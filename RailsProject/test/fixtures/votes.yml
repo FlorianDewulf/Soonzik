@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+VoteOne:
+  user: UserOne
+  battle: BattleOne
+  artist: UserOne
+
+VoteTwo:
+  user: UserTwo
+  battle: BattleOne
+  artist: UserTwo

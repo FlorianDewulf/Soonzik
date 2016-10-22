@@ -1,0 +1,25 @@
+.title
+	%h2 Propose for pack page
+	%span.byline You can propose some albums for pack
+.proposeContainer{ "ng-controller" => "PropositionCtrl", "ng-init" => "propositionInit()" }
+	%loading{ "ng-if" => "loading == true" }
+	.clearfix{ "ng-if" => "loading == false" }
+		.small-12.medium-6.columns
+			%h4 Album you want to propose
+			%ul.no-bullet
+				%li{ "ng-repeat" => "album in albums" }
+					%label
+						%input{ type: "checkbox", "ng-model" => "album.getProposed" }
+						{{ album.title }}
+			%span.button{ "ng-click" => "savePropose()" } Save
+			%loading{ "loading-type" => "'square'", "ng-if" => "loadingSave == true" }
+		.small-12.medium-6.columns
+			%h4 Album already in a pack
+			%ul
+				%li{ "ng-repeat" => "album_p in albumInPacks" }
+					%p
+						{{ album_p.album.title }}
+					%ul.circle
+						%li{ "ng-repeat" => "pack in album_p.pack" }
+							%a.blue{ :href => "http://lvh.me:3000/packs/{{pack.id}}" }
+								%b {{ pack.title }}

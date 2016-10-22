@@ -1,0 +1,42 @@
+%div{ "ng-controller" => "ChatCtrl", "ng-show" => "available", "ng-init" => "chatInit()" }
+	.expand{ "ng-click" => "expandReduceChat()" }
+		%i.fi-arrow-up{ "ng-show" => "reduced == true" }
+		%i.fi-arrow-down{ "ng-show" => "reduced == false" }
+	.conversation.clearfix{ "ng-style" => "conversationStyle"}
+		.miniConversationWindow{ "ng-if" => "miniChat().length > 0" }
+			.appendMiniConversationWindow
+				%div#miniConvBtn{ "click-outside" => "closeMiniChat()", "ng-click" => "openMiniChat()" }
+					%i.fi-comments
+					{{ miniChat().length }}
+				.dropConv{ "ng-show" => "showMiniWindow.value == true" }
+					%ul
+						%li{ "ng-repeat" => "miniWindow in miniChat()", "ng-click" => "open_chat(miniWindow.friend)" }
+							{{ miniWindow.friend.username }}
+							.closeBtn{ "ng-click" => "closeChat(miniWindow)" }
+								x
+		.conversationWindow{ "ng-repeat" => "friendWindow in onWindows", "ng-if" => "friendWindow.opened == true && friendWindow.maximized == true", "id" => "{{ 'userchat-' + friendWindow.friend.id }}" }
+			.header
+				.closeBtn{ "ng-click" => "closeChat(friendWindow)" }
+					x
+				%span.conversationUsername
+					{{friendWindow.friend.username}}
+			.content{ "on-scroll" => "loadMoreMessages(friendWindow)", "scroll-position" => "'top'" }
+				%loading{ "loading-type" => "'square'", "ng-show" => 'friendWindow.loading == true' }
+				.clearfix{ "ng-repeat" => "mess in message[friendWindow.friend.username].messagesText", "auto-scroll-bottom" => true }
+					%p{ "class" => "{{ mess.extern == true ? 'externMessage' : 'myMessage' }}" }
+						%span
+							{{ mess.value }}
+			%input{ "submit-input" => "sendMsg(friendWindow.friend)", "ng-model" => "message[friendWindow.friend.username].value", "auto-focus" => true }
+	%div{ "ng-show" => "reduced == false" }
+		%p {{ labels.DISPLAY_CHAT_CONNECTED_LABEL }}
+		%ul
+			%li{ "ng-repeat" => "friend in friends | filter:search:strict", "data-id" => "{{ friend.id }}", "ng-if" => "friend.online == true", "ng-click" => "open_chat(friend)" }
+				.online.stateBubble
+				%span {{ friend.username }}
+		%p {{ labels.DISPLAY_CHAT_DISCONNECTED_LABEL }}
+		%ul
+			%li{ "ng-repeat" => "friend in friends | filter:search:strict", "data-id" => "{{ friend.id }}", "ng-if" => "friend.online == false", "ng-click" => "open_chat(friend)" }
+				.offline.stateBubble
+				%span {{ friend.username }}
+		%hr
+		%input{:type => 'text', :placeholder => "{{ labels.DISPLAY_CHAT_PLACEHOLDER_INPUT_LABEL }}", "ng-model" => "search.username"}

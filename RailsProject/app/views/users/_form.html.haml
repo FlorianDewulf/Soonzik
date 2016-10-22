@@ -1,0 +1,67 @@
+= form_for @user do |f|
+  - if @user.errors.any?
+    #error_explanation{ :class => "#{@user.errors.size > 0}" }
+      %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li
+            = msg
+  .row
+    .contain-to-grid
+      .large-12.small-8.columns
+        .panel
+          %h3.subheader
+            Informations Public
+          .row
+            .large-3.small-3.columns.inline
+              = f.label :username, "{{ labels.DISPLAY_SIGNUP_USERNAME_LABEL }}"
+            .small-9.columns
+              = f.text_field :username, :class => "radius"
+            .large-3.small-3.columns.inline
+              = f.label :description, "{{ labels.DISPLAY_SIGNUP_DESCRIPTION_LABEL }}"
+            .small-9.columns
+              = f.text_area :description, :class => "radius"
+            .large-3.small-3.columns
+              = f.label :birthday, "{{ labels.DISPLAY_SIGNUP_BIRTHDAY_LABEL }}"
+            .small-9.columns
+              = f.date_select :birthday, :class => "medium-3 columns radius inline"
+            .large-3.small-3.columns
+              = f.label :facebook, "{{ labels.DISPLAY_SIGNUP_FACEBOOK_LABEL }}"
+            .small-9.columns
+              = f.text_field :facebook, :class => "radius"
+            .large-3.small-3.columns
+              = f.label :twitter, "{{ labels.DISPLAY_SIGNUP_TWITTER_LABEL }}"
+            .small-9.columns
+              = f.text_field :twitter, :class => "radius"
+            .large-3.small-3.columns
+              = f.label :googlePlus, "{{ labels.DISPLAY_SIGNUP_GPLUS_LABEL }}"
+            .small-9.columns
+              = f.text_field :googlePlus, :class => "radius"
+          %h3.subheader
+            Informations Personnel
+          .row
+            .large-3.small-3.columns.inline
+              = f.label :fname, "{{ labels.DISPLAY_SIGNUP_FIRSTNAME_LABEL }}"
+            .small-9.columns
+              = f.text_field :fname, :class => "radius"
+            .large-3.small-3.columns.inline
+              = f.label :lname, "{{ labels.DISPLAY_SIGNUP_LASTNAME_LABEL }}"
+            .small-9.columns
+              = f.text_field :lname, :class => "radius"
+            .large-3.small-3.columns.inline
+              = f.label :password, "{{ labels.DISPLAY_SIGNUP_PASSWORD_LABEL }}"
+            .small-9.columns
+              = f.text_field :password, :type => "password", :class => "radius"
+              %small.error
+                Password Can't be blank
+            .large-3.small-3.columns.inline
+              = f.label :phoneNumber, "{{ labels.DISPLAY_SIGNUP_PHONE_LABEL }}"
+            .small-9.columns
+              = f.text_field :phoneNumber, :class => "radius"
+            .large-3.small-3.columns.inline
+              = f.label :newsletter, "{{ labels.DISPLAY_SIGNUP_NEWSLETTER_LABEL }}"
+            .small-9.columns
+              = f.check_box :newsletter, :class => "radius"
+          .actions
+            .large-4.columns.large-centered
+              = f.submit 'Save', :class => "button radius expand success"

@@ -1,0 +1,430 @@
+/* ------------------------ */
+/* |        PLAYER        | */
+/* ------------------------ */
+
+#player {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background: #121314;
+	font-family: Roboto;
+	z-index: 4;
+
+	div {
+		height: 60px;
+		position: relative;
+	}
+	
+	.columns {
+		padding: 0 5px 0 15px;
+	}
+
+	.controls a {
+	  font-size: 30px;
+	  line-height: 60px;
+	}
+
+	.timer {
+		color: white;
+
+		i {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		  font-size: 30px;
+		  cursor: pointer;
+		}
+	}
+
+	.volumeBlock {
+		position: relative;
+		display: inline;
+
+		.volumeSelection {
+			position: absolute;
+			display: none;
+			bottom: 30px;
+			width: 25px;
+			height: 160px;
+			background: #25292B;
+			left: 0;
+		  z-index: 3;
+
+			.volumeBackground {
+				background: #25292B;
+				height: 130px;
+				width: 19px;
+				position: absolute;
+				left: 3px;
+				top: 15px;
+			}
+
+			#sliderVolume {
+				height: 120px;
+				margin-top: 25px;
+				width: 19px;
+				margin-left: 3px;
+				position: relative;
+
+				div {
+					background: #008CBA;
+					position: absolute;
+				  z-index: 1;
+				  display: block;
+				  border: 0;
+				  background-position: 0 0;
+				  left: 0;
+				  bottom: 0;
+					width: 19px;
+				}
+
+				span {
+					background: #CFCFCF;
+					position: absolute;
+				  z-index: 20;
+				  width: 20px;
+				  left: 0;
+				  height: 10px;
+				  cursor: default;
+				  -ms-touch-action: none;
+				  touch-action: none;
+				}
+			}
+		}
+
+		&:hover .volumeSelection {
+			display: block;
+		}
+	}
+
+	p {
+		color: white;
+		margin-bottom: 0px;
+		font-size: 13px;
+		height: 20px;
+		line-height: 20px;
+	}
+
+	wavesurfer {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+#waveform-container {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	margin-top: 0;
+	left: 23%;
+	width: 65%;
+}
+
+/* Customize player */
+@media (max-width: 1070px) {
+	#player .controls a {
+	  font-size: 17px;
+	}
+}
+
+@media (max-width: 640px) {
+	#player .controls {
+		overflow: hidden;
+		height: 60px;
+		background: #25292B;
+
+		&:hover {
+			overflow: visible;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+
+			.volumeSelection {
+			  bottom: -55px;
+			  right: -25px;
+			  left: initial;
+			  height: 200px;
+			}
+		}
+
+		&:hover .toHide {
+			display: none !important;
+		}
+	}
+
+	#player .controls a {
+	  display: block;
+	  width: 100%;
+	  text-align: center;
+	}
+}
+
+/* ------------------------ */
+/* |      PLAYLIST        | */
+/* ------------------------ */
+
+#currentPlaylist {
+	background: #1C1E1F;
+	position: fixed;
+	right: -800px;
+	top: 0;
+	height: 100%;
+	color: #B0B0B0;
+	max-width: 800px;
+  z-index: 50;
+  overflow: auto;
+  border-left: 3px solid rgb(236, 237, 239);
+
+	h2 {
+		padding-top: 20px;
+		color: #DFE0E6;
+	}
+
+	& > div {
+		height: 100%;
+	}
+
+	.red {
+		color: #CC3333;
+	}
+
+	.green {
+		color: #22CC22;
+	}
+
+	.blue {
+		color: rgb(42, 193, 255)
+	}
+
+	.radius-10 {
+		border-radius: 10px;
+	}
+
+	.currentList {
+		overflow: auto;
+		padding-bottom: 10px;
+
+		.moreless {
+			.pophover {
+				
+			}
+
+			span {
+				padding: 5px;
+				margin-left: 5px;
+				margin-right: 5px;
+				cursor: pointer;
+
+				&.divider {
+					padding: 0;
+					margin: 0;
+					border-left: 1px solid whitesmoke;
+					border-right: 1px solid whitesmoke;
+				}
+
+				&:hover {
+					background: rgb(69, 69, 69);
+				}
+			}
+		}
+
+		.musicInformations {
+			border: 1px solid #DDD;
+			padding: 5px;
+			margin-top: 5px;
+		}
+
+		.songName:hover {
+			color: #D07E00;
+			cursor: pointer;
+		}
+	}
+
+	.myPlaylist {
+
+		.playlistElement {
+			position: relative;
+
+			.pophover {
+				top: 45px;
+			}
+		}
+
+		.playlistName {
+			cursor: pointer;
+
+			.fi-play-video {
+				font-size: 20px;
+			}
+		}
+
+		.aPlaylist {
+			transition: all 400ms ease-out;
+		  max-height: 0px;
+		  overflow: hidden;
+		  height: auto;
+
+		  &.open {
+		  	max-height: 700px;
+		  	overflow: auto;
+		  }
+
+			li {
+			  transition: all 200ms ease-out;
+
+			  i {
+			  	margin: 24px 2px 0 2px;
+			  }
+			}
+
+			li:hover {
+				background: rgb(44, 47, 48);
+			}
+
+			.musicItemImg {
+				height: 50px;
+				width: 50px;
+				border-width: 1px;
+				margin: 10px;
+
+				&:hover {
+					box-shadow: 0 0 10px 3px rgba(0, 140, 186, 0.75);
+				}
+
+				img {
+					height: 100%;
+					width: 100%;
+				}
+			}
+
+			.musicItemText {
+				line-height: 70px;
+				margin: 0;
+				color: rgb(1, 169, 229);
+				cursor: pointer;
+			}
+		}
+	}
+
+	.currentPlaying {
+		color: #008CBA;
+		text-indent:15px;
+	}
+
+	i {
+		cursor: pointer;
+		position: relative;
+	}
+
+	.relative {
+		position: relative;
+	}
+
+	.pophover {
+		position: absolute;
+	  top: 35px;
+	  cursor: pointer;
+	  background: #3e3e40;
+	  color: #dfe0e6;
+	  border: 4px solid #797979;
+	  left:0;
+	  right:0;
+	  width: 300px;
+	  z-index: 9;
+	  text-align: center;
+	  padding: 5px 0 5px 0;
+
+	  &.popleft {
+	  	left: 20px;
+	  	right: initial;
+
+	  	&:before {
+	  		top: -20px;
+			  bottom: auto;
+			  left: 0;
+			  content: "";
+			  position: absolute;
+			  border-width: 0px 20px 20px;
+			  border-style: solid;
+			  border-color: #797979 transparent;
+			  display: block;
+			  width: 0;
+	  	}
+	  }
+
+	  &.popright {
+	  	right: 20px;
+	  	left: initial;
+
+	  	&:before {
+	  		top: -20px;
+			  bottom: auto;
+			  right: 0;
+			  content: "";
+			  position: absolute;
+			  border-width: 0px 20px 20px;
+			  border-style: solid;
+			  border-color: #797979 transparent;
+			  display: block;
+			  width: 0;
+	  	}
+	  }
+
+	  ul {
+	  	margin-bottom: 0;
+	  	padding: 0;
+	  }
+
+	  li input {
+	  	background: white;
+	  }
+
+		ul li.choice {
+			cursor: pointer;
+
+			&:hover {
+				background: #008CBA;
+				color: #1C1E1F;
+			}
+		}
+
+		.link {
+			color: #D07E00;
+			padding-top: 5px;
+			cursor: auto;
+		  margin-bottom: 5px;
+		}
+	}
+
+	-webkit-transition: right 1.5s ease;
+	-moz-transition: right 1.5s ease;
+	-ms-transition: right 1.5s ease;
+	-o-transition: right 1.5s ease;
+	transition: right 1.5s ease;
+}
+
+@media (max-width: 640px) {
+	#currentPlaylist > div {
+		height: auto;
+	}
+}
+
+.joyride-content-wrapper {
+  padding: 1.125rem 0.25rem 0;
+  color: #333;
+
+  h4 {
+  	color: black;
+  }
+}
+
+.joyride-tip-guide {
+	left: 15% !important;
+
+	span.joyride-nub {
+		left: 25%;
+	}
+}

@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+PlaylistOne:
+  user: UserOne
+  name: Trocool
+  musics: MusicOne, MusicTwo
+
+PlaylistTwo:
+  user: UserOne
+  name: Trobien

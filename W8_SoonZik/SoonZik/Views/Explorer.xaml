@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="SoonZik.Views.Explorer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModels="using:SoonZik.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Background="#CCCCCC" Height="1080">
+
+        <Grid Height="80" VerticalAlignment="Top" Width="1920" Background="#B0B0B0">
+            <TextBlock x:Name="explorer_txt" HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="Explorer" VerticalAlignment="Top" Height="55" Width="235" FontSize="53.333" Foreground="Black"/>
+            <Button x:Name="back_btn" Content="Button" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Style="{StaticResource NavigationBackButtonNormalStyle}" RequestedTheme="Light" Click="Button_Click"/>
+            <Button x:Name="cart_btn" x:Uid="cart_btn" Content="Panier" HorizontalAlignment="Left" Margin="1622,-3,0,0" VerticalAlignment="Center" Height="76" Width="201" Background="#FF27AAE1" FontSize="40" Click="cart_btn_Click"/>
+            <Image Source="ms-appx:///Assets/cart.png" Margin="1460,0,295,0"></Image>
+        </Grid>
+
+
+        <TextBlock x:Uid="genres_txt" Name="genres_txt" HorizontalAlignment="Left" Margin="46,104,0,0" TextWrapping="Wrap" Text="Genres" VerticalAlignment="Top" Height="45" Width="170" Foreground="Black" FontSize="30"/>
+        <TextBlock x:Uid="ambiances_txt" x:Name="ambiances_txt" HorizontalAlignment="Left" Margin="46,593,0,0" TextWrapping="Wrap" Text="Ambiances" VerticalAlignment="Top" Height="45" Width="170" Foreground="Black" FontSize="30"/>
+        <TextBlock x:Uid="artists_txt" x:Name="artists_txt" HorizontalAlignment="Left" Margin="1590,104,0,0" TextWrapping="Wrap" Text="Artistes" VerticalAlignment="Top" Height="45" Width="170" Foreground="Black" FontSize="30"/>
+        <TextBlock x:Uid="albums_txt" x:Name="albums_txt" HorizontalAlignment="Left" Margin="889,104,0,0" TextWrapping="Wrap" Text="Albums" VerticalAlignment="Top" Height="45" Width="170" Foreground="Black" FontSize="30"/>
+
+        <GridView x:Name="genre_list" ItemClick="genre_list_ItemClick" ItemsSource="{Binding genre_list}" HorizontalAlignment="Left" Margin="44,147,0,0" VerticalAlignment="Top" Width="395" Height="420" IsItemClickEnabled="True" IsSwipeEnabled="False" SelectionMode="None" SelectedItem="{Binding genre_selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="120" Height="120">
+                        <Image Stretch="Fill" Source="ms-appx:///Assets/Record-Album-02.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,10">
+                            <TextBlock Text="{Binding style_name}" FontSize="25" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+
+        <GridView x:Name="ambiance_list" ItemClick="ambiance_list_ItemClick" IsItemClickEnabled="True" HorizontalAlignment="Left" Height="420" Margin="44,637,0,0" VerticalAlignment="Top" Width="385" IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding ambiances_list}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="120" Height="120">
+                        <Image Stretch="Fill" Source="ms-appx:///Assets/Record-Album-02.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,10">
+                            <TextBlock Text="{Binding name}" FontSize="25" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <GridView x:Name="album_list" ItemClick="album_list_ItemClick" ItemsSource="{Binding album_list}" HorizontalAlignment="Left" Margin="889,147,0,0" VerticalAlignment="Top" Width="620" Height="910" IsItemClickEnabled="True" IsSwipeEnabled="False" SelectionMode="None">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="200" Height="200" Background="White">
+                        <!--<Image Stretch="Fill" Source="ms-appx:///Assets/Record-Album-02.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"/>-->
+                        <Image Stretch="Fill" Source="{Binding image, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,10">
+
+                            <TextBlock Text="{Binding user.username}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+                            <TextBlock Text="{Binding title}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <ListView x:Name="artist_list" ItemClick="artist_list_ItemClick" IsItemClickEnabled="True" HorizontalAlignment="Left" Height="903" Margin="1590,154,0,0" VerticalAlignment="Top" Width="285" IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding artist_list}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" x:Name="Username">
+                            <Image Source="{Binding image, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="Fill" Width="50" Height="50"/>
+
+                            <!--<Image Source="{Binding img_artist, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}></Image>"-->
+                            <TextBlock Text="{Binding username}" Margin="20,0,0,0" Foreground="Black" FontSize="20"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <GridView x:Name="music_list" ItemClick="music_list_ItemClick" ItemsSource="{Binding music_list}" HorizontalAlignment="Left" Margin="479,147,0,0" VerticalAlignment="Top" Width="365" Height="910" IsItemClickEnabled="True" IsSwipeEnabled="False" SelectionMode="None">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="150" Height="150" Background="White">
+                        <Image Stretch="Fill" Source="ms-appx:///Assets/Record-Album-02.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,10">
+
+                            <TextBlock Text="{Binding user.username}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+                            <TextBlock Text="{Binding title}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <TextBlock x:Uid="suggest_music_txt" x:Name="suggest_music_txt" HorizontalAlignment="Left" Margin="479,104,0,0" TextWrapping="Wrap" Text="Musiques suggérées" VerticalAlignment="Top" Height="45" Width="351" Foreground="Black" FontSize="30"/>
+        <!--<Button x:Name="ambiamce_btn" Content="Ambiances" HorizontalAlignment="Left" Margin="212,132,0,0" VerticalAlignment="Top" Width="121" Background="#FF27AAE1" FontSize="15" Click="ambiamce_btn_Click"/>-->
+
+    </Grid>
+</Page>

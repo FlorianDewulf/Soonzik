@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="SoonZik.Views.Conversation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Coding4Fun.Toolkit.Controls"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:local="using:SoonZik.Utils"
+    mc:Ignorable="d"
+    DataContext="{StaticResource ConversationViewModel}"
+    Background="#424242">
+
+    <interactivity:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loaded">
+            <core:InvokeCommandAction Command="{Binding SelectionCommand}" />
+        </core:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
+
+    <Page.Resources>
+        <DataTemplate x:Key="MessageDataTemplate">
+            <local:MessageTemplateSelector Content="{Binding}">
+                <local:MessageTemplateSelector.Recu>
+                    <DataTemplate>
+                        <controls:ChatBubble ChatBubbleDirection="UpperLeft" HorizontalContentAlignment="Right"
+                                             Background="#7bc2fa">
+                            <Grid>
+                                <TextBlock x:Name="Message" Text="{Binding Path=msg}" Foreground="White"
+                                           TextWrapping="Wrap" FontSize="20" />
+                            </Grid>
+                        </controls:ChatBubble>
+                    </DataTemplate>
+                </local:MessageTemplateSelector.Recu>
+                <local:MessageTemplateSelector.Envoye>
+                    <DataTemplate>
+                        <controls:ChatBubble ChatBubbleDirection="LowerRight" Grid.Column="1"
+                                             Background="#1d59a2">
+                            <Grid HorizontalAlignment="Right">
+                                <TextBlock x:Name="Message" Text="{Binding Path=msg}" Foreground="White"
+                                           TextWrapping="Wrap"
+                                           FontSize="20" HorizontalAlignment="Right" />
+                            </Grid>
+                        </controls:ChatBubble>
+                    </DataTemplate>
+                </local:MessageTemplateSelector.Envoye>
+            </local:MessageTemplateSelector>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Image Height="80" Width="80" HorizontalAlignment="Left" Margin="20,0,0,0"
+                   Source="{Binding FriendUser.image}" />
+            <TextBlock FontSize="30" Foreground="#40a8e2" VerticalAlignment="Center" HorizontalAlignment="Right"
+                       Margin="0,0,20,0" Text="{Binding FriendUser.username}" />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <ListBox Background="Transparent" ItemsSource="{Binding ListMessages}"
+                     ItemTemplate="{StaticResource MessageDataTemplate}" HorizontalAlignment="Center" />
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <TextBox VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Width="250"
+                     Text="{Binding ConversationText, Mode=TwoWay}" Foreground="#40a8e2" />
+            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" x:Uid="Send" Content=""
+                    Command="{Binding SendCommand}" />
+        </Grid>
+    </Grid>
+</Page>

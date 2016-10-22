@@ -1,0 +1,79 @@
+﻿<Page
+    x:Class="SoonZik.Views.Connexion"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:controls="using:SoonZik.Controls"
+    xmlns:utils="using:SoonZik.Utils"
+    DataContext="{StaticResource ConnexionViewModel}"
+    Background="#D3D3D3">
+
+    <interactivity:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loaded">
+            <core:InvokeCommandAction Command="{Binding SelectionCommand}" />
+        </core:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
+
+
+    <Page.Resources>
+        <utils:BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" True="Visible" False="Collapsed" />
+    </Page.Resources>
+
+    <Grid x:Name="GlobalGrid">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Image Source="../Resources/Logo_SoonZik.png" Height="200" VerticalAlignment="Top" Stretch="UniformToFill" />
+
+            <Image Source="../Resources/Icones/facebook.png" Width="50" Height="50" VerticalAlignment="Center"
+                   HorizontalAlignment="Left" Margin="60,225,0,225">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Tapped">
+                        <core:InvokeCommandAction Command="{Binding FacebookTapped}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Image>
+            <Image Source="../Resources/Icones/twitter.png" Width="50" Height="50" VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Tapped">
+                        <core:InvokeCommandAction Command="{Binding TwitterTapped}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Image>
+            <Image  Source="../Resources/Icones/googleplus.png" Width="50" Height="50"
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,225,60,225">
+
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Tapped">
+                        <core:InvokeCommandAction Command="{Binding GoogleTapped}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </Image>
+
+            <TextBox x:Name="UserTextBox" PlaceholderText="Username" Text="{Binding Username, Mode=TwoWay}"
+                     Grid.Row="0"
+                     Background="LightGray" Margin="50,346,50,0" BorderThickness="0,0,0,2" />
+            <PasswordBox x:Name="PasswordTextBox" PlaceholderText="Password" Password="{Binding Password, Mode=TwoWay}"
+                         Grid.Row="0" Background="LightGray" Margin="50,387,50,0" BorderThickness="0,0,0,2" />
+
+            <Button Grid.Row="0" x:Uid="LogIn" Content="" BorderThickness="0" Foreground="Black" Margin="250,445,0,58"
+                    Command="{Binding ConnexionCommand}" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Button Command="{Binding InscritpiomCommand}" x:Uid="SignIn" Content="" Foreground="Black"
+                    BorderThickness="0" Margin="18,7,0,6" />
+        </Grid>
+        <ProgressRing Grid.Row="0" IsActive="{Binding ProgressOn, Mode=TwoWay}" Background="Black" Foreground="Aqua"
+                      Opacity="0.5" Margin="0,-62,0,-115" />
+
+    </Grid>
+</Page>

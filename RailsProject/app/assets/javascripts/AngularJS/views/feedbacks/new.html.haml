@@ -1,0 +1,26 @@
+.new_feedback
+	%h2 {{ labels.DISPLAY_FEEDBACK_TITLE_LABEL }}
+	%hr
+	.row{ "ng-show" => "!send && !isSending" }
+		.large-3.small-3.columns.inline
+			%label{:for => "feedback_email"} {{ labels.DISPLAY_FEEDBACK_EMAIL_LABEL }}
+		.small-9.columns
+			%input#feedback_email.radius{ 'ng-model' => "feedback.email", :type => "text"}
+		.large-3.small-3.columns.inline
+			%label{:for => "feedback_type_object"}  {{ labels.DISPLAY_FEEDBACK_TYPE_OBJ_LABEL }}
+		.small-9.columns
+			%select#feedback_type_object{ 'ng-model' => "feedback.type_object", 'ng-change' => 'verifType()'}
+				%option{ "ng-repeat" => "data in options", value: "{{ data.value }}" } {{ data.label }}
+		.large-3.small-3.columns.inline
+			%label{:for => "feedback_object"}  {{ labels.DISPLAY_FEEDBACK_OBJECT_LABEL }}
+		.small-9.columns
+			%input#feedback_object.radius{ 'ng-model' => "feedback.object", :type => "text"}
+		.large-3.small-3.columns.inline
+			%label{:for => "feedback_text"}  {{ labels.DISPLAY_FEEDBACK_TEXT_LABEL }}
+		.small-9.columns
+			%textarea#feedback_text.radius{ 'ng-model' => "feedback.text"}
+		.small-12.columns
+			%span.button.success{ "ng-click" => "sendFeeback()"}  {{ labels.DISPLAY_FEEDBACK_SAVE_LABEL }}
+	%loading{ "ng-show" => "isSending" }
+	.feedbackSend.text-center{ "ng-show" => "send" } 
+		%p {{ labels.DISPLAY_FEEDBACK_SEND_MSG	}}

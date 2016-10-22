@@ -1,0 +1,66 @@
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SoonZik.Streaming.exe.config
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SoonZik.Streaming.exe
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SoonZik.Streaming.pdb
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\NAudio.dll
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SonnZik.Streaming.HttpWebRequest.dll
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SonnZik.Streaming.HttpWebRequest.pdb
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\NAudio.xml
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.csprojResolveAssemblyReference.cache
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\MainWindow.baml
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\View\Connexion.baml
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\MainWindow.g.cs
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\View\Connexion.g.cs
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\App.g.cs
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming_MarkupCompile.cache
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.g.resources
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.Properties.Resources.resources
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.csproj.GenerateResource.Cache
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.exe
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.pdb
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SoonZik.Streaming.exe.config
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.exe
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.pdb
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SoonZik.Streaming.exe
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SoonZik.Streaming.pdb
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\NAudio.dll
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SonnZik.Streaming.HttpWebRequest.dll
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SonnZik.Streaming.HttpWebRequest.pdb
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\NAudio.xml
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.csprojResolveAssemblyReference.cache
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\MainWindow.baml
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\View\Connexion.baml
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\MainWindow.g.cs
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\View\Connexion.g.cs
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\App.g.cs
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming_MarkupCompile.cache
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.g.resources
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.Properties.Resources.resources
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.csproj.GenerateResource.Cache
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SoonZik.Streaming.exe.config
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.exe
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.pdb
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SoonZik.Streaming.exe
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SoonZik.Streaming.pdb
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\NAudio.dll
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SonnZik.Streaming.HttpWebRequest.dll
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\SonnZik.Streaming.HttpWebRequest.pdb
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\NAudio.xml
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.csprojResolveAssemblyReference.cache
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\MainWindow.baml
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\View\Connexion.baml
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\MainWindow.g.cs
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\View\Connexion.g.cs
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\App.g.cs
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming_MarkupCompile.cache
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.g.resources
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.Properties.Resources.resources
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SoonZik.Streaming\obj\Debug\SoonZik.Streaming.csproj.GenerateResource.Cache
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\policy.2.0.taglib-sharp.dll
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\taglib-sharp.dll
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SoonZik.Streaming\bin\Debug\policy.2.0.taglib-sharp.config

@@ -1,0 +1,16 @@
+.friend{ "ng-init" => "showFriends()" }
+  %loading{ "ng-if" => "loading == true" }
+  .row{ "ng-if" => "loading == false", "ng-init" => "initFoundation()"}
+    %h3.subheader
+      {{ labels.DISPLAY_FRIENDS_LABEL }}
+    .ul.large-block-grid-4{"ng-show" => "Friend"}
+      %li{ "ng-repeat" => "friend in friends"}
+        .panel
+          %h5.subheader.text-center
+          %a{:href=>"http://lvh.me:3000/users/" + "{{friend.id}}" }
+            .img-friend
+              %img{"ng-src" => "{{ '/assets/usersImage/avatars/' + friend.image}}"}
+            %p
+              %ul.vcard.small-centered.columns
+                %li.fn.text-center
+                  %a{:href=>"http://lvh.me:3000/users/" + "{{friend.id}}"} {{ friend.username }}

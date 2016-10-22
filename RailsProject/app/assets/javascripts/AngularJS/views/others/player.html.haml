@@ -1,0 +1,128 @@
+.player-content{ "ng-controller" => "PlayerCtrl", "ng-init" => "initPlayer()" }
+	#player.small-12
+		.small-2.columns
+			.controls
+				%a.hide-for-medium-up.toHide
+					%i.fi-eject
+				%a{ "ng-click" => "previous()", "ng-style" => "(activeUrl != null) ? {} : { color: 'gray' }" }
+					%i.fi-previous
+				%a{ "ng-click" => "pausePlayer()", "ng-style" => "(activeUrl != null) ? {} : { color: 'gray' }" }
+					%i{ "ng-class" => "(paused) ? 'fi-play' : 'fi-pause'" }
+				%a{ "ng-click" => "next()", "ng-style" => "(activeUrl != null) ? {} : { color: 'gray' }" }
+					%i.fi-next
+				.volumeBlock
+					%a
+						%i{ "ng-class" => "(isVolumeOn()) ? 'fi-volume' : 'fi-volume-strike'" }
+						.volumeSelection
+							.volumeBackground
+							#sliderVolume
+				%a{ "ng-click" => "shuffle = !shuffle" }
+					%i.fi-shuffle{ "ng-style" => "(shuffle) ? {} : { color: 'gray' }" }
+		.small-9.columns
+			%p.text-center {{ playlist[indexPlaylist].title }} {{ (playlist[indexPlaylist] != undefined) ? "-" : "" }} {{ timeFormated }}
+			%wavesurfer{ url: "", "wave-color" => "#337ab7", "progress-color" => "#FF6600", height: "80", normalize: "true" }
+		.small-1.columns.timer
+			%i.fi-list-bullet{ "ng-click" => "displayPlaylist()" }
+	#currentPlaylist.text-center
+		.currentList.columns{ "ng-class" => "user == false ? 'small-12' : 'medium-6'" }
+			%h2.drakolomb {{ labels.DISPLAY_PLAYER_CURRENT_PLAYLIST_LABEL }}
+			%div
+				%span.button.small.alert{ "ng-click" => "cleanPlaylist()" }
+					%i.fi-trash
+					{{ labels.DISPLAY_PLAYER_CLEAN_LABEL }}
+				%span.button.small.info{ "ng-click" => "moreClick()" }
+					%i.fi-widget
+					{{ (more.btn == false) ? labels.DISPLAY_PLAYER_MORE_LABEL : labels.DISPLAY_PLAYER_LESS_LABEL }}
+				%span.button.small{ "ng-click" => "activateLocation()", popover: "Share what you're listening around you. Click here to enable or disable this feature. Warning: you need to allow your browser to give us your location.", "popover-title" => "Geolocation", "ng-if" => "geolocDisplay == true", "ng-class" => "{ alert: !geoloc, success: geoloc }", "popover-placement" => "bottom", "popover-trigger" => "mouseenter" }
+					%i.fi-marker
+					{{ labels.DISPLAY_PLAYER_GEOLOCATION_LABEL }}
+					%i{ "ng-class" => "{ 'fi-x': !geoloc, 'fi-check': geoloc }" }
+				.small-12.moreless.relative{ "ng-show" => "more.btn == true" }
+					%span{ "ng-click" => "setTooltip('share-current')" }
+						%i.fi-share.blue
+						{{ labels.DISPLAY_PLAYER_SHARE_LABEL }}
+					%span.divider
+					%span{ "ng-click" => "setTooltip('save-current')" }
+						%i.fi-save.blue
+						{{ labels.DISPLAY_PLAYER_SAVE_NEW_PLAYLIST_LABEL }}
+					.mytooltip.toolright{ "ng-if" => "tooltip == 'share-current'", "ng-include" => "'/assets/AngularJS/views/include/tooltip.html.haml'", "ng-controller" => "TooltipCtrl", "ng-init" => "tooltipInit(null, 3, tmpUrlCurrentPlaylist)" }
+					.mytooltip.toolright{ "ng-if" => "tooltip == 'save-current'", "ng-include" => "'/assets/AngularJS/views/include/tooltip.html.haml'", "ng-controller" => "TooltipCtrl", "ng-init" => "tooltipInit(null, 6, savePlaylistFromCurrent)" }
+			.clearfix.small-12.musicInformations{ "ng-show" => "infomusic.current != false" }
+				%i.fi-x.right.red{ "ng-click" => "infoForMusic(false, 'current')" }
+				%ul.square.left.text-left
+					%li
+						%span {{ labels.DISPLAY_PLAYER_TITLE_LABEL }} :
+						%span {{ infomusic.current.title }}
+					%li
+						%span {{ labels.DISPLAY_PLAYER_PRICE_LABEL }} :
+						%span {{ infomusic.current.price }}
+					%li
+						%span {{ labels.DISPLAY_PLAYER_DURATION_LABEL }} :
+						%span {{ formatedDuration(infomusic.current.duration) }}
+					%li
+						%span {{ labels.DISPLAY_PLAYER_ALBUM_LABEL }} :
+						%span {{ infomusic.current.album.title }}
+					%li
+						%a{ href: "/albums/{{ infomusic.current.id }}" } {{ labels.DISPLAY_PLAYER_ALBUM_LINK_LABEL }}
+			%hr
+			%div{ "ng-repeat" => "music in playlist track by $index" }
+				.clearfix
+					.left.songName{ "ng-class" => "($index == indexPlaylist) ? 'currentPlaying' : ''", "ng-click" => "playFromPlaylist($index)" }
+						%i.fi-music
+						{{ music.title }} - {{ formatedDuration(music.obj.duration) }}
+					.right
+						%i.fi-info.blue{ "ng-click" => "infoForMusic(music.obj, 'current')" }
+						%i.fi-x.red{ "ng-click" => "removeMusicFromPlaylist($index)" }
+		.myPlaylist.medium-6.columns{ "ng-if" => "user != false" }
+			%h2.drakolomb {{ labels.DISPLAY_PLAYER_YOUR_PLAYLIST_LABEL }}
+			.row.collapse
+				.small-4.columns
+					%span.prefix
+						%label.inline{ "for" => "playlistName" } {{ labels.DISPLAY_PLAYER_NAME_LABEL }} :
+				.small-6.columns
+					%input{ id: "playlistName", type: "text", placeholder: "{{ labels.DISPLAY_PLAYER_NEW_PLAYLIST_PLACEHOLDER }}", "ng-model" => "newItem.name" }
+				.small-2.columns
+					.button.postfix{ "ng-click" => "createPlaylist()" }
+						%i.fi-save
+			.clearfix.small-12.musicInformations{ "ng-show" => "infomusic.playlist != false" }
+				%i.fi-x.right.red{ "ng-click" => "infoForMusic(false, 'playlist')" }
+				%ul.square.left.text-left
+					%li
+						%span {{ labels.DISPLAY_PLAYER_TITLE_LABEL }} :
+						%span {{ infomusic.playlist.title }}
+					%li
+						%span {{ labels.DISPLAY_PLAYER_PRICE_LABEL }} :
+						%span {{ infomusic.playlist.price }}
+					%li
+						%span {{ labels.DISPLAY_PLAYER_DURATION_LABEL }} :
+						%span {{ formatedDuration(infomusic.playlist.duration) }}
+					%li
+						%span {{ labels.DISPLAY_PLAYER_ALBUM_LABEL }} :
+						%span {{ infomusic.playlist.album.title }}
+					%li
+						%a{ href: "/albums/{{ infomusic.playlist.id }}" } {{ labels.DISPLAY_PLAYER_ALBUM_LINK_LABEL }}
+			.text-left
+				%hr
+				%div{ "ng-repeat" => "myplaylist in myPlaylists track by $index" }
+					.clearfix.playlistElement
+						.left.playlistName.relative
+							%div{ "ng-click" => "setTooltip('popPlaylist' + myplaylist.id)" }
+								%i.fi-play-video
+								{{ myplaylist.name }} - {{ labels.DISPLAY_PLAYER_DURATION_LABEL }} : {{ formatedDuration(myplaylist.duration) }}
+							.mytooltip.toolright{ "ng-if" => "tooltip == 'popPlaylist' + myplaylist.id", "ng-include" => "'/assets/AngularJS/views/include/tooltip.html.haml'", "ng-controller" => "TooltipCtrl", "ng-init" => "tooltipInit(null, 4, [myplaylist, addToCurrentPlaylist, replaceToCurrentPlaylist])" }
+						.right.relative
+							%i.fi-share.blue{ "ng-click" => "setTooltip(myplaylist.url)" }
+							.mytooltip.toolright{ "ng-if" => "tooltip == myplaylist.url", "ng-include" => "'/assets/AngularJS/views/include/tooltip.html.haml'", "ng-controller" => "TooltipCtrl", "ng-init" => "tooltipInit(null, 3, myplaylist.url)" }
+							%i{ "ng-class" => "myplaylist.extend == false ? 'fi-plus green' : 'fi-minus red'", "ng-click" => "myplaylist.extend = !myplaylist.extend" }
+							%i.fi-x.red{ "ng-click" => "setTooltip('delete' + myplaylist.id)" }
+							.mytooltip.toolright{ "ng-if" => "tooltip == 'delete' + myplaylist.id", "ng-include" => "'/assets/AngularJS/views/include/tooltip.html.haml'", "ng-controller" => "TooltipCtrl", "ng-init" => "tooltipInit(null, 5, myplaylist.id)" }
+					%ul.no-bullet.aPlaylist{ "ng-class" => "myplaylist.extend ? 'open' : ''" }
+						%li.row{ "ng-repeat" => "music in myplaylist.musics" }
+							%i.fi-x.red.left{ "ng-click" => "removeFromPlaylist(music, myplaylist)" }
+							%i.fi-info.blue.left{ "ng-click" => "infoForMusic(music, 'playlist')" }
+							.musicItemImg.th.left
+								%img{ "ng-src" => "{{ '/assets/albums/' + music.album.image }}" }
+							%p.musicItemText.text-center.left
+								{{ music.title }}
+
+					%hr

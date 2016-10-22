@@ -1,0 +1,11 @@
+.concerts {
+	padding-left: 30px;
+
+	.displayed {
+		color: #0078a0;
+	}
+
+	.map, .map .angular-google-map, .angular-google-map-container {
+		height: 300px;
+	}
+}

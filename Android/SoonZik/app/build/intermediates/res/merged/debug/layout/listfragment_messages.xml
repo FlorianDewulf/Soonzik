@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/messageslistview"
+            android:transcriptMode="alwaysScroll"
+            android:stackFromBottom="true" >
+        </ListView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Say something!"
+            android:background="#FFF"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/edittextmessage"
+            android:layout_toLeftOf="@+id/sendmessage"
+            android:layout_toStartOf="@+id/sendmessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:layout_alignBaseline="@+id/edittextmessage"
+            android:layout_alignBottom="@+id/edittextmessage"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/sendmessage" />
+    </RelativeLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/listfragment_messages.xml -->

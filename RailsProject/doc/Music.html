@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<!--
+
+  Fivefish RDoc Generator
+  $Id$
+
+  Authors:
+  - Michael Granger <ged@FaerieMUD.org>
+
+ -->
+<html lang="en">
+<head>
+	<title>RDoc Documentation</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<link href="." rel="prefix" />
+
+	<link href="./css/fivefish.min.css" rel="stylesheet" />
+
+	<script src="./js/jquery-1.7.1.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="./js/bootstrap.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="./js/searchindex.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="./js/fivefish.min.js" type="text/javascript"
+		defer="defer" charset="utf-8" onload="initFivefish()"></script>
+</head>
+
+<body class="class-page">
+
+	<nav class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand"
+					href="./index.html">RDoc Documentation</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#class-dropdown">
+								Classes
+								<b class="caret"></b>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#file-dropdown">
+								Files
+								<b class="caret"></b>
+							</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+				<span class="pull-right">
+					<form class="navbar-search">
+						<input type="hidden" id="navbar-search-target" value="" />
+						<input type="text" class="search-query" value=""
+							placeholder="Method, Class, or Filename" />
+					</form>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		
+		<header class="hero-unit">
+			<hgroup>
+								  												<h1 class="class"
+					rel="popover"
+					data-original-title="In files"
+					data-content="app/models/music.rb"
+					>Music</h1>
+				</p>
+							</hgroup>
+			<span class="label">class</span>
+		</header>
+
+		<section class="module-relations">
+			<dl>
+								<dt>Superclass</dt>
+								<dd class="superclass">ActiveRecord::Base</dd>
+								
+				
+							</dl>
+		</section>
+
+		<section class="description">
+			
+<p>The model of the object <a href="Music.html">Music</a> Contain the relation
+and the validation Can provide some features linked to this model</p>
+
+<h4 id="class-Music-label-Attributes">Attributes<span><a href="#class-Music-label-Attributes">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>id</code> - (integer) - The ID of the object</p>
+</li><li>
+<p><code>title</code> - (string) - The name of the music</p>
+</li><li>
+<p><code>user_id</code> - (integer) - The ID of the artist</p>
+</li><li>
+<p><code>album_id</code> - (integer) - The ID of the album</p>
+</li><li>
+<p><code>duration</code> - (integer) - The duration in seconds</p>
+</li><li>
+<p><code>price</code> - (float) - The price of the music alone</p>
+</li><li>
+<p><code>file</code> - (string) - The name of the file</p>
+</li><li>
+<p><code>limited</code> - (boolean) - To know if the music is full for
+listening even if we don&#39;t buy it</p>
+</li></ul>
+
+<h4 id="class-Music-label-Associations">Associations<span><a href="#class-Music-label-Associations">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>belongs_to</code> - :album</p>
+</li><li>
+<p><code>belongs_to</code> - :user</p>
+</li><li>
+<p><code>has_many</code> - :listening</p>
+</li><li>
+<p><code>has_many</code> - :music_notes</p>
+</li><li>
+<p><code>has_and_belongs_to_many</code> - :commentaries</p>
+</li><li>
+<p><code>has_and_belongs_to_many</code> - :descriptions</p>
+</li><li>
+<p><code>has_and_belongs_to_many</code> - :playlist_objects</p>
+</li><li>
+<p><code>has_and_belongs_to_many</code> - :genres</p>
+</li><li>
+<p><code>has_many</code> - :purchased_musics</p>
+</li></ul>
+		</section>
+
+				<section id="5Buntitled-5D" class="documentation-section">
+			
+		    
+			
+			
+			<!-- Methods -->
+						
+						<section class="public-methods class-methods methods">
+				<header>
+					<h3>Public Class Methods</h3>
+				</header>
+
+								<a name="method-c-fillAverageNote">anchor</a>
+				<div id="method-c-fillAverageNote-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">fillAverageNote</span><span 
+							class="method-args">(ar_musics)</span>
+										</header>
+
+					<div class="method-description">
+											<p>Fill an association of records of the notes average</p>					
+											<div class="method-source-code" id="fillAverageNote-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/music.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">fillAverageNote</span>(<span class="ruby-identifier">ar_musics</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">ar_musics</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sql</span> = <span class="ruby-string">&quot;SELECT music_id, AVG(value) as average FROM music_notes WHERE (music_id IN (&quot;</span>
+
+  <span class="ruby-identifier">ar_musics</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">music</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">sql</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;, &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sql</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">music</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">sql</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;)) GROUP BY music_id&quot;</span>
+  <span class="ruby-identifier">records_array</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">sql</span>)
+
+  <span class="ruby-identifier">ar_musics</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">music</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">passIn</span> = <span class="ruby-keyword">false</span>
+
+    <span class="ruby-identifier">records_array</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">music</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">record</span>[<span class="ruby-string">&#39;music_id&#39;</span>].<span class="ruby-identifier">to_i</span>)
+        <span class="ruby-identifier">passIn</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">music</span>.<span class="ruby-identifier">setAverageNote</span> <span class="ruby-identifier">record</span>[<span class="ruby-string">&#39;average&#39;</span>].<span class="ruby-identifier">to_f</span>
+        <span class="ruby-keyword">break</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">music</span>.<span class="ruby-identifier">setAverageNote</span>  <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">passIn</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-c-miniKey">anchor</a>
+				<div id="method-c-miniKey-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">miniKey</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Filter of information for the <a href="API.html">API</a></p>
+
+<p>Fields returned : [:id, :title, :duration, :price, :limited]</p>					
+											<div class="method-source-code" id="miniKey-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/music.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">miniKey</span>
+  [<span class="ruby-value">:id</span>, <span class="ruby-value">:title</span>, <span class="ruby-value">:duration</span>, <span class="ruby-value">:price</span>, <span class="ruby-value">:limited</span>]
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-c-musicToJson">anchor</a>
+				<div id="method-c-musicToJson-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">musicToJson</span><span 
+							class="method-args">(m)</span>
+										</header>
+
+					<div class="method-description">
+											<p>To render the object as json (for suggestv2 only)</p>					
+											<div class="method-source-code" id="musicToJson-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/music.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">musicToJson</span>(<span class="ruby-identifier">m</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">Music</span>.<span class="ruby-identifier">miniKey</span>, <span class="ruby-identifier">methods</span><span class="ruby-operator">:</span> <span class="ruby-value">:getAverageNote</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">miniKey</span> }, <span class="ruby-identifier">album</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">Album</span>.<span class="ruby-identifier">miniKey</span> } })
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-c-music_params">anchor</a>
+				<div id="method-c-music_params-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">music_params</span><span 
+							class="method-args">(parameters)</span>
+										</header>
+
+					<div class="method-description">
+											<p>The strong parameters to save or update object</p>					
+											<div class="method-source-code" id="music_params-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/music.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">music_params</span>(<span class="ruby-identifier">parameters</span>)
+  <span class="ruby-identifier">parameters</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:music</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:user_id</span>, <span class="ruby-value">:album_id</span>, <span class="ruby-value">:title</span>, <span class="ruby-value">:duration</span>, <span class="ruby-value">:price</span>, <span class="ruby-value">:file</span>, <span class="ruby-value">:limited</span>, <span class="ruby-identifier">album_attributes</span><span class="ruby-operator">:</span> [<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-c-suggest">anchor</a>
+				<div id="method-c-suggest-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">suggest</span><span 
+							class="method-args">(user)</span>
+										</header>
+
+					<div class="method-description">
+											<p>Suggestion logic</p>					
+											<div class="method-source-code" id="suggest-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/music.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">suggest</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-identifier">index</span> =           <span class="ruby-value">0</span>
+  <span class="ruby-identifier">gPond</span> =           {}
+  <span class="ruby-identifier">musicList</span> =       []
+  <span class="ruby-identifier">suggestionList</span> =  []
+
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">purchases</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">purchase</span><span class="ruby-operator">|</span>        <span class="ruby-comment"># =&gt; For each purchase</span>
+    <span class="ruby-identifier">purchase</span>.<span class="ruby-identifier">musics</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span> <span class="ruby-identifier">music</span> <span class="ruby-operator">|</span>      <span class="ruby-comment"># =&gt; For each musics purchased</span>
+      <span class="ruby-identifier">music</span>.<span class="ruby-identifier">genres</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span> <span class="ruby-identifier">genre_obj</span> <span class="ruby-operator">|</span>   <span class="ruby-comment"># =&gt; For each genre</span>
+        <span class="ruby-comment"># If the genre is not in the hash, we init it, else we increment it </span>
+        <span class="ruby-identifier">gPond</span>[<span class="ruby-identifier">genre_obj</span>] = (<span class="ruby-identifier">gPond</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">genre_obj</span>)) <span class="ruby-operator">?</span> <span class="ruby-identifier">gPond</span>[<span class="ruby-identifier">genre_obj</span>] <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+      }
+      <span class="ruby-comment"># The music is already purchased so we don&#39;t have to suggest it</span>
+      <span class="ruby-identifier">musicList</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">music</span> 
+    }
+  }
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-node">&quot;SELECT COUNT(*), genre_id FROM musicalpasts WHERE user_id = #{user.id} GROUP BY genre_id&quot;</span>)
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">r</span>[<span class="ruby-string">&quot;COUNT(*)&quot;</span>] <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+      <span class="ruby-identifier">genre</span> = <span class="ruby-constant">Genre</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">r</span>[<span class="ruby-string">&quot;genre_id&quot;</span>].<span class="ruby-identifier">to_i</span>)
+      <span class="ruby-identifier">gPond</span>[<span class="ruby-identifier">genre</span>] = (<span class="ruby-identifier">gPond</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">genre</span>)) <span class="ruby-operator">?</span> <span class="ruby-identifier">gPond</span>[<span class="ruby-identifier">genre</span>] <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  }
+
+  <span class="ruby-comment"># if our list is too small, we add a random genre to fill the suggestion list</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">gPond</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Genre</span>.<span class="ruby-identifier">count</span>)
+    <span class="ruby-identifier">randomGenre</span> = <span class="ruby-constant">Genre</span>.<span class="ruby-identifier">all</span>
+    <span class="ruby-identifier">gPond</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">randomGenre</span> = <span class="ruby-identifier">randomGenre</span>.<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">id</span>)
+    }
+    <span class="ruby-identifier">randomGenre</span> = <span class="ruby-identifier">randomGenre</span>.<span class="ruby-identifier">offset</span>(<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">randomGenre</span>.<span class="ruby-identifier">count</span>)).<span class="ruby-identifier">first</span>
+    <span class="ruby-identifier">gPond</span>[<span class="ruby-identifier">randomGenre</span>] = <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">randomGenre</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># We sort by ponderation and transform it as an array [ [key, value], [key, value], ...]</span>
+  <span class="ruby-identifier">gPond</span> = <span class="ruby-identifier">gPond</span>.<span class="ruby-identifier">sort_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>}
+
+  <span class="ruby-comment"># While the list of suggestion is not filled or our list of genre is not finished</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">gPond</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">suggestionList</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">10</span>
+    <span class="ruby-comment"># We get the genre Object and its musics</span>
+    <span class="ruby-identifier">genreObject</span> = <span class="ruby-identifier">gPond</span>[<span class="ruby-identifier">index</span>][<span class="ruby-value">0</span>]
+    <span class="ruby-identifier">listTmp</span> = <span class="ruby-identifier">genreObject</span>.<span class="ruby-identifier">musics</span>.<span class="ruby-identifier">to_a</span>
+
+    <span class="ruby-comment"># We sort it by notes</span>
+    <span class="ruby-identifier">listTmp</span>.<span class="ruby-identifier">sort!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">music1</span>, <span class="ruby-identifier">music2</span><span class="ruby-operator">|</span> <span class="ruby-identifier">music2</span>.<span class="ruby-identifier">getAverageNote</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">music1</span>.<span class="ruby-identifier">getAverageNote</span> }
+    
+    <span class="ruby-comment"># We remove the musics already purchased</span>
+    <span class="ruby-identifier">musicList</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">musicToRemove</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">listTmp</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">musicToRemove</span>)
+    }
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">listTmp</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suggestionList</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">10</span>)
+      <span class="ruby-identifier">suggestionList</span> = <span class="ruby-identifier">suggestionList</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">listTmp</span>
+      <span class="ruby-identifier">musicList</span> = <span class="ruby-identifier">musicList</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">listTmp</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># To fill the suggestionList, we get random element of our new list</span>
+      <span class="ruby-identifier">suggestionList</span> = <span class="ruby-identifier">suggestionList</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">listTmp</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">30</span>].<span class="ruby-identifier">shuffle</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-value">10</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">suggestionList</span>.<span class="ruby-identifier">size</span>)]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">suggestionList</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-c-suggestMusic">anchor</a>
+				<div id="method-c-suggestMusic-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">suggestMusic</span><span 
+							class="method-args">(u, limit)</span>
+										</header>
+
+					<div class="method-description">
+											<p>Algorithm to get musics for suggestv2</p>					
+											<div class="method-source-code" id="suggestMusic-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/music.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">suggestMusic</span>(<span class="ruby-identifier">u</span>, <span class="ruby-identifier">limit</span>)
+  <span class="ruby-identifier">content</span> = []
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">content</span> = <span class="ruby-constant">Music</span>.<span class="ruby-identifier">musicToJson</span> <span class="ruby-constant">Music</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:music_notes</span>).<span class="ruby-identifier">select</span>(<span class="ruby-string">&#39;*, AVG(music_notes.value) AS note&#39;</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;note DESC&quot;</span>).<span class="ruby-identifier">group</span>(<span class="ruby-string">&quot;musics.id&quot;</span>).<span class="ruby-identifier">limit</span>(<span class="ruby-identifier">limit</span> <span class="ruby-operator">*</span> <span class="ruby-value">2</span>).<span class="ruby-identifier">shuffle</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">limit</span>)]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">toRemove</span> = <span class="ruby-constant">Music</span>.<span class="ruby-identifier">musicToJson</span> <span class="ruby-constant">Music</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-identifier">purchased_musics</span><span class="ruby-operator">:</span> [<span class="ruby-value">:purchase</span>]).<span class="ruby-identifier">where</span>([<span class="ruby-string">&quot;purchases.user_id = ?&quot;</span>, <span class="ruby-identifier">u</span>.<span class="ruby-identifier">id</span>])
+    <span class="ruby-identifier">interesting</span> = <span class="ruby-constant">Music</span>.<span class="ruby-identifier">musicToJson</span> <span class="ruby-constant">Music</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:listenings</span>).<span class="ruby-identifier">where</span>([<span class="ruby-string">&quot;listenings.user_id = ?&quot;</span>, <span class="ruby-identifier">u</span>.<span class="ruby-identifier">id</span>])
+    <span class="ruby-identifier">u</span>.<span class="ruby-identifier">friends</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">friend</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">interesting</span> = <span class="ruby-identifier">interesting</span> <span class="ruby-operator">|</span> (<span class="ruby-constant">Music</span>.<span class="ruby-identifier">musicToJson</span> <span class="ruby-constant">Music</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-identifier">purchased_musics</span><span class="ruby-operator">:</span> [<span class="ruby-value">:purchase</span>]).<span class="ruby-identifier">where</span>([<span class="ruby-string">&quot;purchases.user_id = ?&quot;</span>, <span class="ruby-identifier">friend</span>.<span class="ruby-identifier">id</span>]))
+      <span class="ruby-identifier">friend</span>.<span class="ruby-identifier">listenings</span>.<span class="ruby-identifier">limit</span>(<span class="ruby-value">30</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">listening</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">interesting</span> = <span class="ruby-identifier">interesting</span> <span class="ruby-operator">|</span> [<span class="ruby-constant">Music</span>.<span class="ruby-identifier">musicToJson</span>(<span class="ruby-identifier">listening</span>.<span class="ruby-identifier">music</span>)]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">content</span> = <span class="ruby-identifier">interesting</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">toRemove</span>
+    <span class="ruby-identifier">content</span> = <span class="ruby-identifier">content</span>.<span class="ruby-identifier">shuffle</span>
+    <span class="ruby-identifier">content</span> = <span class="ruby-identifier">content</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">limit</span> <span class="ruby-operator">+</span> <span class="ruby-value">10</span>)]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">content</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+									
+						<section class="public-methods instance-methods methods">
+				<header>
+					<h3>Public Instance Methods</h3>
+				</header>
+
+								<a name="method-i-getAverageNote">anchor</a>
+				<div id="method-i-getAverageNote-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">getAverageNote</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Get the average of notes</p>					
+											<div class="method-source-code" id="getAverageNote-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/music.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getAverageNote</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@average</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@average</span> <span class="ruby-operator">:</span> <span class="ruby-constant">MusicNote</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">music_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">average</span>(<span class="ruby-value">:value</span>).<span class="ruby-identifier">to_f</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-setAverageNote">anchor</a>
+				<div id="method-i-setAverageNote-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">setAverageNote</span><span 
+							class="method-args">(value)</span>
+										</header>
+
+					<div class="method-description">
+											<p>Set the average of notes</p>					
+											<div class="method-source-code" id="setAverageNote-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/music.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setAverageNote</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-ivar">@average</span> = <span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+						
+		</section>
+		
+
+		<hr>
+
+		<footer>
+			<div class="container">
+				<span id="rdoc-version">Generated by RDoc 4.2.0</span> using the
+				<a id="generator-version"
+					href="http://deveiate.org/fivefish">Fivefish RDoc 0.1.0</a> generator.
+			</div>
+		</footer>
+	</div> <!-- /container -->
+
+	<!-- Class dropdown menu -->
+	<div id="class-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="./API.html">API</a></li>
+			<li><a href="./API/AlbumsController.html">API::AlbumsController</a></li>
+			<li><a href="./API/AmbiancesController.html">API::AmbiancesController</a></li>
+			<li><a href="./API/ApiController.html">API::ApiController</a></li>
+			<li><a href="./API/ApisecurityController.html">API::ApisecurityController</a></li>
+			<li><a href="./API/BattlesController.html">API::BattlesController</a></li>
+			<li><a href="./API/CartsController.html">API::CartsController</a></li>
+			<li><a href="./API/ConcertsController.html">API::ConcertsController</a></li>
+			<li><a href="./API/FeedbacksController.html">API::FeedbacksController</a></li>
+			<li><a href="./API/GenresController.html">API::GenresController</a></li>
+			<li><a href="./API/InfluencesController.html">API::InfluencesController</a></li>
+			<li><a href="./API/LanguagesController.html">API::LanguagesController</a></li>
+			<li><a href="./API/LikesController.html">API::LikesController</a></li>
+			<li><a href="./API/ListeningsController.html">API::ListeningsController</a></li>
+			<li><a href="./API/MessagesController.html">API::MessagesController</a></li>
+			<li><a href="./API/MusicsController.html">API::MusicsController</a></li>
+			<li><a href="./API/NewsController.html">API::NewsController</a></li>
+			<li><a href="./API/NotificationsController.html">API::NotificationsController</a></li>
+			<li><a href="./API/PacksController.html">API::PacksController</a></li>
+			<li><a href="./API/PlaylistsController.html">API::PlaylistsController</a></li>
+			<li><a href="./API/PurchasesController.html">API::PurchasesController</a></li>
+			<li><a href="./API/SearchsController.html">API::SearchsController</a></li>
+			<li><a href="./API/SuggestionsController.html">API::SuggestionsController</a></li>
+			<li><a href="./API/TweetsController.html">API::TweetsController</a></li>
+			<li><a href="./API/UsersController.html">API::UsersController</a></li>
+			<li><a href="./Artist/MusicsController.html">Artist::MusicsController</a></li>
+			<li><a href="./Address.html">Address</a></li>
+			<li><a href="./AdminUser.html">AdminUser</a></li>
+			<li><a href="./Album.html">Album</a></li>
+			<li><a href="./Albumslike.html">Albumslike</a></li>
+			<li><a href="./Ambiance.html">Ambiance</a></li>
+			<li><a href="./Attachment.html">Attachment</a></li>
+			<li><a href="./Battle.html">Battle</a></li>
+			<li><a href="./Cart.html">Cart</a></li>
+			<li><a href="./Commentary.html">Commentary</a></li>
+			<li><a href="./Concert.html">Concert</a></li>
+			<li><a href="./Concertslike.html">Concertslike</a></li>
+			<li><a href="./Description.html">Description</a></li>
+			<li><a href="./Feedback.html">Feedback</a></li>
+			<li><a href="./Follow.html">Follow</a></li>
+			<li><a href="./Friend.html">Friend</a></li>
+			<li><a href="./Genre.html">Genre</a></li>
+			<li><a href="./Group.html">Group</a></li>
+			<li><a href="./Identity.html">Identity</a></li>
+			<li><a href="./Influence.html">Influence</a></li>
+			<li><a href="./Language.html">Language</a></li>
+			<li><a href="./Listening.html">Listening</a></li>
+			<li><a href="./Meet.html">Meet</a></li>
+			<li><a href="./Meetstring.html">Meetstring</a></li>
+			<li><a href="./Message.html">Message</a></li>
+			<li><a href="./Music.html">Music</a></li>
+			<li><a href="./MusicNote.html">MusicNote</a></li>
+			<li><a href="./Musicalpast.html">Musicalpast</a></li>
+			<li><a href="./News.html">News</a></li>
+			<li><a href="./NewsTitle.html">NewsTitle</a></li>
+			<li><a href="./Newslike.html">Newslike</a></li>
+			<li><a href="./Newstext.html">Newstext</a></li>
+			<li><a href="./Notification.html">Notification</a></li>
+			<li><a href="./Pack.html">Pack</a></li>
+			<li><a href="./PartialAlbum.html">PartialAlbum</a></li>
+			<li><a href="./PaypalPayment.html">PaypalPayment</a></li>
+			<li><a href="./Playlist.html">Playlist</a></li>
+			<li><a href="./PlaylistObject.html">PlaylistObject</a></li>
+			<li><a href="./Proposition.html">Proposition</a></li>
+			<li><a href="./Purchase.html">Purchase</a></li>
+			<li><a href="./PurchasedAlbum.html">PurchasedAlbum</a></li>
+			<li><a href="./PurchasedMusic.html">PurchasedMusic</a></li>
+			<li><a href="./PurchasedPack.html">PurchasedPack</a></li>
+			<li><a href="./Tool.html">Tool</a></li>
+			<li><a href="./Tweet.html">Tweet</a></li>
+			<li><a href="./User.html">User</a></li>
+			<li><a href="./Vote.html">Vote</a></li>
+		</ul>
+	</div>
+
+	<!-- File dropdown menu -->
+	<div id="file-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+		</ul>
+	</div>
+
+</body>
+</html>

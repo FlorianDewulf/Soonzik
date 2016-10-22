@@ -1,0 +1,118 @@
+﻿<Page
+    x:Class="SoonZik.Views.UserEditProfile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#CCCCCC" Height="1080">
+        <Grid Height="80" VerticalAlignment="Top" Width="1920" Background="#B0B0B0">
+            <TextBlock x:Uid="user_profile_tb" x:Name="user_profile_tb" HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="Profil de l'utilisateur" VerticalAlignment="Top" Height="60" Width="Auto" FontSize="53.333" Foreground="Black"/>
+            <Button x:Name="back_btn" Content="Button" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Style="{StaticResource NavigationBackButtonNormalStyle}" RequestedTheme="Light" Click="Button_Click"/>
+        </Grid>
+
+        <Grid x:Name="edit_user_grid" Margin="75,125,75,35" Background="#FF27AAE1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="515"/>
+                <ColumnDefinition Width="540"/>
+                <ColumnDefinition Width="635"/>
+            </Grid.ColumnDefinitions>
+
+
+
+            <TextBlock x:Uid="fname_txt" x:Name="fname_txt" HorizontalAlignment="Left" Margin="65,29,0,0" TextWrapping="Wrap" Text="Prenom" VerticalAlignment="Top" Height="25" Width="370" FontSize="20"/>
+            <TextBox  x:Name="fname_tb" Text="{Binding edit_user.fname, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="370"/>
+
+            <TextBlock x:Uid="lname_txt" x:Name="lname_txt" HorizontalAlignment="Left" Margin="65,134,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Height="25" Width="370" FontSize="20"/>
+            <TextBox  x:Name="lname_tb" Text="{Binding edit_user.lname, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="370"/>
+
+            <TextBlock x:Uid="username_txt" x:Name="username_txt" HorizontalAlignment="Left" Margin="65,249,0,0" TextWrapping="Wrap" Text="Pseudo *" VerticalAlignment="Top" Height="25" Width="370" FontSize="20"/>
+            <TextBox  x:Name="username_tb" Text="{Binding edit_user.username, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="370"/>
+
+            <TextBlock x:Uid="email_txt" x:Name="email_txt" HorizontalAlignment="Left" Margin="65,364,0,0" TextWrapping="Wrap" Text="Email *" VerticalAlignment="Top" Height="25" Width="370" FontSize="20"/>
+            <TextBox  x:Name="email_tb" Text="{Binding edit_user.email, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="370"/>
+
+            <TextBlock x:Uid="password_txt" x:Name="password_txt" HorizontalAlignment="Left" Margin="65,478,0,0" TextWrapping="Wrap" Text="Mot de passe *" VerticalAlignment="Top" Height="25" Width="370" FontSize="20"/>
+            <PasswordBox x:Name="password_tb" Password="{Binding passwd, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,508,0,0" VerticalAlignment="Top" Height="32" Width="370"/>
+
+            <TextBlock x:Uid="password_verify_txt" x:Name="password_verify_txt" HorizontalAlignment="Left" Margin="65,583,0,0" TextWrapping="Wrap" Text="Verification du mot de passe *" VerticalAlignment="Top" Height="25" Width="370" FontSize="20"/>
+            <PasswordBox x:Name="password_verify_tb" Password="{Binding passwd_verif, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,613,0,0" VerticalAlignment="Top" Height="32" Width="370"/>
+
+            <TextBlock x:Uid="language_txt" x:Name="language_txt" HorizontalAlignment="Left" Margin="65,690,0,0" TextWrapping="Wrap" Text="Langue *" VerticalAlignment="Top" Height="25" Width="370" FontSize="20"/>
+            <TextBox x:Name="language_tb" Text="{Binding edit_user.language, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,722,0,0" VerticalAlignment="Top" Width="120" Height="32"/>
+
+
+            <TextBlock x:Uid="birthday_txt" x:Name="birthday_txt" HorizontalAlignment="Left" Margin="65,25,0,0" TextWrapping="Wrap" Text="Date de naissance (YYYY-MM-JJ) *" VerticalAlignment="Top" Height="25" Width="370" FontSize="20" Grid.Column="1"/>
+            <TextBox  x:Name="birthday_tb" Text="{Binding edit_user.birthday, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="370" Grid.Column="1"/>
+
+            <TextBlock x:Uid="phone_txt" x:Name="phone_txt" HorizontalAlignment="Left" Margin="65,137,0,0" TextWrapping="Wrap" Text="Telephone" VerticalAlignment="Top" Height="25" Width="370" FontSize="20" Grid.Column="1"/>
+            <TextBox  x:Name="phone_tb" Text="{Binding edit_user.phoneNumber, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="370" Grid.Column="1"/>
+
+            <TextBlock x:Uid="desc_txt" x:Name="desc_txt" HorizontalAlignment="Left" Margin="65,245,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Height="25" Width="370" FontSize="20" Grid.Column="1"/>
+            <TextBox  x:Name="desc_tb" Text="{Binding edit_user.description, Mode=TwoWay}" HorizontalAlignment="Left" Margin="65,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="370" Grid.Column="1"/>
+
+            <TextBlock x:Uid="address_txt" x:Name="address_txt" HorizontalAlignment="Left" Margin="65,354,0,0" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Height="25" Width="80" FontSize="20" Grid.Column="1"/>
+
+            <TextBlock x:Uid="address_num_txt" x:Name="address_num_txt" HorizontalAlignment="Left" Margin="65,399,0,0" TextWrapping="Wrap" Text="Numero" VerticalAlignment="Top" Height="25" Width="80" FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Uid="address_street_txt" x:Name="address_street_txt" HorizontalAlignment="Left" Margin="155,399,0,0" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Height="25" Width="80" FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Uid="address_zip_txt" x:Name="address_zip_txt" HorizontalAlignment="Left" Margin="65,479,0,0" TextWrapping="Wrap" Text="Code postale" VerticalAlignment="Top" Height="25" Width="120" FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Uid="address_city_txt" x:Name="address_city_txt" HorizontalAlignment="Left" Margin="194,479,0,0" TextWrapping="Wrap" Text="Ville" VerticalAlignment="Top" Height="25" Width="120" FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Uid="address_country_txt" x:Name="address_country_txt" HorizontalAlignment="Left" Margin="330,479,0,0" TextWrapping="Wrap" Text="Pays" VerticalAlignment="Top" Height="25" Width="120" FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Uid="address_complement_txt" x:Name="address_complement_txt" HorizontalAlignment="Left" Margin="65,575,0,0" TextWrapping="Wrap" Text="Complement" VerticalAlignment="Top" Height="25" Width="120" FontSize="20" Grid.Column="1"/>
+
+
+            <TextBox Grid.Column="1" x:Name="address_num_tb" Text="{Binding edit_user.address.numberStreet, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="65,426,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="35"/>
+            <TextBox Grid.Column="1" x:Name="street_tb" Text="{Binding edit_user.address.street, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="155,426,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="295"/>
+            <TextBox Grid.Column="1" x:Name="address_zip_tb" Text="{Binding edit_user.address.zipcode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="65,509,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="35"/>
+            <TextBox Grid.Column="1" x:Name="address_city_tb" Text="{Binding edit_user.address.city, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="194,509,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="35"/>
+            <TextBox Grid.Column="1" x:Name="address_country_tb" Text="{Binding edit_user.address.country, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="330,509,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="35"/>
+            <TextBox Grid.Column="1" x:Name="address_complement_tb" Text="{Binding edit_user.address.complement, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="65,605,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="385" Height="32"/>
+            <Button x:Name="update_btn" x:Uid="update_btn" Command="{Binding do_update_user, Mode=OneWay}" Content="Enregistrer" HorizontalAlignment="Left" Margin="252,832,0,0" VerticalAlignment="Top" Width="521" Background="#FF446CF5" FontSize="20" Height="45" Grid.ColumnSpan="2"/>
+
+
+            <TextBlock x:Uid="friend_list_txt" x:Name="friend_list_txt" Grid.Column="2" HorizontalAlignment="Left" Margin="45,29,0,0" TextWrapping="Wrap" Text="Liste d'amis" VerticalAlignment="Top" Height="25" Width="310" FontSize="20"/>
+            <ListView x:Name="friend_list_lv" ItemsSource="{Binding friends, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" HorizontalAlignment="Left" Height="320" Margin="45,69,0,0" VerticalAlignment="Top" Width="310" Background="White" Foreground="Black"  BorderBrush="#FF27AAE1" SelectedItem="{Binding selected_user, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" x:Name="Username">
+                                <TextBlock Text="{Binding username}" Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Uid="add_friend_btn" x:Name="add_friend_btn" Content="Ajouter un amis" Command="{Binding do_add_friend, Mode=OneWay}" Grid.Column="2" HorizontalAlignment="Left" Margin="417,157,-51,0" VerticalAlignment="Top" Width="269" FontSize="20" Height="45"/>
+            <TextBlock x:Uid="add_friend_txt" x:Name="add_friend_txt" Grid.Column="2" HorizontalAlignment="Left" Margin="423,55,-48,0" TextWrapping="Wrap" Text="Ajouter un nouvel amis avec son pseudo" VerticalAlignment="Top" Width="260" FontSize="20" Height="48"/>
+            <TextBox x:Uid="add_friend_tb" x:Name="add_friend_tb" Grid.Column="2" HorizontalAlignment="Left" Margin="420,120,-48,0" TextWrapping="Wrap" Text="{Binding new_friend, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="35" Width="263" FontSize="15" BorderBrush="#FF27AAE1"/>
+            <Button x:Uid="delete_friend_btn" x:Name="delete_friend_btn" Content="Supprimer un amis" Command="{Binding do_remove_friend, Mode=OneWay}" Grid.Column="2" HorizontalAlignment="Left" Margin="417,343,-51,0" VerticalAlignment="Top" Width="269" Height="45" FontSize="20"/>
+            <TextBlock x:Uid="delete_friend_txt" x:Name="delete_friend_txt" Grid.Column="2" HorizontalAlignment="Left" Margin="423,306,-48,0" TextWrapping="Wrap" Text="Supprimer l'amis selectioné" VerticalAlignment="Top" Height="35" Width="260" FontSize="20"/>
+
+
+            <TextBlock x:Uid="follow_list_txt" x:Name="follow_list_txt" Grid.Column="2" Margin="45,445,0,0" TextWrapping="Wrap" Text="Liste des personnes suivies" VerticalAlignment="Top" Height="23" FontSize="20" HorizontalAlignment="Left" Width="310"/>
+            <ListView x:Name="follow_list_lv" ItemsSource="{Binding follows, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" HorizontalAlignment="Left" Height="320" Margin="45,479,0,0" VerticalAlignment="Top" Width="310" Background="White" Foreground="Black" SelectedItem="{Binding selected_user, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" x:Name="Username">
+                                <TextBlock Text="{Binding username}" Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <TextBlock x:Uid="follow_txt" x:Name="follow_txt" Grid.Column="2" HorizontalAlignment="Left" Margin="423,478,-51,0" TextWrapping="Wrap" Text="Suivre une personne" VerticalAlignment="Top" Height="35" Width="263" FontSize="20"/>
+            <TextBlock x:Uid="unfollow_txt" x:Name="unfollow_txt" Grid.Column="2" Margin="414,672,-42,0" TextWrapping="Wrap" Text="Ne plus suivre la personne selectionnée" VerticalAlignment="Top" Height="53" FontSize="20" HorizontalAlignment="Left" Width="263"/>
+            <Button x:Uid="follow_btn" x:Name="follow_btn" Command="{Binding do_follow, Mode=OneWay}" Content="Suivre cette personne" Grid.Column="2" HorizontalAlignment="Left" Margin="417,562,-51,0" VerticalAlignment="Top" Width="269" Height="45" FontSize="20"/>
+            <Button x:Uid="unfollow_btn" x:Name="unfollow_btn" Command="{Binding do_unfollow, Mode=OneWay}" Content="Ne plus suivre cette personne" Grid.Column="2" HorizontalAlignment="Left" Margin="411,727,-45,0" VerticalAlignment="Top" Height="45" Width="269" FontSize="20"/>
+            <TextBox x:Uid="follow_tb" x:Name="follow_tb" Grid.Column="2" Margin="420,518,-48,0" TextWrapping="Wrap" Text="{Binding new_follow, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="35" FontSize="15" HorizontalAlignment="Left" Width="263"/>
+
+        </Grid>
+
+    </Grid>
+</Page>

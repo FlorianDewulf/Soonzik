@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout8">
+
+        <ImageView
+            android:id="@+id/packpicture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_pack"
+            android:contentDescription="@string/imgmenudescription"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/packname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Le nom du pack"
+            android:layout_marginLeft="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="6dp"
+            android:layout_alignTop="@+id/packpicture"
+            android:layout_toRightOf="@+id/packpicture"
+            android:layout_toEndOf="@+id/packpicture" />
+
+        <TextView
+            android:id="@+id/artistnames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Le nom des artistes"
+            android:layout_below="@+id/packname"
+            android:layout_alignLeft="@+id/packname"
+            android:layout_alignStart="@+id/packname"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/nbalbums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_marginRight="28dp"
+            android:layout_marginEnd="28dp"
+            android:layout_alignTop="@+id/packname"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:src="@drawable/ic_disc"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:id="@+id/imageView2"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignTop="@+id/nbalbums"
+            android:layout_toLeftOf="@+id/nbalbums"
+            android:layout_toStartOf="@+id/nbalbums" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout9">
+
+        <TextView
+            android:id="@+id/textviewdeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For the SoonZik"
+            android:layout_marginTop="72dp"
+            android:layout_below="@+id/textviewcharity"
+            android:layout_alignLeft="@+id/textviewcharity"
+            android:layout_alignStart="@+id/textviewcharity" />
+
+        <TextView
+            android:id="@+id/textviewcharity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For the charity"
+            android:layout_marginTop="78dp"
+            android:layout_below="@+id/textviewartist"
+            android:layout_alignLeft="@+id/textviewartist"
+            android:layout_alignStart="@+id/textviewartist" />
+
+        <TextView
+            android:id="@+id/textviewartist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For the artists"
+            android:layout_marginTop="77dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your choice :"
+            android:id="@+id/textviewvalue"
+            android:layout_alignLeft="@+id/textviewartist"
+            android:layout_alignStart="@+id/textviewartist"
+            android:layout_marginTop="21dp" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/edittextamount"
+            android:layout_toRightOf="@+id/textviewvalue"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:id="@+id/textviewcurrency"
+            android:layout_alignTop="@+id/textviewvalue"
+            android:layout_toRightOf="@+id/edittextamount"
+            android:layout_toEndOf="@+id/edittextamount" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6,5$"
+            android:id="@+id/valueforartist"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_alignTop="@+id/textviewartist"
+            android:layout_alignLeft="@+id/edittextamount"
+            android:layout_alignStart="@+id/edittextamount" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2$"
+            android:id="@+id/valueforcharity"
+            android:layout_above="@+id/textviewdeveloper"
+            android:layout_alignLeft="@+id/valueforartist"
+            android:layout_alignStart="@+id/valueforartist" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,5$"
+            android:id="@+id/valuefordeveloper"
+            android:layout_alignTop="@+id/textviewdeveloper"
+            android:layout_alignLeft="@+id/valueforcharity"
+            android:layout_alignStart="@+id/valueforcharity" />
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbarartist"
+            android:max="100"
+            android:progress="65"
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/textviewartist"
+            android:layout_alignLeft="@+id/textviewartist"
+            android:layout_alignStart="@+id/textviewartist" />
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbarcharity"
+            android:max="100"
+            android:progress="20"
+            android:layout_marginTop="26dp"
+            android:layout_below="@+id/textviewcharity"
+            android:layout_alignLeft="@+id/textviewcharity"
+            android:layout_alignStart="@+id/textviewcharity" />
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbardeveloper"
+            android:max="100"
+            android:progress="15"
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/textviewdeveloper"
+            android:layout_alignLeft="@+id/textviewdeveloper"
+            android:layout_alignStart="@+id/textviewdeveloper" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Purchase"
+        android:id="@+id/purchasebutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp" />
+
+
+</RelativeLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/fragment_pack_purchase.xml -->

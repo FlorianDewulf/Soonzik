@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+userAccess:
+  group: userGroup
+  controllerName: 'User'
+  actionName: index
+
+newsAccess:
+  group: vipGroup
+  controllerName: 'News'
+  actionName: show

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+cadeauUn:
+  user_to: UserOne
+  user_from: UserTwo
+  musics: MusicOne
+
+cadeauDeux:
+  user_to: UserTwo
+  user_from: UserOne
+  albums: AlbumOne

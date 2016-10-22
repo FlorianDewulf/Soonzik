@@ -1,0 +1,37 @@
+﻿<UserControl
+    x:Class="SoonZik.Controls.NewsSharePopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="300"
+    Height="300">
+
+    <Border BorderBrush="White" BorderThickness="1,1,1,1">
+        <Grid Background="#181818">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Uid="Share" Text="" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       FontSize="30" Foreground="White" FontFamily="{StaticResource Roboto}" />
+
+            <TextBox Grid.Row="1" Width="200" x:Name="TextBoxShare" Height="160"
+                     Background="White" Opacity="0.2" BorderThickness="0,0,0,0" Foreground="White"
+                     HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Image Grid.Row="0" Source="../Resources/Icones/cross_icon.png" HorizontalAlignment="Right" Width="30" 
+                   Tapped="UIElement_OnTapped"/>
+
+            <Image x:Name="FacebookShare" Grid.Row="2" VerticalAlignment="Center"
+                   Source="../Resources/Icones/facebook.png"
+                   Width="50" HorizontalAlignment="Right" Margin="0,0,10,0" Tapped="FacebookShare_OnTapped" />
+            <Image x:Name="TwitterShare" Grid.Row="2" VerticalAlignment="Center"
+                   Source="../Resources/Icones/twitter.png"
+                   Width="50" HorizontalAlignment="Right" Margin="0,0,70,0" Tapped="TwitterShare_OnTapped" />
+        </Grid>
+    </Border>
+</UserControl>

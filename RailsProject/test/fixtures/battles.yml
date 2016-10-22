@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+BattleOne:
+  date_begin: 2014-09-07 23:17:49
+  date_end: 2014-19-07 23:17:49
+  artist_one: UserOne
+  artist_two: UserTwo
+
+BattleTwo:
+  date_begin: 2014-09-07 23:17:49
+  date_end: 2014-19-07 23:17:49
+  artist_one: UserTwo
+  artist_two: UserOne

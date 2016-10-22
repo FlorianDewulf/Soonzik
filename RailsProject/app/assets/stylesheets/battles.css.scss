@@ -1,0 +1,40 @@
+// Place all the styles related to the Battles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.battle {
+	padding-top: 20px;
+
+	.battleLine {
+		text-align: center;
+
+		p {
+			font-weight: bold;
+		}
+
+		img {
+			width: 150px;
+			height: 150px;
+		}
+
+		battle {
+			line-height: 175px;
+			height: 175px;
+			display: block;
+		}
+
+		.peopleVote img {
+			height: auto;
+			width: auto;
+		}
+	}
+
+	hr {
+		border: double #8E8E7E;
+		border-width: 3px 0 0;
+	}
+
+	span.label.alert, span.label.primary {
+		cursor: pointer;
+	}
+}

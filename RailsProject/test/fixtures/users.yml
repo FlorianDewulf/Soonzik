@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+UserOne:
+  email: florian.dewulf@gmail.com
+  encrypted_password: 7b95dafa9ecb37dafa76
+  salt: 34ca36a3b2f03ce32a311bef0ebb2398d391efbd
+  fname: first name
+  lname: last name
+  username: testusername1
+  birthday: 1993-11-20
+  image: default.png
+  description: La description de l'utilisateur numero 1
+  phoneNumber: 03 20 60 40 19
+  address: addressOne
+  facebook: user1.facebook
+  twitter: user1.twitter
+  googlePlus: user1.plus
+  idAPI: 4f009289d197fd93e8977e96c945e5324c002875
+  secureKey: 32898042138e9a4686b40b194d8862dd205b415ba2a4247d2f790ae2acf4e557
+  newsletter: true
+  language: FR
+  groups: userGroup
+  #friends: UserTwo
+
+UserTwo:
+  email: user_two@gmail.com
+  encrypted_password: 0a2ede56f6523e16b6a2
+  salt: d8831de896cb4bd5ad74720437c8ccdfc9f0bd42
+  fname: frits nmae
+  lname: lsat nmae
+  username: testusername2
+  birthday: 1999-12-31
+  image: default.png
+  description: description du deuxieme utilisateur
+  phoneNumber: +33 6 30 49 32 11
+  address_id: 2
+  facebook: facedebouc
+  twitter: twittos
+  googlePlus: 2039430539540
+  idAPI: b266741d88c8d2155dc1315c8e9b7fb7ff29830e
+  secureKey: 27cc5eb35022228b6a476f7b3f8c59f38fd44e592fe93cc4ccf6b28035fd52e0
+  newsletter: false
+  language: EN
+  groups: vipGroup
+  #friends_with: UserOne

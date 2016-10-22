@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:id="@+id/albumpicture"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="@string/imgmenudescription"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/playlistname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignTop="@+id/albumpicture"
+            android:layout_toRightOf="@+id/albumpicture"
+            android:layout_toEndOf="@+id/albumpicture" />
+
+        <TextView
+            android:id="@+id/nbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignRight="@+id/playlistname"
+            android:layout_alignEnd="@+id/playlistname" />
+
+
+        <ImageView
+            android:src="@drawable/ic_explorer"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:id="@+id/imageView3"
+            android:layout_alignBottom="@+id/albumpicture"
+            android:layout_alignLeft="@+id/playlistname"
+            android:layout_alignStart="@+id/playlistname" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/musicslistview" />
+
+
+</TableLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/fragment_playlist.xml -->

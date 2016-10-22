@@ -1,0 +1,39 @@
+.title
+	%h2 Music Page
+	%span.byline You can find all your musics here
+.musicContainer{ "ng-controller" => "MusicCtrl", "ng-init" => "musicInit()" }
+	%loading{ "ng-if" => "loading == true" }
+	.musicCollection{ "ng-if" => "loading == false" }
+		.newMusic
+			.button{ "ng-click" => "openMusic()" }
+				Add new music
+		.newAlbum
+			.button{ "ng-click" => "openAlbum()" }
+				Create an album
+		%hr
+		%h3
+			Your musics
+		%h6.subtitle
+			You can sort it by drag and drop
+		%ul.clearfix.no-bullet.inline-list
+			%li.small-12.medium-6.large-4.columns.left{ "ng-repeat" => "album in albums" }
+				%h4
+					%i.fi-wrench.editTool{ "ng-click" => "editAlbum(album)" }
+					{{ album.title }}
+				%div
+					.small-9.small-centered.columns
+						%img{ "ng-src" => '{{ "/assets/albums/" + album.image }}' }
+				%ul.musicList{ "dnd-list" => "album.musics", "dnd-drop" => "musicDrop(album.musics, item, album.id)" }
+					%li{ "ng-repeat" => "music in album.musics", "dnd-draggable" => "music", "dnd-effect-allowed" => "move", "dnd-moved" => "musicMoved(album.musics, $index)" }
+						%p.dragBlock
+							%i.fi-thumbnails
+							%span {{ music.title }}
+							%i.fi-wrench.right{ "ng-click" => "editMusic(music)" }
+		%div
+			%h4 Without album associated
+			%ul.musicList.no-bullet.small-12.medium-6.large-4{ "dnd-list" => "noLinkMusics", "dnd-drop" => "musicDrop(noLinkMusics, item, null)" }
+				%li{ "ng-repeat" => "noLinkMusic in noLinkMusics", "dnd-draggable" => "noLinkMusic", "dnd-moved" => "musicMoved(noLinkMusics, $index)", "dnd-effect-allowed" => "move" }
+					%p.dragBlock
+						%i.fi-thumbnails
+						%span {{ noLinkMusic.title }}
+						%i.fi-wrench.right{ "ng-click" => "editMusic(noLinkMusic)" }

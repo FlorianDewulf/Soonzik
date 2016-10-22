@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+attachmentOne:
+  url: url_one
+  file_size: 1024
+  content_type: pdf
+
+attachmentTwo:
+  url: url_two
+  file_size: 2048
+  content_type: msword

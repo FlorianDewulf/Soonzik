@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+NoteAlbumOne:
+  user: UserOne
+  album: AlbumOne
+  value: 5
+
+NoteAlbumTwo:
+  user: UserTwo
+  album: AlbumOne
+  value: 4

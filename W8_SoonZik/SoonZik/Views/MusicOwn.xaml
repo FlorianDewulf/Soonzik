@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="SoonZik.Views.MusicOwn"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:RatingControl="using:JISoft.RatingControl"
+    mc:Ignorable="d">
+
+    <Grid Background="#CCCCCC" Height="1080">
+        <Grid Height="80" VerticalAlignment="Top" Width="1920" Background="#B0B0B0">
+            <TextBlock x:Name="music_txt" x:Uid="music_txt" HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="Music" VerticalAlignment="Top" Height="55" Width="Auto" FontSize="53.333" Foreground="Black"/>
+            <Button x:Name="back_btn" Content="Button" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Style="{StaticResource NavigationBackButtonNormalStyle}" RequestedTheme="Light" Click="Button_Click"/>
+        </Grid>
+
+        <Grid Height="593" Margin="400,140,400,0" VerticalAlignment="Top" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="265"/>
+                <ColumnDefinition Width="450"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="291"/>
+            </Grid.RowDefinitions>
+            <Image  Grid.Row="1" Source="https://pixabay.com/static/uploads/photo/2014/04/03/11/58/record-312730_640.png" Stretch="Fill" Width="174" Height="174" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,117,46,0"/>
+            <Rectangle Fill="#FF00AFDC" HorizontalAlignment="Left" Height="75" StrokeEndLineCap="Square" Stroke="#FF00AFDC" VerticalAlignment="Top" Width="1120" Grid.ColumnSpan="2" Margin="0,0,-405,0"/>
+
+            <TextBlock Name="music_title" Text="{Binding music.title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="20,10,0,19" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="36" Height="46" Grid.ColumnSpan="2"/>
+            <TextBlock Name="music_artist" Text="{Binding music.user.username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="185,98,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Height="40" Width="160" FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="music_id" Visibility="Collapsed" Text="ID" Grid.Column="1" HorizontalAlignment="Left" Margin="765,10,-405,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="46" FontSize="25"/>
+            <TextBlock x:Name="music_duration" Text="{Binding music.duration, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="185,135,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Height="40" Width="160" FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="music_note" Text="{Binding music.getAverageNote, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="185,172,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Height="40" Width="160" FontSize="20" Grid.Column="1"/>
+
+            <TextBlock x:Name="artist_txt" x:Uid="artist_txt" Text="Artiste:" HorizontalAlignment="Left" Margin="90,99,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Height="40" Width="70" FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="duration_txt" x:Uid="duration_txt" Text="Duration:" HorizontalAlignment="Left" Margin="90,136,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Height="40" Width="90" FontSize="20" Grid.Column="1"/>
+            <TextBlock x:Name="note_txt" x:Uid="note_txt" Text="Note:" HorizontalAlignment="Left" Margin="90,172,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Height="40" Width="70" FontSize="20" Grid.Column="1"/>
+
+
+            <Button x:Name="dl_btn" Command="{Binding do_dl_music}" x:Uid="dl_btn" Content="Télécharger" Margin="632,11,-383,12" Grid.Column="1" Height="52" Width="201" Background="#FF008700" FontSize="20"/>
+
+            <Button Command="{Binding do_note_one, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Margin="91,262,0,-21" Grid.Row="1" VerticalAlignment="Top" Height="50" Width="50">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="{Binding star_one, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Button.Background>
+            </Button>
+            <Button Command="{Binding do_note_two, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Margin="140,262,0,-21" Grid.Row="1" VerticalAlignment="Top" Height="50" Width="50">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="{Binding star_two, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Button.Background>
+            </Button>
+            <Button Command="{Binding do_note_three, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Margin="189,262,0,-21" Grid.Row="1" VerticalAlignment="Top" Height="50" Width="50">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="{Binding star_three, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Button.Background>
+            </Button>
+            <Button Command="{Binding do_note_four, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Margin="238,262,0,-21" Grid.Row="1" VerticalAlignment="Top" Height="50" Width="50">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="{Binding star_four, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Button.Background>
+            </Button>
+            <Button Command="{Binding do_note_five, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Margin="282,262,0,-21" Grid.Row="1" VerticalAlignment="Top" Height="50" Width="50">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="{Binding star_five, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="your_note_txt" x:Uid="your_note_txt" Text="Votre note" HorizontalAlignment="Left" Margin="90,235,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Height="40" Width="102" FontSize="20" Grid.Column="1"/>
+
+            <!--<Grid Background="White" Grid.Column="1" Margin="60,255,125,-39" Grid.Row="1">
+                <RatingControl:Rating HorizontalAlignment="Center" VerticalAlignment="Center"   
+                AllowSelectingZero="True" ReadOnly="False"
+                RatingItemCount="5" Value="{Binding music.getAverageNote, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
+                    <RatingControl:Rating.FilledItemStyle>
+                        <Style TargetType="RatingControl:RatingItem">
+                            <Setter Property="Background" Value="Goldenrod"/>
+                        </Style>
+                    </RatingControl:Rating.FilledItemStyle>
+                    <RatingControl:Rating.UnfilledItemStyle>
+                        <Style TargetType="RatingControl:RatingItem">
+                            <Setter Property="Background" Value="Black"/>
+                        </Style>
+                    </RatingControl:Rating.UnfilledItemStyle>
+                </RatingControl:Rating>
+            </Grid>-->
+            <MediaElement x:Name="media" Height="60" Width="851" AreTransportControlsEnabled="True" Grid.Column="1" AutoPlay="False" Margin="0,458,-401,-227" Grid.Row="1" RequestedTheme="Light" HorizontalAlignment="Left"/>
+
+        </Grid>
+
+        <ListView Name="comment_lv" ItemsSource="{Binding commentlist, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="185" Margin="400,775,0,0" VerticalAlignment="Top" Width="1120" Background="White" IsItemClickEnabled="True" IsSwipeEnabled="False" SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontSize="24" Foreground="Black">
+                                <Run x:Uid="author_txt" Text="Auteur: "></Run>
+                                <Run Text="{Binding user.username}" FontSize="16" Foreground="Black"/>
+                                <LineBreak/>
+                                <Run x:Uid="comment_txt" Text="Commentaire: "></Run>
+                                <Run Text="{Binding content}" FontSize="16" Foreground="Black"/>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <TextBox x:Name="send_com_tb" Text="{Binding comment_content, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="405,1000,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="990"/>
+        <Button x:Name="send_com_btn" Command="{Binding do_send_comment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Uid="send_com_btn" Content="Envoyer" HorizontalAlignment="Left" Margin="1413,997,0,0" VerticalAlignment="Top" Width="110" Background="#FF4C9EFF"/>
+
+
+    </Grid>
+</Page>

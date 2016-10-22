@@ -1,0 +1,259 @@
+﻿<UserControl
+    x:Class="SoonZik.Controls.GlobalMenuControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:media="using:Microsoft.Xaml.Interactions.Media"
+    xmlns:controls="using:SoonZik.Controls"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <Style x:Key="MenuStyle" TargetType="Grid">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../Resources/background.jpg" Opacity="0.5" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Storyboard x:Name="MenuStoryBoard">
+            <DoubleAnimation Duration="0:0:0.25" To="200"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="MenuGrid" d:IsOptimized="True" />
+            <DoubleAnimation Duration="0:0:0.25" To="200"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="GlobalGrid" d:IsOptimized="True" />
+        </Storyboard>
+        <Storyboard x:Name="MenuStoryBoardBack">
+            <DoubleAnimation Duration="0:0:0.25" To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="MenuGrid" d:IsOptimized="True" />
+            <DoubleAnimation Duration="0:0:0.25" To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="GlobalGrid" d:IsOptimized="True" />
+        </Storyboard>
+        <Storyboard x:Name="SearchStoryBoard">
+            <DoubleAnimation Duration="0:0:0.25" To="-300"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="SearchGrid" d:IsOptimized="True" />
+            <DoubleAnimation Duration="0:0:0.25" To="-300"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="GlobalGrid" d:IsOptimized="True" />
+        </Storyboard>
+        <Storyboard x:Name="SearchStoryBoardBack">
+            <DoubleAnimation Duration="0:0:0.25" To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="SearchGrid" d:IsOptimized="True" />
+            <DoubleAnimation Duration="0:0:0.25" To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="GlobalGrid" d:IsOptimized="True" />
+        </Storyboard>
+        <Storyboard x:Name="MenuAloneClose" Completed="MenuAloneClose_OnCompleted">
+            <DoubleAnimation Duration="0:0:0.25" To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="MenuGrid" d:IsOptimized="True" />
+        </Storyboard>
+        <Storyboard x:Name="SearchAloneBack" Completed="SearchAloneBack_OnCompleted">
+            <DoubleAnimation Duration="0:0:0.25" To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                             Storyboard.TargetName="SearchGrid" d:IsOptimized="True" />
+        </Storyboard>
+
+        <DataTemplate x:Key="UserItemTemplate" x:Name="UserDataTemplate">
+            <StackPanel Margin="10,0,0,30" x:Name="UsersStackPanel" Tapped="UsersStackPanel_OnTapped">
+                <TextBlock Text="{Binding Path=username}" FontSize="20" Foreground="White" FontStyle="Normal" />
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ArtistItemTemplate" x:Name="ArtisteDataTemplate">
+            <StackPanel Margin="10,0,0,30" x:Name="ArtistStackPanel" Tapped="ArtistStackPanel_OnTapped">
+                <TextBlock Text="{Binding Path=username}" FontSize="20" Foreground="White" FontStyle="Normal" />
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MusicItemTemplate" x:Name="MusicDataTemplate">
+            <StackPanel Margin="10,0,0,30" x:Name="MusicStackPanel" Tapped="MusicStackPanel_OnTapped">
+                <TextBlock Text="{Binding Path=title}" FontSize="20" Foreground="White" FontStyle="Normal" />
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="AlbumItemTemplate" x:Name="AlbumDataTemplate">
+            <StackPanel Margin="10,0,0,30" x:Name="AlbumStackPanel" Tapped="AlbumStackPanel_OnTapped">
+                <TextBlock Text="{Binding Path=title}" FontSize="20" Foreground="White" FontStyle="Normal" />
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="PackItemTemplate" x:Name="PackDataTemplate">
+            <StackPanel Margin="10,0,0,30" x:Name="PackStackPanel" Tapped="PackStackPanel_OnTapped">
+                <TextBlock Text="{Binding Path=title}" FontSize="20" FontStyle="Normal" Foreground="White" />
+            </StackPanel>
+        </DataTemplate>
+        <Storyboard x:Name="PlayerStoryBoard">
+            <DoubleAnimation Duration="0:0:0.5" To="-619"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                             Storyboard.TargetName="PlayerGrid" d:IsOptimized="True" />
+        </Storyboard>
+        <Storyboard x:Name="PlayerStoryBoardBack">
+            <DoubleAnimation Duration="0:0:0.5" To="0"
+                             Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                             Storyboard.TargetName="PlayerGrid" d:IsOptimized="True" />
+        </Storyboard>
+
+    </UserControl.Resources>
+
+    <Grid x:Name="GeneralGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="HeaderGrid" Grid.Row="0" Background="Transparent" Height="50">
+            <ToggleButton x:Name="ToggleButtonMenu" Content="ToggleButton" HorizontalAlignment="Left" Height="30"
+                          Margin="10,8,0,12" VerticalAlignment="Center" Checked="ToggleButtonMenu_OnChecked"
+                          Unchecked="ToggleButtonMenu_OnUnchecked"
+                          Width="30" MinHeight="20" MinWidth="30" IsChecked="False" MaxHeight="30" MaxWidth="30">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Checked">
+                        <media:ControlStoryboardAction Storyboard="{StaticResource MenuStoryBoard}" />
+                        <media:ControlStoryboardAction Storyboard="{StaticResource SearchAloneBack}" />
+                    </core:EventTriggerBehavior>
+                    <core:EventTriggerBehavior EventName="Unchecked">
+                        <media:ControlStoryboardAction Storyboard="{StaticResource MenuStoryBoardBack}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </ToggleButton>
+            <ToggleButton x:Name="PlayerToggleButton" HorizontalAlignment="Center" Width="200"
+                          BorderThickness="0,0,0,0">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Checked">
+                        <media:ControlStoryboardAction Storyboard="{StaticResource PlayerStoryBoard}" />
+                    </core:EventTriggerBehavior>
+                    <core:EventTriggerBehavior EventName="Unchecked">
+                        <media:ControlStoryboardAction Storyboard="{StaticResource PlayerStoryBoardBack}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </ToggleButton>
+            <ToggleButton x:Name="ToggleButtonSearch" Content="ToggleButton" HorizontalAlignment="Right" Height="30"
+                          Margin="0,8,10,0" Style="{StaticResource SearchButtonStyle}" VerticalAlignment="Top"
+                          Width="30" MinWidth="30" MinHeight="30" MaxWidth="30" MaxHeight="30" IsChecked="False">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Checked">
+                        <media:ControlStoryboardAction Storyboard="{StaticResource SearchStoryBoard}" />
+                        <media:ControlStoryboardAction Storyboard="{StaticResource MenuAloneClose}" />
+                    </core:EventTriggerBehavior>
+                    <core:EventTriggerBehavior EventName="Unchecked">
+                        <media:ControlStoryboardAction Storyboard="{StaticResource SearchStoryBoardBack}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+            </ToggleButton>
+        </Grid>
+        <Grid Row="1" x:Name="MenuGrid" HorizontalAlignment="Left" Margin="-200,0,0,0" Width="200"
+              Background="Transparent" Opacity="0.8"
+              RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <CompositeTransform />
+            </Grid.RenderTransform>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="ProfilButton" Grid.Row="0" Style="{StaticResource ProfilButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+            <Button x:Name="NewsButton" Grid.Row="1" Style="{StaticResource NewsButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+            <Button x:Name="ExplorerButton" Grid.Row="2" Style="{StaticResource ExplorerButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+            <Button x:Name="PacksButton" Grid.Row="3" Style="{StaticResource PackButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+            <Button x:Name="MondeMusicalButton" Grid.Row="4" Style="{StaticResource MondeMusicalButtonStyle}"
+                    MinHeight="50" MinWidth="200" />
+            <Button x:Name="BattleButton" Grid.Row="5" Style="{StaticResource BattleButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+            <Button x:Name="PlaylistButton" Grid.Row="6" Style="{StaticResource PlaylistButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+            <Button x:Name="AmisButton" Grid.Row="7" Style="{StaticResource FriendButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+            <Button x:Name="AchatButton" Grid.Row="8" Style="{StaticResource AchatButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+            <Button x:Name="APropos" Grid.Row="9" Style="{StaticResource AProposButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+            <Button x:Name="ConnexionButton" Grid.Row="10" Style="{StaticResource DecoButtonStyle}" MinHeight="50"
+                    MinWidth="200" />
+        </Grid>
+        <Grid x:Name="SearchGrid" Grid.Row="1" Width="300" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right"
+              Background="Transparent"
+              Margin="0,0,-300,0" Opacity="0.8">
+            <Grid.RenderTransform>
+                <CompositeTransform />
+            </Grid.RenderTransform>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Row="0">
+                <TextBox x:Name="SearchTextBlock" Foreground="#424242" Background="Transparent"
+                         BorderThickness="0,0,0,1" BorderBrush="White" VerticalAlignment="Center"
+                         x:Uid="Search" PlaceholderText="" FontSize="25" VerticalContentAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         TextChanged="SearchTextBlock_OnTextChanged" />
+            </Grid>
+            <ScrollViewer Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <ListView Grid.Row="0" x:Name="ResultArtisteListView" Header="Artistes" FontSize="20"
+                              Foreground="#40a8e2" FontStyle="Italic"
+                              ItemTemplate="{StaticResource ArtistItemTemplate}" Margin="10,0,0,10"
+                              SelectedItem="{Binding SelectedArtist, Mode=TwoWay}" />
+                    <ListView Grid.Row="1" x:Name="ResultUserListView" Header="Utilisateurs" FontSize="20"
+                              Foreground="#40a8e2" FontStyle="Italic"
+                              ItemTemplate="{StaticResource UserItemTemplate}" Margin="10,0,0,10"
+                              SelectedItem="{Binding SelectedUser, Mode=TwoWay}" />
+                    <ListView Grid.Row="2" x:Name="ResultMusicListView" Header="Musiques" FontSize="20"
+                              Foreground="#40a8e2" FontStyle="Italic"
+                              ItemTemplate="{StaticResource MusicItemTemplate}" Margin="10,0,0,10"
+                              SelectedItem="{Binding SelectedMusic, Mode=TwoWay}" />
+                    <ListView Grid.Row="3" x:Name="ResultAlbumListView" Header="Albums" FontSize="20"
+                              Foreground="#40a8e2" FontStyle="Italic"
+                              ItemTemplate="{StaticResource AlbumItemTemplate}" Margin="10,0,0,10"
+                              SelectedItem="{Binding SelectedAlbum, Mode=TwoWay}" />
+                    <ListView Grid.Row="4" x:Name="ResultPackListView" Margin="10,0,0,0" Header="Packs" FontSize="20"
+                              Foreground="#40a8e2" FontStyle="Italic"
+                              ItemTemplate="{StaticResource PackItemTemplate}"
+                              SelectedItem="{Binding SelectedPack, Mode=TwoWay}" />
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid Grid.Row="1" x:Name="GlobalGrid" RenderTransformOrigin="0.5,0.5" Margin="0, 10, 0, 0"
+              Tapped="GlobalGrid_OnTapped">
+            <Grid.RenderTransform>
+                <CompositeTransform />
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid x:Name="PlayerGrid" Grid.Row="1" Margin="0,617,0,-617.333" Background="#424242"
+              RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <CompositeTransform />
+            </Grid.RenderTransform>
+        </Grid>
+    </Grid>
+</UserControl>

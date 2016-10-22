@@ -1,0 +1,29 @@
+﻿<UserControl
+    x:Class="SoonZik.Controls.Genre"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="110"
+    d:DesignWidth="100">
+
+    <Grid Background="#d3d7da" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid Background="White" Grid.Row="0">
+            <Image Source="../Resources/Icones/disc.png" Height="70" HorizontalAlignment="Center" />
+            <TextBlock Text="News Title" FontSize="15" Foreground="#424242" FontFamily="Calibri" Height="25" Width="90"
+                       Margin="111,15,49,60" />
+            <TextBlock Text="Le nouvel album de :" FontSize="10" Foreground="#424242" FontFamily="Calibri" Width="100"
+                       Height="15" Margin="111,59,39,26" />
+            <TextBlock Text="Artist Name" FontSize="10" Foreground="#424242" FontFamily="Calibri" Width="100"
+                       Height="15" Margin="111,74,39,11" />
+        </Grid>
+        <TextBlock Grid.Row="2" Text="Electronic" VerticalAlignment="Center" Foreground="#424242" FontSize="10"
+                   FontFamily="Calibri" HorizontalAlignment="Center" />
+    </Grid>
+</UserControl>

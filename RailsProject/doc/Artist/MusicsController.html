@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<!--
+
+  Fivefish RDoc Generator
+  $Id$
+
+  Authors:
+  - Michael Granger <ged@FaerieMUD.org>
+
+ -->
+<html lang="en">
+<head>
+	<title>RDoc Documentation</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<link href=".." rel="prefix" />
+
+	<link href="../css/fivefish.min.css" rel="stylesheet" />
+
+	<script src="../js/jquery-1.7.1.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/searchindex.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/fivefish.min.js" type="text/javascript"
+		defer="defer" charset="utf-8" onload="initFivefish()"></script>
+</head>
+
+<body class="class-page">
+
+	<nav class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand"
+					href="../index.html">RDoc Documentation</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#class-dropdown">
+								Classes
+								<b class="caret"></b>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#file-dropdown">
+								Files
+								<b class="caret"></b>
+							</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+				<span class="pull-right">
+					<form class="navbar-search">
+						<input type="hidden" id="navbar-search-target" value="" />
+						<input type="text" class="search-query" value=""
+							placeholder="Method, Class, or Filename" />
+					</form>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		
+		<header class="hero-unit">
+			<hgroup>
+								  				<h2 class="namespace">Artist::</h2>
+				  												<h1 class="class"
+					rel="popover"
+					data-original-title="In files"
+					data-content="app/controllers/Artist/musics_controller.rb"
+					>MusicsController</h1>
+				</p>
+							</hgroup>
+			<span class="label">class</span>
+		</header>
+
+		<section class="module-relations">
+			<dl>
+								<dt>Superclass</dt>
+								<dd class="superclass">ArtistsecurityController</dd>
+								
+								<dt>Included Modules</dt>
+												<dd class="include">::Multimedia</dd>
+												
+							</dl>
+		</section>
+
+		<section class="description">
+			
+<p>Controller which manage main page of the artist panel</p>
+		</section>
+
+				<section id="5Buntitled-5D" class="documentation-section">
+			
+		    
+			
+			
+			<!-- Methods -->
+						
+			
+			
+			
+			
+			
+									
+						<section class="public-methods instance-methods methods">
+				<header>
+					<h3>Public Instance Methods</h3>
+				</header>
+
+								<a name="method-i-createAlbum">anchor</a>
+				<div id="method-i-createAlbum-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">createAlbum</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Create an album for the software. There is a default image, it can be
+modified by the website</p>
+
+<p>Route : /musics/createAlbumSoftware</p>
+
+<h4 id="method-i-createAlbum-label-Options">Options<span><a href="#method-i-createAlbum-label-Options">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>album_name</code> - The name of the album</p>
+</li><li>
+<p><code>price</code> - The price of the album</p>
+</li><li>
+<p><code>yearProd</code> - The year of the production</p>
+</li></ul>					
+											<div class="method-source-code" id="createAlbum-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 502</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">createAlbum</span>
+            <span class="ruby-keyword">begin</span>
+                    <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@u</span>.<span class="ruby-identifier">isArtist?</span>))
+           <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+           <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+           <span class="ruby-identifier">sendJson</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+   <span class="ruby-keyword">end</span>
+
+   <span class="ruby-keyword">if</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:album_name</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:price</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:yearProd</span>))
+           <span class="ruby-identifier">a</span> = <span class="ruby-constant">Album</span>.<span class="ruby-identifier">new</span>
+           <span class="ruby-identifier">a</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>
+           <span class="ruby-identifier">a</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:album_name</span>]
+           <span class="ruby-identifier">a</span>.<span class="ruby-identifier">image</span> = <span class="ruby-string">&quot;default.jpg&quot;</span>
+           <span class="ruby-identifier">a</span>.<span class="ruby-identifier">price</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:price</span>]
+           <span class="ruby-identifier">a</span>.<span class="ruby-identifier">file</span> = <span class="ruby-string">&quot;default.jpg&quot;</span>
+           <span class="ruby-identifier">a</span>.<span class="ruby-identifier">yearProd</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:yearProd</span>]
+           <span class="ruby-identifier">a</span>.<span class="ruby-identifier">save!</span>
+    <span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:content</span>] = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:only</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Album</span>.<span class="ruby-identifier">miniKey</span>)
+  <span class="ruby-keyword">else</span>
+           <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+           <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:bad_request</span>
+   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span>
+   <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+    <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:service_unavailable</span>
+<span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">sendJson</span>
+    <span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-getPropose">anchor</a>
+				<div id="method-i-getPropose-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">getPropose</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>To get the info about the proposed albums</p>					
+											<div class="method-source-code" id="getPropose-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 381</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">getPropose</span>
+<span class="ruby-keyword">if</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@u</span>.<span class="ruby-identifier">isArtist?</span>))
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+        <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+        <span class="ruby-identifier">sendJson</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">albums</span> = <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">albums</span>
+        <span class="ruby-identifier">albumInPacks</span> = []
+        <span class="ruby-identifier">albums</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">album</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">album</span>.<span class="ruby-identifier">packs</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                        <span class="ruby-identifier">albumInPacks</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-identifier">album</span><span class="ruby-operator">:</span> <span class="ruby-identifier">album</span>, <span class="ruby-identifier">pack</span><span class="ruby-operator">:</span> <span class="ruby-identifier">album</span>.<span class="ruby-identifier">packs</span> }
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">proposed</span> = <span class="ruby-constant">Proposition</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">artist_id</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">where</span>(<span class="ruby-identifier">album_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">album</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">all</span>
+                <span class="ruby-identifier">album</span>.<span class="ruby-identifier">setProposed</span> <span class="ruby-identifier">proposed</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">albumInPacks</span><span class="ruby-operator">:</span> <span class="ruby-identifier">albumInPacks</span>, <span class="ruby-identifier">albums</span><span class="ruby-operator">:</span> <span class="ruby-identifier">albums</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:methods</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:getProposed</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">musics</span><span class="ruby-operator">:</span> {}, <span class="ruby-identifier">genres</span><span class="ruby-operator">:</span> {}, <span class="ruby-identifier">descriptions</span><span class="ruby-operator">:</span> {} } ) }
+        <span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-index">anchor</a>
+				<div id="method-i-index-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">index</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>The index page for the music management</p>					
+											<div class="method-source-code" id="index-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-parseDescriptions">anchor</a>
+				<div id="method-i-parseDescriptions-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">parseDescriptions</span><span 
+							class="method-args">(descriptions, error)</span>
+										</header>
+
+					<div class="method-description">
+											<p>To parse the descriptions and know if one at least is english</p>					
+											<div class="method-source-code" id="parseDescriptions-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 361</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parseDescriptions</span>(<span class="ruby-identifier">descriptions</span>, <span class="ruby-identifier">error</span>)
+        <span class="ruby-identifier">tmpDesc</span> = []
+        <span class="ruby-identifier">alreadyIn</span> = []
+
+        <span class="ruby-identifier">descriptions</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">alreadyIn</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">x</span>[<span class="ruby-string">&quot;language&quot;</span>])
+                        <span class="ruby-identifier">obj</span> = <span class="ruby-constant">Language</span>.<span class="ruby-identifier">find_by_abbreviation</span>(<span class="ruby-identifier">x</span>[<span class="ruby-string">&quot;language&quot;</span>])
+                        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">obj</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+                                <span class="ruby-identifier">tmpDesc</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span>
+                                <span class="ruby-identifier">alreadyIn</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span>[<span class="ruby-string">&quot;language&quot;</span>]
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        }
+        <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">alreadyIn</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&#39;EN&#39;</span>)
+                <span class="ruby-identifier">error</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">tmpDesc</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-propose">anchor</a>
+				<div id="method-i-propose-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">propose</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>The page to propose a music</p>					
+											<div class="method-source-code" id="propose-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">propose</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-proposeAlbums">anchor</a>
+				<div id="method-i-proposeAlbums-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">proposeAlbums</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Delete or create a proposition</p>					
+											<div class="method-source-code" id="proposeAlbums-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 402</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">proposeAlbums</span>
+<span class="ruby-keyword">if</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@u</span>.<span class="ruby-identifier">isArtist?</span>))
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+        <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+        <span class="ruby-identifier">sendJson</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span>
+
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:arr_id</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:arr_id</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>))
+                        <span class="ruby-identifier">params</span>[<span class="ruby-value">:arr_id</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+                                <span class="ruby-identifier">proposed</span> = <span class="ruby-constant">Proposition</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">artist_id</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">where</span>(<span class="ruby-identifier">album_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>).<span class="ruby-identifier">all</span>
+                                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">proposed</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>)
+                                        <span class="ruby-identifier">proposed</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">destroy</span>
+                                <span class="ruby-keyword">else</span>
+                                        <span class="ruby-identifier">p</span> = <span class="ruby-constant">Proposition</span>.<span class="ruby-identifier">new</span>
+                                        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">artist_id</span> = <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>
+                                        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">album_id</span> = <span class="ruby-identifier">id</span>
+                                        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">state</span> = <span class="ruby-value">0</span>
+                                        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">date_posted</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>
+                                        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">save</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}
+        <span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-setMenu">anchor</a>
+				<div id="method-i-setMenu-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">setMenu</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>For the menu bar</p>					
+											<div class="method-source-code" id="setMenu-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setMenu</span>
+        <span class="ruby-ivar">@menu</span> = <span class="ruby-string">&#39;music&#39;</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-updateAlbum">anchor</a>
+				<div id="method-i-updateAlbum-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">updateAlbum</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>To update the album We can&#39;t change the file</p>					
+											<div class="method-source-code" id="updateAlbum-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateAlbum</span>
+        <span class="ruby-identifier">error</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-identifier">a</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">http</span> = <span class="ruby-value">:ok</span>
+        <span class="ruby-identifier">genres</span> = []
+
+<span class="ruby-keyword">if</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@u</span>.<span class="ruby-identifier">isArtist?</span>))
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+        <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+        <span class="ruby-identifier">sendJson</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:album</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:id</span>))
+                                <span class="ruby-identifier">p</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:album</span>])
+                                <span class="ruby-identifier">p</span>[<span class="ruby-value">:title</span>] = <span class="ruby-identifier">p</span>[<span class="ruby-string">&quot;title&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;title&quot;</span>)
+                                <span class="ruby-identifier">p</span>[<span class="ruby-value">:price</span>] = <span class="ruby-identifier">p</span>[<span class="ruby-string">&quot;price&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;price&quot;</span>)
+                                <span class="ruby-identifier">p</span>[<span class="ruby-value">:yearProd</span>] = <span class="ruby-identifier">p</span>[<span class="ruby-string">&quot;yearProd&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;yearProd&quot;</span>)
+               <span class="ruby-keyword">else</span>
+                       <span class="ruby-identifier">error</span> = <span class="ruby-string">&quot;Parameters missing&quot;</span>
+               <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">genres</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:genres</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:genres</span>)
+                        <span class="ruby-identifier">descriptions</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parseDescriptions</span>((<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:descriptions</span>)) <span class="ruby-operator">?</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:descriptions</span>]) <span class="ruby-operator">:</span> [], <span class="ruby-identifier">error</span>)
+
+                        <span class="ruby-identifier">acceptedContentType</span> = [
+  <span class="ruby-string">&quot;image/gif&quot;</span>,
+  <span class="ruby-string">&quot;image/jpeg&quot;</span>,
+  <span class="ruby-string">&quot;image/pjpeg&quot;</span>,
+  <span class="ruby-string">&quot;image/png&quot;</span>,
+  <span class="ruby-string">&quot;image/x-png&quot;</span>
+]
+
+<span class="ruby-identifier">a</span> = <span class="ruby-constant">Album</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+
+<span class="ruby-keyword">if</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">error</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:file</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:file</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">acceptedContentType</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">content_type</span>)))
+        <span class="ruby-identifier">oldFile</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">newFilename</span> = <span class="ruby-keyword">nil</span>
+
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span> <span class="ruby-value">:file</span>)
+                <span class="ruby-identifier">randomNumber</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-value">1000</span><span class="ruby-operator">..</span><span class="ruby-value">10000</span>)
+                <span class="ruby-identifier">timestamp</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>
+                <span class="ruby-identifier">newFilename</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA256</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-node">&quot;#{timestamp}--#{params[:file].original_filename}#{randomNumber}&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;-&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">original_filename</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^0-9A-Za-z\.-]/</span>, <span class="ruby-string">&#39;&#39;</span>)
+                               
+                <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;images&#39;</span>, <span class="ruby-string">&#39;albums&#39;</span>, <span class="ruby-identifier">newFilename</span>), <span class="ruby-string">&#39;wb&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+                  <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">read</span>)
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">oldFile</span> = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">image</span>
+              <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment"># new music object</span>
+        <span class="ruby-identifier">parameters</span> = <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Parameters</span>.<span class="ruby-identifier">new</span>({ <span class="ruby-identifier">album</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span> })
+        <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">update</span>(<span class="ruby-constant">Album</span>.<span class="ruby-identifier">album_params</span> <span class="ruby-identifier">parameters</span>)
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">ret</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">newFilename</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+                <span class="ruby-identifier">a</span>.<span class="ruby-identifier">image</span> = <span class="ruby-identifier">newFilename</span>
+                <span class="ruby-identifier">a</span>.<span class="ruby-identifier">file</span> = <span class="ruby-identifier">newFilename</span>
+                <span class="ruby-identifier">a</span>.<span class="ruby-identifier">save!</span>
+              <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">ret</span>)
+               <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;images&#39;</span>, <span class="ruby-string">&#39;albums&#39;</span>, <span class="ruby-identifier">oldFile</span>).<span class="ruby-identifier">to_s</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">oldFile</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                        <span class="ruby-identifier">http</span> = <span class="ruby-value">:created</span>
+                                        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">genres</span> = []
+                                        <span class="ruby-identifier">genres</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">genre</span><span class="ruby-operator">|</span>
+                                                <span class="ruby-keyword">begin</span>
+                                                        <span class="ruby-identifier">g</span> = <span class="ruby-constant">Genre</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">genre</span>)
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">g</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">g</span>.<span class="ruby-identifier">albums</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">a</span>
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">rescue</span>
+                                                <span class="ruby-keyword">end</span>
+                                        }
+                                        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">descriptions</span> = []
+                                        <span class="ruby-identifier">descriptions</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">description</span><span class="ruby-operator">|</span>
+                                                <span class="ruby-keyword">begin</span>
+                                                        <span class="ruby-identifier">d</span> = <span class="ruby-constant">Description</span>.<span class="ruby-identifier">new</span>
+                                                        <span class="ruby-identifier">d</span>.<span class="ruby-identifier">description</span> = <span class="ruby-identifier">description</span>[<span class="ruby-string">&quot;description&quot;</span>]
+                                                        <span class="ruby-identifier">d</span>.<span class="ruby-identifier">language</span> = <span class="ruby-identifier">description</span>[<span class="ruby-string">&quot;language&quot;</span>]
+                                                        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">d</span>.<span class="ruby-identifier">save</span>)
+                                                                <span class="ruby-identifier">a</span>.<span class="ruby-identifier">descriptions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">d</span>
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">rescue</span>
+                                                <span class="ruby-keyword">end</span>
+                                        }
+                                        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">reload</span>
+              <span class="ruby-keyword">else</span>
+                      <span class="ruby-identifier">error</span> = <span class="ruby-identifier">m</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>
+                      <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;images&#39;</span>, <span class="ruby-string">&#39;albums&#39;</span>, <span class="ruby-identifier">newFilename</span>).<span class="ruby-identifier">to_s</span>
+                <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+              <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+       <span class="ruby-identifier">error</span> = <span class="ruby-string">&quot;Wrong file format&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">error</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+       <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+      <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">rescue</span>
+              <span class="ruby-identifier">error</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">error</span>, <span class="ruby-identifier">album</span><span class="ruby-operator">:</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">musics</span><span class="ruby-operator">:</span> {}, <span class="ruby-identifier">genres</span><span class="ruby-operator">:</span> {}, <span class="ruby-identifier">descriptions</span><span class="ruby-operator">:</span> {} } ) }, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">http</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-updateMusic">anchor</a>
+				<div id="method-i-updateMusic-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">updateMusic</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Route to update a music. Usefull to change album too</p>					
+											<div class="method-source-code" id="updateMusic-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateMusic</span>
+        <span class="ruby-identifier">m</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">http</span> = <span class="ruby-value">:ok</span>
+
+<span class="ruby-keyword">if</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@u</span>.<span class="ruby-identifier">isArtist?</span>))
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+        <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+        <span class="ruby-identifier">sendJson</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">begin</span>
+               <span class="ruby-keyword">if</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:id</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:music</span>))
+                       <span class="ruby-identifier">m</span> = <span class="ruby-constant">Music</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+                       <span class="ruby-keyword">if</span> (<span class="ruby-identifier">m</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>)
+                               <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+                       <span class="ruby-keyword">else</span>
+                              <span class="ruby-identifier">u</span> = <span class="ruby-keyword">false</span>
+                              <span class="ruby-identifier">u</span> = <span class="ruby-identifier">m</span>.<span class="ruby-identifier">update</span>(<span class="ruby-constant">Music</span>.<span class="ruby-identifier">music_params</span> <span class="ruby-identifier">params</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>
+                              <span class="ruby-keyword">if</span> (<span class="ruby-identifier">u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>)
+                                      <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+                              <span class="ruby-keyword">elsif</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:genres</span>))
+                                      <span class="ruby-identifier">m</span>.<span class="ruby-identifier">genres</span> = []
+                                      <span class="ruby-identifier">params</span>[<span class="ruby-value">:genres</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">genre</span><span class="ruby-operator">|</span>
+                                                        <span class="ruby-keyword">begin</span>
+                                                                <span class="ruby-identifier">g</span> = <span class="ruby-constant">Genre</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">genre</span>)
+                                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">g</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                                        <span class="ruby-identifier">g</span>.<span class="ruby-identifier">musics</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">m</span>
+                                                                <span class="ruby-keyword">end</span>
+                                                        <span class="ruby-keyword">rescue</span>
+                                                        <span class="ruby-keyword">end</span>
+                                                }
+                                                <span class="ruby-identifier">m</span>.<span class="ruby-identifier">reload</span>
+                              <span class="ruby-keyword">end</span>
+                      <span class="ruby-keyword">end</span>
+               <span class="ruby-keyword">else</span>
+                       <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+               <span class="ruby-keyword">end</span>
+       <span class="ruby-keyword">rescue</span>
+               <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+       <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">music</span><span class="ruby-operator">:</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">genres</span><span class="ruby-operator">:</span> {} }) }, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">http</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-uploadAlbum">anchor</a>
+				<div id="method-i-uploadAlbum-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">uploadAlbum</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Route to create an album</p>					
+											<div class="method-source-code" id="uploadAlbum-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">uploadAlbum</span>
+        <span class="ruby-identifier">error</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-identifier">a</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">http</span> = <span class="ruby-value">:ok</span>
+        <span class="ruby-identifier">genres</span> = []
+        <span class="ruby-identifier">descriptions</span> = []
+
+<span class="ruby-keyword">if</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@u</span>.<span class="ruby-identifier">isArtist?</span>))
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+        <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+        <span class="ruby-identifier">sendJson</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:album</span>))
+                                <span class="ruby-identifier">p</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:album</span>])
+                        <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:file</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;title&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;price&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;yearProd&quot;</span>))
+                               <span class="ruby-identifier">error</span> = <span class="ruby-string">&quot;Parameters missing&quot;</span>
+                                <span class="ruby-keyword">else</span>
+                                        <span class="ruby-identifier">p</span> = {
+                                                <span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>[<span class="ruby-string">&quot;title&quot;</span>],
+                                                <span class="ruby-identifier">price</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>[<span class="ruby-string">&quot;price&quot;</span>],
+                                                <span class="ruby-identifier">yearProd</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>[<span class="ruby-string">&quot;yearProd&quot;</span>]
+                                        }                                 
+                       <span class="ruby-keyword">end</span>
+               <span class="ruby-keyword">else</span>
+                       <span class="ruby-identifier">error</span> = <span class="ruby-string">&quot;Parameters missing&quot;</span>
+               <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">genres</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:genres</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:genres</span>)
+                        <span class="ruby-identifier">descriptions</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parseDescriptions</span>((<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:descriptions</span>)) <span class="ruby-operator">?</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:descriptions</span>]) <span class="ruby-operator">:</span> [], <span class="ruby-identifier">error</span>)
+                        
+                        <span class="ruby-identifier">acceptedContentType</span> = [
+  <span class="ruby-string">&quot;image/gif&quot;</span>,
+  <span class="ruby-string">&quot;image/jpeg&quot;</span>,
+  <span class="ruby-string">&quot;image/pjpeg&quot;</span>,
+  <span class="ruby-string">&quot;image/png&quot;</span>,
+  <span class="ruby-string">&quot;image/x-png&quot;</span>
+]
+
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">error</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">acceptedContentType</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">content_type</span>)
+        <span class="ruby-identifier">randomNumber</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-value">1000</span><span class="ruby-operator">..</span><span class="ruby-value">10000</span>)
+        <span class="ruby-identifier">timestamp</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">newFilename</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA256</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-node">&quot;#{timestamp}--#{params[:file].original_filename}#{randomNumber}&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;-&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">original_filename</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^0-9A-Za-z\.-]/</span>, <span class="ruby-string">&#39;&#39;</span>)
+                        
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;images&#39;</span>, <span class="ruby-string">&#39;albums&#39;</span>, <span class="ruby-identifier">newFilename</span>), <span class="ruby-string">&#39;wb&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">read</span>)
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment"># new music object</span>
+        <span class="ruby-identifier">parameters</span> = <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Parameters</span>.<span class="ruby-identifier">new</span>({ <span class="ruby-identifier">album</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span> })
+        <span class="ruby-identifier">a</span> = <span class="ruby-constant">Album</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Album</span>.<span class="ruby-identifier">album_params</span> <span class="ruby-identifier">parameters</span>)
+        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">image</span> = <span class="ruby-identifier">newFilename</span>
+        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">file</span> = <span class="ruby-identifier">newFilename</span>
+        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">a</span>.<span class="ruby-identifier">save</span>)
+                                        <span class="ruby-identifier">http</span> = <span class="ruby-value">:created</span>
+                                        <span class="ruby-identifier">genres</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">genre</span><span class="ruby-operator">|</span>
+                                                <span class="ruby-keyword">begin</span>
+                                                        <span class="ruby-identifier">g</span> = <span class="ruby-constant">Genre</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">genre</span>)
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">g</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">g</span>.<span class="ruby-identifier">albums</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">a</span>
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">rescue</span>
+                                                <span class="ruby-keyword">end</span>
+                                        }
+                                        <span class="ruby-identifier">descriptions</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">description</span><span class="ruby-operator">|</span>
+                                                <span class="ruby-keyword">begin</span>
+                                                        <span class="ruby-identifier">d</span> = <span class="ruby-constant">Description</span>.<span class="ruby-identifier">new</span>
+                                                        <span class="ruby-identifier">d</span>.<span class="ruby-identifier">description</span> = <span class="ruby-identifier">description</span>[<span class="ruby-string">&quot;description&quot;</span>]
+                                                        <span class="ruby-identifier">d</span>.<span class="ruby-identifier">language</span> = <span class="ruby-identifier">description</span>[<span class="ruby-string">&quot;language&quot;</span>]
+                                                        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">d</span>.<span class="ruby-identifier">save</span>)
+                                                                <span class="ruby-identifier">a</span>.<span class="ruby-identifier">descriptions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">d</span>
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">rescue</span>
+                                                <span class="ruby-keyword">end</span>
+                                        }
+              <span class="ruby-keyword">else</span>
+                      <span class="ruby-identifier">error</span> = <span class="ruby-identifier">m</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>
+                      <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;images&#39;</span>, <span class="ruby-string">&#39;albums&#39;</span>, <span class="ruby-identifier">newFilename</span>).<span class="ruby-identifier">to_s</span>
+                <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+              <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+       <span class="ruby-identifier">error</span> = <span class="ruby-string">&quot;Wrong file format&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">error</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+       <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+      <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">rescue</span>
+              <span class="ruby-identifier">error</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+                <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">error</span>, <span class="ruby-identifier">album</span><span class="ruby-operator">:</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">musics</span><span class="ruby-operator">:</span> {}, <span class="ruby-identifier">genres</span><span class="ruby-operator">:</span> {}, <span class="ruby-identifier">descriptions</span><span class="ruby-operator">:</span> {} } ) }, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">http</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-uploadMusic">anchor</a>
+				<div id="method-i-uploadMusic-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">uploadMusic</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Route to upload a music (with genres)</p>					
+											<div class="method-source-code" id="uploadMusic-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">uploadMusic</span>
+<span class="ruby-keyword">if</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@u</span>.<span class="ruby-identifier">isArtist?</span>))
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+        <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+        <span class="ruby-identifier">sendJson</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+<span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">error</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-identifier">m</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">http</span> = <span class="ruby-value">:ok</span>
+        <span class="ruby-identifier">genres</span> = []
+        <span class="ruby-identifier">newFilename</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">hasWritten</span> = <span class="ruby-keyword">false</span>
+
+        <span class="ruby-keyword">begin</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:music</span>))
+                                <span class="ruby-identifier">p</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:music</span>])
+                        <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:file</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;title&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;price&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;limited&quot;</span>))
+                               <span class="ruby-identifier">error</span> = <span class="ruby-string">&quot;Parameters missing&quot;</span>
+                                <span class="ruby-keyword">else</span>
+                                        <span class="ruby-identifier">p</span> = {
+                                                <span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>[<span class="ruby-string">&quot;title&quot;</span>],
+                                                <span class="ruby-identifier">price</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>[<span class="ruby-string">&quot;price&quot;</span>],
+                                                <span class="ruby-identifier">limited</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>[<span class="ruby-string">&quot;limited&quot;</span>]
+                                        }                                 
+                       <span class="ruby-keyword">end</span>
+               <span class="ruby-keyword">else</span>
+                       <span class="ruby-identifier">error</span> = <span class="ruby-string">&quot;Parameters missing&quot;</span>
+               <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">genres</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:genres</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:genres</span>)
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">error</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">content_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;audio/mp3&quot;</span>
+        <span class="ruby-identifier">randomNumber</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-value">1000</span><span class="ruby-operator">..</span><span class="ruby-value">10000</span>)
+        <span class="ruby-identifier">timestamp</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">newFilename</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA256</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-node">&quot;#{timestamp}--#{params[:file].original_filename}#{randomNumber}&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;-&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">original_filename</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^0-9A-Za-z]/</span>, <span class="ruby-string">&#39;&#39;</span>)
+
+        <span class="ruby-comment">#check si le dossier existe</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exists?</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;musics&#39;</span>, <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>))
+               <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;musics&#39;</span>, <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">to_s</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;musics&#39;</span>, <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">newFilename</span>), <span class="ruby-string">&#39;wb&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>].<span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">read</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">hasWritten</span> = <span class="ruby-keyword">true</span>
+
+        <span class="ruby-identifier">cutObject</span> = <span class="ruby-constant">Multimedia</span><span class="ruby-operator">::</span><span class="ruby-constant">CutAudio</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;musics&#39;</span>, <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">newFilename</span>)
+        
+                        <span class="ruby-comment"># new music object</span>
+        <span class="ruby-identifier">parameters</span> = <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Parameters</span>.<span class="ruby-identifier">new</span>({ <span class="ruby-identifier">music</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span> })
+        <span class="ruby-identifier">m</span> = <span class="ruby-constant">Music</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Music</span>.<span class="ruby-identifier">music_params</span> <span class="ruby-identifier">parameters</span>)
+        <span class="ruby-identifier">m</span>.<span class="ruby-identifier">file</span> = <span class="ruby-identifier">newFilename</span>
+        <span class="ruby-identifier">m</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>
+        <span class="ruby-identifier">m</span>.<span class="ruby-identifier">duration</span> = <span class="ruby-identifier">cutObject</span>.<span class="ruby-identifier">determine_duration</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">m</span>.<span class="ruby-identifier">save</span>)
+                <span class="ruby-identifier">http</span> = <span class="ruby-value">:created</span>
+                                        <span class="ruby-identifier">cutObject</span>.<span class="ruby-identifier">determineStart</span>(<span class="ruby-value">0</span>)
+                                        <span class="ruby-identifier">cutObject</span>.<span class="ruby-identifier">determineEnd</span>(<span class="ruby-value">30</span>)
+                                        <span class="ruby-identifier">cutObject</span>.<span class="ruby-identifier">cut</span>
+                                        <span class="ruby-identifier">genres</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">genre</span><span class="ruby-operator">|</span>
+                                                <span class="ruby-keyword">begin</span>
+                                                        <span class="ruby-identifier">g</span> = <span class="ruby-constant">Genre</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">genre</span>)
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">g</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">g</span>.<span class="ruby-identifier">musics</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">m</span>
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">rescue</span>
+                                                <span class="ruby-keyword">end</span>
+                                        }
+              <span class="ruby-keyword">else</span>
+                      <span class="ruby-identifier">error</span> = <span class="ruby-identifier">m</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>
+                      <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;musics&#39;</span>, <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">newFilename</span>).<span class="ruby-identifier">to_s</span>
+                <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+              <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">else</span>
+       <span class="ruby-identifier">error</span> = <span class="ruby-string">&quot;Wrong file format&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">error</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+       <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+      <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">rescue</span>
+              <span class="ruby-identifier">error</span> = <span class="ruby-keyword">true</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">hasWritten</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;musics&#39;</span>, <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">newFilename</span>).<span class="ruby-identifier">to_s</span>
+              <span class="ruby-keyword">end</span>
+              <span class="ruby-identifier">m</span>.<span class="ruby-identifier">delete</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+              <span class="ruby-identifier">http</span> = <span class="ruby-value">:bad_request</span>
+          <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">error</span>, <span class="ruby-identifier">music</span><span class="ruby-operator">:</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">genres</span><span class="ruby-operator">:</span> {} }) }, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">http</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-uploadRediff">anchor</a>
+				<div id="method-i-uploadRediff-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">uploadRediff</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Upload a rediffusion for the software and put it in an album</p>
+
+<p>Route : /musics/uploadRediff</p>
+
+<h4 id="method-i-uploadRediff-label-Options+for+the+upload">Options for the upload<span><a href="#method-i-uploadRediff-label-Options+for+the+upload">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>filename</code> - The filename of the music</p>
+</li><li>
+<p><code>data</code> - A piece of string</p>
+</li></ul>
+
+<h4 id="method-i-uploadRediff-label-Options+for+the+finish+-28last+call+after+the+upload-29">Options for the finish (last call after the upload)<span><a href="#method-i-uploadRediff-label-Options+for+the+finish+-28last+call+after+the+upload-29">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>finish</code> - The value doesn&#39;t matter, put 1</p>
+</li><li>
+<p><code>album_id</code> - The id of the album where we put the music</p>
+</li><li>
+<p><code>music_name</code> - The name of the music</p>
+</li><li>
+<p><code>duration</code> - The duration of the music</p>
+</li><li>
+<p><code>price</code> - The price of the music</p>
+</li><li>
+<p><code>filename</code> - The name of the music file (same as before)
+uploaded</p>
+</li><li>
+<p><code>limited</code> - 0 or 1 to know if the music can be fully listen or
+not</p>
+</li></ul>					
+											<div class="method-source-code" id="uploadRediff-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/Artist/musics_controller.rb, line 445</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier">uploadRediff</span>
+                <span class="ruby-keyword">begin</span>
+                        <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@u</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@u</span>.<span class="ruby-identifier">isArtist?</span>))
+               <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+               <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+               <span class="ruby-identifier">sendJson</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+       <span class="ruby-keyword">end</span>
+
+       <span class="ruby-keyword">if</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:finish</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:album_id</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:music_name</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:duration</span>) <span class="ruby-operator">&amp;&amp;</span>
+                       <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:price</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:filename</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:limited</span>))
+               <span class="ruby-identifier">a</span> = <span class="ruby-constant">Album</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:album_id</span>])
+
+               <span class="ruby-identifier">m</span> = <span class="ruby-constant">Music</span>.<span class="ruby-identifier">new</span>
+               <span class="ruby-identifier">m</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>
+               <span class="ruby-identifier">m</span>.<span class="ruby-identifier">album_id</span> = <span class="ruby-identifier">a</span>.<span class="ruby-identifier">id</span>
+               <span class="ruby-identifier">m</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:music_name</span>]
+               <span class="ruby-identifier">m</span>.<span class="ruby-identifier">duration</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:duration</span>]
+               <span class="ruby-identifier">m</span>.<span class="ruby-identifier">price</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:price</span>]
+               <span class="ruby-identifier">m</span>.<span class="ruby-identifier">file</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:filename</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^0-9A-Za-z\.-]/</span>, <span class="ruby-string">&#39;&#39;</span>)
+               <span class="ruby-identifier">m</span>.<span class="ruby-identifier">limited</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:limited</span>]
+               <span class="ruby-identifier">m</span>.<span class="ruby-identifier">save</span>
+
+               <span class="ruby-identifier">d</span> = <span class="ruby-constant">Description</span>.<span class="ruby-identifier">new</span>
+                                <span class="ruby-identifier">d</span>.<span class="ruby-identifier">description</span> = <span class="ruby-string">&quot;This is a rediffusion&quot;</span>
+                                <span class="ruby-identifier">d</span>.<span class="ruby-identifier">language</span> = <span class="ruby-string">&quot;EN&quot;</span>
+                                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">d</span>.<span class="ruby-identifier">save</span>)
+                                        <span class="ruby-identifier">a</span>.<span class="ruby-identifier">descriptions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">d</span>
+                                <span class="ruby-keyword">end</span>
+       <span class="ruby-keyword">elsif</span> (<span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:filename</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:data</span>))
+               <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
+               <span class="ruby-identifier">data</span> = <span class="ruby-constant">Base64</span>.<span class="ruby-identifier">decode64</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:data</span>]
+
+               <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;app&#39;</span>, <span class="ruby-string">&#39;assets&#39;</span>, <span class="ruby-string">&#39;musics&#39;</span>, <span class="ruby-ivar">@u</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:filename</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^0-9A-Za-z\.-]/</span>, <span class="ruby-string">&#39;&#39;</span>)), <span class="ruby-string">&#39;ab&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">n</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">data</span>)
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:content</span>] = { <span class="ruby-identifier">char_written</span><span class="ruby-operator">:</span> <span class="ruby-identifier">n</span> }
+      <span class="ruby-keyword">else</span>
+               <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+               <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:bad_request</span>
+       <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span>
+       <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+        <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:service_unavailable</span>
+    <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">sendJson</span>
+        <span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+						
+		</section>
+		
+
+		<hr>
+
+		<footer>
+			<div class="container">
+				<span id="rdoc-version">Generated by RDoc 4.2.0</span> using the
+				<a id="generator-version"
+					href="http://deveiate.org/fivefish">Fivefish RDoc 0.1.0</a> generator.
+			</div>
+		</footer>
+	</div> <!-- /container -->
+
+	<!-- Class dropdown menu -->
+	<div id="class-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="../API.html">API</a></li>
+			<li><a href="../API/AlbumsController.html">API::AlbumsController</a></li>
+			<li><a href="../API/AmbiancesController.html">API::AmbiancesController</a></li>
+			<li><a href="../API/ApiController.html">API::ApiController</a></li>
+			<li><a href="../API/ApisecurityController.html">API::ApisecurityController</a></li>
+			<li><a href="../API/BattlesController.html">API::BattlesController</a></li>
+			<li><a href="../API/CartsController.html">API::CartsController</a></li>
+			<li><a href="../API/ConcertsController.html">API::ConcertsController</a></li>
+			<li><a href="../API/FeedbacksController.html">API::FeedbacksController</a></li>
+			<li><a href="../API/GenresController.html">API::GenresController</a></li>
+			<li><a href="../API/InfluencesController.html">API::InfluencesController</a></li>
+			<li><a href="../API/LanguagesController.html">API::LanguagesController</a></li>
+			<li><a href="../API/LikesController.html">API::LikesController</a></li>
+			<li><a href="../API/ListeningsController.html">API::ListeningsController</a></li>
+			<li><a href="../API/MessagesController.html">API::MessagesController</a></li>
+			<li><a href="../API/MusicsController.html">API::MusicsController</a></li>
+			<li><a href="../API/NewsController.html">API::NewsController</a></li>
+			<li><a href="../API/NotificationsController.html">API::NotificationsController</a></li>
+			<li><a href="../API/PacksController.html">API::PacksController</a></li>
+			<li><a href="../API/PlaylistsController.html">API::PlaylistsController</a></li>
+			<li><a href="../API/PurchasesController.html">API::PurchasesController</a></li>
+			<li><a href="../API/SearchsController.html">API::SearchsController</a></li>
+			<li><a href="../API/SuggestionsController.html">API::SuggestionsController</a></li>
+			<li><a href="../API/TweetsController.html">API::TweetsController</a></li>
+			<li><a href="../API/UsersController.html">API::UsersController</a></li>
+			<li><a href="../Artist/MusicsController.html">Artist::MusicsController</a></li>
+			<li><a href="../Address.html">Address</a></li>
+			<li><a href="../AdminUser.html">AdminUser</a></li>
+			<li><a href="../Album.html">Album</a></li>
+			<li><a href="../Albumslike.html">Albumslike</a></li>
+			<li><a href="../Ambiance.html">Ambiance</a></li>
+			<li><a href="../Attachment.html">Attachment</a></li>
+			<li><a href="../Battle.html">Battle</a></li>
+			<li><a href="../Cart.html">Cart</a></li>
+			<li><a href="../Commentary.html">Commentary</a></li>
+			<li><a href="../Concert.html">Concert</a></li>
+			<li><a href="../Concertslike.html">Concertslike</a></li>
+			<li><a href="../Description.html">Description</a></li>
+			<li><a href="../Feedback.html">Feedback</a></li>
+			<li><a href="../Follow.html">Follow</a></li>
+			<li><a href="../Friend.html">Friend</a></li>
+			<li><a href="../Genre.html">Genre</a></li>
+			<li><a href="../Group.html">Group</a></li>
+			<li><a href="../Identity.html">Identity</a></li>
+			<li><a href="../Influence.html">Influence</a></li>
+			<li><a href="../Language.html">Language</a></li>
+			<li><a href="../Listening.html">Listening</a></li>
+			<li><a href="../Meet.html">Meet</a></li>
+			<li><a href="../Meetstring.html">Meetstring</a></li>
+			<li><a href="../Message.html">Message</a></li>
+			<li><a href="../Music.html">Music</a></li>
+			<li><a href="../MusicNote.html">MusicNote</a></li>
+			<li><a href="../Musicalpast.html">Musicalpast</a></li>
+			<li><a href="../News.html">News</a></li>
+			<li><a href="../NewsTitle.html">NewsTitle</a></li>
+			<li><a href="../Newslike.html">Newslike</a></li>
+			<li><a href="../Newstext.html">Newstext</a></li>
+			<li><a href="../Notification.html">Notification</a></li>
+			<li><a href="../Pack.html">Pack</a></li>
+			<li><a href="../PartialAlbum.html">PartialAlbum</a></li>
+			<li><a href="../PaypalPayment.html">PaypalPayment</a></li>
+			<li><a href="../Playlist.html">Playlist</a></li>
+			<li><a href="../PlaylistObject.html">PlaylistObject</a></li>
+			<li><a href="../Proposition.html">Proposition</a></li>
+			<li><a href="../Purchase.html">Purchase</a></li>
+			<li><a href="../PurchasedAlbum.html">PurchasedAlbum</a></li>
+			<li><a href="../PurchasedMusic.html">PurchasedMusic</a></li>
+			<li><a href="../PurchasedPack.html">PurchasedPack</a></li>
+			<li><a href="../Tool.html">Tool</a></li>
+			<li><a href="../Tweet.html">Tweet</a></li>
+			<li><a href="../User.html">User</a></li>
+			<li><a href="../Vote.html">Vote</a></li>
+		</ul>
+	</div>
+
+	<!-- File dropdown menu -->
+	<div id="file-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+		</ul>
+	</div>
+
+</body>
+</html>

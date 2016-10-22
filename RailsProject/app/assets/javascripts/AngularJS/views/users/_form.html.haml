@@ -1,0 +1,158 @@
+.row
+	.contain-to-grid
+		.large-12.small-8.columns
+			.panel
+				%h3.subheader
+					{{ labels.DISPLAY_USER_FORM_IMAGES_LABEL }}
+				.row
+					.clearfix.text-center
+						.large-6.small-12.columns
+							%p
+								%label{ for: "image" } {{ labels.DISPLAY_USER_FORM_AVATAR_LABEL }}
+							%div
+								%img{ "ng-src" => "{{ '/assets/usersImage/avatars/' + form.user.image }}" }
+							.radius.button{ id: "image", 'ngf-select' => true, "ngf-change" => "uploadAvatar($files)" } {{ labels.DISPLAY_USER_FORM_IMAGE_LOAD_LABEL }}
+							%div
+								%small.error{ "ng-if" => "formError.user.image != false", "ng-repeat" => "error in formError.user.image" } {{ labels.DISPLAY_USER_FORM_IMAGE_LABEL }} {{ error }}
+						.large-6.small-12.columns
+							%p
+								%label{ for: "background" } {{ labels.DISPLAY_USER_FORM_BACKGROUND_LABEL }}
+							%div
+								%img{ "ng-src" => "{{ '/assets/usersImage/backgrounds/' + form.user.background }}" }
+							.radius.button{ id: "background", 'ngf-select' => true, "ngf-change" => "uploadBackground($files)" } {{ labels.DISPLAY_USER_FORM_IMAGE_LOAD_LABEL }}
+							%div
+								%small.error{ "ng-if" => "formError.user.background != false", "ng-repeat" => "error in formError.user.background" } {{ labels.DISPLAY_USER_FORM_BACKGROUND_LABEL }} {{ error }}
+				%h3.subheader
+					{{ labels.DISPLAY_USER_FORM_PUBLIC_INFO_LABEL }}
+				.row
+					.medium-3.small-12.columns.inline
+						%label{ for: "username" } {{ labels.DISPLAY_USER_FORM_USERNAME_LABEL }}
+					.medium-9.small-12.columns
+						%p.radius{ id: "username" } {{ form.user.username }}
+					.medium-3.small-12.columns.inline
+						%label{ for: "email" } {{ labels.DISPLAY_USER_FORM_EMAIL_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "email", type: "text", "ng-model" => "form.user.email" }
+						%small.error{ "ng-if" => "formError.user.email != false", "ng-repeat" => "error in formError.user.email" } {{ labels.DISPLAY_USER_FORM_EMAIL_LABEL }} {{ error }}
+					.medium-3.small-12.columns.inline
+						%label{ for: "description" } {{ labels.DISPLAY_USER_FORM_DESCRIPTION_LABEL }}
+					.medium-9.small-12.columns
+						%textarea.radius{ id: "description" } {{ form.user.description }}
+						%small.error{ "ng-if" => "formError.user.description != false", "ng-repeat" => "error in formError.user.description" } {{ labels.DISPLAY_USER_FORM_DESCRIPTION_LABEL }} {{ error }}
+					.medium-3.small-12.columns
+						%label {{ labels.DISPLAY_USER_FORM_BIRTHDAY_LABEL }}
+					.medium-9.small-12.columns
+						%select.medium-4.columns.radius.inline{ "ng-model" => "form.user['birthday(1i)']" }
+							%option{ "ng-repeat" => "year in range(80) track by $index", "ng-value" => "(currentYear - 80 + $index).toString()" } {{ currentYear - $index }}
+						%select.medium-4.columns.radius.inline{ "ng-model" => "form.user['birthday(2i)']" }
+							%option{ "ng-repeat" => "month in months track by $index", "value" => "{{ ($index + 1 < 10 ? '0' : '') + ($index + 1).toString() }}" } {{ month }}
+						%select.medium-4.columns.radius.inline{ "ng-model" => "form.user['birthday(3i)']" }
+							%option{ "ng-repeat" => "day in days", "value" => "{{ (day < 10 ? '0' : '') + day.toString() }}" } {{ day }}
+						%small.error{ "ng-if" => "formError.user.birthday != false", "ng-repeat" => "error in formError.user.birthday" } {{ labels.DISPLAY_USER_FORM_BIRTHDAY_LABEL }} {{ error }}
+					.medium-3.small-12.columns
+						%label{ for: "facebook" } {{ labels.DISPLAY_USER_FORM_FB_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "facebook", type: "text", "ng-model" => "form.user.facebook" }
+						%small.error{ "ng-if" => "formError.user.facebook != false", "ng-repeat" => "error in formError.user.facebook" } {{ labels.DISPLAY_USER_FORM_FB_LABEL }} {{ error }}
+					.medium-3.small-12.columns
+						%label{ for: "twitter" } {{ labels.DISPLAY_USER_FORM_TWITTER_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "twitter", type: "text", "ng-model" => "form.user.twitter" }
+						%small.error{ "ng-if" => "formError.user.twitter != false", "ng-repeat" => "error in formError.user.twitter" } {{ labels.DISPLAY_USER_FORM_TWITTER_LABEL }} {{ error }}
+					.medium-3.small-12.columns
+						%label{ for: "googleplus" } {{ labels.DISPLAY_USER_FORM_GPLUS_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "googleplus", type: "text", "ng-model" => "form.user.googlePlus" }
+						%small.error{ "ng-if" => "formError.user.googlePlus != false", "ng-repeat" => "error in formError.user.googlePlus" } {{ labels.DISPLAY_USER_FORM_GPLUS_LABEL }} {{ error }}
+				%h3.subheader
+					{{ labels.DISPLAY_USER_FORM_PERSO_INFO_LABEL }}
+				.row
+					.medium-3.small-12.columns.inline
+						%label{ for: "firstname" } {{ labels.DISPLAY_USER_FORM_FIRSTNAME_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "firstname", type: "text", "ng-model" => "form.user.fname" }
+						%small.error{ "ng-if" => "formError.user.fname != false", "ng-repeat" => "error in formError.user.fname" } {{ labels.DISPLAY_USER_FORM_FIRSTNAME_LABEL }} {{ error }}
+					.medium-3.small-12.columns.inline
+						%label{ for: "lastname" } {{ labels.DISPLAY_USER_FORM_LASTNAME_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "lastname", type: "text", "ng-model" => "form.user.lname" }
+						%small.error{ "ng-if" => "formError.user.lname != false", "ng-repeat" => "error in formError.user.lname" } {{ labels.DISPLAY_USER_FORM_LASTNAME_LABEL }} {{ error }}
+					.medium-3.small-12.columns.inline
+						%label{ for: "password" } {{ labels.DISPLAY_USER_FORM_PASSWORD_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "password", type: "password", "ng-model" => "form.user.password" }
+						%small.error{ "ng-if" => "formError.user.password != false", "ng-repeat" => "error in formError.user.password" } {{ labels.DISPLAY_USER_FORM_PASSWORD_LABEL }} {{ error }}
+					.medium-3.small-12.columns.inline
+						%label{ for: "phone" } {{ labels.DISPLAY_USER_FORM_PHONE_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "phone", type: "text", "ng-model" => "form.user.phoneNumber" }
+						%small.error{ "ng-if" => "formError.user.phoneNumber != false", "ng-repeat" => "error in formError.user.phoneNumber" } {{ labels.DISPLAY_USER_FORM_PHONE_LABEL }} {{ error }}
+					.medium-3.small-12.columns.inline
+						%label{ for: "newsletter" } {{ labels.DISPLAY_USER_FORM_NEWSLETTER_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "newsletter", type: "checkbox", "ng-model" => "form.user.newsletter" }
+						%small.error{ "ng-if" => "formError.user.newsletter != false", "ng-repeat" => "error in formError.user.newsletter" } {{ labels.DISPLAY_USER_FORM_NEWSLETTER_LABEL }} {{ error }}
+					.medium-3.small-12.columns.inline
+						%label{ for: "language" } {{ labels.DISPLAY_USER_FORM_LANGUAGE_LABEL }}
+					.medium-9.small-12.columns
+						%input.radius{ id: "language", type: "text", "ng-model" => "form.user.language" }
+						%small.error{ "ng-if" => "formError.user.language != false", "ng-repeat" => "error in formError.user.language" } {{ labels.DISPLAY_USER_FORM_LANGUAGE_LABEL }} {{ error }}
+				%hr
+				.actions.text-center
+					.large-4.large-centered
+						%input.button.radius.expand.success{ id: "", type: "button", value: "{{ labels.DISPLAY_USER_SAVE_BUTTON }}", "ng-click" => "submitForm('user')" }
+				.small-12.clearfix
+					%p {{ labels.DISPLAY_USER_FORM_LINKS_LABEL }}
+					.small-12.medium-5.columns
+						%label {{ labels.DISPLAY_USER_FORM_FB_LINK_LABEL }}
+					.small-12.medium-7.columns
+						.button.tiny{ "ng-if" => "form.identities.facebook != null", "ng-class" => "{ secondary: !facebookReady }" } {{ labels.DISPLAY_USER_FORM_LINKED_LABEL }}
+						.button.tiny{ "ng-if" => "form.identities.facebook == null", "ng-class" => "{ secondary: !facebookReady }", "ng-click" => "IntentLogin()" } {{ labels.DISPLAY_USER_FORM_FB_LOG_LABEL }}
+					.small-12.medium-5.columns
+						%label {{ labels.DISPLAY_USER_FORM_TWITTER_LINK_LABEL }}
+					.small-12.medium-7.columns
+						.button.tiny{ "ng-if" => "form.identities.twitter != null" } {{ labels.DISPLAY_USER_FORM_LINKED_LABEL }}
+						%a.button.tiny{ "ng-if" => "form.identities.twitter == null", href: "/users/auth/twitter", target: "_blank" } {{ labels.DISPLAY_USER_FORM_TWITTER_LOG_LABEL }}
+					.small-12.medium-5.columns
+						%label {{ labels.DISPLAY_USER_FORM_GPLUS_LINK_LABEL }}
+					.small-12.medium-7.columns
+						%script{ src: "https://apis.google.com/js/client.js" }
+						%script{ src: "https://apis.google.com/js/plusone.js" }
+						.button.tiny{ "ng-if" => "form.identities.google != null" } {{ labels.DISPLAY_USER_FORM_LINKED_LABEL }}
+						%span#signinButton{ "ng-if" => "form.identities.google == null" }
+							%plus{:action => "connect", :callback => "onSignInCallback", :clientid => "793685873206-mtbd8bm2gvskccm5rnnnkod5n6q7dqpv.apps.googleusercontent.com", :scope => "https://www.googleapis.com/auth/plus.me"}
+							%google-plus-signin{ "ng-init" => "googleCallback()", :clientid => "793685873206-mtbd8bm2gvskccm5rnnnkod5n6q7dqpv.apps.googleusercontent.com" }
+					.small-12.medium-5.columns
+						%label {{ labels.DISPLAY_USER_FORM_SOUNDCLOUD_LINK_LABEL }}
+					.small-12.medium-7.columns
+						.button.tiny.primary{ "ng-click" => "connectSoundcloud()" } {{ labels.DISPLAY_USER_FORM_SOUNDCLOUD_LOG_LABEL }}
+				%hr
+				.row
+					.small-12.medium-5.columns
+						%label{ for: "numberStreet" } {{ labels.DISPLAY_USER_FORM_NUMBER_LABEL }}
+					.small-12.medium-7.columns
+						%input.radius{ id: "numberStreet", type: "text", "ng-model" => "form.address.numberStreet" }
+					.small-12.medium-5.columns
+						%label{ for: "complement" } {{ labels.DISPLAY_USER_FORM_COMPLEMENT_LABEL }}
+					.small-12.medium-7.columns
+						%input.radius{ id: "complement", type: "text", "ng-model" => "form.address.complement" }
+					.small-12.medium-5.columns
+						%label{ for: "street" } {{ labels.DISPLAY_USER_FORM_STREET_LABEL }}
+					.small-12.medium-7.columns
+						%input.radius{ id: "street", type: "text", "ng-model" => "form.address.street" }
+					.small-12.medium-5.columns
+						%label{ for: "city" } {{ labels.DISPLAY_USER_FORM_CITY_LABEL }}
+					.small-12.medium-7.columns
+						%input.radius{ id: "city", type: "text", "ng-model" => "form.address.city" }
+					.small-12.medium-5.columns
+						%label{ for: "country" } {{ labels.DISPLAY_USER_FORM_COUNTRY_LABEL }}
+					.small-12.medium-7.columns
+						%input.radius{ id: "country", type: "text", "ng-model" => "form.address.country" }
+					.small-12.medium-5.columns
+						%label{ for: "zipcode" } {{ labels.DISPLAY_USER_FORM_ZIPCODE_LABEL }}
+					.small-12.medium-7.columns
+						%input.radius{ id: "zipcode", type: "text", "ng-model" => "form.address.zipcode" }
+				%hr
+				.actions.text-center
+					.large-4.large-centered
+						%input.button.radius.expand.success{ id: "", type: "button", value: "{{ labels.DISPLAY_USER_SAVE_BUTTON }}", "ng-click" => "submitForm('address')" }

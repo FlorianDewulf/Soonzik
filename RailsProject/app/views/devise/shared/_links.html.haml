@@ -1,0 +1,9 @@
+- if controller_name != 'sessions'
+  = link_to "{{ labels.DISPLAY_SIGNIN_SIGNIN_LABEL }}", new_session_path(resource_name)
+  %br
+- if devise_mapping.registerable? && controller_name != 'registrations'
+  %h5 {{ labels.DISPLAY_SIGNIN_NOT_SIGNUP_LABEL }}
+  = link_to "{{ labels.DISPLAY_SIGNIN_SIGNUP_LABEL }}", new_registration_path(resource_name)
+  %br
+- if devise_mapping.confirmable? && controller_name != 'confirmations'
+  = link_to "{{ labels.DISPLAY_SIGNIN_CONFIRM_NOT_RECEIVED_LABEL }}", new_confirmation_path(resource_name)

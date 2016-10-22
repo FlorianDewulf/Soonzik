@@ -1,0 +1,51 @@
+.home-artist {
+	padding-left: 10px;
+
+	.stat-container, .text-container {
+		padding: 10px 0px;
+	}
+
+	.stat-container {
+		.musics, .albums, .packs, .notes_music, .notes_album {
+			overflow-x: auto;
+		  overflow-y: hidden;
+		  height: 350px;
+		  border: 1px solid #E8E8E8;
+		}
+
+		.lastBattle > div, .currentBattle > div {
+			height: 200px;
+		}
+
+		h5 {
+			color: #00AABB;
+		}
+
+		charts {
+			height: 200px;
+			line-height: 200px;
+			display: block;
+		}
+
+		.morris-hover {
+			position: absolute;
+			width: 100%;
+			top: 200px !important;
+			line-height: 18px;
+			text-align: left;
+		}
+	}
+
+	.text-container {
+		.commentaries {
+			blockquote cite a {
+				color: #00AABB;
+			}
+
+			blockquote cite a:hover {
+				color: #22CCDD
+			}
+		}
+	}
+
+}

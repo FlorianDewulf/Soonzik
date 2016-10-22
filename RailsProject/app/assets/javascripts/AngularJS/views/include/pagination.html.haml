@@ -1,0 +1,10 @@
+.pagination-centered
+	%ul.pagination
+		%li{ "class" => "arrow {{ (index.currentPage == 1) ? 'unavailable' : '' }}" }
+			%a{ href: "#", "ng-if" => "index.currentPage == 1" } &laquo;
+			%a{ href: "/{{resourceName}}?page={{ max(1, index.currentPage - 1)}}", "ng-if" => "(index.currentPage != 1)" } &laquo;
+		%li{ "ng-repeat" => "num in range(min(index.currentPage, 5) + min((index.resources.length / 20 + 1) - 1, 5)) track by $index", "class" => "{{ $index + 1 == min(index.currentPage, 5) ? 'current' : '' }}" }
+			%a{ href: "/{{resourceName}}?page={{ index.currentPage - min(index.currentPage, 5) + $index + 1 }}"} {{ index.currentPage - min(index.currentPage, 5) + $index + 1 }}
+		%li{ "class" => "arrow {{ (index.currentPage == index.totalPage) ? 'unavailable' : '' }}" }
+			%a{ href: "#", "ng-if" => "index.currentPage == index.totalPage" } &raquo;
+			%a{ href: "/{{resourceName}}?page={{ min(Math.floor(index.resources.length / 20 + 1), index.currentPage + 1) }}", "ng-if" => "index.currentPage != index.totalPage"} &raquo;

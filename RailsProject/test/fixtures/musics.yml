@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+MusicOne:
+  user: UserOne
+  album: AlbumOne
+  title: Titre musique
+  duration: 120
+  price: 7.5
+  file: music_one
+  limited: false
+  commentaries: commentaireMusic
+
+MusicTwo:
+  user: UserTwo
+  album: AlbumTwo
+  title: Title music
+  duration: 134
+  price: 3.5
+  file: music_two
+  limited: true
+  descriptions: DescOne

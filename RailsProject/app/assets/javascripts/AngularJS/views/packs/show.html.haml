@@ -1,0 +1,72 @@
+.pack{ "ng-init" => "showPacksById()" }
+  %loading{ "ng-if" => "loading == true" }
+  .row{ "ng-if" => "loading == false", "ng-init" => "initFoundation()"}
+    %div{"ng-show" => "thisPackId"}
+      %h3.subheader.text-center
+        {{ thisPack.title }}
+      %div{"ng-init" => "timeLeft()"}
+        %h5.subheader.text-center
+          {{ labels.DISPLAY_PACK_TIMELEFT }} : {{ thisPack.timeLeftPack }}
+      .ul.large-block-grid-3.centered.columns{'ng-init' => 'check_partial()'}
+        %li{"ng-repeat" => "album in thisPack.albums"}
+          .panel
+            %h3.subheader
+              %p.text-center
+                {{ album.title }}
+            %a{:href => "http://lvh.me:3000/albums/{{ album.id }}"}
+              %img{ "ng-src" => "{{ '/assets/albums/' + album.image }}"}
+            .divider
+            {{ labels.DISPLAY_PACK_ARTIST_NAME }} : {{ album.user.username }}
+            %br
+            {{ labels.DISPLAY_PACK_YEAR_ALBUM }} : {{ album.yearProd }}
+            %div{'ng-repeat' => 'partial in partial_albums_id'}
+              %p.red{'ng-if' => 'partial == album.id'}
+                {{ thisPack.averagePrice }} € or more to get this album
+
+      .row{ 'ng-if' => 'user != false' }
+        .large-6.columns
+          .panel.left{"ng-init" => "managePrice()"}
+            .large-9.columns
+              {{labels.DISPLAY_PACK_DEFINE_PRICE }}
+            .small-3.columns
+              %input{ type: "text", "ng-model" => "input.price", "ng-change" => "updatePrice()" }
+            .large-9.columns
+              {{ labels.DISPLAY_PACK_AVERAGE }}
+            .small-3.columns
+              {{ thisPack.averagePrice }} €
+            .large-9.columns
+              .divider
+              {{ labels.DISPLAY_PACK_ARTIST_NAME }}
+              %input{:type => "range", "ng-model" => "newValuePercentage.artist", "ng-change" => "varRange('artist')", "min" => "0", "max" => "100"}
+            .small-3.columns
+              .divider
+              %br
+              {{ realValue.artist }} €
+            .large-9.columns
+              {{ labels.DISPLAY_PACK_ASSOCIATION_NAME }}
+              %input{:type => "range", "ng-model" => "newValuePercentage.asso", "ng-change" => "varRange('asso')", "min" => "0", "max" => "100"}
+            .small-3.columns
+              %br
+              {{ realValue.asso }} €
+            .large-9.columns
+              {{ labels.DISPLAY_PACK_DEV_NAME}}
+              %input{:type => "range", "ng-model" => "newValuePercentage.web", "ng-change" => "varRange('web')", "min" => "0", "max" => "100"}
+            .small-3.columns
+              %br
+              {{ realValue.web }} €
+            .large-4.columns
+              .divider
+              {{ labels.DISPLAY_PACK_TOTAL_PACK }} : {{ input.price }} €
+        .large-6.columns
+          .panel
+            %battle{ "battle-values" => "percentages" }
+          .row
+            .small-3.columns.text-center
+              %label.inline {{ labels.DISPLAY_PACK_GIFT_LABEL }}
+            .small-9.columns
+              %select{ 'ng-model' => 'gift.user' }
+                %option
+                %option{ 'ng-repeat' => 'friend in friends', 'ng-value' => 'friend.id' } {{ friend.username }}
+        .large-12.columns{ 'ng-if' => 'user != false' }
+          .button.expand.radius.success{ "ng-click" => "toPayment()" }
+            {{ labels.DISPLAY_PACK_BUY_PACK }}

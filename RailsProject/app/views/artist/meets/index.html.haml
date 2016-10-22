@@ -1,0 +1,98 @@
+.title
+	%h2 Meet Page
+	%span.byline You can find artists to contact for partnership
+.meetContainer
+	%hr
+	%a.button{ href: "#{artist_meet_all_path}" }
+		Take a look to the different propositions available
+	%hr
+	%myMeets
+		%h4 Your requests
+		- if current_user.meets.size > 0
+			%table
+				%thead
+					%tr
+						%th
+							Type
+						%th
+							Profession
+						%th
+							For what
+						%th
+							From
+						%th
+							To
+						%th
+							Location
+						%th
+							Email
+						%th
+				%tbody
+					- current_user.meets.each do |m|
+						%tr
+							%td= m.query
+							%td= m.profession
+							%td= m.what
+							%td= m.fromDate
+							%td= m.toDate
+							%td= m.location
+							%td= m.email
+							%td
+								=link_to artist_meet_destroy_path(m) do
+									%i.fi-x
+		- else
+			%p Currently, you don't have meets proposed
+	%hr
+	%h4 Search or propose a partnership
+	= form_for @meet, url: artist_meet_save_path do |f|
+		- if @meet.errors.any?
+			#error_explanation.red
+				%h6= "#{pluralize(@meet.errors.count, "error")} prohibited this meet from being saved:"
+				%ul
+					- @meet.errors.full_messages.each do |msg|
+						%li= msg
+			%hr
+		.row
+			.small-3.columns
+				= f.label(:query, "You want to" )
+			.small-8.columns
+				= f.label(:query, nil, :class => "small-6 columns" ) do
+					= f.radio_button(:query, "search", { :id => "search" } )
+					= "Search"
+				= f.label(:query, nil, :class => "small-6 columns" ) do
+					= f.radio_button(:query, "propose", { :id => "propose" } )
+					= "Propose"
+		.row
+			.small-12.medium-6.columns
+				.small-4.columns
+					= f.label(:profession, "A" )
+				.small-8.columns
+					= f.select(:profession, @professionsArray.collect {|p| [ p.str, p.str ] }, { id: "profession" })
+			.small-12.medium-6.columns
+				.small-4.columns
+					= f.label(:what, "for a" )
+				.small-8.columns
+					= f.select(:what, @typesArray.collect {|p| [ p.str, p.str ] }, { id: "type" })
+		.row
+			.small-12.medium-6.columns
+				.small-4.columns
+					= f.label(:fromDate, "From the" )
+				.small-8.columns
+					= f.date_field(:fromDate, { id: "fromDate" })
+			.small-12.medium-6.columns
+				.small-4.columns
+					= f.label(:toDate, "to" )
+				.small-8.columns
+					= f.date_field(:toDate, { id: "toDate" })
+		.row
+			.small-12.medium-3.columns
+				= f.label(:location, "Location" )
+			.small-12.medium-9.columns
+				= f.text_field( :location, { id: "location" } )
+		.row
+			.small-12.medium-3.columns
+				= f.label(:email, "Email" )
+			.small-12.medium-9.columns
+				= f.text_field( :email, { id: "email" } )
+		= f.submit("Create meet", { :class => "button tiny" })
+	%hr

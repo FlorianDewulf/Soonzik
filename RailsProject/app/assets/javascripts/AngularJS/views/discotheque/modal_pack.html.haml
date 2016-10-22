@@ -1,0 +1,15 @@
+.discotheque
+	.discothequeContainer
+		.myMusics
+			%h3 {{ pack.title }}
+			%hr
+			.modalMusicContent
+				.grid
+					%ul.inline-list
+						%li.text-center{ "ng-repeat" => "album in pack.albums" }
+							%div
+								%img{ "ng-src" => "{{ '/assets/albums/' + album.image }}" }
+							%span {{ album.title }}
+							.overPlay
+								%i.fi-plus.pointer{ "ng-click" => "ok(album)" }
+%a.close-reveal-modal{ "ng-click" => "cancel()" } ×

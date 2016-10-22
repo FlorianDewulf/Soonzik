@@ -1,0 +1,149 @@
+﻿<Page
+    x:Class="SoonZik.Views.Concert"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bm="using:Bing.Maps"
+    xmlns:ViewModels="using:SoonZik.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Background="#CCCCCC" Height="1080">
+        <Grid.DataContext>
+            <ViewModels:ConcertViewModel/>
+        </Grid.DataContext>
+
+
+
+        <Grid Height="80" VerticalAlignment="Top" Width="1920" Background="#B0B0B0">
+            <TextBlock x:Name="concert_txt" HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="Concert" VerticalAlignment="Top" Height="55" Width="193" FontSize="53.333" Foreground="Black"/>
+            <Button x:Name="back_btn" Content="Button" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Style="{StaticResource NavigationBackButtonNormalStyle}" RequestedTheme="Light" Click="Button_Click"/>
+        </Grid>
+
+
+        <FlipView Name="flip_view" ItemsSource="{Binding concertlist}" SelectedItem="{Binding selected_concert, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="97,107,0,0" VerticalAlignment="Top" Height="936" Width="1721" FontSize="30">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid Width="Auto" Height="Auto" Background="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="5*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid x:Name="concert_info_grid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--ROW 0-->
+                            <TextBlock Grid.Column="0" Grid.Row="0" x:Uid="date_txt" Text="Date:" Foreground="Black" FontSize="40" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding planification.Date}" Foreground="Black" VerticalAlignment="Center"/>
+
+                            <!--ROW 1-->
+                            <TextBlock Grid.Column="1" Grid.Row="0" x:Uid="website_txt" Text="Site Internet:" Foreground="Black" FontSize="40" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding url}" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                            <!--ROW 2-->
+                            <TextBlock Grid.Column="2" Grid.Row="0" Name="address_txt" x:Uid="address_txt" Text="Adresse:" Foreground="#FF020202" FontSize="40" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
+                            <TextBlock Grid.Column="2" Grid.Row="0" TextWrapping="NoWrap" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Run Text="{Binding address.numberStreet}"/>
+                                <Run Text="{Binding address.street}"/>
+                                <LineBreak></LineBreak>
+                                <Run Text="{Binding address.city}"/>
+                                <Run Text="{Binding address.zipcode}"/>
+                            </TextBlock>
+
+                            <!--ROW 3-->
+                            <Button x:Name="like_btn" Grid.Column="3" Grid.Row="0" Command="{Binding do_like}" Visibility="{Binding like_btn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Height="55" VerticalAlignment="Center" Width="55">
+                                <Button.Background>
+                                    <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/like.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="unlike_btn" Grid.Column="3" Grid.Row="0" Command="{Binding do_unlike}" Visibility="{Binding unlike_btn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Height="55" VerticalAlignment="Center" Width="55">
+                                <Button.Background>
+                                    <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/unlike.png"/>
+                                </Button.Background>
+                            </Button>
+                            
+                            <TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <Run Foreground="Black" Text="Likes: "/>
+                                <Run Foreground="Black" Text="{Binding likes}"/>
+                            </TextBlock>
+
+                        </Grid>
+
+
+                        <bm:Map Grid.Row="1" ZoomLevel="6" Credentials="Au1nH1MxHdvPVWttdBJJbTRYt6nHZJofF21VgvtHIAb5oYGH5609yjEa51GZZqFO" x:Name="MyMap" Height="Auto" Width="Auto">
+                            <bm:Map.Center>
+                                <bm:Location Latitude="46.601595" Longitude="1.904063"/>
+                            </bm:Map.Center>
+
+                            <bm:Map.Children>
+                                <bm:Pushpin Background="#FF990000">
+                                    <bm:MapLayer.Position>
+                                        <bm:Location Latitude="{Binding address.lat}" Longitude="{Binding address.lng}" />
+                                    </bm:MapLayer.Position>
+                                </bm:Pushpin>
+                            </bm:Map.Children>
+                        </bm:Map>
+
+                        <!--<Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="89*"/>
+                            <ColumnDefinition Width="254*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                        
+                            <StackPanel Grid.Column="0" Grid.Row="0">
+                                <TextBlock x:Uid="date_txt" Text="Date:" Foreground="Black" FontSize="40" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding planification.Date}" Foreground="Black"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="1">
+                                <TextBlock x:Uid="website_txt" Text="Site Internet:" Foreground="Black" FontSize="40" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding url}" Foreground="Black"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="2">
+                                <TextBlock Name="address_txt" x:Uid="address_txt" Text="Adresse:" Foreground="#FF020202" Margin="0,30,0,0" FontSize="40" FontWeight="Bold"></TextBlock>
+                                <TextBlock TextWrapping="NoWrap" Foreground="Black">
+                                <Run Text="{Binding address.numberStreet}"/>
+                                <Run Text="{Binding address.street}"/>
+                                <LineBreak></LineBreak>
+                                <Run Text="{Binding address.city}"/>
+                                <Run Text="{Binding address.zipcode}"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+
+
+                        <bm:Map Grid.Column="1" ZoomLevel="6" Credentials="Au1nH1MxHdvPVWttdBJJbTRYt6nHZJofF21VgvtHIAb5oYGH5609yjEa51GZZqFO" x:Name="MyMap" Margin="50,150,50,150">
+                            <bm:Map.Center>
+                                <bm:Location Latitude="46.601595" Longitude="1.904063"/>
+                                <bm:Location Latitude="{Binding address.lat}" Longitude="{Binding address.lng}"/>-->
+                        <!--
+                            </bm:Map.Center>
+
+                            <bm:Map.Children>
+                                <bm:Pushpin Background="#FF990000">
+                                    <bm:MapLayer.Position>
+                                        <bm:Location Latitude="{Binding address.lat}" Longitude="{Binding address.lng}" />
+                                    </bm:MapLayer.Position>
+                                </bm:Pushpin>
+                            </bm:Map.Children>
+                        </bm:Map>-->
+
+                    </Grid>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+
+    </Grid>
+</Page>

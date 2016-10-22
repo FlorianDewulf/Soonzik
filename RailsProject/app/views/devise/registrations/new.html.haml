@@ -1,0 +1,88 @@
+.row.signup
+  %h2 {{ labels.DISPLAY_SIGNUP_SIGNUP_LABEL }}
+  .small-12
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { :class => "devise" }) do |f|
+      .panel.login
+        %h3.subheader
+          {{ labels.DISPLAY_SIGNUP_PUBLIC_INFO_LABEL }}
+        = devise_error_messages!
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-torso
+          .large-11.medium-10.small-9.columns
+            = f.text_field :username, :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_USERNAME_LABEL }}"
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-align-justify
+          .large-11.medium-10.small-9.columns
+            = f.text_area :description, :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_DESCRIPTION_LABEL }}"
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-social-facebook
+          .large-11.medium-10.small-9.columns
+            = f.text_field :facebook, :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_FACEBOOK_LABEL }}"
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-social-twitter
+          .large-11.medium-10.small-9.columns
+            = f.text_field :twitter, :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_TWITTER_LABEL }}"
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-social-google-plus
+          .large-11.medium-10.small-9.columns
+            = f.text_field :googlePlus, :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_GPLUS_LABEL }}"
+        %h3.subheader
+          {{ labels.DISPLAY_SIGNUP_PERSO_INFO_LABEL }}
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-info
+          .large-11.medium-10.small-9.columns
+            = f.text_field :fname, :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_FIRSTNAME_LABEL }}"
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-info
+          .large-11.medium-10.small-9.columns
+            = f.text_field :lname, :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_LASTNAME_LABEL }}"
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-lock
+          .large-11.medium-10.small-9.columns
+            = f.text_field :password, :type => "password", :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_PASSWORD_LABEL }}"
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-telephone
+          .large-11.medium-10.small-9.columns
+            = f.text_field :phoneNumber, :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_PHONE_LABEL }}"
+        .row.collapse
+          .large-1.medium-2.small-3.columns
+            %span.prefix
+              %i.fi-mail
+          .large-11.medium-10.small-9.columns
+            = f.text_field :email, :class => "radius", placeholder: "{{ labels.DISPLAY_SIGNUP_EMAIL_LABEL }}"
+        .row
+          .large-3.medium-4.small-12.columns
+            %span.prefix.small-only-text-center
+              {{ labels.DISPLAY_SIGNUP_BIRTHDAY_LABEL }}
+          .large-9.medium-8.small-12.columns
+            .clearfix
+              = f.date_select :birthday, { start_year: 1900, end_year: 2010, :use_two_digit_numbers => true, order: [:day, :month, :year] }, { :class => "medium-4 columns radius" }
+        .row
+          = f.label :newsletter, :class => "newsletter" do
+            = f.check_box :newsletter, :class => "radius"
+            {{ labels.DISPLAY_SIGNUP_NEWSLETTER_LABEL }}
+        %hr
+        .actions.clearfix
+          .large-4.columns.large-centered
+            = f.submit '{{ labels.DISPLAY_SIGNIN_SIGNUP_LABEL }}', :class => "button radius expand success"
+        .divider
+        .links
+          = render "devise/shared/links"

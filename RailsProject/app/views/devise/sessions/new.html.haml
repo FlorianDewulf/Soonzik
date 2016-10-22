@@ -1,0 +1,26 @@
+.row
+  .small-12.medium-8.large-6.small-centered.columns
+    .panel.login
+      .social-button
+        - if devise_mapping.omniauthable?
+          - resource_class.omniauth_providers.each do |provider|
+            = link_to socialIconConnect(provider.to_s.downcase).html_safe, omniauth_authorize_path(resource_name, provider)
+      .divider
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          = f.email_field :email, :class => "radius", :placeholder => "{{ labels.DISPLAY_SIGNIN_MAIL_PLACEHOLDER }}", :autofocus => "true"
+        .field
+          = f.password_field :password, :class => "radius", :placeholder => "{{ labels.DISPLAY_SIGNIN_PASSWORD_PLACEHOLDER }}"
+        .left
+          - if devise_mapping.rememberable?
+            .field
+              = f.check_box :remember_me
+              = f.label :remember_me, "{{ labels.DISPLAY_SIGNIN_REMEMBER_LABEL }}"
+        .right
+          - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+            = link_to "{{ labels.DISPLAY_SIGNIN_PASSWORD_FORGOTTEN_LABEL }}", new_password_path(resource_name)
+        .actions
+          = f.submit '{{ labels.DISPLAY_SIGNIN_SIGNIN_LABEL }}', :class => "button expand radius"
+      .divider
+      .links
+        = render "devise/shared/links"

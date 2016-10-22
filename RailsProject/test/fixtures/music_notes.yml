@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+MusicNoteOne:
+  user: UserOne
+  music: MusicTwo
+  value: 4
+
+MusicNoteTwo:
+  user: UserTwo
+  music: MusicTwo
+  value: 3

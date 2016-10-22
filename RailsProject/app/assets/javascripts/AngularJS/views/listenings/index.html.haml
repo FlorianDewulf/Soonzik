@@ -1,0 +1,16 @@
+.listenings{ "ng-init" => "init()" }
+	%loading{ "ng-if" => "loading == true" }
+	.row{ "ng-if" => "loading == false" }
+		%p{ "ng-if" => "location == 0" }
+			{{ labels.DISPLAY_LISTENING_ERROR_GEOLOCATION_LABEL }}
+		.load{ "ng-if" => "location == 1" }
+			%loading{ "loading-type" => "'square'" }
+			%p {{ labels.DISPLAY_LISTENING_WAITING_LABEL }}
+			%p {{ labels.DISPLAY_LISTENING_INFORMATION_LABEL }}
+		.map{ "ng-if" => "location == 2" }
+			%ui-gmap-google-map.angular-google-map-container{ :center => "map.center", :zoom => "map.zoom", :events => "map.events"}
+				%ui-gmap-circle{ :center => "circle.center", :stroke => "circle.stroke", :fill => "circle.fill", :radius => "circle.radius", :events => "circle.events", :visible => "circle.visible", :geodesic => "c.geodesic", :editable => "circle.editable", :draggable => "circle.draggable", :clickable => "circle.clickable" }
+				%ui-gmap-circle.circleZone{ :center => "circleZone.center", :stroke => "circleZone.stroke", :fill => "circleZone.fill", :radius => "circleZone.radius", :events => "circleZone.events", :visible => "circleZone.visible", :geodesic => "c.geodesic", :editable => "circleZone.editable", :draggable => "circleZone.draggable", :clickable => "circleZone.clickable" }
+				%ui-gmap-markers{ models: "map.markers", coords: "'self'", icon: "'icon'", modelsbyref: "true", idKey: "'idKey'", options: "'options'", :events => "circleZone.events", click: "clickOnMarker" }
+			%input{ type: "range", min: 1, max: 500, "ng-model" => "model.range", "ng-change" => "changeRange()", step: 0.5 }
+			%p {{ labels.DISPLAY_LISTENING_RANGE_LABEL }} {{ model.range }} kms.

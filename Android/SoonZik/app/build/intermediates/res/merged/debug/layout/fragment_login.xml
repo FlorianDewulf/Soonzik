@@ -1,0 +1,48 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.soonzik.soonzik.LoginFragment">
+
+    <TextView android:text="Login :" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText android:id="@+id/loginUsername" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView android:text="Password :" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText android:inputType="textPassword" android:id="@+id/loginPassword" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button android:text="Log In" android:id="@+id/loginButton" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button android:text="Sign In" android:id="@+id/signinButton" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp" />
+
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/login_twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"/>
+
+</TableLayout>
+<!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/fragment_login.xml -->

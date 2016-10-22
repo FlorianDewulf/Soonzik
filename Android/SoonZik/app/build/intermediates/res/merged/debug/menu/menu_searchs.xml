@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.soonzik.soonzik.SearchAllFragment">
+        
+        <item
+            android:id="@+id/action_create_playlist"
+            android:orderInCategory="50"
+            app:showAsAction="ifRoom"
+
+            android:icon="@drawable/ic_soonzik"
+            android:title="@string/action_create_playlist"/>
+    </menu>
+</menu><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/menu/menu_searchs.xml -->

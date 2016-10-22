@@ -1,0 +1,16 @@
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\bin\Debug\SonnZik.Streaming.HttpWebRequest.dll
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\bin\Debug\SonnZik.Streaming.HttpWebRequest.pdb
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\obj\Debug\SonnZik.Streaming.HttpWebRequest.dll
+C:\Users\Gery\documents\visual studio 2013\Projects\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\obj\Debug\SonnZik.Streaming.HttpWebRequest.pdb
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\bin\Debug\SonnZik.Streaming.HttpWebRequest.dll
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\bin\Debug\SonnZik.Streaming.HttpWebRequest.pdb
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\obj\Debug\SonnZik.Streaming.HttpWebRequest.csprojResolveAssemblyReference.cache
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\obj\Debug\SonnZik.Streaming.HttpWebRequest.dll
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\obj\Debug\SonnZik.Streaming.HttpWebRequest.pdb
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\bin\Debug\SonnZik.Streaming.HttpWebRequest.dll
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\bin\Debug\SonnZik.Streaming.HttpWebRequest.pdb
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\obj\Debug\SonnZik.Streaming.HttpWebRequest.csprojResolveAssemblyReference.cache
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\obj\Debug\SonnZik.Streaming.HttpWebRequest.dll
+C:\Users\Gery\Documents\GitHub\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\obj\Debug\SonnZik.Streaming.HttpWebRequest.pdb
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Julien\Desktop\GIT EIP\Soonzik\SoonZik.Streaming\SonnZik.Streaming.HttpWebRequest\bin\Debug\Newtonsoft.Json.xml

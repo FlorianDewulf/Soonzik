@@ -1,0 +1,44 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+// FONTS
+#define     SOONZIK_FONT_BODY_BIG               [UIFont fontWithName:@"HelveticaNeue-Light" size:20]
+#define     SOONZIK_FONT_BODY_MEDIUM            [UIFont fontWithName:@"HelveticaNeue-Light" size:17]
+#define     SOONZIK_FONT_BODY_SMALL             [UIFont fontWithName:@"HelveticaNeue-Light" size:14]
+#define     SOONZIK_FONT_BODY_VERY_SMALL        [UIFont fontWithName:@"HelveticaNeue-Light" size:12]
+
+// COLORS
+#define     BACKGROUND_COLOR                    [UIColor colorWithRed:215/255.0f green:215/255.0f blue:215/255.0f alpha:1.0f]
+#define     DARK_GREY                           [UIColor colorWithRed:39/255.0f green:39/255.0f blue:39/255.0f alpha:1.0f]
+#define     BLUE_1                              [UIColor colorWithRed:36/255.0f green:153/255.0f blue:219/255.0f alpha:1.0f]
+#define     BLUE_2                              [UIColor colorWithRed:19/255.0f green:96/255.0f blue:141/255.0f alpha:1.0f]
+#define     BLUE_3                              [UIColor colorWithRed:123/255.0f green:194/255.0f blue:250/255.0f alpha:1.0f]
+#define     ORANGE                              [UIColor colorWithRed:239/255.0f green:108/255.0f blue:10/255.0f alpha:1.0f]
+
+// HEIGHTS
+#define     MENU_CELL_HEIGHT 35.0
+
+// API
+#define API_URL         @"http://soonzikapi.herokuapp.com/"
+#define FIX_SALT        @"3uNi@rCK$L$om40dNnhX)#jV2$40wwbr_bAK99%E"
+
+// PAYPAL
+
+// GOOGLE +
+#define googleClientID  @"485472921989-j0idqmomdgutqba1e0nbthda48lbdt3n.apps.googleusercontent.com"
+
+//#define URL @"http://soonzikapi.herokuapp.com/"

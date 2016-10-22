@@ -1,0 +1,43 @@
+%h3 Create an album
+%hr
+.form
+	.row
+		.small-12.medium-3.large-2.columns
+			%label.left.inline{ for: "albumImage" } Image
+		.small-12.medium-9.large-10.columns
+			.radius.button.tiny{ id: "albumImage", 'ngf-select' => true, "ngf-change" => "uploadImage($files)" } Upload the image
+			%p {{ file.name }}
+	.row
+		.small-12.medium-3.large-2.columns
+			%label.left.inline{ for: "title" } Title
+		.small-12.medium-9.large-10.columns
+			%input{ type: "text", placeholder: "My title", "ng-model" => "form.title", id: "title" }
+	.row
+		.small-12.medium-3.large-2.columns
+			%label.left.inline{ for: "price" } Price
+		.small-12.medium-9.large-10.columns
+			%input{ type: "text", placeholder: "My price", "ng-model" => "form.price", id: "price" }
+	.row
+		.small-12.medium-3.large-2.columns
+			%label.left.inline{ for: "year" } Year of production
+		.small-12.medium-9.large-10.columns
+			%input{ type: "text", placeholder: "2000", "ng-model" => "form.yearProd", id: "year" }
+	.row
+		.small-6.medium-4.large-3.columns.left{ "ng-repeat" => "influence in influences" }
+			%h5 {{ influence.name }}
+			%label{ for: "{{genre.style_name}}", "ng-repeat" => "genre in influence.genres" }
+				%input{ type: "checkbox", "checklist-model" => "selected.selectedGenres", "checklist-value" => "genre.id", id: "{{genre.style_name}}"}
+				{{ genre.style_name }}
+	.row
+		%h4 Descriptions
+		%h6.subtitle.red * The English description need to be set at least
+		.small-12{ "ng-repeat" => "desc in descriptions" }
+			%hr
+			%select.small-6.columns{ "ng-model" => "desc.language", "ng-options" => "lang.abbreviation as lang.language for lang in languages" }
+			%span.button.left.tiny{ "ng-click" => "removeDesc(desc)" } Remove this description
+			%textarea{ "ng-model" => "desc.description" }
+		%span.button.tiny.right{ "ng-click" => "addDesc()" } Add a description
+.button{ "ng-click" => "ok()" }
+	Save
+%loading{ "loading-type" => "'square'", "ng-if" => 'loading == true' }
+%a.close-reveal-modal{ "ng-click" => "cancel()" } ×

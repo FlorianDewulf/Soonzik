@@ -1,0 +1,43 @@
+= form_for @concert, url: artist_tour_update_path(@concert), html: { class: "row" } do |f|
+	- if @concert.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@concert.errors.count, "error")} prohibited this concert from being saved:"
+			%ul
+				- @concert.errors.full_messages.each do |msg|
+					%li= msg
+	.labelForm.small-12.medium-4.large-3.columns
+		%span.inline Date *
+	.inputForm.small-12.medium-8.large-9.columns
+		%input{ type: "datetime-local", placeholder: "yyyy-MM-dd HH:mm", min: "#{Time.now.strftime("%Y-%m-%d")}T00:00", value: "#{@concert.planification.strftime("%Y-%m-%dT%H:%M")}", name: "concert[planification]" }
+	.labelForm.small-12.medium-4.large-3.columns
+		%span.inline Link *
+	.inputForm.small-12.medium-8.large-9.columns
+		%input{ placeholder: "Link to get more information about the event", type: "text", value: "#{@concert.url}", name: "concert[url]" }
+	.labelForm.small-12.medium-4.large-3.columns
+		%span.inline Number of the street *
+	.inputForm.small-12.medium-8.large-9.columns
+		%input{ placeholder: "72", type: "text", value: "#{@concert.address.numberStreet}", name: "address[numberStreet]" }
+	.labelForm.small-12.medium-4.large-3.columns
+		%span.inline Street *
+	.inputForm.small-12.medium-8.large-9.columns
+		%input{ placeholder: "Street xxx", type: "text", value: "#{@concert.address.street}", name: "address[street]" }
+	.labelForm.small-12.medium-4.large-3.columns
+		%span.inline More information
+	.inputForm.small-12.medium-8.large-9.columns
+		%input{ placeholder: "In the Irish pub", type: "text", value: "#{@concert.address.complement}", name: "address[complement]" }
+	.labelForm.small-12.medium-4.large-3.columns
+		%span.inline City *
+	.inputForm.small-12.medium-8.large-9.columns
+		%input{ placeholder: "SoonZik-City", type: "text", value: "#{@concert.address.city}", name: "address[city]" }
+	.labelForm.small-12.medium-4.large-3.columns
+		%span.inline Zipcode *
+	.inputForm.small-12.medium-8.large-9.columns
+		%input{ placeholder: "12345", type: "text", value: "#{@concert.address.zipcode}", name: "address[zipcode]" }
+	.labelForm.small-12.medium-4.large-3.columns
+		%span.inline Country *
+	.inputForm.small-12.medium-8.large-9.columns
+		%input{ placeholder: "SoonZik-Country", type: "text", value: "#{@concert.address.country}", name: "address[country]" }
+	.actions
+		%input.button{ name: "commit", type: "submit", value: "Update !" }
+	.panel.callout.radius
+		%p.red The fields with a star are mandatory

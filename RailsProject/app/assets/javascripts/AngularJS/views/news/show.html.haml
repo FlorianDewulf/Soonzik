@@ -1,0 +1,36 @@
+%meta{:property => "og:url", :content => "http://www.lvh.me:3000/news/{{show.news.id}}"}
+%meta{:property => "og:type", :content => "article"}
+%meta{:property => "og:title", :content => "{{show.news.title}}"}
+%meta{:property => "og:description", :content => "{{show.news.title}}"}
+%meta{:property => "og:image", :content => "http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"}
+.showNews{ "ng-init" => "initShowNews()" }
+  %loading{ "ng-if" => "loading == true" }
+  .clearfix{ "ng-if" => "loading == false", "ng-init" => "initSocialAPI()" }
+    .small-11.small-centered.columns
+      .panel.radius
+        %h3
+          %ul.no-bullet.clearfix
+            %li.small-3.columns.text-left
+              {{ show.news.user.username }}
+            %li.small-6.columns.text-center
+              {{ show.news.title }}
+            %li.small-3.columns.text-right
+              {{ show.news.created_at }}
+        .text-center{"ng-repeat" => "url in show.news.attachments" }
+          %img{"ng-src" => "{{ '/assets/news/' + url.url }}"}
+        %p.contentNews
+          {{ show.news.content }}
+        .likeContainer.text-right{ "ng-include" => "'/assets/AngularJS/views/include/like.html.haml'" }
+      .large-12
+        %textarea.radius{"placeholder" => "Ecrire un commentaire", "ng-model" => "show.contentCommentary"}
+        .action.clearfix
+          .text-right
+            .button.success.radius{:type => "submit", "ng-click" => "postComment()"} Envoyer
+          // Share Facebook
+          .fb-share-button{":data-href" => "http://www.lvh.me:3000/news/{{show.news.id}}", ":data-layout" => "button_count"}
+          // Share Twitter
+          %a.twitter-share-button{"data-hashtags" => "Soonzik", "data-url" => "http://lvh.me:3000/news/{{show.news.id}}", "data-text" => "{{show.news.title}}", "data-via" => "Soonzik", :href => "https://twitter.com/share"} Tweet
+          // Share Google +
+          /%button.g-interactivepost{"data-calltoactiondeeplinkid" => "/pages/create", "data-calltoactionlabel" => "CREATE", "data-calltoactionurl" => "http://plus.google.com/pages/create", "data-clientid" => "xxxxx.apps.googleusercontent.com", "data-contentdeeplinkid" => "/pages", "data-contenturl" => "http://lvh.me:3000/news/1", "data-cookiepolicy" => "single_host_origin", "data-prefilltext" => "News 1"} Tell your friends
+    .commentariesContainer{ "ng-include" => "'/assets/AngularJS/views/include/commentaries.html.haml'" }
+    %loading{ "loading-type" => "'square'", "ng-show" => "commentLoading == true" }

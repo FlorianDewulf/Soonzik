@@ -1,0 +1,13 @@
+﻿<UserControl
+    x:Class="SoonZik.Controls.ProgressRingControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black" Opacity="0.2" Visibility="{Binding GridVisibility, Mode=TwoWay}">
+        <ProgressRing x:Name="ProgressRing" IsActive="{Binding isActive, Mode=TwoWay}" Foreground="DeepSkyBlue" />
+    </Grid>
+</UserControl>

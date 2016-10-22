@@ -1,0 +1,29 @@
+.concerts{ "ng-init" => "initIndex()" }
+	%loading{ "ng-if" => "loading == true" }
+	.concertContainer{ "ng-if" => "loading == false" }
+		.groupFilter.clearfix
+			.small-12.medium-4.columns
+				%label{ :for => "artistInput" }
+					%strong {{ labels.DISPLAY_CONCERT_ARTIST_FILTER_LABEL }}
+				%input#artistInput{ "type" => "text", name: "artistInput", "ng-model" => "modelObj.user.username" }
+			.small-12.medium-4.columns.end
+				%label{ :for => "addressInput" }
+					%strong {{ labels.DISPLAY_CONCERT_COUNTRY_FILTER_LABEL }}
+				%input#artistInput{ "type" => "text", name: "addressInput", "ng-model" => "modelObj.address.country" }
+		%hr
+		.concert{ "ng-repeat" => "concert in indexView.concerts | filter:modelObj" }
+			%h3.lato {{ labels.DISPLAY_CONCERT_CONCERT_OF_LABEL }} {{ concert.user.username }}
+			%p
+				%span {{ labels.DISPLAY_CONCERT_LINK_LABEL }}
+				%a{ href: "{{ (concert.url.length == 0 || concert.url == null) ? '#' : concert.url }}" } {{ (concert.url.length == 0 || concert.url == null) ? labels.DISPLAY_CONCERT_NO_LINK_LABEL : concert.url }}
+			%p {{ labels.DISPLAY_CONCERT_ADDRESS_LABEL }} {{ formatAddress(concert.address) }}
+			%p{ "ng-show" => "concert.address.complement != null" } {{ concert.address.complement }}
+			.pointer{ 'ng-click' => 'concert.displayed = !concert.displayed', 'ng-class' => '{ displayed: concert.displayed }' }
+				%i.fi-map
+				%span {{ concert.displayed ? 'Cacher' : 'Afficher' }}
+			.map{ 'ng-if' => 'concert.map', 'ng-show' => 'concert.displayed == true' }
+				%ui-gmap-google-map.angular-google-map-container{ :center => "concert.map.center", :zoom => "concert.map.zoom" }
+					%ui-gmap-marker{ coords: "concert.map.marker.coords", idkey: "concert.map.marker.idKey" }
+			%p.text-right
+				%em {{ concert.planification }}
+			%hr

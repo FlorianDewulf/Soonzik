@@ -1,0 +1,61 @@
+$primary-blue-color: #008CBA;
+$primary-black-color: #252525;
+$primary-gray-color: #EDEDED;
+
+.commentariesContainer {
+	position: relative;
+	padding: 0.125rem 3.75rem .75rem;
+	font-family: "Lato";
+	width: 100%;
+
+	&:before {
+		content: " ";
+    top: 0;
+    width: 2px;
+    bottom: -10px;
+    background-color: $primary-blue-color;
+    left: 40px;
+    position: absolute;
+	}
+
+	.commentaries {
+		.commentaryContainer {
+			position: relative;
+	    margin-bottom: 30px;
+
+			.bullet {
+		    position: absolute;
+		    top: 9px;
+		    left: -24px;
+		    color: $primary-blue-color;
+		    background-color: #F5F5F5;
+		    width: 14px;
+		    height: 14px;
+		    line-height: 10px;
+			}
+
+			.commentary {
+				padding: 10px;
+				border-left: 2px solid $primary-blue-color;
+
+				&:before {
+				  position: absolute;
+				  top: 15px;
+				  left: -15px;
+					content: " ";
+					background-color: $primary-blue-color;
+				  width: 16px;
+				  height: 2px;
+				}
+
+				&.even { background: $primary-gray-color; color: $primary-black-color; }
+				&.odd { background: $primary-black-color; color: $primary-gray-color; }
+				
+				.headerCommentary {
+					line-height: 30px;
+					img {	height: 30px;	}
+				}
+			}
+		}
+	}
+}

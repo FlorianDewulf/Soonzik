@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.8.0\a517f29ed06be2b2879524fcd94b6e9b36e2e0b5\retrofit-1.8.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="a517f29ed06be2b2879524fcd94b6e9b36e2e0b5">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\retrofit-1.8.0-61a45ea9bf462ad246f4904009470fd55364fc65.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-d31d35d03037aba39ea5823dab81175fbdfac54c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b068965b1347f34c1918a6d606358e7b357a1229">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-4acee97a35e106751b34021352bb99d82b68ac6a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-0a1a1d538451994ac9ecd97fff2a9efc390a6110.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\gson-2.3-62d4485bddfffd5e7e3ffc75ea6846cedb11ce40.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="074b93197194a0225023845f90cceba9518be74c">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-ea8a10c4947576b247a6172066c8c30679c6f1d7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-45a0967aa80bd1a62523ef6b4c98a27f43abceeb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-78bd51a5f294c2cd47411028fccde31d99dcea33.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-7e78a6e4bf5aa03375712b2c2cb8aa1ad476fca8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-91a410cc833080649f051eeb8d7c78c73db1df58.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter\1.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6fc144eac80d908c45c4308e9aaa55622cae086f">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-abad4966d1f2c3f3fed1ade993abab66892b8a31.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-9a617e88aa6fcc324ca0a5acbc8e5fe540fa83da.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-7b58335903b82aea86542e461707733cbd7f06b8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.6.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-ed80266a58ddb980e3ffc68a48a81a30c06c176f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-ui\1.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b068965b1347f34c1918a6d606358e7b357a1229">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-4acee97a35e106751b34021352bb99d82b68ac6a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.8.0\a517f29ed06be2b2879524fcd94b6e9b36e2e0b5\retrofit-1.8.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a517f29ed06be2b2879524fcd94b6e9b36e2e0b5">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\retrofit-1.8.0-61a45ea9bf462ad246f4904009470fd55364fc65.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3c598243d9616e3c6132e054d43f50ff8f8dee63">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-ec6928a073f1fe11ab5040291fa11e5bc1f3ee5d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-3e7025aeeff2ebd241b36ca8ea359add225fa51a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-3221dbbc006cbbb75f8189738635afc631d2918b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-43e46ab09c403207e1365d476152147efd858114.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\libs\PayPalAndroidSDK-2.10.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="14dd3dad396b30a7c143d15998ac2a22fd3eaaf9">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\PayPalAndroidSDK-2.10.1-80d1097e51c38d04f608311e55ab6a77861eb301.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-73cd29a248513a6d96535f53db39d4358b84c38d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-82ccf0b027d9949013d050ab29a3bd91984799cd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-70de8354eb3e01dbb42801d0a07dd512b994811c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-3ad902eb5d5843472db354270fb9783b71623bdb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-0971ef38530a473cafe7e86f0d9edec8c9206f95.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-e3ccd75ffa73326b93fbf5047bfa12225619afb5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-1288369997c7951fd47636a952b5ff01b1795508.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-05ca5c9577bf3133c8d4a98227b7aef85a98ca9e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-82ccf0b027d9949013d050ab29a3bd91984799cd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-cb56057400a6f30f10c63c1579e8a847070efb36.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter-core\1.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3c598243d9616e3c6132e054d43f50ff8f8dee63">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-ec6928a073f1fe11ab5040291fa11e5bc1f3ee5d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-73cd29a248513a6d96535f53db39d4358b84c38d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\libs\android-async-http-1.4.6.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-fffa968a6aeec6a6b695d12d9ed454c42044af05.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-c7edb9cdbe1cd7e18010e1dfe48de928ad4f17b3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\libs\PayPalAndroidSDK-2.10.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="14dd3dad396b30a7c143d15998ac2a22fd3eaaf9">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\PayPalAndroidSDK-2.10.1-80d1097e51c38d04f608311e55ab6a77861eb301.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\libs\jbcrypt-0.3m.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fe2d9c5f23767d681a7e38fc8986b812400ec583">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\jbcrypt-0.3m-bb3e48c65692af92083d888bbcde4889cfb0dd51.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\0.9.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="de76a31d4a478cd8fcd7e30ec63261c18ba4f5a5">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-b101dc9e54ceff9128f9de6148a98d380db6af73.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-66d2d93ff465ac012748999797d43d522d3b1ffb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-2bba739b721af72ffab01795f7ea448cf8136186.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-02d14e856cee46d75fea378cc6719e5891f04f0c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\gson-2.3-62d4485bddfffd5e7e3ffc75ea6846cedb11ce40.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-cc71a4b2449613fde5704a62a422750515f2b426.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-b6995a4f02658c2d224be667cf53258cb7d6b321.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-0a1a1d538451994ac9ecd97fff2a9efc390a6110.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2e24e5f1b11170163028277de63f709e42525db4">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-b1b08345df1cdd09dc6666b2bde9df46ce106857.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.5\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6e65060ef2ec6ec98365250d2119d7968626fd3f">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-98f2c4ec94dec3b94cf793e27185b5bde572e722.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.twitter.sdk.android\tweet-composer\0.9.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="de76a31d4a478cd8fcd7e30ec63261c18ba4f5a5">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-b101dc9e54ceff9128f9de6148a98d380db6af73.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-bacab22b87b98846519947b487c2b96224a1cb24.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.digits.sdk.android\digits\1.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="074b93197194a0225023845f90cceba9518be74c">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-ea8a10c4947576b247a6172066c8c30679c6f1d7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.5\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6e65060ef2ec6ec98365250d2119d7968626fd3f">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-98f2c4ec94dec3b94cf793e27185b5bde572e722.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.twitter.sdk.android\twitter\1.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6fc144eac80d908c45c4308e9aaa55622cae086f">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-abad4966d1f2c3f3fed1ade993abab66892b8a31.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-b2031e2e4f650459b71a62c67b5a0165b25149f5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-91a410cc833080649f051eeb8d7c78c73db1df58.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-282d7b3cd757fc689b740988f5353e94bb8c54cf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.6.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1c1afa0ab2a8197a5da1b36c4167a9e479cb74d9">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\classes-ed80266a58ddb980e3ffc68a48a81a30c06c176f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Kevin\Desktop\SoonZik\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-7b58335903b82aea86542e461707733cbd7f06b8.jar" />
+    </item>
+
+</items>

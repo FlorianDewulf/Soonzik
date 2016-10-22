@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+PackOne:
+  title: Pack 1
+  albums: AlbumOne
+
+PackTwo:
+  title: Pack 2
+  albums: AlbumTwo

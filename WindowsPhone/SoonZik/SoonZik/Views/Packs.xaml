@@ -1,0 +1,119 @@
+﻿<Page
+    x:Class="SoonZik.Views.Packs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    mc:Ignorable="d"
+    DataContext="{StaticResource PackViewModel}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <interactivity:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loaded">
+            <core:InvokeCommandAction Command="{Binding SelectionCommand}" />
+        </core:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
+
+    <Page.Resources>
+
+        <DataTemplate x:Key="AlbumTemplate">
+            <Grid Height="70" Margin="0,0,0,0">
+                <Border BorderThickness="0,0,0,0.5" Width="350" BorderBrush="White" />
+                <Image x:Name="AlbumImage" Source="../Resources/Icones/MenuExplorer.png" Height="40"
+                       VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                <TextBlock x:Name="MusicTitle" Text="{Binding title}" Foreground="White" FontSize="25"
+                           HorizontalAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ListPackItemTemplate">
+            <TextBlock FontSize="25" Text="{Binding title}" Foreground="White" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="ListArtisteItemTemplate">
+            <TextBlock FontSize="25" Text="{Binding username}" Foreground="White" />
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Grid x:Name="GlobalGrid">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ListBox Grid.Row="0" Background="Transparent" ItemsSource="{Binding CompleteListPack}"
+                 ItemTemplate="{StaticResource ListPackItemTemplate}"
+                 SelectedItem="{Binding ThePack, Mode=TwoWay}">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Tapped">
+                    <core:InvokeCommandAction Command="{Binding PackTappedCommand}" />
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+
+        </ListBox>
+
+        <Grid Grid.Row="1">
+            <Pivot x:Name="PivotGlobal" HeaderTemplate="{StaticResource SizeHeaderGlobalPivot}"
+                   Foreground="Transparent" RenderTransformOrigin="0.5,0.5" Style="{StaticResource PivotStyle1}"
+                   Margin="0,20,0,0">
+                <PivotItem Header="Pack Info">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" FontSize="20" Foreground="White"
+                                   Text="{Binding MyPack.title, Mode=TwoWay}" />
+                        <TextBlock Grid.Row="1" FontSize="20" Foreground="White"
+                                   Text="{Binding MyPack.descriptions[0].description, Mode=TwoWay}" />
+                        <Button Grid.Row="4" HorizontalAlignment="Center" Content="Acheter"
+                                Command="{Binding BuyCommand}" />
+                        <ComboBox PlaceholderText="Offrir a un amis" ItemsSource="{Binding ListFriend}" SelectedItem="{Binding Friend, Mode=TwoWay}"
+                                  Grid.Row="3">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=username}"></TextBlock>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                            </ComboBox>
+                    </Grid>
+                </PivotItem>
+
+                <PivotItem x:Uid="AlbumPivot" Header="">
+                    <ListBox Background="Transparent" x:Name="ListBoxAlbum" ItemsSource="{Binding ListAlbums}"
+                             ItemTemplate="{StaticResource AlbumTemplate}"
+                             SelectedItem="{Binding SelectedAlbum, Mode=TwoWay}">
+
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Tapped">
+                                <core:InvokeCommandAction Command="{Binding AlbumTappedCommand}" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                    </ListBox>
+                </PivotItem>
+
+                <PivotItem x:Uid="ArtistPivot" Header="">
+                    <ListBox Background="Transparent" x:Name="ListBoxArtiste" ItemsSource="{Binding ListArtistes}"
+                             ItemTemplate="{StaticResource ListArtisteItemTemplate}"
+                             SelectedItem="{Binding TheArtiste, Mode=TwoWay}" />
+
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <core:InvokeCommandAction Command="{Binding ArtistTappedCommand}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </PivotItem>
+
+                <PivotItem x:Uid="AssociationPivot" Header="" />
+            </Pivot>
+        </Grid>
+    </Grid>
+</Page>

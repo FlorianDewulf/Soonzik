@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/packpicture"
+        android:src="@drawable/ic_pack"
+        android:contentDescription="@string/imgmenudescription"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/albumtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artists names"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/artistname"
+        android:layout_alignStart="@+id/artistname" />
+
+    <TextView
+        android:id="@+id/nbalbums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:layout_toStartOf="@+id/imageView2" />
+
+    <ImageView
+        android:src="@drawable/ic_disc"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/imageView2"
+        android:layout_alignBottom="@+id/artistname"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:id="@+id/artistname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title of the Pack"
+        android:textSize="30sp"
+        android:layout_above="@+id/albumtitle"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignBottom="@+id/packpicture"
+        android:layout_toRightOf="@+id/packpicture"
+        android:layout_toEndOf="@+id/packpicture"
+        android:layout_marginLeft="9dp"
+        android:layout_marginStart="9dp">
+    </TextView>
+
+
+
+</RelativeLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/row_packs.xml -->

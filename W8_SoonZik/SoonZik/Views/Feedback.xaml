@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="SoonZik.Views.Feedback"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModels="using:SoonZik.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Background="#CCCCCC" Height="1080">
+
+        <Grid Height="80" VerticalAlignment="Top" Width="1920" Background="#B0B0B0">
+            <TextBlock x:Uid="feedback_txt" x:Name="feedback_txt" HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="Feedback" VerticalAlignment="Top" Height="55" Width="290" FontSize="53.333" Foreground="Black"/>
+            <Button x:Name="back_btn" Content="Button" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Style="{StaticResource NavigationBackButtonNormalStyle}" RequestedTheme="Light" Click="Button_Click"/>
+        </Grid>
+
+        <Grid Height="593" Margin="400,155,400,0" VerticalAlignment="Top" Background="White">
+
+
+            <Rectangle Fill="#FF00AFDC" HorizontalAlignment="Left" Height="75" StrokeEndLineCap="Square" Stroke="#FF00AFDC" VerticalAlignment="Top" Width="1120" Grid.ColumnSpan="2" Margin="0,0,-405,0"/>
+            <TextBlock Name="title" Margin="20,16,0,531" Text="Remplissez tous les champs suivants" VerticalAlignment="Center" FontSize="36" Height="46"/>
+
+            <TextBlock x:Name="email_txt" HorizontalAlignment="Left" Margin="340,110,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Height="25" Width="230" Foreground="Black" FontSize="20"/>
+            <TextBox HorizontalAlignment="Left" Margin="340,140,0,0" Text="{Binding email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="15" Width="297" Foreground="#FF080808" Background="#FFC1C1C1"/>
+            <TextBlock x:Name="type_txt" HorizontalAlignment="Left" Margin="340,205,0,0" TextWrapping="Wrap" Text="Type" VerticalAlignment="Top" Height="28" Width="130" Foreground="Black" FontSize="20"/>
+            <TextBlock x:Name="objet_txt" HorizontalAlignment="Left" Margin="515,205,0,0" TextWrapping="Wrap" Text="Objet" VerticalAlignment="Top" Height="28" Width="260" Foreground="Black" FontSize="20"/>
+            <TextBox HorizontalAlignment="Left" Margin="510,233,0,0" Text="{Binding objet, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="15" Width="265" Foreground="#FF080808" Background="#FFC1C1C1"/>
+            <TextBlock x:Name="txt_txt" HorizontalAlignment="Left" Margin="340,280,0,0" TextWrapping="Wrap" Text="Message" VerticalAlignment="Top" Height="25" Width="435" Foreground="Black" FontSize="20"/>
+            <TextBox  TextWrapping="Wrap" AcceptsReturn="True" Margin="0,305,340,0" Text="{Binding txt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="175" Foreground="#FF080808" Background="#FFC1C1C1" HorizontalAlignment="Right" Width="440"/>
+
+            <ComboBox HorizontalAlignment="Left" SelectedIndex="{Binding index_cb, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding object_type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="340,233,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.042,0" Height="32" Background="#FFC1C1C1">
+                <ComboBoxItem Content="Bug"/>
+                <ComboBoxItem Content="Payment"/>
+                <ComboBoxItem Content="Compte"/>
+                <ComboBoxItem Content="Autre"/>
+            </ComboBox>
+            <Button x:Name="send_btn" Content="Envoyer" HorizontalAlignment="Stretch" Command="{Binding do_send_feedback, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="479,502,480,0" VerticalAlignment="Top" Background="#FF00AFDC" Height="43"/>
+
+
+        </Grid>
+
+    </Grid>
+</Page>

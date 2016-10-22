@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+NotifOne:
+  user: UserOne
+  link: notification1
+  description: User1 vous a envoyé un poke
+
+NotifTwo:
+  user: UserTwo
+  link: notification2
+  description: User2 vous a envoyé un poke

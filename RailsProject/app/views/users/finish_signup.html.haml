@@ -1,0 +1,29 @@
+.row
+  #add-email.container
+    %h1 Finalisation de l'inscription
+    = form_for(@user, :as => 'user', :url => finish_signup_path(@user), :html => { role: 'form'}) do |f|
+      - if @show_errors && @user.errors.any?
+        #error_explanation.red
+          - @user.errors.full_messages.each do |msg|
+            = msg
+            %br/
+      .form-group
+        .controls
+          .field
+            = f.label :email
+            = f.text_field :email, :autofocus => true, :value => UsersHelper.validate_email_for_oauth(@user), class: 'form-control input-lg', placeholder: 'Example: email@me.com', disabled: ((UsersHelper.validate_email_for_oauth(@user) != "") ? true : false)
+          .field
+            = f.label :username
+            = f.text_field :username, :autofocus => true, :value => UsersHelper.validate_username_for_oauth(@user), class: 'form-control input-lg'
+          .field
+            = f.label :fname, "Firstname"
+            = f.text_field :fname, :autofocus => true, :value => @user.fname, class: 'form-control input-lg'
+          .field
+            = f.label :lname, "Lastname"
+            = f.text_field :lname, :autofocus => true, :value => @user.lname, class: 'form-control input-lg'
+          .field
+            = f.label :birthday
+            = f.date_select :birthday, :autofocus => true, :value => @user.birthday, :start_year=>1900, :end_year=>2005, class: 'form-control input-lg'
+      .actions
+        = f.submit 'Continue', :class => 'button'
+      %hr

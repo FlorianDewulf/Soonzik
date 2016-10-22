@@ -1,0 +1,73 @@
+.explorerContainer{ "ng-init" => "explorerInit()" }
+	%loading{ "ng-if" => "loading == true" }
+	%h6.navigation{ "ng-if" => "loading == false" }
+		%span.clickable{ "ng-click" => "reset()" } {{ labels.DISPLAY_EXPLORER_INDEX_LABEL }}
+		%span{ "ng-if" => "selectedInfluence != null" } >>
+		%span.clickable{ "ng-if" => "selectedInfluence != null", "ng-click" => "resetInfluence()" } {{ selectedInfluence.name }}
+		%span{ "ng-if" => "selectedGenre != null" } >> {{ selectedGenre.style_name }}
+	.explorer
+		.influences{ "ng-if" => "loading == false && state == 0" }
+			%h2.lato {{ labels.DISPLAY_EXPLORER_INFLUENCE_CHOOSE_LABEL }}
+			%hr
+			%ul.influence.circle
+				%li{ "ng-repeat" => "influence in influences" }
+					%h5.influence.clickable{ "ng-click" => "chooseInfluence(influence)" } {{ influence.name }} ({{ influence.genres.length }} {{ labels.DISPLAY_EXPLORER_GENRE_LABEL }})
+			%hr
+			%h2.lato {{ labels.DISPLAY_EXPLORER_AMBIANCE_CHOOSE_LABEL }}
+			%hr
+			%ul.ambiance.circle
+				%li{ "ng-repeat" => "ambiance in ambiances" }
+					%h5.ambiance.clickable{ "ng-click" => "chooseAmbiance(ambiance)" } {{ ambiance.name }}
+		.ambianceDetail{ "ng-class" => "ambianceWindow" }
+			%h2.lato {{ selectedAmbiance.name }}
+			%hr
+			%loading{ "loading-type" => "'square'", "ng-if" => "loadingAmbiance == true" }
+			%table
+				%tr.item{ "ng-repeat" => "music in selectedAmbiance.musics" }
+					%td.small-1.medium-1.large-1
+						%p
+							{{ $index + 1 + ((currentPage - 1) * 30) }}
+					%td.small-2.medium-1
+						%music{ "music-object" => "music" }
+							%img{ "ng-src" => "{{ '/assets/albums/' + music.album.image }}" }
+					%td.small-5.medium-7.large-8
+						%music{ "music-object" => "music" } {{ music.title }}
+					%td.small-2
+						{{ formatTime(music.duration) }}
+					%td.small-2
+						%a{ href: "/albums/{{ music.album.id }}" }
+							%i.fi-arrow-right
+		.influenceDetail{ "ng-class" => "influenceWindow" }
+			%h2.lato {{ selectedInfluence.name }}
+			%hr
+			%loading{ "loading-type" => "'square'", "ng-if" => "loadingGenre == true" }
+			%ul.inline-list
+				%li{ "ng-repeat" => "genre in selectedInfluence.genres" }
+					.genre.clickable{ "ng-click" => "chooseGenre(genre)", style: "border-color: {{ genre.color_hexa }};background: {{ shadeColor(genre.color_hexa, 0.8) }}" }
+						{{ genre.style_name }}
+		.genreDetail{ "ng-class" => "genreWindow" }		
+			%h2.lato {{ selectedGenre.style_name }}
+			%hr
+				%table
+					%tr.item{ "ng-repeat" => "music in selectedGenre.musics" }
+						%td.small-1.medium-1.large-1
+							%p
+								{{ $index + 1 + ((currentPage - 1) * 30) }}
+						%td.small-2.medium-1
+							%music{ "music-object" => "music" }
+								%img{ "ng-src" => "{{ '/assets/albums/' + music.album.image }}" }
+						%td.small-5.medium-7.large-8
+							%music{ "music-object" => "music" } {{ music.title }}
+						%td.small-2
+							{{ formatTime(music.duration) }}
+						%td.small-2
+							%a{ href: "/albums/{{ music.album.id }}" }
+								%i.fi-arrow-right
+				.pagination-centered{ "ng-if" => "totalPage > 1" }
+					%ul.pagination
+						%li{ "class" => "arrow {{ (currentPage == 1) ? 'unavailable' : '' }}" }
+							%a{ href: ""} &laquo;
+						%li{ "ng-repeat" => "num in range(min(currentPage, 5) + min(totalPage - 1, 5)) track by $index", "class" => "{{ $index + 1 == min(currentPage, 5) ? 'current' : '' }}" }
+							%a{ href: ""} {{ currentPage - min(currentPage, 5) + $index + 1 }}
+						%li{ "class" => "arrow {{ (totalPage == currentPage) ? 'unavailable' : '' }}" }
+							%a{ href: ""} &raquo;

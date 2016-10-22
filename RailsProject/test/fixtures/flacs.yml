@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+FlacOne:
+  music: MusicOne
+  file: music_one
+
+FlacTwo:
+  music: MusicTwo
+  file: music_two

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ListeningOne:
+  user: UserOne
+  music: MusicOne
+  when: 2014-09-07 23:18:57
+  latitude: 1.5
+  longitude: 2.5
+
+ListeningTwo:
+  user: UserTwo
+  music: MusicOne
+  when: 2014-09-07 23:18:57
+  latitude: -88
+  longitude: 20

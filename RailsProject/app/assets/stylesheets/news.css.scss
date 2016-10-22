@@ -1,0 +1,72 @@
+// Place all the styles related to the News controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.indexNews {
+
+	h2 {
+		margin: 10px 5% 30px;
+		padding: 20px;
+		border-top: 2px solid #006A8D;
+		border-bottom: 2px solid #006A8D;
+		font-family: "Drakolomb";
+	}
+
+	.newsItem {
+		.contentNewsContainer {
+			.title {
+				font-family: "Lato";
+				font-weight: bold;
+				font-size: 20px;
+				margin-bottom: 30px;
+			}
+
+			.contentNews {
+				color: #00536E;
+				margin-bottom: 40px;
+				text-indent:15px;
+			}
+		}
+
+		.illustration {
+			margin-bottom: 15px;
+
+			img {
+				-webkit-transition: all 0.8s ease-in-out;
+				-moz-transition: all 0.8s ease-in-out;
+				-o-transition: all 0.8s ease-in-out;
+				-ms-transition: all 0.8s ease-in-out;
+				transition: all 0.8s ease-in-out;
+				border: 2px solid #006A8D;
+
+				&:hover {
+					-webkit-transform: scale(1.03);
+					-moz-transform: scale(1.03);
+					-o-transform: scale(1.03);
+					-ms-transform: scale(1.03);
+					transform: scale(1.03);
+				}
+			}
+		}
+	}
+
+}
+
+.showNews {
+	.panel {
+		padding: 0 0 1.25rem 0;
+
+		h3 {
+			height: 40px;
+			background: #008CBA;
+			font-family: "Lato";
+			font-weight: bold;
+			ul li { color: white; line-height: 40px; }
+		}
+
+		.contentNews {
+			padding: 10px 15px;
+			color: #006A8D;
+		}
+	}
+}

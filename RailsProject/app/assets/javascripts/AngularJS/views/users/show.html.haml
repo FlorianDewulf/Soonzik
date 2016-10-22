@@ -1,0 +1,143 @@
+.userProfile{ "ng-init" => "showInit()" }
+	%loading{ "ng-if" => "loading == true" }
+	.row{ "ng-if" => "loading == false" }
+		.background-profil{ "style" => "{{ show.style }}" }
+			.photo-profil-show
+				%img.photo-profil-user{ "ng-src" => '{{ "/assets/usersImage/avatars/" + show.user.image }}' }
+			.username.text-center
+				%b
+					{{ show.user.username }}
+			.text-center
+				.nb-followers.text-center
+					%p {{ show.user.followers.length }} {{ labels.DISPLAY_USER_FOLLOWERS_LABEL }}
+					%span.button.tiny.radius{ "ng-if" => "user != false && user.id != show.user.id", "ng-class" => "isaFollower() ? 'success follow' : 'info notfollow'", "ng-click" => "isaFollower() ? unfollow() : follow()" }
+						{{ isaFollower() ? labels.DISPLAY_USER_FOLLOWING_LABEL : labels.DISPLAY_USER_FOLLOW_LABEL }}
+					%span.button.tiny.radius{ "ng-if" => "user != false && user.id != show.user.id", "ng-class" => "isaFriend() ? 'success follow' : 'info notfollow'", "ng-click" => "isaFriend() ? unfriend() : friend()" }
+						{{ isaFriend() ? labels.DISPLAY_USER_DELFRIEND_LABEL : labels.DISPLAY_USER_ADDFRIEND_LABEL }}
+			.social-network.text-center
+				%a{:href => '{{show.user.facebook}}', "ng-class" => "{ gray: (show.user.facebook == '#') }"}
+					%i.step.fi-social-facebook.size-42
+				%a{:href => '{{show.user.twitter}}', "ng-class" => "{ gray: (show.user.twitter == '#') }"}
+					%i.step.fi-social-twitter.size-42
+				%a{:href => '{{show.user.googlePlus}}', "ng-class" => "{ gray: (show.user.googlePlus == '#') }"}
+					%i.step.fi-social-google-plus.size-42
+		.large-12.large-centered.columns{ 'ng-if' => 'show.user.isArtist' }
+			.top-songs
+				%h1.subheader.lato
+					{{ labels.DISPLAY_USER_ARTIST_TOP_LABEL }}
+				%table.radius
+					%thead.radius
+						%tr
+							%th {{ labels.DISPLAY_USER_TITLE_SONG_LABEL }}
+							%th {{ labels.DISPLAY_USER_DURATION_SONG_LABEL }}
+							%th {{ labels.DISPLAY_USER_PRICE_SONG_LABEL }}
+							%th {{ labels.DISPLAY_USER_RATE_AV_SONG_LABEL }}
+							%th 
+							%th 
+					%tbody.radius
+						%tr{ 'ng-repeat' => 'song in show.user.topFive track by $index' }
+							%td{:width => '1000'}
+								%music{ "music-object" => "song" } {{song.title}}
+							%td{:width => '100'}
+								{{ formatTime(song.duration) }}
+							%td{:width => '50'}
+								{{song.price}} $
+							%td{:width => '200'}
+								%i.fi-star{ "ng-repeat" => "n in range(song.getAverageNote)	track by $index" }
+							%td{:width => '50'}
+								%music{ "music-object" => "song" }
+									%i.fi-play
+							%td.relative{:width => '50'}
+								%i.fi-plus.pointer{ "ng-click" => "setTooltip(tooltip == false ? song : false)" }
+								.mytooltip.toolright{ "ng-show" => "tooltip == song" }
+									%ul.no-bullet
+										%li.choice{ "ng-if" => "user != false", "ng-click" => "selectMusic(song)" } {{ labels.DISPLAY_USER_ADD_PLAYLIST_LABEL }}
+										%li.playlistBlock{ "ng-if" => "selectedMusic == song" }
+											%hr
+											%ul.text-left.small-12.playlistList
+												%li.choice.small-12.playlistChoice{ "ng-repeat" => "myplaylist in myPlaylists" }
+													%input{ "ng-model" => "myplaylist.check", type: "radio", id: "playlist-{{myplaylist.id}}", "ng-value" => "true" }
+													%label{ "for" => "playlist-{{myplaylist.id}}" } {{ myplaylist.name }}
+												%li.small-12.text-center
+													.button.tiny{ "ng-click" => "addToPlaylist()" } {{ labels.DISPLAY_USER_ADD_BUTTON }}
+											%hr
+										%li.choice
+											%music.small-12{ "music-object" => "song", "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_USER_LISTEN_LABEL }}
+										%li
+											.button.tiny{ "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_USER_CLOSE_BUTTON }}
+			.albums
+				%h1.subheader.lato
+					Albums
+				.row{ 'ng-repeat' => 'album in show.user.albums track by $index' }
+					.panel.clearfix
+						%img{ "ng-src" => "{{'/assets/albums/' + album.image}}" }
+						%table.right
+							%thead
+								%tr
+									%th{ colspan: '5' }
+										%a{ href: "/albums/{{album.id}}" }
+											{{album.title}}
+							%tbody
+								%tr{ 'ng-repeat' => 'song in album.musics track by $index' }
+									%td{:width => '50'}
+										{{$index + 1 }}
+									%td{:width => '300'}
+										%div {{song.title}}
+										%div{ "ng-mouseleave" => "setGolden(song, song.note)" }
+											%i.fi-star{ "ng-repeat" => "n in range(5)	track by $index", "ng-mouseover" => "setGolden(song, $index + 1)", "ng-class" => "{ goldenStar: (song.goldenStars > $index || (song.goldenStars == null && song.note > $index)) }", "ng-click" => "setNote(song)" }
+									%td{:width => '100'}
+										{{formatTime(song.duration)}}
+									%td{:width => '50'}
+										{{song.price}} $
+									%td{:width => '50'}
+										%music{ "music-object" => "song" }
+											%i.fi-play
+									%td.relative{:width => '50'}
+										%i.fi-plus.pointer{ "ng-click" => "setTooltip(tooltip == false ? song : false)" }
+										.mytooltip.toolright{ "ng-show" => "tooltip == song" }
+											%ul.no-bullet
+												%li.choice{ "ng-if" => "user != false", "ng-click" => "selectMusic(song)" } {{ labels.DISPLAY_USER_ADD_PLAYLIST_LABEL }}
+												%li.playlistBlock{ "ng-if" => "selectedMusic == song" }
+													%hr
+													%ul.text-left.small-12.playlistList
+														%li.choice.small-12.playlistChoice{ "ng-repeat" => "myplaylist in myPlaylists" }
+															%input{ "ng-model" => "myplaylist.check", type: "radio", id: "playlist-{{myplaylist.id}}", "ng-value" => "true" }
+															%label{ "for" => "playlist-{{myplaylist.id}}" } {{ myplaylist.name }}
+														%li.small-12.text-center
+															.button.tiny{ "ng-click" => "addToPlaylist()" } {{ labels.DISPLAY_USER_ADD_BUTTON }}
+													%hr
+												%li.choice
+													%music.small-12{ "music-object" => "song", "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_USER_LISTEN_LABEL }}
+												%li
+													.button.tiny{ "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_USER_CLOSE_BUTTON }}
+						%hr
+						%p {{ album.yearProd }} - {{ show.user.username }}
+		%h1.subheader
+			Tweets
+		%div{ "ng-if" => "user != false && show.user.id == user.id" }
+			.row.collapse
+				.small-11.columns{ "ng-if" => "user != false" }
+					%input#inputTweet{ type: "text", placeholder: "Tell something !", "ng-model" => "tweet.input", "submit-input" => "sendTweet()" }
+				.small-1.columns.end{ "ng-click" => "sendTweet()", "ng-if" => "user != false" }
+					%a.button.postfix
+						%i.fi-arrow-right
+			%span {{ 140 - tweet.input.length }} {{ labels.DISPLAY_USER_TWEETS_CHARACTERS_LABEL }}
+		.tweets{ "on-scroll" => "reloadTweet()", "scroll-position" => "'bottom'" }
+			.tweet.clearfix{ "ng-repeat" => "tweet in show.tweets.my" }
+				.small-1.columns
+					%img{ "ng-src" => '{{ "/assets/usersImage/avatars/" + tweet.user.image }}' }
+				.contentTweet.small-offset-1.small-9.medium-10
+					%tweet{ "tweet-msg" => "tweet.msg" }
+					%p.underTweet
+						%i.fi-clock
+						%span {{ tweet.created_at }} - 
+						%i.fi-comment.pointer{ "ng-click" => "comment(tweet.user.username)" }
+						%span.pointer{ "ng-click" => "comment(tweet.user.username)" } {{ labels.DISPLAY_USER_ANSWER_LABEL }}
+			%loading{ "ng-if" => "loading_tweet", "loading-type" => "'square'" }
+		.playlist
+			%ul.pricing-table.small-12.medium-4.large-3.columns{ "ng-repeat" => "playlist in show.playlists", "ng-class" => "$last ? 'end' : ''" }
+				%li.title {{ playlist.name }}
+				%li.price {{ playlist.musics.length }} {{ labels.DISPLAY_USER_MUSICS_LABEL }}
+				%li.description {{ labels.DISPLAY_USER_PLAYLIST_DURATION_LABEL }} {{ formatTime(playlist.duration) }}
+				%li.cta-button
+					%a.button{ href: "/playlists/{{playlist.id}}" } {{ labels.DISPLAY_USER_MORE_LABEL }}

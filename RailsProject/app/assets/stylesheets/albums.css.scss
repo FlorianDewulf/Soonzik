@@ -1,0 +1,80 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.albumContainer {
+	.albumShow {
+		.row {
+			max-width: 100%;
+			background: #252525;
+			margin-top: -20px;
+			margin-bottom: 40px;
+
+			.headerRow {
+				padding: 5px 30px;
+
+				img.albumIllustration {
+					max-width: 195px;
+					width: 100%;
+				}
+
+				h3, p {
+					font-family: "Lato";
+					color: #F9F9F9;
+				}
+
+				.likeContainer {
+					background: transparent;
+
+					i, span { color:#EEE; }
+					i.isLiked { color:#CC3333; }
+				}
+			}
+
+			table {
+				width: 95%;
+				margin: 0 auto;
+				border-collapse: collapse;
+
+				.goldenStar {
+					color: #E6C200;
+				}
+
+				td.iBtn { width: 15px; }
+			}
+		}
+
+
+		.playlistBlock {
+			background: black;
+
+			ul {
+				margin-left: 0;
+
+				li {
+			    padding-left: 2px;
+				}
+
+				label {
+			    color: #008CBA;
+				}
+			}
+		}
+
+		.commentariesInput {
+			padding: 20px 30px;
+
+			.inputArea {
+				width: 90%;
+				margin: 0 auto;
+				
+				textarea {
+					width: 100%;
+					resize: none;
+					height: 75px;
+				}
+			}
+		}
+	}
+}

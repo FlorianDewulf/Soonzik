@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="add_playlist_btn.Content" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="album_txt.Text" xml:space="preserve">
+    <value>Album:</value>
+  </data>
+  <data name="artist_txt.Text" xml:space="preserve">
+    <value>Artiste:</value>
+  </data>
+  <data name="audio_player_btn.Content" xml:space="preserve">
+    <value>Lecteur Audio</value>
+  </data>
+  <data name="battle_btn.Content" xml:space="preserve">
+    <value>Battle</value>
+  </data>
+  <data name="community_btn.Content" xml:space="preserve">
+    <value>Communauté</value>
+  </data>
+  <data name="community_txt.Text" xml:space="preserve">
+    <value>Communauté</value>
+  </data>
+  <data name="concert_btn.Content" xml:space="preserve">
+    <value>Concert</value>
+  </data>
+  <data name="connection_txt.Text" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="connect_btn.Content" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="follow_btn.Content" xml:space="preserve">
+    <value>Suivre cette personne</value>
+  </data>
+  <data name="forgot_password_txt.Text" xml:space="preserve">
+    <value>Récuperation du mot de passe</value>
+  </data>
+  <data name="music_player_txt.Text" xml:space="preserve">
+    <value>Lecteur Audio</value>
+  </data>
+  <data name="music_txt.Text" xml:space="preserve">
+    <value>Musique</value>
+  </data>
+  <data name="news_btn.Content" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="news_txt.Text" xml:space="preserve">
+    <value>Dernières news</value>
+  </data>
+  <data name="new_playlist_btn.Content" xml:space="preserve">
+    <value>Créer</value>
+  </data>
+  <data name="playlist_txt.Text" xml:space="preserve">
+    <value>Playlist</value>
+  </data>
+  <data name="remove_playlist_btn.Content" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="shop_btn.Content" xml:space="preserve">
+    <value>Magasin</value>
+  </data>
+  <data name="shop_txt.Text" xml:space="preserve">
+    <value>Magasin</value>
+  </data>
+  <data name="signup_txt.Text" xml:space="preserve">
+    <value>Inscription</value>
+  </data>
+  <data name="year_txt.Text" xml:space="preserve">
+    <value>Année:</value>
+  </data>
+  <data name="address_city_txt.Text" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="address_complement_txt.Text" xml:space="preserve">
+    <value>Complement</value>
+  </data>
+  <data name="address_country_txt.Text" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="address_num_txt.Text" xml:space="preserve">
+    <value>Numero</value>
+  </data>
+  <data name="address_street_txt.Text" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="address_txt.Text" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="address_zip_txt.Text" xml:space="preserve">
+    <value>Code postale</value>
+  </data>
+  <data name="add_friend_btn.Content" xml:space="preserve">
+    <value>Ajouter un ami</value>
+  </data>
+  <data name="add_friend_txt.Text" xml:space="preserve">
+    <value>Ajouter un nouvel ami avec son pseudo</value>
+  </data>
+  <data name="add_to_cart_btn.Content" xml:space="preserve">
+    <value>Ajouter au panier</value>
+  </data>
+  <data name="albums_txt.Text" xml:space="preserve">
+    <value>Albums</value>
+  </data>
+  <data name="album_artist_txt.Text" xml:space="preserve">
+    <value>Artiste:</value>
+  </data>
+  <data name="album_music_list_txt.Text" xml:space="preserve">
+    <value>Liste des pistes:</value>
+  </data>
+  <data name="album_price_txt.Text" xml:space="preserve">
+    <value>Prix:</value>
+  </data>
+  <data name="album_year_txt.Text" xml:space="preserve">
+    <value>Année:</value>
+  </data>
+  <data name="artists_txt.Text" xml:space="preserve">
+    <value>Artistes</value>
+  </data>
+  <data name="birthday_txt.Text" xml:space="preserve">
+    <value>Date de naissance*</value>
+  </data>
+  <data name="buy_pack_btn.Content" xml:space="preserve">
+    <value>Acheter ce pack</value>
+  </data>
+  <data name="delete_friend_btn.Content" xml:space="preserve">
+    <value>Supprimer un ami</value>
+  </data>
+  <data name="delete_friend_txt.Text" xml:space="preserve">
+    <value>Supprimer l'ami selectioné</value>
+  </data>
+  <data name="description_txt.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="desc_txt.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="detail_news_txt.Text" xml:space="preserve">
+    <value>Détail de la news</value>
+  </data>
+  <data name="duration_txt.Text" xml:space="preserve">
+    <value>Duration:</value>
+  </data>
+  <data name="email_txt.Text" xml:space="preserve">
+    <value>Email*</value>
+  </data>
+  <data name="end_of_battle_txt.Text" xml:space="preserve">
+    <value>La Battle finie le:</value>
+  </data>
+  <data name="fname_txt.Text" xml:space="preserve">
+    <value>Prenom*</value>
+  </data>
+  <data name="follow_list_txt.Text" xml:space="preserve">
+    <value>Liste des personnes suivies</value>
+  </data>
+  <data name="follow_txt.Text" xml:space="preserve">
+    <value>Suivre une personne</value>
+  </data>
+  <data name="friend_list_txt.Text" xml:space="preserve">
+    <value>Liste d'amis</value>
+  </data>
+  <data name="genres_txt.Text" xml:space="preserve">
+    <value>Genres</value>
+  </data>
+  <data name="gift_pack_btn.Content" xml:space="preserve">
+    <value>Offrir ce pack</value>
+  </data>
+  <data name="influence_list_txt.Text" xml:space="preserve">
+    <value>Influences</value>
+  </data>
+  <data name="language_txt.Text" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="listening_txt.Text" xml:space="preserve">
+    <value>Listenings</value>
+  </data>
+  <data name="lname_txt.Text" xml:space="preserve">
+    <value>Nom*</value>
+  </data>
+  <data name="music_list_txt.Text" xml:space="preserve">
+    <value>Musiques</value>
+  </data>
+  <data name="note_txt.Text" xml:space="preserve">
+    <value>Note:</value>
+  </data>
+  <data name="packs_txt.Text" xml:space="preserve">
+    <value>Packs</value>
+  </data>
+  <data name="pack_album_list_txt.Text" xml:space="preserve">
+    <value>Liste des albums:</value>
+  </data>
+  <data name="pack_date_begin_txt.Text" xml:space="preserve">
+    <value>Debut:</value>
+  </data>
+  <data name="pack_date_end_txt.Text" xml:space="preserve">
+    <value>Fin:</value>
+  </data>
+  <data name="password_txt.Text" xml:space="preserve">
+    <value>Mot de passe*</value>
+  </data>
+  <data name="password_verify_txt.Text" xml:space="preserve">
+    <value>Verification du mot de passe*</value>
+  </data>
+  <data name="phone_txt.Text" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="price_txt.Text" xml:space="preserve">
+    <value>Prix:</value>
+  </data>
+  <data name="profil_btn.Content" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="search_btn.Content" xml:space="preserve">
+    <value>Chercher</value>
+  </data>
+  <data name="send_com_btn.Content" xml:space="preserve">
+    <value>Envoyer</value>
+  </data>
+  <data name="signup_btn.Content" xml:space="preserve">
+    <value>S'inscrire</value>
+  </data>
+  <data name="sign_out_btn.Content" xml:space="preserve">
+    <value>Se deconnecter</value>
+  </data>
+  <data name="unfollow_btn.Content" xml:space="preserve">
+    <value>Ne plus suivre cette personne</value>
+  </data>
+  <data name="unfollow_txt.Text" xml:space="preserve">
+    <value>Ne plus suivre la personne selectionnée</value>
+  </data>
+  <data name="username_txt.Text" xml:space="preserve">
+    <value>Pseudo*</value>
+  </data>
+  <data name="vote_artist_one_btn.Content" xml:space="preserve">
+    <value>Vote Artist 1</value>
+  </data>
+  <data name="vote_artist_two_btn.Content" xml:space="preserve">
+    <value>Vote Artist 2</value>
+  </data>
+  <data name="update_btn.Content" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="website_txt.Text" xml:space="preserve">
+    <value>Site internet:</value>
+  </data>
+  <data name="cart_txt.Text" xml:space="preserve">
+    <value>Panier</value>
+  </data>
+  <data name="author_txt.Text" xml:space="preserve">
+    <value>Auteur:</value>
+  </data>
+  <data name="comment_txt.Text" xml:space="preserve">
+    <value>Commentaire:</value>
+  </data>
+  <data name="discotheque_btn.Content" xml:space="preserve">
+    <value>Discothèque</value>
+  </data>
+  <data name="discotheque_txt.Text" xml:space="preserve">
+    <value>Discothèque</value>
+  </data>
+  <data name="friends_list_txt.Text" xml:space="preserve">
+    <value>Amis</value>
+  </data>
+  <data name="remove_friend_btn.Content" xml:space="preserve">
+    <value>Ne plus etre ami</value>
+  </data>
+  <data name="title_txt.Text" xml:space="preserve">
+    <value>Titre:</value>
+  </data>
+  <data name="tweets_list_txt.Text" xml:space="preserve">
+    <value>Liste des Tweets de la communauté</value>
+  </data>
+  <data name="user_list_txt.Text" xml:space="preserve">
+    <value>Liste des utilisateurs</value>
+  </data>
+  <data name="user_profile_tb.Text" xml:space="preserve">
+    <value>Profil de l'utilisateur</value>
+  </data>
+  <data name="user_txt.Text" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+  <data name="total_price_txt.Text" xml:space="preserve">
+    <value>Prix total:</value>
+  </data>
+  <data name="artist_page_txt.Text" xml:space="preserve">
+    <value>Artiste</value>
+  </data>
+  <data name="association_txt.Text" xml:space="preserve">
+    <value>Association:</value>
+  </data>
+  <data name="artist_tweets_list_txt.Text" xml:space="preserve">
+    <value>Liste des Tweets de l'artiste</value>
+  </data>
+  <data name="ambiance_txt.Text" xml:space="preserve">
+    <value>Ambiance</value>
+  </data>
+  <data name="dl_btn.Content" xml:space="preserve">
+    <value>Télécharger</value>
+  </data>
+  <data name="offer_pack_btn.Content" xml:space="preserve">
+    <value>Offrir</value>
+  </data>
+  <data name="offer_txt.Text" xml:space="preserve">
+    <value>Pour offrir, entrez un pseudo et cliquez sur offrir</value>
+  </data>
+  <data name="and_txt.Text" xml:space="preserve">
+    <value>et</value>
+  </data>
+  <data name="battle_vs_txt.Text" xml:space="preserve">
+    <value>Cette battle oppose</value>
+  </data>
+  <data name="birthday.Text" xml:space="preserve">
+    <value>Date de naissance:</value>
+  </data>
+  <data name="buy_cart.Content" xml:space="preserve">
+    <value>Acheter le panier</value>
+  </data>
+  <data name="buy_cart_btn.Content" xml:space="preserve">
+    <value>Acheter</value>
+  </data>
+  <data name="email.Text" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="fname.Text" xml:space="preserve">
+    <value>Nom:</value>
+  </data>
+  <data name="lname.Text" xml:space="preserve">
+    <value>Prénom:</value>
+  </data>
+  <data name="qwe" xml:space="preserve">
+    <value />
+  </data>
+  <data name="remove_cart.Content" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="remove_follow_btn.Content" xml:space="preserve">
+    <value>Unfollow cet artist</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="suggest_music_txt.Text" xml:space="preserve">
+    <value>Musiques suggérées</value>
+  </data>
+</root>

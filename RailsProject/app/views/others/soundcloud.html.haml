@@ -1,0 +1,13 @@
+!!! 5
+%html
+	%head
+		= javascript_include_tag 'application'
+	%body
+		:javascript
+			$(document).ready(function() {
+				window.opener.setTimeout(function() {
+					console.log("vtff");
+					window.opener.SC.connectCallback();
+					window.close();
+				}, 1)
+			});

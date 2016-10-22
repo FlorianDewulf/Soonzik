@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:id="@+id/artistpicture"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="@string/imgmenudescription"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/countryartist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="France"
+            android:layout_below="@+id/artistname"
+            android:layout_alignLeft="@+id/artistname"
+            android:layout_alignStart="@+id/artistname" />
+
+        <TextView
+            android:id="@+id/nbfollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:layout_below="@+id/countryartist"
+            android:layout_alignRight="@+id/countryartist"
+            android:layout_alignEnd="@+id/countryartist" />
+
+        <ImageView
+            android:src="@drawable/ic_battle"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:id="@+id/imageView2"
+            android:layout_below="@+id/countryartist"
+            android:layout_alignLeft="@+id/countryartist"
+            android:layout_alignStart="@+id/countryartist" />
+
+        <TextView
+            android:id="@+id/artistname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name Artist"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignTop="@+id/artistpicture"
+            android:layout_toRightOf="@+id/artistpicture"
+            android:layout_toEndOf="@+id/artistpicture"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp">
+        </TextView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Follow"
+            android:id="@+id/followbutton"
+            android:layout_marginRight="13dp"
+            android:layout_marginEnd="13dp"
+            android:textSize="10sp"
+            android:layout_below="@+id/artistname"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.soonzik.soonzik.SlidingTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:elevation="2dp"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/artistPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/fragment_artist.xml -->

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/albumpicture"
+        android:src="@drawable/ic_profile"
+        android:contentDescription="@string/imgmenudescription"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/artistname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom de l'artiste"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_alignTop="@+id/albumpicture"
+        android:layout_toRightOf="@+id/albumpicture"
+        android:layout_toEndOf="@+id/albumpicture" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom de l&apos;album"
+        android:textSize="25sp"
+        android:layout_alignBottom="@+id/albumpicture"
+        android:layout_alignLeft="@+id/artistname"
+        android:layout_alignStart="@+id/artistname">
+    </TextView>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.99$"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignRight="@+id/deletebutton"
+        android:layout_alignEnd="@+id/deletebutton" />
+
+    <TextView
+        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/deletebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:layout_marginRight="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/price" />
+
+</RelativeLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/row_cart_albums.xml -->

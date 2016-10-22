@@ -1,0 +1,18 @@
+%div{ "ng-init" => "showPacks()" }
+  %loading{ "ng-if" => "loading == true" }
+  .row{ "ng-if" => "loading == false", "ng-init" => "initFoundation()"}
+    %h3.subheader
+      {{ labels.DISPLAY_PACK_LABEL }}
+    .ul.large-block-grid-3{"ng-show" => "Pack"}
+      %li{ "ng-repeat" => "packs in pack"}
+        .panel
+          %h5.subheader.text-center
+            {{ packs.title }}
+          %a{:href=>"http://lvh.me:3000/packs/" + "{{packs.id}}" }
+
+            %img{ "ng-src" => "{{ '/assets/pack' + packs.id + '.jpg' }}"}
+          .divider
+          %div.text-center{"ng-init" => "toto()"}
+            {{ labels.DISPLAY_PACK_TIMELEFT }} : {{ packs.timeLeftAllPacks }}
+            %br
+            {{ labels.DISPLAY_PACK_AVERAGE }} : {{ packs.averagePrice }} €

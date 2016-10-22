@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!--
+
+  Fivefish RDoc Generator
+  $Id$
+
+  Authors:
+  - Michael Granger <ged@FaerieMUD.org>
+
+ -->
+<html lang="en">
+<head>
+	<title>RDoc Documentation</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<link href=".." rel="prefix" />
+
+	<link href="../css/fivefish.min.css" rel="stylesheet" />
+
+	<script src="../js/jquery-1.7.1.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/searchindex.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/fivefish.min.js" type="text/javascript"
+		defer="defer" charset="utf-8" onload="initFivefish()"></script>
+</head>
+
+<body class="class-page">
+
+	<nav class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand"
+					href="../index.html">RDoc Documentation</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#class-dropdown">
+								Classes
+								<b class="caret"></b>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#file-dropdown">
+								Files
+								<b class="caret"></b>
+							</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+				<span class="pull-right">
+					<form class="navbar-search">
+						<input type="hidden" id="navbar-search-target" value="" />
+						<input type="text" class="search-query" value=""
+							placeholder="Method, Class, or Filename" />
+					</form>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		
+		<header class="hero-unit">
+			<hgroup>
+								  				<h2 class="namespace">API::</h2>
+				  												<h1 class="class"
+					rel="popover"
+					data-original-title="In files"
+					data-content="app/controllers/API/apisecurity_controller.rb"
+					>ApisecurityController</h1>
+				</p>
+							</hgroup>
+			<span class="label">class</span>
+		</header>
+
+		<section class="module-relations">
+			<dl>
+								<dt>Superclass</dt>
+								<dd class="superclass"><a href="../API/ApiController.html">API::ApiController</a></dd>
+								
+				
+							</dl>
+		</section>
+
+		<section class="description">
+			
+<p>The class parent of every controller of the <a href="../API.html">API</a>.
+It provides security and some default stuff</p>
+		</section>
+
+				<section id="5Buntitled-5D" class="documentation-section">
+			
+		    
+			
+			
+			<!-- Methods -->
+						
+						<section class="public-methods class-methods methods">
+				<header>
+					<h3>Public Class Methods</h3>
+				</header>
+
+								<a name="method-c-new">anchor</a>
+				<div id="method-c-new-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">new</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>We create a list of code and initialize the returnValue and the security
+boolean. Usually a controller has no constructor but in this case it&#39;s
+for the heritance.</p>					
+											<div class="method-source-code" id="new-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/apisecurity_controller.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-ivar">@security</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@user_id</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@returnValue</span> = { <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> {} }
+  
+  <span class="ruby-ivar">@code</span> = []
+  <span class="ruby-ivar">@code</span>[<span class="ruby-value">200</span>] = {<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-value">200</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Success&quot;</span>}
+  <span class="ruby-ivar">@code</span>[<span class="ruby-value">201</span>] = {<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-value">201</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Created&quot;</span>}
+  <span class="ruby-ivar">@code</span>[<span class="ruby-value">202</span>] = {<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-value">202</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;NoContent&quot;</span>}
+  <span class="ruby-ivar">@code</span>[<span class="ruby-value">500</span>] = {<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-value">500</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;NotSecure&quot;</span>}
+  <span class="ruby-ivar">@code</span>[<span class="ruby-value">501</span>] = {<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-value">501</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;FailSecurity&quot;</span>}
+  <span class="ruby-ivar">@code</span>[<span class="ruby-value">502</span>] = {<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-value">502</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;NotFound&quot;</span>}
+  <span class="ruby-ivar">@code</span>[<span class="ruby-value">503</span>] = {<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-value">503</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;NotCreated&quot;</span>}
+  <span class="ruby-ivar">@code</span>[<span class="ruby-value">504</span>] = {<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-value">504</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Error&quot;</span>}
+  <span class="ruby-ivar">@code</span>[<span class="ruby-value">505</span>] = {<span class="ruby-identifier">code</span><span class="ruby-operator">:</span> <span class="ruby-value">505</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;UpdateError&quot;</span>}
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+									
+						<section class="public-methods instance-methods methods">
+				<header>
+					<h3>Public Instance Methods</h3>
+				</header>
+
+								<a name="method-i-getSocialToken">anchor</a>
+				<div id="method-i-getSocialToken-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">getSocialToken</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>To get the token for social authentication Route :
+/getSocialToken/:uid/:provider [GET]</p>
+
+<h4 id="method-i-getSocialToken-label-Options">Options<span><a href="#method-i-getSocialToken-label-Options">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>uid</code> - The user id from the social network</p>
+</li><li>
+<p><code>provider</code> - The name of the provider between : “facebook”,
+“twitter” and “google”</p>
+</li></ul>
+
+<h5 id="method-i-getSocialToken-label-HTTP+VALUE">HTTP VALUE<span><a href="#method-i-getSocialToken-label-HTTP+VALUE">&para;</a> <a href="#top">&uarr;</a></span></h5>
+<ul><li>
+<p><code>200</code> - In case of success, return the specific token</p>
+</li><li>
+<p><code>404</code> - Can&#39;t get an user with the uid and the provider
+given or the combinaison is false</p>
+</li><li>
+<p><code>503</code> - Error from server</p>
+</li></ul>					
+											<div class="method-source-code" id="getSocialToken-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/apisecurity_controller.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getSocialToken</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@uid</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@provider</span>))
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">identity</span> = <span class="ruby-constant">Identity</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">provider</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@provider</span>).<span class="ruby-identifier">find_by_uid</span>(<span class="ruby-ivar">@uid</span>)
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">identity</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">200</span>
+        <span class="ruby-ivar">@returnValue</span> = { <span class="ruby-identifier">key</span><span class="ruby-operator">:</span> <span class="ruby-identifier">identity</span>.<span class="ruby-identifier">token</span> }
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">502</span>
+        <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:not_found</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+      <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:service_unavailable</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">502</span>
+    <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:not_found</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sendJson</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-login">anchor</a>
+				<div id="method-i-login-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">login</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>To signin and get the information you need for the authentication Route :
+/login [POST]</p>
+
+<h4 id="method-i-login-label-Options">Options<span><a href="#method-i-login-label-Options">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>email</code> - The email of the user</p>
+</li><li>
+<p><code>password</code> - The password encrypted by the bcrypt algorithm</p>
+</li></ul>
+
+<h5 id="method-i-login-label-HTTP+VALUE">HTTP VALUE<span><a href="#method-i-login-label-HTTP+VALUE">&para;</a> <a href="#top">&uarr;</a></span></h5>
+<ul><li>
+<p><code>200</code> - In case of success, return the user with ALL the field</p>
+</li><li>
+<p><code>404</code> - Can&#39;t get an user with the email given or the
+combinaison is false</p>
+</li><li>
+<p><code>503</code> - Error from server</p>
+</li></ul>					
+											<div class="method-source-code" id="login-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/apisecurity_controller.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@email</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@password</span>))
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_email</span>(<span class="ruby-ivar">@email</span>)
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">valid_password?</span>(<span class="ruby-ivar">@password</span>))
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">200</span>
+        <span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:content</span>] = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> {
+                                                              <span class="ruby-value">:address</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">Address</span>.<span class="ruby-identifier">miniKey</span> },
+                                                              <span class="ruby-value">:friends</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">miniKey</span> },
+                                                              <span class="ruby-value">:follows</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">miniKey</span> }
+                                                            },
+                                                <span class="ruby-value">:only</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">notRestrictedKey</span>
+                                              )
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">502</span>
+        <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:not_found</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+      <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:service_unavailable</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">502</span>
+    <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:not_found</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sendJson</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-provideKey">anchor</a>
+				<div id="method-i-provideKey-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">provideKey</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Provide a token relative to the user who asks Route : /getKey/:user_id
+[GET]</p>
+
+<h4 id="method-i-provideKey-label-Options">Options<span><a href="#method-i-provideKey-label-Options">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>id</code> - The id of the user who makes the transaction</p>
+</li></ul>
+
+<h5 id="method-i-provideKey-label-HTTP+VALUE">HTTP VALUE<span><a href="#method-i-provideKey-label-HTTP+VALUE">&para;</a> <a href="#top">&uarr;</a></span></h5>
+<ul><li>
+<p><code>200</code> - In case of success, return { key: token_user,
+last_update: date_with_the_pattern(“2007-11-19T08:37:48-06:00”) }</p>
+</li><li>
+<p><code>404</code> - Can&#39;t get an user with the id given</p>
+</li><li>
+<p><code>503</code> - Error from server</p>
+</li></ul>					
+											<div class="method-source-code" id="provideKey-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/apisecurity_controller.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">provideKey</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@id</span>))
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">u</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-ivar">@id</span>)
+      <span class="ruby-keyword">if</span> (<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">u</span>.<span class="ruby-identifier">token_update</span>).<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>)
+        <span class="ruby-identifier">u</span>.<span class="ruby-identifier">regenerateKey</span>
+        <span class="ruby-identifier">u</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-identifier">u</span>.<span class="ruby-identifier">reload</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@returnValue</span> = { <span class="ruby-identifier">key</span><span class="ruby-operator">:</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">idAPI</span>, <span class="ruby-identifier">last_update</span><span class="ruby-operator">:</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">token_update</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%FT%T%:z&quot;</span>) }
+      <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">200</span>
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+      <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:service_unavailable</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">502</span>
+    <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:not_found</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sendJson</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-socialLogin">anchor</a>
+				<div id="method-i-socialLogin-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">socialLogin</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>To authenticate to a social network Route : /social-login [POST]</p>
+
+<h4 id="method-i-socialLogin-label-Options">Options<span><a href="#method-i-socialLogin-label-Options">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>uid</code> - The user id from the social network</p>
+</li><li>
+<p><code>provider</code> - The name of the provider between : “facebook”,
+“twitter” and “google”</p>
+</li><li>
+<p><code>encrypted_key</code> - The encrypted key following this : SHA256(uid
++ token that you get earlier + salt)</p>
+</li><li>
+<p><code>token</code> - the token from the social network (to test its
+validity)</p>
+</li></ul>
+
+<p>Hint : the salt is stored in your application. It must be :
+“3uNi@rCK$L$om40dNnhX)#jV2$40wwbr_bAK99%E”</p>
+
+<h5 id="method-i-socialLogin-label-HTTP+VALUE">HTTP VALUE<span><a href="#method-i-socialLogin-label-HTTP+VALUE">&para;</a> <a href="#top">&uarr;</a></span></h5>					
+											<div class="method-source-code" id="socialLogin-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/apisecurity_controller.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">socialLogin</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@uid</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@provider</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@encrypted_key</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@token</span>))
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">identity</span> = <span class="ruby-constant">Identity</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">provider</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@provider</span>).<span class="ruby-identifier">find_by_uid</span>(<span class="ruby-ivar">@uid</span>)
+      <span class="ruby-identifier">valid</span> = (<span class="ruby-ivar">@provider</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;twitter&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">isValidToken?</span>(<span class="ruby-ivar">@token</span>, <span class="ruby-ivar">@provider</span>)
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">identity</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA256</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-ivar">@uid</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">identity</span>.<span class="ruby-identifier">token</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Identity</span><span class="ruby-operator">::</span><span class="ruby-constant">SALT</span>) <span class="ruby-operator">==</span> <span class="ruby-ivar">@encrypted_key</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">valid</span>)
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">200</span>
+        <span class="ruby-ivar">@returnValue</span> = { <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-identifier">identity</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> {
+                                                              <span class="ruby-value">:address</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">Address</span>.<span class="ruby-identifier">miniKey</span> },
+                                                              <span class="ruby-value">:friends</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">miniKey</span> },
+                                                              <span class="ruby-value">:follows</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">miniKey</span> }
+                                                            },
+                                                <span class="ruby-value">:only</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">notRestrictedKey</span>
+                                              ) }
+        <span class="ruby-identifier">identity</span>.<span class="ruby-identifier">newToken</span>
+        <span class="ruby-identifier">identity</span>.<span class="ruby-identifier">save!</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">502</span>
+        <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:not_found</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+      <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:service_unavailable</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">502</span>
+    <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:not_found</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sendJson</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+						<section class="protected-methods instance-methods methods">
+				<header>
+					<h3>Protected Instance Methods</h3>
+				</header>
+
+								<a name="method-i-checkKey">anchor</a>
+				<div id="method-i-checkKey-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">checkKey</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Check if the secure key corresponds to the key of the selected user. This
+key is the hash between the token and the salt user.</p>
+
+<h4 id="method-i-checkKey-label-Options">Options<span><a href="#method-i-checkKey-label-Options">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>user_id</code> - The id of the user who makes the transaction</p>
+</li><li>
+<p><code>secureKey</code> - The key provided to etablish a secure transaction</p>
+</li></ul>
+
+<h4 id="method-i-checkKey-label-Example">Example<span><a href="#method-i-checkKey-label-Example">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<pre># Assuming we have in database a user like this :
+#&lt;User&gt; -&gt; id = 9
+        -&gt; idAPI = &quot;6789&quot;
+        -&gt; salt = &quot;12345&quot;
+        -&gt; securekey = SHA256(salt + idAPI)
+So if I provide :
+        -&gt; user_id = 9
+        -&gt; secureKey = SHA256(&quot;123456789&quot;)
+The access is granted and secure.
+If the hash is not good, the access is not granted.</pre>
+
+<h5 id="method-i-checkKey-label-HTTP+VALUE">HTTP VALUE<span><a href="#method-i-checkKey-label-HTTP+VALUE">&para;</a> <a href="#top">&uarr;</a></span></h5>
+
+<p>It is not a route so you can&#39;t query it, but if an issue happend, it
+can set the http code</p>
+<ul><li>
+<p><code>401</code> - The combination user_id / secureKey doesn&#39;t match,
+the access is not granted</p>
+</li><li>
+<p><code>503</code> - Error from server</p>
+</li></ul>					
+											<div class="method-source-code" id="checkKey-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/apisecurity_controller.rb, line 222</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">checkKey</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@user_id</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@secureKey</span>))
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">u</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-ivar">@user_id</span>)
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">u</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@secureKey</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">secureKey</span>)
+        <span class="ruby-ivar">@security</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">u</span>.<span class="ruby-identifier">token_update</span>).<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_i</span>)
+          <span class="ruby-identifier">u</span>.<span class="ruby-identifier">regenerateKey</span>
+          <span class="ruby-identifier">u</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">501</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+      <span class="ruby-ivar">@httpCode</span> = <span class="ruby-value">:service_unavailable</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-codeAnswer">anchor</a>
+				<div id="method-i-codeAnswer-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">codeAnswer</span><span 
+							class="method-args">(index)</span>
+										</header>
+
+					<div class="method-description">
+											<p>Put information about the answer (the code and the corresponding message)
+in the return value. If a code has already been assigned, we don&#39;t
+modify it.</p>
+
+<h4 id="method-i-codeAnswer-label-Attributes">Attributes<span><a href="#method-i-codeAnswer-label-Attributes">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>index</code> - The index of the answer information</p>
+</li></ul>					
+											<div class="method-source-code" id="codeAnswer-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/apisecurity_controller.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">codeAnswer</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@code</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+    <span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:code</span>] = <span class="ruby-ivar">@code</span>[<span class="ruby-identifier">index</span>][<span class="ruby-value">:code</span>]
+    <span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:message</span>] = <span class="ruby-ivar">@code</span>[<span class="ruby-identifier">index</span>][<span class="ruby-value">:message</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:code</span>] = <span class="ruby-value">999</span>
+    <span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:message</span>] = <span class="ruby-string">&quot;Unknow&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-defineHttp">anchor</a>
+				<div id="method-i-defineHttp-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">defineHttp</span><span 
+							class="method-args">(sym)</span>
+										</header>
+
+					<div class="method-description">
+											<p>Set the HTTP status If a code has already been assigned, we don&#39;t
+modify it.</p>
+
+<h4 id="method-i-defineHttp-label-Attributes">Attributes<span><a href="#method-i-defineHttp-label-Attributes">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>sym</code> - The symbol of the http code</p>
+</li></ul>					
+											<div class="method-source-code" id="defineHttp-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/apisecurity_controller.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">defineHttp</span>(<span class="ruby-identifier">sym</span>)
+  <span class="ruby-ivar">@httpCode</span> = <span class="ruby-identifier">sym</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-sendJson">anchor</a>
+				<div id="method-i-sendJson-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">sendJson</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Render the value to return in json</p>					
+											<div class="method-source-code" id="sendJson-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/apisecurity_controller.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sendJson</span>
+  <span class="ruby-identifier">codeAnswer</span>(<span class="ruby-value">202</span>) <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:content</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:content</span>].<span class="ruby-identifier">size</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:content</span>].<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-keyword">defined?</span><span class="ruby-ivar">@returnValue</span>[<span class="ruby-value">:code</span>]
+  <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:ok</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@httpCode</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-ivar">@returnValue</span>), <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@httpCode</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+						
+		</section>
+		
+
+		<hr>
+
+		<footer>
+			<div class="container">
+				<span id="rdoc-version">Generated by RDoc 4.2.0</span> using the
+				<a id="generator-version"
+					href="http://deveiate.org/fivefish">Fivefish RDoc 0.1.0</a> generator.
+			</div>
+		</footer>
+	</div> <!-- /container -->
+
+	<!-- Class dropdown menu -->
+	<div id="class-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="../API.html">API</a></li>
+			<li><a href="../API/AlbumsController.html">API::AlbumsController</a></li>
+			<li><a href="../API/AmbiancesController.html">API::AmbiancesController</a></li>
+			<li><a href="../API/ApiController.html">API::ApiController</a></li>
+			<li><a href="../API/ApisecurityController.html">API::ApisecurityController</a></li>
+			<li><a href="../API/BattlesController.html">API::BattlesController</a></li>
+			<li><a href="../API/CartsController.html">API::CartsController</a></li>
+			<li><a href="../API/ConcertsController.html">API::ConcertsController</a></li>
+			<li><a href="../API/FeedbacksController.html">API::FeedbacksController</a></li>
+			<li><a href="../API/GenresController.html">API::GenresController</a></li>
+			<li><a href="../API/InfluencesController.html">API::InfluencesController</a></li>
+			<li><a href="../API/LanguagesController.html">API::LanguagesController</a></li>
+			<li><a href="../API/LikesController.html">API::LikesController</a></li>
+			<li><a href="../API/ListeningsController.html">API::ListeningsController</a></li>
+			<li><a href="../API/MessagesController.html">API::MessagesController</a></li>
+			<li><a href="../API/MusicsController.html">API::MusicsController</a></li>
+			<li><a href="../API/NewsController.html">API::NewsController</a></li>
+			<li><a href="../API/NotificationsController.html">API::NotificationsController</a></li>
+			<li><a href="../API/PacksController.html">API::PacksController</a></li>
+			<li><a href="../API/PlaylistsController.html">API::PlaylistsController</a></li>
+			<li><a href="../API/PurchasesController.html">API::PurchasesController</a></li>
+			<li><a href="../API/SearchsController.html">API::SearchsController</a></li>
+			<li><a href="../API/SuggestionsController.html">API::SuggestionsController</a></li>
+			<li><a href="../API/TweetsController.html">API::TweetsController</a></li>
+			<li><a href="../API/UsersController.html">API::UsersController</a></li>
+			<li><a href="../Artist/MusicsController.html">Artist::MusicsController</a></li>
+			<li><a href="../Address.html">Address</a></li>
+			<li><a href="../AdminUser.html">AdminUser</a></li>
+			<li><a href="../Album.html">Album</a></li>
+			<li><a href="../Albumslike.html">Albumslike</a></li>
+			<li><a href="../Ambiance.html">Ambiance</a></li>
+			<li><a href="../Attachment.html">Attachment</a></li>
+			<li><a href="../Battle.html">Battle</a></li>
+			<li><a href="../Cart.html">Cart</a></li>
+			<li><a href="../Commentary.html">Commentary</a></li>
+			<li><a href="../Concert.html">Concert</a></li>
+			<li><a href="../Concertslike.html">Concertslike</a></li>
+			<li><a href="../Description.html">Description</a></li>
+			<li><a href="../Feedback.html">Feedback</a></li>
+			<li><a href="../Follow.html">Follow</a></li>
+			<li><a href="../Friend.html">Friend</a></li>
+			<li><a href="../Genre.html">Genre</a></li>
+			<li><a href="../Group.html">Group</a></li>
+			<li><a href="../Identity.html">Identity</a></li>
+			<li><a href="../Influence.html">Influence</a></li>
+			<li><a href="../Language.html">Language</a></li>
+			<li><a href="../Listening.html">Listening</a></li>
+			<li><a href="../Meet.html">Meet</a></li>
+			<li><a href="../Meetstring.html">Meetstring</a></li>
+			<li><a href="../Message.html">Message</a></li>
+			<li><a href="../Music.html">Music</a></li>
+			<li><a href="../MusicNote.html">MusicNote</a></li>
+			<li><a href="../Musicalpast.html">Musicalpast</a></li>
+			<li><a href="../News.html">News</a></li>
+			<li><a href="../NewsTitle.html">NewsTitle</a></li>
+			<li><a href="../Newslike.html">Newslike</a></li>
+			<li><a href="../Newstext.html">Newstext</a></li>
+			<li><a href="../Notification.html">Notification</a></li>
+			<li><a href="../Pack.html">Pack</a></li>
+			<li><a href="../PartialAlbum.html">PartialAlbum</a></li>
+			<li><a href="../PaypalPayment.html">PaypalPayment</a></li>
+			<li><a href="../Playlist.html">Playlist</a></li>
+			<li><a href="../PlaylistObject.html">PlaylistObject</a></li>
+			<li><a href="../Proposition.html">Proposition</a></li>
+			<li><a href="../Purchase.html">Purchase</a></li>
+			<li><a href="../PurchasedAlbum.html">PurchasedAlbum</a></li>
+			<li><a href="../PurchasedMusic.html">PurchasedMusic</a></li>
+			<li><a href="../PurchasedPack.html">PurchasedPack</a></li>
+			<li><a href="../Tool.html">Tool</a></li>
+			<li><a href="../Tweet.html">Tweet</a></li>
+			<li><a href="../User.html">User</a></li>
+			<li><a href="../Vote.html">Vote</a></li>
+		</ul>
+	</div>
+
+	<!-- File dropdown menu -->
+	<div id="file-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+		</ul>
+	</div>
+
+</body>
+</html>

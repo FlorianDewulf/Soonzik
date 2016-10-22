@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/concertpicture"
+        android:src="@drawable/ic_profile"
+        android:contentDescription="@string/imgmenudescription"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/artistconcert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom de l'artiste"
+        android:textStyle="bold"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_alignTop="@+id/concertpicture"
+        android:layout_toRightOf="@+id/concertpicture"
+        android:layout_toEndOf="@+id/concertpicture"/>
+
+    <TextView
+        android:id="@+id/dateconcert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25/09/82"
+        android:layout_marginRight="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_alignTop="@+id/artistconcert"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/linkconcert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://www.facebook.com/soonzik"
+        android:layout_below="@+id/artistconcert"
+        android:layout_alignLeft="@+id/artistconcert"
+        android:layout_alignStart="@+id/artistconcert"
+        android:autoLink="web"/>
+
+    <TextView
+        android:id="@+id/adressconcert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 rue de la vie, 75013 Paris"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linkconcert"
+        android:layout_alignStart="@+id/artistconcert"
+        android:layout_alignLeft="@+id/artistconcert" />
+
+</RelativeLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/row_concerts.xml -->

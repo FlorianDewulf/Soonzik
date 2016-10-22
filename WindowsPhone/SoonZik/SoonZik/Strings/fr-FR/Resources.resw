@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Album.Text" xml:space="preserve">
+    <value>Album</value>
+  </data>
+  <data name="AlbumPivot.Header" xml:space="preserve">
+    <value>Album(s)</value>
+  </data>
+  <data name="Artist.Text" xml:space="preserve">
+    <value>Artiste</value>
+  </data>
+  <data name="ArtistPivot.Header" xml:space="preserve">
+    <value>Artiste(s)</value>
+  </data>
+  <data name="Battle.Content" xml:space="preserve">
+    <value>Battle</value>
+  </data>
+  <data name="CheckProfile.Content" xml:space="preserve">
+    <value>Voir le profil</value>
+  </data>
+  <data name="City.PlaceholderText" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="Complement.PlaceholderText" xml:space="preserve">
+    <value>Complement</value>
+  </data>
+  <data name="Country.PlaceholderText" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="Delete.Content" xml:space="preserve">
+    <value>Effacer le contact</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editer mes informations</value>
+  </data>
+  <data name="Email.PlaceholderText" xml:space="preserve">
+    <value>Email*</value>
+  </data>
+  <data name="Explorer.Content" xml:space="preserve">
+    <value>Explorer</value>
+  </data>
+  <data name="FirstName.PlaceholderText" xml:space="preserve">
+    <value>Prénom*</value>
+  </data>
+  <data name="ForgotPassword.Content" xml:space="preserve">
+    <value>Mot de passe oublié</value>
+  </data>
+  <data name="Friends.Content" xml:space="preserve">
+    <value>Mon reseau</value>
+  </data>
+  <data name="Genre.Text" xml:space="preserve">
+    <value>Genre</value>
+  </data>
+  <data name="GenrePivot.Header" xml:space="preserve">
+    <value>Genre(s)</value>
+  </data>
+  <data name="LastName.PlaceholderText" xml:space="preserve">
+    <value>Nom*</value>
+  </data>
+  <data name="LogIn.Content" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="LogOut.Content" xml:space="preserve">
+    <value>Deconnexion</value>
+  </data>
+  <data name="Music.Text" xml:space="preserve">
+    <value>Musique</value>
+  </data>
+  <data name="MusicalWorld.Content" xml:space="preserve">
+    <value>Monde Musical</value>
+  </data>
+  <data name="MusicPivot.Header" xml:space="preserve">
+    <value>Musique(s)</value>
+  </data>
+  <data name="News.Content" xml:space="preserve">
+    <value>A la une</value>
+  </data>
+  <data name="NumberStreet.PlaceholderText" xml:space="preserve">
+    <value>Numéro de rue</value>
+  </data>
+  <data name="Packs.Text" xml:space="preserve">
+    <value>Packs</value>
+  </data>
+  <data name="PacksBoutton.Content" xml:space="preserve">
+    <value>Packs</value>
+  </data>
+  <data name="Password.PlaceholderText" xml:space="preserve">
+    <value>Mot de passe*</value>
+  </data>
+  <data name="Phone.PlaceholderText" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="Picture.PlaceholderText" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="Playlist.Text" xml:space="preserve">
+    <value>Playlist</value>
+  </data>
+  <data name="PlaylistBoutton.Content" xml:space="preserve">
+    <value>Ma musique</value>
+  </data>
+  <data name="Profile.Content" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Purchase.Content" xml:space="preserve">
+    <value>Achat</value>
+  </data>
+  <data name="Search.PlaceholderText" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="SendMessage.Content" xml:space="preserve">
+    <value>Envoyer un message</value>
+  </data>
+  <data name="Share.Text" xml:space="preserve">
+    <value>Partager</value>
+  </data>
+  <data name="SignIn.Content" xml:space="preserve">
+    <value>Inscription</value>
+  </data>
+  <data name="SignInText.Text" xml:space="preserve">
+    <value>Inscription</value>
+  </data>
+  <data name="Street.PlaceholderText" xml:space="preserve">
+    <value>Rue</value>
+  </data>
+  <data name="User.Text" xml:space="preserve">
+    <value>Utilisateur(s)</value>
+  </data>
+  <data name="UserName.PlaceholderText" xml:space="preserve">
+    <value>Pseudo*</value>
+  </data>
+  <data name="Validate.Content" xml:space="preserve">
+    <value>Valider</value>
+  </data>
+  <data name="Welcome.Text" xml:space="preserve">
+    <value>Bienvenue</value>
+  </data>
+  <data name="ZipCode.PlaceholderText" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="PlaylistPivot.Header" xml:space="preserve">
+    <value>Playlist(s)</value>
+  </data>
+  <data name="PostEdit" xml:space="preserve">
+    <value>Mettre à jour mes informations</value>
+  </data>
+  <data name="UpdateInformation" xml:space="preserve">
+    <value>Vos informations sont mises à jour</value>
+  </data>
+  <data name="Association.Text" xml:space="preserve">
+    <value>Association</value>
+  </data>
+  <data name="GoToCard.Content" xml:space="preserve">
+    <value>Ajouter au panier</value>
+  </data>
+  <data name="Price.Text" xml:space="preserve">
+    <value>Prix</value>
+  </data>
+  <data name="SoonZik.Text" xml:space="preserve">
+    <value>SoonZik</value>
+  </data>
+  <data name="PackError" xml:space="preserve">
+    <value>Veuillez selectionner un pack</value>
+  </data>
+  <data name="Follow.Header" xml:space="preserve">
+    <value>Followers</value>
+  </data>
+  <data name="Friend.Header" xml:space="preserve">
+    <value>Amis</value>
+  </data>
+  <data name="Tweet.Header" xml:space="preserve">
+    <value>Tweets</value>
+  </data>
+  <data name="Send.Content" xml:space="preserve">
+    <value>Envoyer</value>
+  </data>
+  <data name="SocialPivot.Header" xml:space="preserve">
+    <value>Social</value>
+  </data>
+  <data name="AddFriend" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="DelFriend" xml:space="preserve">
+    <value>Suprimer</value>
+  </data>
+  <data name="PackPivot.Header" xml:space="preserve">
+    <value>Pack(s)</value>
+  </data>
+  <data name="EndBattle.Text" xml:space="preserve">
+    <value>La battle est terminée</value>
+  </data>
+  <data name="AddToPlaylist.Text" xml:space="preserve">
+    <value>Ajouter à la playlist</value>
+  </data>
+  <data name="Carts.Text" xml:space="preserve">
+    <value>Mon panier</value>
+  </data>
+  <data name="Buy.Content" xml:space="preserve">
+    <value>Acheter</value>
+  </data>
+  <data name="CreatePlaylist.Content" xml:space="preserve">
+    <value>Créer une playlist</value>
+  </data>
+  <data name="DelFromPlaylist.Text" xml:space="preserve">
+    <value>Supprimer de la playlist</value>
+  </data>
+  <data name="Description.PlaceholderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="About.Content" xml:space="preserve">
+    <value>A propos</value>
+  </data>
+  <data name="Comment.PlaceholderText" xml:space="preserve">
+    <value>Commentaire*</value>
+  </data>
+  <data name="Dev.Text" xml:space="preserve">
+    <value>Developer : Baudry Gery</value>
+  </data>
+  <data name="ErrorAbout" xml:space="preserve">
+    <value>Veuillez remplir tous les champs.</value>
+  </data>
+  <data name="Feedback.Text" xml:space="preserve">
+    <value>Reporter une erreur</value>
+  </data>
+  <data name="InfoAddress.Text" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="InfoGeneral.Text" xml:space="preserve">
+    <value>Informations Génerales</value>
+  </data>
+  <data name="Object.PlaceholderText" xml:space="preserve">
+    <value>Objet*</value>
+  </data>
+  <data name="Site.Text" xml:space="preserve">
+    <value>www.SoonZik.Com</value>
+  </data>
+  <data name="Version.Text" xml:space="preserve">
+    <value>Version : 1.0.3</value>
+  </data>
+  <data name="AssociationPivot.Header" xml:space="preserve">
+    <value>Association</value>
+  </data>
+  <data name="InfluencePivot.Header" xml:space="preserve">
+    <value>Influences</value>
+  </data>
+  <data name="AmbiancePivot.Header" xml:space="preserve">
+    <value>Ambiances</value>
+  </data>
+  <data name="ErrorUpdate" xml:space="preserve">
+    <value>Erreur lors de l'update</value>
+  </data>
+  <data name="FeedbackSend" xml:space="preserve">
+    <value>Le message à bien etait transmis</value>
+  </data>
+  <data name="ProductAddToCart" xml:space="preserve">
+    <value>Article ajouté au panier</value>
+  </data>
+  <data name="AddPlaylist" xml:space="preserve">
+    <value>Musique ajoutée à la playlist</value>
+  </data>
+  <data name="DeleteFromPlaylist.Text" xml:space="preserve">
+    <value>Supprimer de la playlist</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Télécharger</value>
+  </data>
+  <data name="DownloadOk" xml:space="preserve">
+    <value>Le téléchargement est réussi</value>
+  </data>
+  <data name="ErrorAddPlaylist" xml:space="preserve">
+    <value>Vous devez sélectionner une playlist</value>
+  </data>
+  <data name="ErrorChamp" xml:space="preserve">
+    <value>Veuillez remplir tous les champs avec une *</value>
+  </data>
+  <data name="ErrorConnec" xml:space="preserve">
+    <value>Erreur de connexion</value>
+  </data>
+  <data name="ErrorDeleteMusic" xml:space="preserve">
+    <value>Erreur lors de la suppression de la musique</value>
+  </data>
+  <data name="ErrorDeletePlaylist" xml:space="preserve">
+    <value>Erreur lors de la suppression de la playlist</value>
+  </data>
+  <data name="ErrorDownload" xml:space="preserve">
+    <value>Le téléchargement a echoué</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>L'adresse e-mail n'est pas valide</value>
+  </data>
+  <data name="ErrorGeo" xml:space="preserve">
+    <value>Erreur du chargement de la carte</value>
+  </data>
+  <data name="ErrorIdUser" xml:space="preserve">
+    <value>Erreur lors de la récupération de l'id utilisateur</value>
+  </data>
+  <data name="ErrorLogIn" xml:space="preserve">
+    <value>Veuillez entrer vos informations de connexion</value>
+  </data>
+  <data name="ErrorNoMusic" xml:space="preserve">
+    <value>Pas de musique sélectionnée</value>
+  </data>
+  <data name="ErrorPayment" xml:space="preserve">
+    <value>Erreur lors du paiement</value>
+  </data>
+  <data name="ErrorSignal" xml:space="preserve">
+    <value>Réseau insuffisant</value>
+  </data>
+  <data name="ErrorTweet" xml:space="preserve">
+    <value>Erreur lors de l'envoi de votre message</value>
+  </data>
+  <data name="ErrorTwitter" xml:space="preserve">
+    <value>Erreur lors de la connexion via Twitter</value>
+  </data>
+  <data name="ErrorUpdatePlaylist" xml:space="preserve">
+    <value>Erreur lors de la mise à jour de la playlist</value>
+  </data>
+  <data name="Euros" xml:space="preserve">
+    <value> €</value>
+  </data>
+  <data name="GoToAlbum.Text" xml:space="preserve">
+    <value>Voir l'album</value>
+  </data>
+  <data name="GoToCart.Text" xml:space="preserve">
+    <value>Ajouter au panier</value>
+  </data>
+  <data name="InfosConec" xml:space="preserve">
+    <value>Veuillez entrer vos informations de connexion</value>
+  </data>
+  <data name="MusicDelete" xml:space="preserve">
+    <value>La musique a été surpprimée</value>
+  </data>
+  <data name="PasswordEight" xml:space="preserve">
+    <value>Le mot de passe doit contenir au mois 8 caractères</value>
+  </data>
+  <data name="PaymentOk" xml:space="preserve">
+    <value>Paiement effectué</value>
+  </data>
+  <data name="RateMusic.Text" xml:space="preserve">
+    <value>Noter la musique</value>
+  </data>
+  <data name="SignInOk" xml:space="preserve">
+    <value>L'inscription est réussi</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total :</value>
+  </data>
+  <data name="WaitGeo" xml:space="preserve">
+    <value>La carte est en cours de chargement</value>
+  </data>
+</root>

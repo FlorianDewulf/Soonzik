@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="SoonZik.Views.Connection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    xmlns:ViewModels="using:SoonZik.ViewModels"
+    mc:Ignorable="d">
+
+
+    <Grid Background="#FFDEDEDE" HorizontalAlignment="Left" Height="1080" Width="1920">
+        <!--<Grid.DataContext>
+            <ViewModels:ConnectionViewModel/>
+        </Grid.DataContext>-->
+        <Image Margin="429,131,70,131" Source="ms-appx:///Assets/SoonZik_splashscreen.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+
+
+        <TextBlock x:Name="conection_txt" x:Uid="connection_txt" HorizontalAlignment="Left" Margin="92,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="69" Width="332" FontSize="53.333" FontFamily="Berlin Sans FB Demi" Foreground="#FF27AAE1"  Text="Connexion"/>
+
+
+
+        <!--<TextBox x:Name="login_box" HorizontalAlignment="Left" Margin="92,295,0,0" TextWrapping="Wrap" Text="Email" Height="35" Width="227" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="pass_box" Password="Password" HorizontalAlignment="Left" Margin="92,355,0,0" Height="35" Width="227" VerticalAlignment="Top"/>
+        <Button x:Name="connect_btn" x:Uid="connect_btn" Content="Connexion" HorizontalAlignment="Left" Margin="89,412,0,0" VerticalAlignment="Top" Width="233" Background="#FF27AAE1" Foreground="White" BorderThickness="0" FontWeight="Bold" Click="Connect_btn_Click" BorderBrush="{x:Null}"/>-->
+
+
+        <TextBox x:Name="login_box" HorizontalAlignment="Left" Margin="92,295,0,0" TextWrapping="Wrap" Text="{Binding mail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="35" Width="230" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="pass_box" Password="{Binding passwd , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Margin="92,355,0,0" Height="35" Width="230" VerticalAlignment="Top"/>
+        <Button Command="{Binding do_classic_connection, Mode=OneWay}" x:Name="connect_btn" x:Uid="connect_btn" Content="Connexion" HorizontalAlignment="Left" Margin="92,412,0,0" VerticalAlignment="Top" Width="230" Background="#FF27AAE1" BorderThickness="0" FontWeight="Bold" BorderBrush="Black" Foreground="White" Height="35"/>
+
+        <Button  BorderThickness="0" BorderBrush="Transparent" Padding="-4" x:Name="fb_btn" Command="{Binding do_facebook_connection}" HorizontalAlignment="Left" Margin="92,558,0,0" VerticalAlignment="Top" Height="40" Width="230">
+            <Button.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/connexion_fb.png"/>
+            </Button.Background>
+            <Image Source="ms-appx:///Assets/connexion_fb.png" Width="225" Height="35" Stretch="Fill"/>
+        </Button>
+
+        <Button  BorderThickness="0" BorderBrush="Transparent" Padding="-4" x:Name="twitter_btn" Command="{Binding do_twitter_connection}" HorizontalAlignment="Left" Margin="92,608,0,0" VerticalAlignment="Top" Height="40" Width="230">
+            <Button.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/connexion_twitter.png"/>
+            </Button.Background>
+            <Image Source="ms-appx:///Assets/connexion_twitter.png" Width="225" Height="35" Stretch="Fill"/>
+        </Button>
+
+        <Button  BorderThickness="0" BorderBrush="Transparent" Padding="-4" x:Name="gplus_btn" Command="{Binding do_google_connection}" HorizontalAlignment="Left" Margin="92,658,0,0" VerticalAlignment="Top" Height="40" Width="230">
+            <Button.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/connexion_twitter.png"/>
+            </Button.Background>
+            <Image Source="ms-appx:///Assets/connexion_gplus.png" Width="225" Height="35" Stretch="Fill"/>
+        </Button>
+
+        <TextBlock x:Name="signup_txt" x:Uid="signup_txt" HorizontalAlignment="Left" Margin="95,495,0,0" TextWrapping="Wrap" Text="Inscription" VerticalAlignment="Top" Width="Auto" Foreground="#FF27AAE1" FontSize="25" Tapped="signup_txt_SelectionChanged" />
+        <!--<TextBlock x:Name="langue" HorizontalAlignment="Left" Margin="80,40,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="80" Width="239" Foreground="#FF006A00" FontSize="40"/>-->
+        <!--<TextBlock x:Name="forgot_password_txt" x:Uid="forgot_password_txt" HorizontalAlignment="Left" Margin="92,522,0,0" TextWrapping="Wrap" Text="Récuperation du mot de passe" VerticalAlignment="Top" Width="283" Foreground="#FF27AAE1" FontSize="20"/>-->
+        <!--<TextBlock x:Name="feedback" HorizontalAlignment="Left" Margin="25,1045,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="275" Foreground="#FF111111" FontSize="25">
+            <Hyperlink NavigateUri="http://api.lvh.me:3000/feedbacks/new" Foreground="#FF611EFF" >Feedback</Hyperlink>
+        </TextBlock>-->
+        <TextBlock x:Name="feedback_txt" x:Uid="feedback_txt" HorizontalAlignment="Left" Margin="30,1025,0,0" TextWrapping="Wrap" Text="Feedback" VerticalAlignment="Top" Width="116" Foreground="#FF27AAE1" FontSize="25" Tapped="feedback_txt_Tapped" />
+        <!--<Button Content="Button" Click="Button_Click" HorizontalAlignment="Left" Margin="162,47,0,0" VerticalAlignment="Top" Height="88" Width="218" Background="#FF7E6969"/>-->
+
+    </Grid>
+</Page>

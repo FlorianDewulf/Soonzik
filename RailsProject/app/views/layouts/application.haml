@@ -1,0 +1,130 @@
+!!! 5
+%html
+	%head
+		%title= "SoonZik | Welcome"
+		%base{href: "/"}
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+		= stylesheet_link_tag		'application', media: 'all'
+		= javascript_include_tag 'application'
+		= javascript_include_tag 'websocket_rails/main'
+		= javascript_include_tag "vendor/modernizr"
+		= javascript_include_tag "languages/#{@languageSelected}_file"
+		= csrf_meta_tags
+
+	%body{ "ng-app" => "SoonzikApp" }
+		%header.index{ "ng-controller" => "HeaderCtrl", "ng-init" => "initHeader()" }
+			%nav.top-bar-custom
+				.center-logo
+					=link_to image_tag("logo-soonzik.png"), "http://lvh.me:3000", :class => "soonzik-logo"
+					%input#inputSearch{:placeholder => "{{ labels.DISPLAY_MENU_SEARCH_PLACEHOLDER }}", :type => "text", "ng-model" => "search.value" }
+					%a.alert.button.expand.searchBtn{:href => "#", "ng-click" => "sendSearch()"}
+						=image_tag "loupe.png", :class => "loupe"
+					%ul.no-bullet{ "ng-class" => "{ open: menuOpen }" }
+						- if user_signed_in?
+							%li.text-center.relative
+								%a{ href: notifications_url }
+									%span.notif{ "ng-show" => "countNotRead() > 0" }
+										{{ countNotRead() }}
+									%span{ "ng-show" => "countNotRead() == 0" }
+										0
+									%span.small_menu
+										{{ (notifs.length > 1) ? labels.DISPLAY_MENU_NOTIFICATION_LABEL_PLURAL : labels.DISPLAY_MENU_NOTIFICATION_LABEL_SINGULAR }}
+							%li.clearfix
+								=image_tag ("usersImage/avatars/" + current_user.image), :class => "photo-profile left", id: "profilePicture"
+								%p.small_menu
+									= link_to(UsersHelper.validate_username_for_oauth(current_user), user_path(current_user), :class => "profile")
+							%li
+								= link_to edit_user_path(current_user)do
+									%i.fi-wrench
+									%span.small_menu
+										{{ labels.DISPLAY_MENU_PROFILE_EDITION_LABEL }}
+							%li
+								= link_to my_music_path do
+									%i.fi-music
+									%span.small_menu
+										{{ labels.DISPLAY_MENU_MUSIC_LABEL }}
+						- else
+							%li
+								%a{:href => new_user_registration_path, :target => "_self" }
+									%i.fi-save
+									%span{ :class => "small_menu" }
+										{{ labels.DISPLAY_MENU_SIGNUP_LABEL }}
+							%li
+								%a{:href => new_user_session_path, :target => "_self" }
+									%i.fi-power
+									%span{ :class => "small_menu" }
+										{{ labels.DISPLAY_MENU_LOGIN_LABEL }}
+						%li
+							= link_to news_index_path do
+								%i.fi-clipboard
+								%span.small_menu
+									{{ labels.DISPLAY_MENU_NEWS_LABEL }}
+						%li
+							= link_to explorer_path do
+								%i.fi-web
+								%span.small_menu
+									{{ labels.DISPLAY_MENU_EXPLORER_LABEL }}
+						%li
+							= link_to packs_path do
+								%i.fi-results
+								%span.small_menu
+									{{ labels.DISPLAY_MENU_PACKS_LABEL }}
+						%li
+							= link_to listenings_path do
+								%i.fi-map
+								%span.small_menu
+									{{ labels.DISPLAY_MENU_LISTENING_LABEL }}
+						%li
+							= link_to concerts_path do
+								%i.fi-ticket
+								%span.small_menu
+									{{ labels.DISPLAY_MENU_CONCERT_LABEL }}
+						%li
+							= link_to battles_path do
+								%i.fi-flag
+								%span.small_menu
+									{{ labels.DISPLAY_MENU_BATTLES_LABEL }}
+						%li
+							= link_to new_feedback_path do
+								%i.fi-comment
+								%span.small_menu
+									{{ labels.DISPLAY_MENU_FEEDBACK_LABEL }}
+						- if user_signed_in?
+							%li
+								= link_to carts_my_cart_path do
+									%i.fi-shopping-cart
+									%span.small_menu
+										{{ labels.DISPLAY_MENU_CART_LABEL }}
+							%li
+								= link_to '/users/friendlist' do
+									%i.fi-torsos-all
+									%span.small_menu
+										{{ labels.DISPLAY_MENU_FRIENDS_LABEL }}
+							%li
+								= link_to destroy_user_session_path, :target => "_self", :method => :delete  do
+									%i.fi-power
+									%span.small_menu
+										{{ labels.DISPLAY_MENU_LOGOUT_LABEL }}
+						.flags
+							%ul.inline-list
+								%li.pointer{ "ng-click" => "chooseLanguage('EN')" }
+									= image_tag "flag-gb.png"
+								%li.pointer{ "ng-click" => "chooseLanguage('FR')" }
+									= image_tag "flag-fr.png"
+		%main
+			- if notice
+				%small.error.bg-green
+					%i.fi-x.left.removeInfo.pointer
+					%p= notice
+			-if alert
+				%small.error
+					%i.fi-x.left.removeInfo.pointer
+					%p= alert
+			.large-12{"ng-view" => true}
+			=yield
+			- if user_signed_in?	
+				#chat{ "ng-include" => "'#{asset_path('AngularJS/views/chat.html.haml')}'" }
+		%footer
+			.container
+				#player-container{ "ng-include" => "'#{asset_path('AngularJS/views/others/player.html.haml')}'" }
+		.feedback

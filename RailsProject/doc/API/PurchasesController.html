@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!--
+
+  Fivefish RDoc Generator
+  $Id$
+
+  Authors:
+  - Michael Granger <ged@FaerieMUD.org>
+
+ -->
+<html lang="en">
+<head>
+	<title>RDoc Documentation</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<link href=".." rel="prefix" />
+
+	<link href="../css/fivefish.min.css" rel="stylesheet" />
+
+	<script src="../js/jquery-1.7.1.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/searchindex.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../js/fivefish.min.js" type="text/javascript"
+		defer="defer" charset="utf-8" onload="initFivefish()"></script>
+</head>
+
+<body class="class-page">
+
+	<nav class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand"
+					href="../index.html">RDoc Documentation</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#class-dropdown">
+								Classes
+								<b class="caret"></b>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#file-dropdown">
+								Files
+								<b class="caret"></b>
+							</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+				<span class="pull-right">
+					<form class="navbar-search">
+						<input type="hidden" id="navbar-search-target" value="" />
+						<input type="text" class="search-query" value=""
+							placeholder="Method, Class, or Filename" />
+					</form>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		
+		<header class="hero-unit">
+			<hgroup>
+								  				<h2 class="namespace">API::</h2>
+				  												<h1 class="class"
+					rel="popover"
+					data-original-title="In files"
+					data-content="app/controllers/API/purchases_controller.rb"
+					>PurchasesController</h1>
+				</p>
+							</hgroup>
+			<span class="label">class</span>
+		</header>
+
+		<section class="module-relations">
+			<dl>
+								<dt>Superclass</dt>
+								<dd class="superclass"><a href="../API/ApisecurityController.html">API::ApisecurityController</a></dd>
+								
+								<dt>Included Modules</dt>
+												<dd class="include">PayPal::SDK::REST</dd>
+												
+							</dl>
+		</section>
+
+		<section class="description">
+			
+<p>Controller which manage the transaction for the <a
+href="../Purchase.html">Purchase</a> objects Here is the list of action
+available :</p>
+<ul><li>
+<p>buycart       [post] - SECURE</p>
+</li><li>
+<p>buypack               [post] - SECURE</p>
+</li></ul>
+		</section>
+
+				<section id="5Buntitled-5D" class="documentation-section">
+			
+		    
+			
+			
+			<!-- Methods -->
+						
+			
+			
+			
+			
+			
+									
+						<section class="public-methods instance-methods methods">
+				<header>
+					<h3>Public Instance Methods</h3>
+				</header>
+
+								<a name="method-i-buycart">anchor</a>
+				<div id="method-i-buycart-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">buycart</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Buy the current cart and empty it</p>
+
+<p>Route : /purchases/buycart</p>
+
+<h4 id="method-i-buycart-label-Options">Options<span><a href="#method-i-buycart-label-Options">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p>+paypal [:payment_id] + - The informations that paypal returns after a
+payment (PAY-xxxxxx)</p>
+</li></ul>
+
+<h5 id="method-i-buycart-label-HTTP+VALUE">HTTP VALUE<span><a href="#method-i-buycart-label-HTTP+VALUE">&para;</a> <a href="#top">&uarr;</a></span></h5>
+<ul><li>
+<p><code>201</code> - In case of success, return the purchase created in this
+format : { user: {}, purchased_musics: { music: {}, purchased_album: {
+album : {}, purchased_pack: { partial: value, pack: {} } } } }</p>
+</li><li>
+<p><code>401</code> - It is not a secured transaction</p>
+</li><li>
+<p><code>503</code> - Error from server</p>
+</li></ul>					
+											<div class="method-source-code" id="buycart-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/purchases_controller.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">buycart</span>
+  <span class="ruby-identifier">p</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">ret</span> = { <span class="ruby-identifier">musics</span><span class="ruby-operator">:</span> [], <span class="ruby-identifier">albums</span><span class="ruby-operator">:</span> [] }
+
+  <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span>(<span class="ruby-ivar">@paypal</span>.<span class="ruby-identifier">present?</span>() <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@paypal</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:payment_id</span>)))
+    <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">503</span>
+    <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:bad_request</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@security</span>)
+        <span class="ruby-identifier">p</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-ivar">@user_id</span>
+        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">save!</span>
+
+        <span class="ruby-identifier">cart</span> = <span class="ruby-constant">Cart</span>.<span class="ruby-identifier">eager_load</span>(<span class="ruby-identifier">albums</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">musics</span><span class="ruby-operator">:</span> {} }).<span class="ruby-identifier">where</span>(<span class="ruby-identifier">carts</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@user_id</span> })
+        <span class="ruby-identifier">list</span> = <span class="ruby-identifier">p</span>.<span class="ruby-identifier">buyCart</span>(<span class="ruby-identifier">cart</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>)
+
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">list</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>)
+          <span class="ruby-identifier">p</span>.<span class="ruby-identifier">destroy</span>
+          <span class="ruby-ivar">@returnValue</span> = { <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span> }
+          <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">202</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">if</span> ((<span class="ruby-ivar">@paypal</span>[<span class="ruby-value">:payment_id</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/PAY-[A-Za-z-0-9]/</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+            <span class="ruby-identifier">payment</span> = <span class="ruby-constant">Payment</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@paypal</span>[<span class="ruby-value">:payment_id</span>])
+
+            <span class="ruby-identifier">address</span> = <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>
+            <span class="ruby-identifier">payer_info</span> = <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>
+            <span class="ruby-constant">PaypalPayment</span>.<span class="ruby-identifier">create</span>({
+              <span class="ruby-identifier">payment_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">id</span>,
+              <span class="ruby-identifier">payment_method</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payment_method</span>,
+              <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">status</span>,
+              <span class="ruby-identifier">payer_email</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">email</span>,
+              <span class="ruby-identifier">payer_first_name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">first_name</span>,
+              <span class="ruby-identifier">payer_last_name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">last_name</span>,
+              <span class="ruby-identifier">payer_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">payer_id</span>,
+              <span class="ruby-identifier">payer_phone</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">phone</span>,
+              <span class="ruby-identifier">payer_country_code</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">country_code</span>,
+              <span class="ruby-identifier">payer_street</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">line1</span>,
+              <span class="ruby-identifier">payer_city</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">city</span>,
+              <span class="ruby-identifier">payer_postal_code</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">postal_code</span>,
+              <span class="ruby-identifier">payer_country_code</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">country_code</span>,
+              <span class="ruby-identifier">payer_recipient_name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">recipient_name</span>,
+              <span class="ruby-identifier">purchase_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">id</span>
+            })
+
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">request</span> = <span class="ruby-node">%x`curl -s --insecure https://api-3t.sandbox.paypal.com/nvp -d &quot;USER=florian.dewulf-facilitator_api1.gmail.com&amp;PWD=QRN447MQJTK4HRLH&amp;SIGNATURE=AFcWxV21C7fd0v3bYYYRCpSSRl31A1yXlnpAqjVHPd5zaswpjnCJg-6f&amp;METHOD=GetTransactionDetails&amp;VERSION=78&amp;TransactionID=#{@paypal[:payment_id]}`</span>
+            <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">request</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/PAYMENTSTATUS=Completed/</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
+              <span class="ruby-identifier">raise</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-identifier">list</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+            <span class="ruby-keyword">if</span> (<span class="ruby-identifier">item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Music</span>))
+              <span class="ruby-identifier">ret</span>[<span class="ruby-value">:musics</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:album</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">Album</span>.<span class="ruby-identifier">miniKey</span> } })
+            <span class="ruby-keyword">else</span>
+              <span class="ruby-identifier">ret</span>[<span class="ruby-value">:albums</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:musics</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">Music</span>.<span class="ruby-identifier">miniKey</span> } })
+            <span class="ruby-keyword">end</span>
+          }
+
+          <span class="ruby-identifier">cart</span>.<span class="ruby-identifier">destroy_all</span>
+
+          <span class="ruby-ivar">@returnValue</span> = { <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-identifier">ret</span> }
+          <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">201</span>
+          <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:created</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+        <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">purchased_albums</span>.<span class="ruby-identifier">destroy_all</span>
+        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">purchased_musics</span>.<span class="ruby-identifier">destroy_all</span>
+        <span class="ruby-identifier">p</span>.<span class="ruby-identifier">destroy</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+      <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:service_unavailable</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sendJson</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-buypack">anchor</a>
+				<div id="method-i-buypack-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">buypack</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Buy the current cart and empty it</p>
+
+<p>Route : /purchases/buypack</p>
+
+<h4 id="method-i-buypack-label-Options">Options<span><a href="#method-i-buypack-label-Options">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>pack_id</code> - The id of the pack purchased</p>
+</li><li>
+<p><code>amount</code> - The donation</p>
+</li><li>
+<p><code>artist</code> - The percentage for the artist</p>
+</li><li>
+<p><code>association</code> - The percentage for the association</p>
+</li><li>
+<p><code>website</code> - The percentage for the website</p>
+</li><li>
+<p>+paypal [:payment_id] + - The informations that paypal returns after a
+payment (PAY-xxxxxx)</p>
+</li><li>
+<p><code>gift_user_id</code> - (optionnal) If this is a gift</p>
+</li></ul>
+
+<h5 id="method-i-buypack-label-HTTP+VALUE">HTTP VALUE<span><a href="#method-i-buypack-label-HTTP+VALUE">&para;</a> <a href="#top">&uarr;</a></span></h5>
+<ul><li>
+<p><code>201</code> - In case of success, return the purchase created in this
+format : { user: {}, purchased_musics: { music: {}, purchased_album: {
+album : {}, purchased_pack: { partial: value, pack: {} } } } }</p>
+</li><li>
+<p><code>401</code> - It is not a secured transaction</p>
+</li><li>
+<p><code>403</code> - The sum of the percentage != 100</p>
+</li><li>
+<p><code>503</code> - Error from server</p>
+</li></ul>					
+											<div class="method-source-code" id="buypack-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/controllers/API/purchases_controller.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">buypack</span>
+  <span class="ruby-identifier">objectToDelete</span> = []
+  <span class="ruby-identifier">gift_to</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-ivar">@gift_user_id</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@gift_user_id</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@user_id</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span>(<span class="ruby-ivar">@paypal</span>.<span class="ruby-identifier">present?</span>() <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@paypal</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:payment_id</span>)) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">gift_to</span>)
+    <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">503</span>
+    <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:bad_request</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@security</span>)
+        <span class="ruby-identifier">pack</span> = <span class="ruby-constant">Pack</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-ivar">@pack_id</span>)
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">pack</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
+          <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">502</span>
+          <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:not_found</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@artist</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@association</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@website</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">!=</span> <span class="ruby-value">100</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@amount</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">minimal_price</span>
+          <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+          <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:bad_request</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">p</span> = <span class="ruby-constant">Purchase</span>.<span class="ruby-identifier">new</span>
+          <span class="ruby-identifier">p</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">gift_to</span>.<span class="ruby-identifier">id</span>
+          <span class="ruby-identifier">p</span>.<span class="ruby-identifier">save!</span>
+
+          <span class="ruby-keyword">if</span> ((<span class="ruby-ivar">@paypal</span>[<span class="ruby-value">:payment_id</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/PAY-[A-Za-z-0-9]/</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+
+            <span class="ruby-identifier">payment</span> = <span class="ruby-constant">Payment</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@paypal</span>[<span class="ruby-value">:payment_id</span>])
+            <span class="ruby-identifier">address</span> = <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>
+            <span class="ruby-identifier">payer_info</span> = <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>
+            <span class="ruby-constant">PaypalPayment</span>.<span class="ruby-identifier">create</span>({
+              <span class="ruby-identifier">payment_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">id</span>,
+              <span class="ruby-identifier">payment_method</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payment_method</span>,
+              <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">status</span>,
+              <span class="ruby-identifier">payer_email</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">email</span>,
+              <span class="ruby-identifier">payer_first_name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">first_name</span>,
+              <span class="ruby-identifier">payer_last_name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">last_name</span>,
+              <span class="ruby-identifier">payer_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">payer_id</span>,
+              <span class="ruby-identifier">payer_phone</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">phone</span>,
+              <span class="ruby-identifier">payer_country_code</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">country_code</span>,
+              <span class="ruby-identifier">payer_street</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">line1</span>,
+              <span class="ruby-identifier">payer_city</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">city</span>,
+              <span class="ruby-identifier">payer_postal_code</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">postal_code</span>,
+              <span class="ruby-identifier">payer_country_code</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">country_code</span>,
+              <span class="ruby-identifier">payer_recipient_name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">payment</span>.<span class="ruby-identifier">payer</span>.<span class="ruby-identifier">payer_info</span>.<span class="ruby-identifier">shipping_address</span>.<span class="ruby-identifier">recipient_name</span>,
+              <span class="ruby-identifier">purchase_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">id</span>
+            })
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">request</span> = <span class="ruby-node">%x(curl -s --insecure https://api-3t.sandbox.paypal.com/nvp -d &quot;USER=florian.dewulf-facilitator_api1.gmail.com&amp;PWD=QRN447MQJTK4HRLH&amp;SIGNATURE=AFcWxV21C7fd0v3bYYYRCpSSRl31A1yXlnpAqjVHPd5zaswpjnCJg-6f&amp;METHOD=GetTransactionDetails&amp;VERSION=78&amp;TransactionID=#{@paypal[:payment_id]})</span>
+            <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">request</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/PAYMENTSTATUS=Completed/</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
+              <span class="ruby-identifier">raise</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-identifier">p</span>.<span class="ruby-identifier">addPurchasedPackFromObject</span>(<span class="ruby-identifier">pack</span>, (<span class="ruby-identifier">pack</span>.<span class="ruby-identifier">averagePrice</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@amount</span>.<span class="ruby-identifier">to_f</span>), <span class="ruby-ivar">@artist</span>, <span class="ruby-ivar">@association</span>, <span class="ruby-ivar">@website</span>, <span class="ruby-ivar">@amount</span>, <span class="ruby-identifier">gift_to</span>.<span class="ruby-identifier">id</span>)
+
+          <span class="ruby-ivar">@returnValue</span> = {
+            <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-identifier">pack</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">Pack</span>.<span class="ruby-identifier">miniKey</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> {
+              <span class="ruby-identifier">albums</span><span class="ruby-operator">:</span> {
+                <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">Album</span>.<span class="ruby-identifier">miniKey</span>,
+                <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> {
+                  <span class="ruby-identifier">musics</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">only</span><span class="ruby-operator">:</span> <span class="ruby-constant">Music</span>.<span class="ruby-identifier">miniKey</span> }
+                }
+              }
+            })
+          }
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">500</span>
+        <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:forbidden</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">rescue</span>
+      <span class="ruby-identifier">p</span>.<span class="ruby-identifier">destroy</span>
+      <span class="ruby-identifier">codeAnswer</span> <span class="ruby-value">504</span>
+      <span class="ruby-identifier">defineHttp</span> <span class="ruby-value">:service_unavailable</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sendJson</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+						
+		</section>
+		
+
+		<hr>
+
+		<footer>
+			<div class="container">
+				<span id="rdoc-version">Generated by RDoc 4.2.0</span> using the
+				<a id="generator-version"
+					href="http://deveiate.org/fivefish">Fivefish RDoc 0.1.0</a> generator.
+			</div>
+		</footer>
+	</div> <!-- /container -->
+
+	<!-- Class dropdown menu -->
+	<div id="class-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="../API.html">API</a></li>
+			<li><a href="../API/AlbumsController.html">API::AlbumsController</a></li>
+			<li><a href="../API/AmbiancesController.html">API::AmbiancesController</a></li>
+			<li><a href="../API/ApiController.html">API::ApiController</a></li>
+			<li><a href="../API/ApisecurityController.html">API::ApisecurityController</a></li>
+			<li><a href="../API/BattlesController.html">API::BattlesController</a></li>
+			<li><a href="../API/CartsController.html">API::CartsController</a></li>
+			<li><a href="../API/ConcertsController.html">API::ConcertsController</a></li>
+			<li><a href="../API/FeedbacksController.html">API::FeedbacksController</a></li>
+			<li><a href="../API/GenresController.html">API::GenresController</a></li>
+			<li><a href="../API/InfluencesController.html">API::InfluencesController</a></li>
+			<li><a href="../API/LanguagesController.html">API::LanguagesController</a></li>
+			<li><a href="../API/LikesController.html">API::LikesController</a></li>
+			<li><a href="../API/ListeningsController.html">API::ListeningsController</a></li>
+			<li><a href="../API/MessagesController.html">API::MessagesController</a></li>
+			<li><a href="../API/MusicsController.html">API::MusicsController</a></li>
+			<li><a href="../API/NewsController.html">API::NewsController</a></li>
+			<li><a href="../API/NotificationsController.html">API::NotificationsController</a></li>
+			<li><a href="../API/PacksController.html">API::PacksController</a></li>
+			<li><a href="../API/PlaylistsController.html">API::PlaylistsController</a></li>
+			<li><a href="../API/PurchasesController.html">API::PurchasesController</a></li>
+			<li><a href="../API/SearchsController.html">API::SearchsController</a></li>
+			<li><a href="../API/SuggestionsController.html">API::SuggestionsController</a></li>
+			<li><a href="../API/TweetsController.html">API::TweetsController</a></li>
+			<li><a href="../API/UsersController.html">API::UsersController</a></li>
+			<li><a href="../Artist/MusicsController.html">Artist::MusicsController</a></li>
+			<li><a href="../Address.html">Address</a></li>
+			<li><a href="../AdminUser.html">AdminUser</a></li>
+			<li><a href="../Album.html">Album</a></li>
+			<li><a href="../Albumslike.html">Albumslike</a></li>
+			<li><a href="../Ambiance.html">Ambiance</a></li>
+			<li><a href="../Attachment.html">Attachment</a></li>
+			<li><a href="../Battle.html">Battle</a></li>
+			<li><a href="../Cart.html">Cart</a></li>
+			<li><a href="../Commentary.html">Commentary</a></li>
+			<li><a href="../Concert.html">Concert</a></li>
+			<li><a href="../Concertslike.html">Concertslike</a></li>
+			<li><a href="../Description.html">Description</a></li>
+			<li><a href="../Feedback.html">Feedback</a></li>
+			<li><a href="../Follow.html">Follow</a></li>
+			<li><a href="../Friend.html">Friend</a></li>
+			<li><a href="../Genre.html">Genre</a></li>
+			<li><a href="../Group.html">Group</a></li>
+			<li><a href="../Identity.html">Identity</a></li>
+			<li><a href="../Influence.html">Influence</a></li>
+			<li><a href="../Language.html">Language</a></li>
+			<li><a href="../Listening.html">Listening</a></li>
+			<li><a href="../Meet.html">Meet</a></li>
+			<li><a href="../Meetstring.html">Meetstring</a></li>
+			<li><a href="../Message.html">Message</a></li>
+			<li><a href="../Music.html">Music</a></li>
+			<li><a href="../MusicNote.html">MusicNote</a></li>
+			<li><a href="../Musicalpast.html">Musicalpast</a></li>
+			<li><a href="../News.html">News</a></li>
+			<li><a href="../NewsTitle.html">NewsTitle</a></li>
+			<li><a href="../Newslike.html">Newslike</a></li>
+			<li><a href="../Newstext.html">Newstext</a></li>
+			<li><a href="../Notification.html">Notification</a></li>
+			<li><a href="../Pack.html">Pack</a></li>
+			<li><a href="../PartialAlbum.html">PartialAlbum</a></li>
+			<li><a href="../PaypalPayment.html">PaypalPayment</a></li>
+			<li><a href="../Playlist.html">Playlist</a></li>
+			<li><a href="../PlaylistObject.html">PlaylistObject</a></li>
+			<li><a href="../Proposition.html">Proposition</a></li>
+			<li><a href="../Purchase.html">Purchase</a></li>
+			<li><a href="../PurchasedAlbum.html">PurchasedAlbum</a></li>
+			<li><a href="../PurchasedMusic.html">PurchasedMusic</a></li>
+			<li><a href="../PurchasedPack.html">PurchasedPack</a></li>
+			<li><a href="../Tool.html">Tool</a></li>
+			<li><a href="../Tweet.html">Tweet</a></li>
+			<li><a href="../User.html">User</a></li>
+			<li><a href="../Vote.html">Vote</a></li>
+		</ul>
+	</div>
+
+	<!-- File dropdown menu -->
+	<div id="file-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+		</ul>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/uservote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You haven't already vote!"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp" />
+
+        <TextView
+            android:id="@+id/artistonevote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_alignTop="@+id/uservote"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="47dp"
+            android:layout_marginStart="47dp" />
+
+        <TextView
+            android:id="@+id/artisttwovote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_alignTop="@+id/uservote"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="41dp"
+            android:layout_marginEnd="41dp" />
+
+        <TextView
+            android:id="@+id/timeremaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8H"
+            android:layout_below="@+id/uservote"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp" />
+
+     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="193dp"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/artistonepicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/nameartistone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keen V Lol"
+                android:layout_below="@+id/artistonepicture"
+                android:layout_centerHorizontal="true" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/topartistone"
+                android:layout_below="@+id/nameartistone"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/artisttwopicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/nameartisttwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keen V Lol"
+                android:layout_below="@+id/artisttwopicture"
+                android:layout_alignRight="@+id/artisttwopicture"
+                android:layout_alignEnd="@+id/artisttwopicture" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/topartisttwo"
+                android:layout_below="@+id/nameartisttwo"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/fragment_battle.xml -->

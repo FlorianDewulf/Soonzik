@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+MessageOne:
+  msg: Message numero 1
+  sender: UserOne
+  receiver: UserTwo
+  session: AAAAA
+
+MessageTwo:
+  msg: Message numero 2
+  sender: UserTwo
+  receiver: UserOne
+  session: AAAAA

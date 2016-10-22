@@ -1,0 +1,50 @@
+.cart{"ng-init" => "showCart()" }
+	%loading{ 'ng-if' => 'loading == true' }
+	%div{ 'ng-if' => 'loading != true' }
+		%h1 {{ labels.DISPLAY_CART_LABEL }} {{ labels.DISPLAY_CART_INDEX }}
+		.row
+			%div{'ng-if' => 'listMusics.length == 0 && listAlbums.length == 0'}
+				%h3.subheader
+					{{ labels.DISPLAY_CART_EMPTY }}
+			%div{'ng-if' => 'listAlbums.length != 0'}
+				%h3 {{ labels.DISPLAY_CART_ALBUM }}
+				.ul.large-block-grid-2.centered.columns
+					%li{"ng-repeat" => "cartAlbum in listAlbums"}
+						.panel
+							%h3.subheader
+								%p.text-center
+									{{ cartAlbum.album.title }}
+							.divider
+							%p.right
+								{{ labels.DISPLAY_PACK_ARTIST_NAME }} : {{ cartAlbum.album.user.username }}
+								%br
+								{{ labels.DISPLAY_PACK_YEAR_ALBUM }} : {{ cartAlbum.album.yearProd }}
+								%br
+								{{ labels.DISPLAY_CART_PRICE }} : {{ cartAlbum.album.price }} €
+								%br
+								%a.delete_item{"ng-click" => "deleteItem(cartAlbum.cart_id)"}
+									%i.fi-x.right
+									{{ labels.DISPLAY_CART_DELETE }}
+							%a{:href => "http://lvh.me:3000/albums/ {{ cartAlbum.album.id }}"}
+								%img.centered{ "ng-src" => "{{ '/assets/albums/' + cartAlbum.album.image }}"}
+			%div{'ng-if' => 'listMusics.length != 0'}
+				%h3 {{ labels.DISPLAY_CART_MUSIC }}
+				.ul.large-block-grid-2.centered.columns
+					%li{"ng-repeat" => "cartMusic in listMusics"}
+						.panel
+							%h3.subheader
+								%p.text-center
+									{{ labels.DISPLAY_PACK_ARTIST_NAME }} : {{ cartMusic.music.user.username }} / {{ cartMusic.music.title }}
+							.divider
+							%a{"ng-click" => "deleteItem(cartMusic.cart_id)"}
+								%i.fi-x.left
+								{{ labels.DISPLAY_CART_EMPTY }}
+							%p.right
+								{{ labels.DISPLAY_CART_PRICE }} : {{ cartMusic.music.price }} €
+							%br
+			.large-block-grid-1.right{'ng-if' => 'listMusics.length > 0 || listAlbums.length > 0'}
+				.divider
+				{{ labels.DISPLAY_CART_TOTAL }} : {{ totalPrice }} €
+			%div{'ng-if' => 'listMusics.length > 0 || listAlbums.length > 0'}
+				.button.expand.radius.success{ "ng-click" => "toPayment()" }
+					{{ labels.DISPLAY_CART_BUY }}

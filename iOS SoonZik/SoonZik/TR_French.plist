@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>menu_news</key>
+	<string>Actualités</string>
+	<key>menu_explore</key>
+	<string>Explorer</string>
+	<key>menu_packs</key>
+	<string>Packs</string>
+	<key>menu_geoloc</key>
+	<string>Geoloc</string>
+	<key>menu_battle</key>
+	<string>Duels</string>
+	<key>menu_content</key>
+	<string>Mon Contenu</string>
+	<key>menu_network</key>
+	<string>Mon Réseau</string>
+	<key>menu_account</key>
+	<string>Mon Compte</string>
+	<key>menu_cart</key>
+	<string>Panier</string>
+	<key>save</key>
+	<string>Enregistrer</string>
+	<key>cancel</key>
+	<string>Annuler</string>
+	<key>delete</key>
+	<string>Supprimer</string>
+	<key>playlist_enter_title</key>
+	<string>Veuillez entrer un titre</string>
+	<key>playlist_create_title</key>
+	<string>Nouvelle playlist</string>
+	<key>playlist_create_synthaxe</key>
+	<string>Veuillez entrer entre 4 et 20 caractères</string>
+	<key>playlist_deleted</key>
+	<string>La playlist a été supprimée</string>
+	<key>playlist_deleted_error</key>
+	<string>Un erreur est apparue pendant la suppression</string>
+	<key>update_error</key>
+	<string>Erreur pendant la mise à jour</string>
+	<key>news_add_com</key>
+	<string>Écrire un commentaire</string>
+	<key>account_update</key>
+	<string>Votre compte a été mis à jour</string>
+	<key>choose_social_network</key>
+	<string>Veuillez choisir un réseau social</string>
+	<key>current_list_no_content</key>
+	<string>La liste de lecture est vide</string>
+	<key>playlist_delete_music</key>
+	<string>%@ a été supprimé de la playlist</string>
+	<key>play_all</key>
+	<string>Lire tout</string>
+	<key>no_playlist</key>
+	<string>Vous n&apos;avez pas encore créé de playlist</string>
+	<key>no_playlist_content</key>
+	<string>Vous n&apos;avez pas encore ajouté de musique dans cette playlist</string>
+	<key>title_playlists</key>
+	<string>Playlist</string>
+	<key>title_rate_music</key>
+	<string>Noter cette musique</string>
+	<key>title_albums</key>
+	<string>Albums</string>
+	<key>title_musics</key>
+	<string>Musiques</string>
+	<key>title_influences</key>
+	<string>Influences</string>
+	<key>title_artists</key>
+	<string>Artistes</string>
+	<key>title_social</key>
+	<string>Social</string>
+	<key>title_number</key>
+	<string>N°</string>
+	<key>title_street</key>
+	<string>Rue</string>
+	<key>title_zip</key>
+	<string>Code Postal</string>
+	<key>title_city</key>
+	<string>Ville</string>
+	<key>title_country</key>
+	<string>Pays</string>
+	<key>vote_for_artist</key>
+	<string>Vous avez voté pour %@</string>
+	<key>vote_for_artist_error</key>
+	<string>Une erreur est apparu durant le vote</string>
+	<key>battle_deadline</key>
+	<string>Fin de la battle dans %dd %dh %dm %ds</string>
+	<key>battle_ended</key>
+	<string>Le duel est terminé</string>
+	<key>follow_artist</key>
+	<string>Vous suivez %@</string>
+	<key>unfollow_artist</key>
+	<string>Vous ne suivez plus %@</string>
+	<key>music_added_playlist</key>
+	<string>Vous avez ajouté %@ dans %@</string>
+	<key>music_added_playlist_error</key>
+	<string>La musique n&apos;a pas été ajoutée</string>
+	<key>music_added_current_list</key>
+	<string>Vous avez ajouté: %@ dans la liste de lecture</string>
+	<key>loading_error</key>
+	<string>Erreur durant le chargement</string>
+	<key>connect_failed</key>
+	<string>Impossible de se connecter</string>
+	<key>add_friend</key>
+	<string>%@ est maintenant votre ami</string>
+	<key>del_friend</key>
+	<string>%@ n&apos;est plus votre ami</string>
+	<key>news_com_added</key>
+	<string>Your comment has been sent</string>
+	<key>news_com_added_error</key>
+	<string>Erreur durant l&apos;envoi</string>
+	<key>soonzik_phase_1</key>
+	<string>Aidez les artistes indépendants avec SoonZik</string>
+	<key>battle_versus</key>
+	<string>VS</string>
+	<key>title_follows</key>
+	<string>Ce que vous suivez</string>
+	<key>title_friends</key>
+	<string>Vos amis</string>
+	<key>title_followers</key>
+	<string>Ceux qui vous suivent</string>
+	<key>title_username</key>
+	<string>Username</string>
+	<key>title_firstname</key>
+	<string>Prénom</string>
+	<key>title_lastname</key>
+	<string>Nom</string>
+	<key>title_send</key>
+	<string>Envoyer</string>
+	<key>title_users</key>
+	<string>Utilisateurs</string>
+	<key>title_search</key>
+	<string>Rechercher</string>
+	<key>title_packs</key>
+	<string>Packs</string>
+	<key>title_email</key>
+	<string>Email</string>
+	<key>buy_now</key>
+	<string>Acheter</string>
+	<key>title_remove_from_playlist</key>
+	<string>Supprimer de la playlist</string>
+	<key>title_album_view</key>
+	<string>Vue de l&apos;album</string>
+	<key>title_artist_view</key>
+	<string>Vue de l&apos;artiste</string>
+	<key>title_add_to_playing_list</key>
+	<string>Ajouter à la liste de lecture</string>
+	<key>search_no_result</key>
+	<string>Rechercher du contenu</string>
+	<key>title_add_to_playlist</key>
+	<string>Ajouter à une playlist</string>
+	<key>title_delete_from_playing_list</key>
+	<string>Supprimer de la liste de lecture</string>
+	<key>title_best_singles</key>
+	<string>Leurs meilleurs titres</string>
+	<key>repartition_artist</key>
+	<string>Pour l&apos;artiste</string>
+	<key>repartition_association</key>
+	<string>Pour les associations</string>
+	<key>repartition_site</key>
+	<string>Pour le site</string>
+	<key>repartition_choice</key>
+	<string>Votre montant</string>
+	<key>choose_amount</key>
+	<string>Veuillez entrer un montant</string>
+	<key>buy_music</key>
+	<string>Acheter cette musique</string>
+	<key>rating_success</key>
+	<string>Votre note a été enregistrée</string>
+	<key>rate_title</key>
+	<string>Noter</string>
+	<key>rating_error</key>
+	<string>Erreur apparue durant le vote</string>
+	<key>ask_buy_album</key>
+	<string>Voulez-vous acheter cet album</string>
+	<key>no</key>
+	<string>Non</string>
+	<key>yes</key>
+	<string>Oui</string>
+	<key>add_to_cart_success</key>
+	<string>Ajouté au panier</string>
+	<key>add_to_cart_error</key>
+	<string>Erreur durant l&apos;ajout au panier</string>
+	<key>cart_empty</key>
+	<string>Votre panier est vide</string>
+	<key>cart_error_delete</key>
+	<string>erreur</string>
+	<key>cart_success_delete</key>
+	<string>Suppression réussie</string>
+	<key>pack_average_message</key>
+	<string>Si vous dépensez plus que la moyenne des autres utilisateurs vous débloquez tout le pack</string>
+	<key>pack_average</key>
+	<string>La moyenne est %.2f€</string>
+	<key>payment_title_success</key>
+	<string>Paiement effectué</string>
+	<key>payment_message_success</key>
+	<string>Le paiement a été effectué avec succès</string>
+	<key>let_message_to_followers</key>
+	<string>Laissez un message à vos followers</string>
+	<key>tweet_sended</key>
+	<string>Tweet envoyé</string>
+	<key>tweet_sended_error</key>
+	<string>Le tweet n&apos;a pas été envoyé</string>
+</dict>
+</plist>

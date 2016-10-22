@@ -1,0 +1,49 @@
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Helpers.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Helpers.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Helpers.pri
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\bin\Debug\Facebook.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\bin\Debug\Facebook.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\SoonZik.Helpers.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\SoonZik.Helpers.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\priconfig.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\priconfig.xml.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\layout.resfiles
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\layout.resfiles.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\resources.resfiles
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\resources.resfiles.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\pri.resfiles
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\pri.resfiles.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\qualifiers.txt
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik.Helpers\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Helpers.dll.config
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Helpers.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Helpers.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Helpers.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\Facebook.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.HttpRequest.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Singleton.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\Tweetinvi.Core.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.HttpRequest.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.HttpRequest.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Singleton.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\SoonZik.Singleton.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\Facebook.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\SoonZik.Helpers.csprojResolveAssemblyReference.cache
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\SoonZik.Helpers.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\SoonZik.Helpers.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\priconfig.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\priconfig.xml.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\layout.resfiles
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\layout.resfiles.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\resources.resfiles
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\resources.resfiles.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\pri.resfiles
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\pri.resfiles.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\qualifiers.txt
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik.Helpers\obj\Debug\MultipleQualifiersPerDimensionFound.txt

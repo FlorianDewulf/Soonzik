@@ -1,0 +1,29 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+monoandroid1+monotouch1\autofac.dll" HashGuid="1cb0ce22-b02a-b00a-4e94-c1bdda12d7f7" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\coding4fun.toolkit.controls.2.1.7\lib\wpa81\coding4fun.toolkit.controls.dll" HashGuid="8bbb9304-fede-39af-5ed4-00ee4e3fd140" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\coding4fun.toolkit.controls.2.1.7\lib\wpa81\coding4fun.toolkit.dll" HashGuid="119685b3-f018-829b-095c-510e7d2a3a28" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\facebook.client.1.0.4\lib\wpa81\facebook.client.dll" HashGuid="32d395fd-d10f-e96c-05be-bf064a7180f6" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\facebook.7.0.6\lib\portable-win81+wpa81\facebook.dll" HashGuid="b23a2499-2700-fb5e-a497-93d9e719fc0b" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\mvvmlightlibs.5.2.0.0\lib\wpa81\galasoft.mvvmlight.dll" HashGuid="d702f8e6-9904-1220-8de7-be8614bf93e8" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\mvvmlightlibs.5.2.0.0\lib\wpa81\galasoft.mvvmlight.extras.dll" HashGuid="f59e2cac-89a1-06f4-bbe7-18857251ef78" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\mvvmlightlibs.5.2.0.0\lib\wpa81\galasoft.mvvmlight.platform.dll" HashGuid="27c4f135-c15f-18a2-cb9f-847748d33bdb" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\jisoft.rating.1.0.3\lib\portable-wpa81+win81\jratingcontrol.dll" HashGuid="404d1537-603d-fde1-aa59-115669ee8e27" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\commonservicelocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\microsoft.practices.servicelocation.dll" HashGuid="89de7f80-26d8-a17c-5ad9-b855f81ea5b2" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\microsoft.bcl.async.1.0.168\lib\wpa81\microsoft.threading.tasks.dll" HashGuid="3a1beea5-1547-d5c6-af32-3b5c761c2a6a" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\microsoft.bcl.async.1.0.168\lib\wpa81\microsoft.threading.tasks.extensions.dll" HashGuid="79a01987-c06c-c9d7-37eb-629809787680" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\newtonsoft.json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="0b4cdfc1-2257-2e75-23cf-4052e97b309e" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\rx-interfaces.2.2.5\lib\portable-win81+wpa81\system.reactive.interfaces.dll" HashGuid="2fd855ee-8440-f81f-a427-ceb8eb15ce8f" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\tweetinviapi.0.9.10.0\lib\portable-net40+sl5+wp80+win8+wpa81\tweetinvi.controllers.dll" HashGuid="c4cbb59b-a727-db5d-dd96-05b69c915986" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\tweetinviapi.0.9.10.0\lib\portable-net40+sl5+wp80+win8+wpa81\tweetinvi.core.dll" HashGuid="37c3ed40-08df-90aa-2528-66e859b3a489" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\tweetinviapi.0.9.10.0\lib\portable-net40+sl5+wp80+win8+wpa81\tweetinvi.credentials.dll" HashGuid="e054099a-9759-924e-d364-b495b9c8265c" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\tweetinviapi.0.9.10.0\lib\portable-net40+sl5+wp80+win8+wpa81\tweetinvi.dll" HashGuid="65d6ad81-9445-c996-0b80-ed445b925bd3" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\tweetinviapi.0.9.10.0\lib\portable-net40+sl5+wp80+win8+wpa81\tweetinvi.factories.dll" HashGuid="5601d761-9ea8-d4d7-c2c7-235d9db83dae" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\tweetinviapi.0.9.10.0\lib\portable-net40+sl5+wp80+win8+wpa81\tweetinvi.logic.dll" HashGuid="fbd89f76-3fb1-6791-4d54-ac3b3f3efcb3" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\tweetinviapi.0.9.10.0\lib\portable-net40+sl5+wp80+win8+wpa81\tweetinvi.security.dll" HashGuid="0cedc641-6184-0afd-b24e-5456b571ac71" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\tweetinviapi.0.9.10.0\lib\portable-net40+sl5+wp80+win8+wpa81\tweetinvi.streams.dll" HashGuid="58b2b370-657b-c4ce-04cb-9547df3ecfde" />
+    <ReferenceAssembly PathName="c:\users\gery\documents\github\soonzik\windowsphone\soonzik\packages\tweetinviapi.0.9.10.0\lib\portable-net40+sl5+wp80+win8+wpa81\tweetinvi.weblogic.dll" HashGuid="0b03a002-d6f8-5e16-37f4-fcfde4666326" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

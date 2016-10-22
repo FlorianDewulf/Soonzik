@@ -1,0 +1,124 @@
+﻿<Page
+    x:Class="SoonZik.Views.Explorer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:ratingControl="using:JISoft.RatingControl"
+    mc:Ignorable="d"
+    DataContext="{StaticResource ExplorerViewModel}"
+    Background="#424242">
+
+    <interactivity:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loaded">
+            <core:InvokeCommandAction Command="{Binding LoadCommand}" />
+        </core:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
+
+    <Page.Resources>
+        <DataTemplate x:Key="InfluencesTemplate">
+            <StackPanel Margin="0,0,0,30" Tapped="InfluenceNameBlock_OnTapped">
+                <TextBlock x:Name="InfluenceNameBlock" Text="{Binding Path=name}"
+                           Style="{StaticResource TitleTextBlockStyle}" />
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="HeaderTemplate">
+            <ContentPresenter>
+                <TextBlock Text="{Binding Path=name}" FontFamily="{StaticResource Roboto}" FontStyle="Normal"
+                           FontSize="30" />
+            </ContentPresenter>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MusicTemplate">
+            <Grid Height="70" Margin="0,0,0,0" Tapped="UIElement_OnTapped">
+                <Border BorderThickness="0,0,0,1" Width="350" BorderBrush="White" />
+                <TextBlock x:Name="MusicTitle" Text="{Binding Path=title}" Foreground="#40a8e2" FontSize="20"
+                           Margin="70,0,0,0" VerticalAlignment="Center" />
+                <Ellipse Grid.Column="0" Height="60" Width="60" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding Path=album.imageAlbum}" AlignmentX="Center"
+                                    AlignmentY="Center" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Image x:Name="PlayImage" Source="../Resources/Icones/play.png" Height="30" Tapped="PlayImage_OnTapped"
+                       VerticalAlignment="Center" HorizontalAlignment="Right" />
+                <FlyoutBase.AttachedFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="" x:Uid="AddToPlaylist" x:Name="ItemPlaylist" Click="ItemPlaylist_OnClick" />
+                        <MenuFlyoutItem Text="" x:Uid="GoToCart" x:Name="ItemCart" Click="ItemCart_OnTapped" />
+                        <MenuFlyoutItem Text="" x:Uid="GoToAlbum" x:Name="ItemAlbum" Click="ItemAlbum_OnClick" />
+                        <MenuFlyoutItem Text="" x:Uid="Download" x:Name="Download" Click="Download_OnClick" />
+                    </MenuFlyout>
+                </FlyoutBase.AttachedFlyout>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ArtisteTemplate">
+            <Grid Width="350" x:Name="ArtisteGridTemplate">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Ellipse Grid.Column="0" Height="80" Width="80">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding Path=profilImage}" AlignmentX="Center" AlignmentY="Center" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <TextBlock Grid.Column="1" Text="{Binding Path=username}" Foreground="White" Margin="15,0,0,0"
+                           FontSize="25" VerticalAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid>
+        <Pivot Margin="0,20,0,0" x:Name="PivotGlobal" HeaderTemplate="{StaticResource SizeHeaderGlobalPivot}"
+               Foreground="Transparent"
+               RenderTransformOrigin="0.5,0.5" Style="{StaticResource PivotStyle1}">
+            <PivotItem x:Uid="InfluencePivot" Header="">
+                <Grid>
+                    <ListBox Background="Transparent" x:Name="ListBoxInfluence" ItemsSource="{Binding ListInfluences}"
+                             ItemTemplate="{StaticResource InfluencesTemplate}"
+                             SelectedItem="{Binding SelectedInfluence, Mode=TwoWay}"
+                             Visibility="{Binding ListInfluenceVisibility}" />
+
+                </Grid>
+            </PivotItem>
+
+            <PivotItem x:Uid="MusicPivot" Header="">
+                <ListBox Background="Transparent" x:Name="ListBoxMusics" ItemsSource="{Binding ListMusique}"
+                         ItemTemplate="{StaticResource MusicTemplate}"
+                         SelectedItem="{Binding SelectedMusic, Mode=TwoWay}" />
+
+            </PivotItem>
+
+            <PivotItem x:Uid="ArtistPivot" Header="">
+                <ListBox Background="Transparent" x:Name="ListBoxArtiste" ItemsSource="{Binding ListArtiste}"
+                         ItemTemplate="{StaticResource ArtisteTemplate}"
+                         SelectedItem="{Binding SelectedArtiste, Mode=TwoWay}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <core:InvokeCommandAction Command="{Binding TappedCommand}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </ListBox>
+            </PivotItem>
+            <PivotItem x:Uid="AmbiancePivot" Header="">
+                <Pivot Margin="0,20,0,0" x:Name="PivotAmbiance" HeaderTemplate="{StaticResource HeaderTemplate}"
+                       Foreground="Transparent" RenderTransformOrigin="0.5,0.5" Style="{StaticResource PivotStyle1}"
+                       ItemsSource="{Binding ListAmbiance}">
+                    <Pivot.ItemTemplate>
+                        <DataTemplate>
+                            <ListBox Background="Transparent" x:Name="ListBoxGenre" ItemsSource="{Binding Path=musics}"
+                                     SelectionChanged="ListBoxGenre_OnSelectionChanged"
+                                     ItemTemplate="{StaticResource MusicTemplate}" />
+                        </DataTemplate>
+                    </Pivot.ItemTemplate>
+                </Pivot>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>

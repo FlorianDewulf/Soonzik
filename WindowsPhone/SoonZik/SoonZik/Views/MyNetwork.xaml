@@ -1,0 +1,148 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Class="SoonZik.Views.MyNetwork"
+    xmlns:toolkit="using:Coding4Fun.Toolkit.Controls"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    mc:Ignorable="d"
+    xmlns:local="using:SoonZik.Utils"
+    DataContext="{StaticResource MyNetworkViewModel}"
+    Background="Transparent">
+
+    <interactivity:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loaded">
+            <core:InvokeCommandAction Command="{Binding LoadedCommand}" />
+        </core:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
+
+    <Page.Resources>
+        <DataTemplate x:Key="UserTemplate">
+            <StackPanel Margin="0,0,0,10">
+                <TextBlock Text="{Binding Path=username}" Foreground="White" FontSize="15" />
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TweetTemplate">
+            <Grid Width="350" Height="70">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <TextBlock local:TextBlockExtension.FormattedText="{Binding Path=msg}" Grid.Row="0" Foreground="White"
+                           FontSize="15" TextWrapping="Wrap" />
+                <TextBlock Grid.Row="1" Text="{Binding Path=user.username}" Foreground="White" FontSize="10"
+                           TextAlignment="Right" Margin="0,0,45,0" />
+            </Grid>
+        </DataTemplate>
+
+        <CollectionViewSource x:Key="AddressGroups" Source="{Binding ItemSource, Mode=TwoWay}"
+                              IsSourceGrouped="True" />
+
+        <JumpListItemBackgroundConverter x:Key="BackgroundConverter" />
+        <JumpListItemForegroundConverter x:Key="ForegroundConverter" />
+        <DataTemplate x:Key="AddrBookJumpTemplate">
+            <Border Padding="5">
+                <Border Background="{Binding Converter={StaticResource BackgroundConverter}}"
+                        Width="82" Height="82" HorizontalAlignment="Left">
+                    <TextBlock Text="{Binding Group.Key}"
+                               Foreground="White"
+                               FontSize="48" Padding="6"
+                               HorizontalAlignment="Left" VerticalAlignment="Center" />
+                </Border>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="AddrBookItemTemplate">
+            <Grid VerticalAlignment="Top">
+                <Image Source="{Binding Path=profilImage}" HorizontalAlignment="Left" Height="30" Width="30" />
+                <TextBlock FontWeight="Bold" Text="{Binding Path=username}" Foreground="White" Margin="60,0,0,0"
+                           FontSize="25" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="AddrBookGroupHeaderTemplate">
+            <Border Background="Transparent" Padding="5">
+                <Border Background="{StaticResource PhoneAccentBrush}" BorderBrush="{StaticResource PhoneAccentBrush}"
+                        BorderThickness="2" Width="62"
+                        Height="62" Margin="0,0,18,0" HorizontalAlignment="Left">
+                    <TextBlock Text="{Binding Key}" Foreground="White" FontSize="48" Padding="6"
+                               FontFamily="{StaticResource PhoneFontFamilySemiLight}" HorizontalAlignment="Left"
+                               VerticalAlignment="Center" />
+                </Border>
+            </Border>
+        </DataTemplate>
+    </Page.Resources>
+
+
+    <Grid x:Name="ContentRoot">
+        <Pivot x:Name="PivotGlobal" HeaderTemplate="{StaticResource SizeHeaderGlobalPivot}"
+               Foreground="Transparent" RenderTransformOrigin="0.5,0.5" Style="{StaticResource PivotStyle1}"
+               Margin="0,20,0,0">
+            <PivotItem x:Uid="Friend" Header="">
+                <SemanticZoom>
+                    <SemanticZoom.ZoomedInView>
+                        <ListView x:Name="ListView" IsHoldingEnabled="True"
+                                  ItemsSource="{Binding Source={StaticResource AddressGroups}}"
+                                  ItemTemplate="{StaticResource AddrBookItemTemplate}"
+                                  ContinuumNavigationTransitionInfo.ExitElementContainer="True"
+                                  SelectedItem="{Binding SelectedUser, Mode=TwoWay}">
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="Tapped">
+                                    <core:InvokeCommandAction Command="{Binding TappedCommand}" />
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+
+                            <ListView.GroupStyle>
+                                <GroupStyle HidesIfEmpty="True"
+                                            HeaderTemplate="{StaticResource AddrBookGroupHeaderTemplate}" />
+                            </ListView.GroupStyle>
+
+                        </ListView>
+                    </SemanticZoom.ZoomedInView>
+                    <SemanticZoom.ZoomedOutView>
+                        <GridView Background="Black"
+                                  ItemsSource="{Binding CollectionGroups, Source={StaticResource AddressGroups}}"
+                                  ItemTemplate="{StaticResource AddrBookJumpTemplate}" />
+                    </SemanticZoom.ZoomedOutView>
+                </SemanticZoom>
+            </PivotItem>
+
+            <PivotItem x:Uid="Follow" Header="">
+                <ListBox Background="Transparent" x:Name="FollowListBox"
+                         ItemsSource="{Binding CurrentUser.follows}" ItemTemplate="{StaticResource UserTemplate}"
+                         SelectedItem="{Binding SelectedUser, Mode=TwoWay}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="SelectionChanged">
+                            <core:InvokeCommandAction Command="{Binding FollowerCommand}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </ListBox>
+            </PivotItem>
+
+            <PivotItem x:Uid="Tweet" Header="">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <ListBox Grid.Row="0" Background="Transparent" x:Name="ListBoxTweet"
+                             ItemsSource="{Binding ListTweets}" ItemTemplate="{StaticResource TweetTemplate}"
+                             SelectedItem="{Binding SelectedTweet, Mode=TwoWay}">
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="SelectionChanged">
+                                <core:InvokeCommandAction Command="{Binding TweetCommand}" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                    </ListBox>
+
+                    <TextBox Grid.Row="1" Width="200" HorizontalAlignment="Left" Margin="10,5,0,0"
+                             Text="{Binding TextTweet, Mode=TwoWay}" />
+                    <Button x:Uid="Send" Content="" Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,10,0"
+                            Command="{Binding SendTweet}" />
+                </Grid>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>

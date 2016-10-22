@@ -1,0 +1,79 @@
+﻿<Page
+    x:Class="SoonZik.Views.Genre"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#CCCCCC" Height="1080">
+
+        <Grid Height="80" VerticalAlignment="Top" Width="1920" Background="#B0B0B0">
+            <TextBlock x:Name="genre_txt" HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="Genre" VerticalAlignment="Top" Height="55" Width="235" FontSize="53.333" Foreground="Black"/>
+            <Button x:Name="back_btn" Content="Button" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Style="{StaticResource NavigationBackButtonNormalStyle}" RequestedTheme="Light" Click="Button_Click"/>
+        </Grid>
+
+        <Grid Height="593" Margin="400,140,400,0" VerticalAlignment="Top" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="265"/>
+                <ColumnDefinition Width="450"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="291"/>
+            </Grid.RowDefinitions>
+            <Image  Grid.Row="1" Source="http://www.scottbuckley.com.au/musoscientific/wp-content/uploads/2012/10/treeofmusic.jpg" Stretch="Fill" Width="174" Height="174" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,175,46,-58"/>
+            <Rectangle Fill="#FF00AFDC" HorizontalAlignment="Left" Height="75" StrokeEndLineCap="Square" Stroke="#FF00AFDC" VerticalAlignment="Top" Width="1120" Grid.ColumnSpan="2" Margin="0,0,-405,0"/>
+            <TextBlock Name="genre_name" Margin="20,10,0,19" TextWrapping="Wrap" Text="{Binding genre.style_name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" FontSize="36" Height="46" Grid.ColumnSpan="2"/>
+            <!--<TextBlock Name="genre_color" HorizontalAlignment="Left" Margin="45,85,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding genre.color_name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Foreground="Black" FontSize="25"/>-->
+
+            <ListView Name="genre_musics" IsItemClickEnabled="True" ItemClick="genre_musics_ItemClick" ItemsSource="{Binding genre.musics, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Left" Height="370" Margin="60,85,0,-164" Grid.Row="1" VerticalAlignment="Top" Width="355">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Name="music_title" FontSize="16" Foreground="Black" Margin="0,0,0,0">
+                                    <Run Text="{Binding user.username}"></Run>
+                                    <Run Text=" - "></Run>
+                                    <Run Text="{Binding title}"></Run>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Name="price_txt" x:Uid="price_txt" Text="Prix" FontSize="16" Foreground="Black"/>
+                                <TextBlock Name="music_duration" FontSize="16" Foreground="Black" Margin="20,0,0,0">
+                                    <Run Text="{Binding price}"></Run>
+                                    <Run Text="€"></Run>
+                                </TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--<ListBox x:Name="album_list_lv" ItemsSource="{Binding music_own.albums, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding selected_album, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="319" Margin="974,216,0,0" VerticalAlignment="Top" Width="205" FontSize="15">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding title}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>-->
+
+            <ListBox Name="genre_influences" ItemsSource="{Binding genre.influences, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Left" Height="370" Margin="458,83,-268,-162" Grid.Row="1" VerticalAlignment="Top" Width="260" Background="{x:Null}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Name="music_title" Text="{Binding name}"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <TextBlock x:Name="music_list_txt" x:Uid="music_list_txt" Grid.Column="1" HorizontalAlignment="Left" Margin="60,55,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Musiques" VerticalAlignment="Top" Height="30" Width="260" Foreground="Black" FontSize="18"/>
+            <TextBlock x:Name="influence_list_txt" x:Uid="influence_list_txt" Grid.Column="1" HorizontalAlignment="Left" Margin="458,53,-268,0" Grid.Row="1" TextWrapping="Wrap" Text="Influences" VerticalAlignment="Top" Height="30" Width="260" Foreground="Black" FontSize="18"/>
+
+
+        </Grid>
+
+
+    </Grid>
+</Page>

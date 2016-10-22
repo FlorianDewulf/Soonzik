@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/headerpurchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/summarypurchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of article"
+            android:id="@+id/labelnbobject"
+            android:layout_below="@+id/summarypurchase"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/nbobject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:layout_alignBaseline="@+id/labelnbobject"
+            android:layout_alignBottom="@+id/labelnbobject"
+            android:layout_toRightOf="@+id/labelnbobject"
+            android:layout_toEndOf="@+id/labelnbobject" />
+
+        <Button
+            android:id="@+id/purchasebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PURCHASE"
+            android:layout_below="@+id/labelnbobject"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:id="@+id/labeltotal"
+            android:layout_above="@+id/labelnbobject"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="51dp"
+            android:layout_marginEnd="51dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20$"
+            android:id="@+id/totalvalue"
+            android:layout_alignTop="@+id/nbobject"
+            android:layout_alignLeft="@+id/labeltotal"
+            android:layout_alignStart="@+id/labeltotal" />
+
+    </RelativeLayout>
+
+    <ListView
+         android:id="@+id/cartslistview"
+         android:layout_below="@+id/headerpurchase"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" />
+
+</RelativeLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/fragment_cart.xml -->

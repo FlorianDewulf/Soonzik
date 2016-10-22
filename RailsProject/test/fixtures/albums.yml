@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+AlbumOne:
+  user: UserOne
+  title: Titre Album
+  price: 1.5
+  image: "image.png"
+  file: TitreAlbum
+  yearProd: 2000
+  commentaries: commentaireAlbum
+
+AlbumTwo:
+  user: UserTwo
+  title: Title Album
+  price: 2.5
+  image: "image.png"
+  file: TitleAlbum
+  yearProd: 2001
+  descriptions: DescTwo

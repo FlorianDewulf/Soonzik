@@ -1,0 +1,80 @@
+/*
+ * TOOLTIP STYLE
+ */
+
+.mytooltip {
+	border-top: 5px solid rgb(0, 140, 186);
+	border-bottom: 5px solid rgb(0, 140, 186);
+	border-radius: 2px;
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 35px;
+	cursor: pointer;
+	color: white;
+	left: 0;
+	right: 0;
+	width: 300px;
+	z-index: 2;
+	text-align: center;
+	padding: 0;
+	margin-bottom: 60px;
+
+	.button { margin-bottom: 0px; }
+
+	&.toolleft {
+		left: 20px;
+		right: initial;
+
+		&:before { right: initial; }
+	}
+
+	&.toolright {
+		right: 20px;
+		left: initial;
+
+		&:before { left: initial; }
+	}
+
+	&:before {
+		top: -20px;
+		bottom: auto;
+		content: "";
+		left: 0;
+		right: 0;
+		position: absolute;
+		border-width: 10px;
+		border-style: solid;
+		border-color: transparent transparent rgb(0, 140, 186) transparent;
+		display: block;
+		width: 0;
+	}
+
+	ul.no-bullet {
+		margin: 0;
+
+		li {
+			cursor: pointer;
+			height: 30px;
+			line-height: 30px;
+
+			&:hover {
+				background: black;
+				color: #008CBA;
+			}
+
+			& > * { height: 100%; }
+			& > label { height: auto; }
+
+			label { color: white; }
+		}
+	}
+
+	.saveAs ul {
+		.columns { padding: 0; }
+
+		input {
+			height: 100%;
+			background: rgba(255, 255, 255, 0.9);
+		}
+	}
+}

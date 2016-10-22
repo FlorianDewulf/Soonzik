@@ -1,0 +1,10 @@
+%div{ "ng-controller" => "FollowersCtrl", "ng-init" => "initFunc()" }
+	.title.followers
+		%h3 Last followers
+		%h6 (Total : {{ total }} followers)
+		%loading.left{ "loading-type" => "'square'", "ng-if" => 'loading == true' }
+		%ul.no-bullet{ "ng-if" => 'loading == false' }
+			%li{ "ng-if" => "list.length == 0" }
+				No followers for the moment
+			%li{ "ng-if" => "list.length != 0", "ng-repeat" => "user in list track by $index" }
+				%a{:href => "http://lvh.me:3000/users/{{ user.id }}", target: "_blank"} - {{ user.username }}

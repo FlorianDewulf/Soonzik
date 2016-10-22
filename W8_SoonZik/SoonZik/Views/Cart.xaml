@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="SoonZik.Views.Cart"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#CCCCCC" Height="1080">
+
+        <Grid Height="80" VerticalAlignment="Top" Width="1920" Background="#B0B0B0">
+            <TextBlock x:Name="cart_txt" x:Uid="cart_txt" HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="Panier" VerticalAlignment="Top" Height="55" Width="Auto" FontSize="53.333" Foreground="Black"/>
+            <Button x:Name="back_btn" Content="Button" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Style="{StaticResource NavigationBackButtonNormalStyle}" RequestedTheme="Light" Click="Button_Click"/>
+        </Grid>
+
+        <ListView x:Name="cart_list" ItemsSource="{Binding Path=list_cart}" Background="#FFBFBFBF" Margin="383,140,725,0" VerticalAlignment="Top" Height="655" SelectedItem="{Binding cart, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel x:Name="cart">
+                        <StackPanel  Orientation="Horizontal" Width="Auto" Height="Auto">
+                            <TextBlock Text="{Binding albums[0].user.username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="20" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="Black"/>
+                            <TextBlock Text="{Binding albums[0].title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="Black"/>
+                            <TextBlock Text="{Binding musics[0].user.username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="20" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="Black"/>
+                            <TextBlock Text="{Binding musics[0].title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="Black"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button x:Uid="remove_cart" x:Name="remove_cart" Command="{Binding do_remove_cart, Mode=OneWay}" Content="Supprimer" HorizontalAlignment="Left" Margin="1270,137,0,0" VerticalAlignment="Top" Height="76" Width="298" FontSize="30" Background="#FFE84D46"/>
+        <Button x:Uid="buy_cart_btn" x:Name="buy_cart_btn" Command="{Binding do_buy_cart, Mode=OneWay}" Content="Acheter" HorizontalAlignment="Left" Margin="380,900,0,0" VerticalAlignment="Top" Height="93" Width="818" Background="#FF0C91FF" FontSize="30"/>
+        <TextBlock x:Name="txt_pp" HorizontalAlignment="Left" Margin="383,995,0,0" TextWrapping="Wrap" Text="{Binding txt_pp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="55" Width="1182" FontSize="25" Foreground="Black"/>
+        <TextBlock x:Name="cart_price" HorizontalAlignment="Left" Margin="555,820,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="205" Foreground="Black" FontSize="25">
+            <Run Text="{Binding cart_price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></Run>
+            <Run Text="€"></Run>
+        </TextBlock>
+        <TextBlock x:Uid="total_price_txt" x:Name="total_price_txt" Text="Prix Total: " HorizontalAlignment="Left" Margin="383,820,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="Auto" Foreground="Black" FontSize="25"/>
+
+        <Image HorizontalAlignment="Left" Height="92" Margin="1248,903,0,0" VerticalAlignment="Top" Width="317" Source="ms-appx:///Assets/Paypal-Logo.png"/>
+        <Image HorizontalAlignment="Left" Height="145" Margin="40,140,0,0" VerticalAlignment="Top" Width="195" Source="ms-appx:///Assets/cart.png"/>
+    </Grid>
+</Page>

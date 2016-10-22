@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+PropOne:
+  user: UserOne
+  album: AlbumTwo
+  state: 1
+  date_posted: 2014-09-07 23:19:47
+
+PropTwo:
+  user: UserOne
+  album: AlbumOne
+  state: 2
+  date_posted: 2014-09-07 23:19:47

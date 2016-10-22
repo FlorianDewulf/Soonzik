@@ -1,0 +1,134 @@
+﻿<Page
+    x:Class="SoonZik.Views.MyMusic"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:ratingControl="using:JISoft.RatingControl"
+    mc:Ignorable="d"
+    DataContext="{StaticResource MyMusicViewModel}"
+    Background="#424242">
+
+
+    <Page.Resources>
+        <DataTemplate x:Key="PackTemplate">
+            <Grid Width="350">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Source="../Resources/Icones/MenuPack.png" Height="80" Width="80" />
+                <TextBlock Grid.Column="1" Text="{Binding Path=title}" Margin="15,0,0,0" FontSize="25" />
+
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="PlaylistTemplate">
+            <Grid Width="350">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="50" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="{Binding Path=name}" Margin="15,0,0,0" FontSize="25"
+                           Foreground="White" />
+                <Image Grid.Column="1" Tapped="DeleteItem_OnTapped" VerticalAlignment="Center" Margin="0,0,15,0"
+                       HorizontalAlignment="Center" Source="../Resources/Icones/trash.png" Width="30" Height="30" />
+
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MusicTemplate">
+            <Grid Height="70" Margin="0,0,0,0" Tapped="UIElement_OnTapped">
+                <Border BorderThickness="0,0,0,1" Width="350" BorderBrush="#7bc2fa" />
+                <TextBlock x:Name="MusicTitle" Text="{Binding Path=title}" Foreground="#40a8e2" FontSize="25"
+                           Margin="50,0,0,0" />
+                <Image x:Name="PlayImage" Source="../Resources/Icones/play.png" Height="30" Tapped="PlayImage_OnTapped"
+                       VerticalAlignment="Center" HorizontalAlignment="Left" />
+                <FlyoutBase.AttachedFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="" x:Uid="AddToPlaylist" x:Name="ItemPlaylist" Click="ItemPlaylist_OnTapped" />
+                        <MenuFlyoutItem Text="" x:Uid="GoToCart" x:Name="ItemCart" Click="ItemCart_OnTapped" />
+                        <MenuFlyoutItem Text="" x:Uid="GoToAlbum" x:Name="ItemAlbum" Click="ItemAlbum_OnTapped" />
+                        <MenuFlyoutItem Text="" x:Uid="Download" x:Name="Download" Click="Download_OnClick" />
+                    </MenuFlyout>
+                </FlyoutBase.AttachedFlyout>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="AlbumTemplate">
+            <Grid Width="350">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Source="../Resources/Icones/disc.png" Height="80" Width="80" />
+                <TextBlock Grid.Column="1" Text="{Binding Path=title}" Margin="15,0,0,0" FontSize="25"
+                           Foreground="White" />
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid x:Name="GlobalGrid" Margin="0,10,0,0">
+        <ProgressRing IsActive="{Binding ProgressOn, Mode=TwoWay}" Background="Black" Foreground="Aqua" Opacity="0.5" />
+        <Pivot x:Name="PivotGlobal" HeaderTemplate="{StaticResource SizeHeaderGlobalPivot}" Foreground="Transparent"
+               RenderTransformOrigin="0.5,0.5" Style="{StaticResource PivotStyle1}"
+               SelectedIndex="{Binding SelectedIndex, Mode=TwoWay}">
+            <PivotItem x:Uid="MusicPivot" Header="">
+                <ListBox Background="Transparent" x:Name="ListBoxMusic" ItemsSource="{Binding ListMusique}"
+                         ItemTemplate="{StaticResource MusicTemplate}"
+                         SelectedItem="{Binding SelectedMusic, Mode=TwoWay}" />
+            </PivotItem>
+
+            <PivotItem x:Uid="AlbumPivot" Header="">
+                <ListBox Background="Transparent" x:Name="ListBoxAlbums" ItemsSource="{Binding ListAlbum}"
+                         ItemTemplate="{StaticResource AlbumTemplate}"
+                         SelectedItem="{Binding SelectedAlbum, Mode=TwoWay}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <core:InvokeCommandAction Command="{Binding AlbumTappedCommand}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </ListBox>
+            </PivotItem>
+
+            <PivotItem x:Uid="PackPivot" Header="">
+                <ListBox Background="Transparent" x:Name="ListBoxPack" ItemsSource="{Binding ListPack}"
+                         SelectedItem="{Binding SelectedPack, Mode=TwoWay}"
+                         ItemTemplate="{StaticResource PackTemplate}">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <core:InvokeCommandAction Command="{Binding PackTappedCommand}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                </ListBox>
+            </PivotItem>
+
+            <PivotItem x:Uid="PlaylistPivot" Header="">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="80" />
+                    </Grid.RowDefinitions>
+                    <ListBox Grid.Row="0" Background="Transparent" x:Name="ListPlayList"
+                             ItemsSource="{Binding ListPlaylist}"
+                             SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}"
+                             ItemTemplate="{StaticResource PlaylistTemplate}">
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Tapped">
+                                <core:InvokeCommandAction Command="{Binding PlaylistTappedCommand}" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                    </ListBox>
+                    <Button Grid.Row="1" x:Uid="CreatePlaylist" Content="" VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Command="{Binding CreatePlaylist}" />
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

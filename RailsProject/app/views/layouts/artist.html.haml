@@ -1,0 +1,105 @@
+!!! 5
+%html
+	%head
+		%title= "SoonZik | Artist panel"
+		%base{href: "/"}
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+		= stylesheet_link_tag		'application', media: 'all'
+		= javascript_include_tag 'application'
+		= javascript_include_tag 'AngularJS/artist_app'
+		= javascript_include_tag "vendor/modernizr"
+		= csrf_meta_tags
+	%body.artist{ "ng-app" => "SoonzikArtistApp" }
+		%header.small-12
+			.header-container
+				.logo
+					%h1
+						%a{:href => "/"} SoonZik
+				.banner
+					=link_to image_tag("logo-soonzik.png", :class => "soonzik-logo"), "/"
+		.menu-wrapper.small-12
+			.menu
+				%ul.no-bullet
+					%li{ class: "#{'current_page_item' if (defined?(@menu) && @menu == 'home') || !defined?(@menu)}" }
+						=link_to "Home", artist_root_path
+					%li{ class: "#{'current_page_item' if (defined?(@menu) && @menu == 'music')}" }
+						=link_to "My Music", artist_musics_path
+					%li{ class: "#{'current_page_item' if (defined?(@menu) && @menu == 'tour')}" }
+						=link_to "Tour", artist_tour_path
+					%li{ class: "#{'current_page_item' if (defined?(@menu) && @menu == 'meet')}" }
+						=link_to "Meet artists", artist_meet_path
+		- if notice
+			%small.error= notice
+		-if alert
+			%small.error= alert
+		%main
+			.small-12.medium-8.large-9.columns
+				.row
+					=yield
+			.small-12.medium-4.large-3.columns
+				%div{"ng-include" => "'#{asset_path("AngularJS/Artist/views/followers.html.haml")}'"}
+		.portfolio-wrapper
+			.portfolio.row
+				.small-12.medium-6.large-3.columns
+					.title
+						%h2.text-center Meet other artists
+					%a.image.image-full{:href => "/meet"}
+						=image_tag("Artist/meet.png")
+					%p.text-justify
+						Do you search someone who play guitar for your next track ? Do you need someone because you search a women voice ? Here is our service to help you to find the perfect person for your needs.
+					%a{:href => "/meet"}
+						%span.button
+							%i.fi-plus
+							Meet
+				.small-12.medium-6.large-3.columns
+					.title
+						%h2.text-center Suggest music
+					%a.image.image-full{:href => "#{artist_musics_propose_path}"}
+						=image_tag("Artist/suggest.png")
+					%p.text-justify
+						You want to be a real part of SoonZik and see one of your music into a pack ? We are waiting you ! Suggest which music you allow us to pick, and maybe you will be in our next bundle.
+					%a{:href => "#{artist_musics_propose_path}"}
+						%span.button
+							%i.fi-plus
+							Suggest
+				.small-12.medium-6.large-3.columns
+					.title
+						%h2.text-center Rebroadcast tool
+					%a.image.image-full{:href => "#"}
+						=image_tag("Artist/stream.png")
+					%p.text-justify
+						You will play music in a pub, a mini-concert or something like that ? You want to share this experience with all your fans (and more people !) ? You can find here everything you need to send your music.
+					%a{:href => "#"}
+						%span.button
+							%i.fi-plus
+							Download
+				.small-12.medium-6.large-3.columns
+					.title
+						%h2.text-center Tour management
+					%a.image.image-full{:href => "/tour"}
+						=image_tag("Artist/concert.png")
+					%p.text-justify
+						You will be in many places soon and you want to inform your fans ? In a pub, in a concert hall or in the street, you can manage your tour and say where / when we can find you and share it.
+					%a{:href => "/tour"}
+						%span.button
+							%i.fi-plus
+							Manage
+		.footer-wrapper
+			.footer.row
+				.small-4.small-centered.columns.text-center
+					.title
+						%h2 Follow Us
+					%ul.contact.no-bullet
+						%li
+							%a.icon.icon-twitter{:href => "https://twitter.com/soonzik"}
+								%span Twitter
+						%li
+							%a.icon.icon-facebook{:href => "https://facebook.com/soonzik"}
+								%span Facebook
+						%li
+							%a.icon.icon-google-plus{:href => "https://plus.google.com/104642412164558094474/posts"}
+								%span Google +
+					%a.icon.icon-plus-sign.button{:href => "#"} Read More
+		.copyright.small-12
+			%p
+				\© SoonZik. All rights reserved. | All the content belongs to SoonZik or the artists.

@@ -1,0 +1,45 @@
+.albumContainer{ "ng-init" => "initAlbum()" }
+	%loading{ "ng-if" => "loading == true" }
+	.albumShow{ "ng-if" => "loading == false" }
+		.row
+			.clearfix.headerRow
+				.small-6.medium-4.large-2.columns
+					%img.albumIllustration{ "ng-src" => "{{'/assets/albums/' + album.image}}" }
+				.small-6.medium-8.large-10.columns
+					%h3 {{ album.title }}
+					%p
+						%span By 
+						%a{ href: "/users/{{album.user.id}}" } {{ album.user.username }}
+					.clearfix
+						%span.button.primary
+							%a.custom-disable{"ng-click" => "addAlbumToCart()"} {{ labels.DISPLAY_ALBUM_ADD_TO_CART }}
+						.likeContainer.button.alert{ "ng-include" => "'/assets/AngularJS/views/include/like.html.haml'" }
+			%table
+				%tbody
+					%tr{ 'ng-repeat' => 'song in album.musics track by $index' }
+						%td
+							{{$index + 1 }}
+						%td
+							%div {{song.title}}
+							%div{ "ng-mouseleave" => "setGolden(song, song.note)" }
+								%i.fi-star{ "ng-repeat" => "n in range(5)	track by $index", "ng-mouseover" => "setGolden(song, $index + 1)", "ng-class" => "{ goldenStar: (song.goldenStars > $index || (song.goldenStars == null && song.note > $index)) }", "ng-click" => "setNote(song)" }
+						%td
+							{{formatTime(song.duration)}}
+						%td
+							{{song.price}} $
+						%td.iBtn
+							%a{"ng-click" => "addSongToCart(song)", "ng-class" => "{ 'custom-disable': !user }"}
+								%i.fi-shopping-cart
+						%td.iBtn
+							%music{ "music-object" => "song" }
+								%i.fi-play
+						%td.relative.iBtn
+							%i.fi-plus.pointer{ "ng-click" => "setTooltip(tooltip == song ? false : song)" }
+							.mytooltip.toolright{ "ng-show" => "tooltip == song && user != false", "ng-include" => "'/assets/AngularJS/views/include/tooltip.html.haml'", "ng-controller" => "TooltipCtrl", "ng-init" => "tooltipInit(song, 1)" }
+			.commentariesInput
+				.inputArea
+					%textarea{ "ng-model" => "comment.value" }
+					.text-right
+						%span.button.secondary{ "ng-click" => "sendComment()" } {{ labels.DISPLAY_ALBUM_SEND_COMMENT_BUTTON }}
+		.commentariesContainer{ "ng-include" => "'/assets/AngularJS/views/include/commentaries.html.haml'" }
+		%loading{ "loading-type" => "'square'", "ng-show" => "commentLoading == true" }

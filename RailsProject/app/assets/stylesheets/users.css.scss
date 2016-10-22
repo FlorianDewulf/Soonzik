@@ -1,0 +1,135 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.userProfile {
+	.background-profil {
+		width: 100%;
+		background: rgba(255,255,255,1);
+		background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(207,207,207,1) 100%);
+		background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(207,207,207,1) 100%);
+		background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(207,207,207,1) 100%);
+		background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(207,207,207,1) 100%);
+		background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(207,207,207,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cfcfcf', GradientType=0 );
+		height: 300px;
+		color: black;
+	}
+
+	.username, .nb-followers > p {
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+		-moz-text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+		-webkit-text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	}
+
+	.photo-profil-show {
+		width: 100px;
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		height: 100px;
+		border-radius: 100px;
+	}
+
+	.social-network {
+		margin-top: -15px;
+	}
+
+	.button.follow:hover {
+		background: #CC3333;
+	}
+
+	.top-songs {
+		margin-top: 20px;
+	}
+
+	.albums .panel {
+		margin-left: 15px;
+	}
+
+	.albums img {
+		width: 195px;
+		height: 195px;
+		margin-right: 40px;
+	}
+
+	.panel th {
+		text-align: left;
+	}
+
+	.panel .divider {
+		width: 190px;
+	}
+
+	.packsImplicated {
+		width: 100%;
+		height: 10%;
+	}
+
+	.birthday {
+		display: inline-block;
+	}
+
+	.tweets {
+		max-height: 300px;
+		width: 100%;
+		overflow: auto;
+		border: 1px solid gray;
+
+		.tweet {
+
+			background: #FCFCFC;
+			padding: 10px;
+			margin: 10px 0;
+			border-radius: 5px;
+
+			img {
+				max-height: 50px;
+				max-width: 50px;
+				width: 100%;
+				border-radius: 3px;
+			}
+
+			p {
+				margin-bottom: 0.5rem;
+			}
+
+			.underTweet {
+				font-size: 12px;
+				color: cadetblue;
+			}
+		}
+	}
+
+	.playlistBlock {
+		background: black;
+
+		ul {
+			margin-left: 0;
+
+			li {
+		    padding-left: 2px;
+			}
+
+			label {
+		    color: #008CBA;
+			}
+		}
+	}
+
+	.goldenStar {
+		color: #E6C200;
+	}
+}
+
+.error-message {
+	margin-top: -10px;
+}
+
+.gray {
+	color: gray;
+
+	&:hover {
+		color: darkgray;
+	}
+}

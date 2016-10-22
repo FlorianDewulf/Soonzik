@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+DescOne:
+  description: Description d'une musique
+  language: RU
+
+DescTwo:
+  description: Description d'un album
+  language: EN

@@ -1,0 +1,644 @@
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\App.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Controls\Genre.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Controls\NewsControl.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\MainPage.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\Battle.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\Connexion.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\Conversation.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\CustomSplashScreen.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\Explorer.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\Friends.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\Geoloc.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\MainView.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\News.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\Packs.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\Player.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\Playlist.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\ProfilArtiste.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Views\ProfilUser.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\SoonZik.xr.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\SoonZik.exe
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\SoonZik.pdb
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\resources.pri
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\AppxManifest.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\SoonZik.build.appxrecipe
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Microsoft.Xaml.Interactions.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Facebook.Client.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Facebook.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\LightStone.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\SoonZik.HttpRequest.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\LightStone.pdb
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\LightStone.pri
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\SoonZik.HttpRequest.pdb
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\SoonZik.HttpRequest.pri
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Facebook.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Facebook.Client.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Facebook.Client.pri
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.pri
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\SoonZik.csprojResolveAssemblyReference.cache
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\App.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\App.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\Genre.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\Genre.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\NewsControl.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\NewsControl.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\MainPage.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\MainPage.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Battle.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Battle.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Connexion.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Connexion.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Conversation.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Conversation.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\CustomSplashScreen.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\CustomSplashScreen.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Explorer.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Explorer.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Friends.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Friends.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Geoloc.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Geoloc.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\MainView.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\MainView.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\News.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\News.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Packs.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Packs.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Player.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Player.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Playlist.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Playlist.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\Genre.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\NewsControl.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\MainPage.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Battle.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Connexion.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Conversation.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\CustomSplashScreen.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Explorer.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Friends.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Geoloc.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\MainView.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Packs.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Player.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Playlist.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\Genre.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\NewsControl.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\MainPage.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Battle.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Connexion.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Conversation.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\CustomSplashScreen.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Explorer.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Friends.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Geoloc.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\MainView.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Packs.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Player.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\Playlist.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\App.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\News.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\App.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Views\News.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\SoonZik.exe
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\SoonZik.pdb
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Microsoft.Practices.ServiceLocation\en-US\Microsoft.Practices.ServiceLocation.Properties.Resources.resw
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\SoonZik.csproj.GenerateResource.Cache
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Microsoft.Practices.ServiceLocation.pri
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Microsoft.Practices.ServiceLocation\qualifiers.txt
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\priconfig.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\priconfig.xml.intermediate
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\layout.resfiles
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\layout.resfiles.intermediate
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\resources.resfiles
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\resources.resfiles.intermediate
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\pri.resfiles
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\pri.resfiles.intermediate
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\qualifiers.txt
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Facebook.Client.pri.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\GalaSoft.MvvmLight.Platform.pri.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\ProjectArchitectures.txt
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.Controls.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.dll
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.pri
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.Controls.pri
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Coding4Fun.Toolkit.pri.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Coding4Fun.Toolkit.Controls.pri.xml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Controls\ButtonFriendPopUp.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Controls\GlobalMenuControl.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\PivotControl.g.i.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\PivotControl.g.cs
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\bin\Debug\Controls\PivotControl.xbf
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\PivotControl.xaml
+C:\Users\Géry\documents\visual studio 2013\Projects\SoonZik\SoonZik\obj\Debug\Controls\PivotControl.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\SoonZik.csprojResolveAssemblyReference.cache
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\App.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\App.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\Genre.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\Genre.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\NewsSharePopup.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\NewsSharePopup.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\PlayerControl.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\PlayerControl.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\ProgressRingControl.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\ProgressRingControl.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\MainPage.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\MainPage.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\AlbumView.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\AlbumView.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\GeolocalisationView.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\GeolocalisationView.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\InscriptionView.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\InscriptionView.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilFriendView.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilFriendView.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\BattleView.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\BattleView.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Connexion.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Connexion.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Conversation.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Conversation.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Explorer.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Explorer.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Friends.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Friends.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\MainView.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\MainView.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\News.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\News.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\NewsDetail.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\NewsDetail.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Packs.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Packs.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Playlist.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Playlist.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.g.i.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\App.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\Genre.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\NewsSharePopup.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\PlayerControl.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\ProgressRingControl.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\MainPage.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\AlbumView.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\GeolocalisationView.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\InscriptionView.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilFriendView.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\BattleView.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Connexion.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Conversation.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Explorer.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Friends.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\MainView.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\News.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\NewsDetail.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Packs.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\App.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\Genre.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\NewsSharePopup.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\PlayerControl.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Controls\ProgressRingControl.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\MainPage.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\AlbumView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\GeolocalisationView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\InscriptionView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilFriendView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\BattleView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Connexion.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Conversation.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Explorer.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Friends.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\MainView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\News.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\NewsDetail.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Packs.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\App.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Controls\ButtonFriendPopUp.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Controls\Genre.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Controls\GlobalMenuControl.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Controls\NewsSharePopup.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Controls\PlayerControl.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Controls\ProgressRingControl.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\MainPage.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\AlbumView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\GeolocalisationView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\InscriptionView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\ProfilFriendView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\BattleView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\Connexion.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\Conversation.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\Explorer.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\Friends.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\MainView.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\News.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\NewsDetail.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\Packs.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\Playlist.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\ProfilArtiste.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Views\ProfilUser.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.xr.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.exe
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\resources.pri
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\AppxManifest.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.build.appxrecipe
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Microsoft.Xaml.Interactions.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.Controls.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Facebook.Client.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Facebook.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.Helpers.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.HttpRequest.dll
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.Helpers.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.Helpers.pri
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.HttpRequest.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\SoonZik.HttpRequest.pri
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.pri
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.Controls.pri
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Facebook.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Facebook.Client.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Facebook.Client.pri
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.pri
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Playlist.xaml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Views\Playlist.xbf
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\SoonZik.exe
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\SoonZik.pdb
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Microsoft.Practices.ServiceLocation\en-US\Microsoft.Practices.ServiceLocation.Properties.Resources.resw
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\SoonZik.csproj.GenerateResource.Cache
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Microsoft.Practices.ServiceLocation.pri
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Microsoft.Practices.ServiceLocation\qualifiers.txt
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\priconfig.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\priconfig.xml.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\layout.resfiles
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\layout.resfiles.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\resources.resfiles
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\resources.resfiles.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\pri.resfiles
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\pri.resfiles.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\qualifiers.txt
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Coding4Fun.Toolkit.pri.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Coding4Fun.Toolkit.Controls.pri.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\Facebook.Client.pri.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\GalaSoft.MvvmLight.Platform.pri.xml
+C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\SoonZik\obj\Debug\ProjectArchitectures.txt
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\SoonZik.csprojResolveAssemblyReference.cache
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\App.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\App.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\BackgroundAudioPlayer.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\BackgroundAudioPlayer.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\Genre.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\Genre.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\GeolocalisationControl.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\GeolocalisationControl.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\NewsSharePopup.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\NewsSharePopup.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\NotationMusic.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\NotationMusic.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\PlayerControl.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\PlayerControl.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\PriceControl.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\PriceControl.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\ProgressRingControl.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\ProgressRingControl.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\TwitterConnect.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\TwitterConnect.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\MainPage.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\MainPage.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\AboutView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\AboutView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\AlbumView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\AlbumView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\BattleDetailView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\BattleDetailView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\CartsView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\CartsView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\GeolocalisationView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\GeolocalisationView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\InscriptionView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\InscriptionView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\PlaylistView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\PlaylistView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilFriendView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilFriendView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\BattleView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\BattleView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Connexion.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Connexion.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Conversation.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Conversation.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Explorer.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Explorer.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MyNetwork.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MyNetwork.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MainView.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MainView.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\News.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\News.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\NewsDetail.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\NewsDetail.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Packs.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Packs.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MyMusic.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MyMusic.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.g.i.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\App.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\BackgroundAudioPlayer.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\Genre.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\GeolocalisationControl.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\NewsSharePopup.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\NotationMusic.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\PlayerControl.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\PriceControl.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\ProgressRingControl.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\TwitterConnect.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\MainPage.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\AboutView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\AlbumView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\BattleDetailView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\CartsView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\GeolocalisationView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\InscriptionView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\PlaylistView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilFriendView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\BattleView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Connexion.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Conversation.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Explorer.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MyNetwork.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MainView.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\News.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\NewsDetail.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Packs.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MyMusic.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.xaml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\App.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\BackgroundAudioPlayer.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\ButtonFriendPopUp.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\Genre.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\GeolocalisationControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\GlobalMenuControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\NewsSharePopup.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\NotationMusic.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\PlayerControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\PriceControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\ProgressRingControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Controls\TwitterConnect.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\MainPage.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\AboutView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\AlbumView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\BattleDetailView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\CartsView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\GeolocalisationView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\InscriptionView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\PlaylistView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilFriendView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\BattleView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Connexion.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Conversation.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Explorer.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MyNetwork.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MainView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\News.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\NewsDetail.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\Packs.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\MyMusic.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilArtiste.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Views\ProfilUser.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\SoonZik.exe
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\SoonZik.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.exe.config
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\App.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\BackgroundAudioPlayer.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\ButtonFriendPopUp.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\Genre.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\GeolocalisationControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\GlobalMenuControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\NewsSharePopup.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\NotationMusic.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\PlayerControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\PriceControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\ProgressRingControl.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Controls\TwitterConnect.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\MainPage.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\AboutView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\AlbumView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\BattleDetailView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\CartsView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\GeolocalisationView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\InscriptionView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\PlaylistView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\ProfilFriendView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\BattleView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\Connexion.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\Conversation.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\Explorer.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\MyNetwork.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\MainView.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\News.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\NewsDetail.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\Packs.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\MyMusic.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\ProfilArtiste.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Views\ProfilUser.xbf
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.xr.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.exe
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\resources.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\AppxManifest.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.build.appxrecipe
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Microsoft.Xaml.Interactions.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Autofac.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.Controls.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Facebook.Client.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Facebook.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\JRatingControl.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.Helpers.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.HttpRequest.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.Singleton.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Tweetinvi.Controllers.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Tweetinvi.Core.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Tweetinvi.Credentials.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Tweetinvi.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Tweetinvi.Factories.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Tweetinvi.Logic.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Tweetinvi.Security.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Tweetinvi.Streams.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Tweetinvi.WebLogic.dll
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.Helpers.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.Helpers.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.HttpRequest.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.HttpRequest.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.Singleton.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\SoonZik.Singleton.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Autofac.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Coding4Fun.Toolkit.Controls.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Facebook.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Facebook.Client.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Facebook.Client.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Facebook.Client.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\GalaSoft.MvvmLight.Platform.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\JRatingControl.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Activators.Reflection.MostParametersConstructorSelectorResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.DependencyResolutionExceptionResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.GeneratedFactories.GeneratedFactoryRegistrationSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Builder.RegistrationBuilderResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.ContainerBuilderResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Activators.Delegate.DelegateActivatorResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Activators.ProvidedInstance.ProvidedInstanceActivatorResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Activators.Reflection.ConstructorParameterBindingResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Activators.Reflection.MatchingSignatureConstructorSelectorResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Activators.Reflection.ReflectionActivatorResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.ContainerResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Lifetime.LifetimeScopeResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Lifetime.MatchingScopeLifetimeResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Registration.ComponentNotRegisteredExceptionResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Registration.ComponentRegistrationResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Registration.ServiceRegistrationInfoResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Resolving.CircularDependencyDetectorResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Resolving.ComponentActivationResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.Resolving.ResolveOperationResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Core.ServiceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.Collections.CollectionRegistrationSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.LazyDependencies.LazyRegistrationSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.LightweightAdapters.LightweightAdapterRegistrationSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.LazyDependencies.LazyWithMetadataRegistrationSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.Metadata.MetadataViewProviderResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.Metadata.MetaRegistrationSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.OpenGenerics.OpenGenericDecoratorActivatorDataResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.OpenGenerics.OpenGenericDecoratorRegistrationSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.OpenGenerics.OpenGenericRegistrationExtensionsResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.OpenGenerics.OpenGenericRegistrationSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.OpenGenerics.OpenGenericServiceBinderResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.OwnedInstances.OwnedInstanceRegistrationSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Features.ResolveAnything.AnyConcreteTypeNotAlreadyRegisteredSourceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.ModuleResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.RegistrationExtensionsResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.TypeExtensionsResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Util.EnforceResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\en\Autofac.Util.ReflectionExtensionsResources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Microsoft.Practices.ServiceLocation\en-US\Microsoft.Practices.ServiceLocation.Properties.Resources.resw
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\SoonZik.csproj.GenerateResource.Cache
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Autofac\qualifiers.txt
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Microsoft.Practices.ServiceLocation.pri
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Microsoft.Practices.ServiceLocation\qualifiers.txt
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\priconfig.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\priconfig.xml.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\layout.resfiles
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\layout.resfiles.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\resources.resfiles
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\resources.resfiles.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\pri.resfiles
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\pri.resfiles.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\qualifiers.txt
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Coding4Fun.Toolkit.pri.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Coding4Fun.Toolkit.Controls.pri.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\Facebook.Client.pri.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\GalaSoft.MvvmLight.Platform.pri.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\JRatingControl.pri.xml
+C:\Users\Gery\Desktop\SoonZik\SoonZik\obj\Debug\ProjectArchitectures.txt

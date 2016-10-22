@@ -1,0 +1,13 @@
+%h3 {{ labels.DISPLAY_COMMENTARY_TITLE_LABEL }}
+.commentaries
+	%p{ "ng-if" => "resourcesCommentaries.length == 0" } {{ labels.DISPLAY_NO_COMMENTARY_LABEL }}
+	.commentaryContainer{ "ng-repeat" => "commentary in resourcesCommentaries" }
+		%span.bullet •
+		.commentary{ "ng-class" => "{ even: $even, odd: $odd }" }
+			.headerCommentary
+				%img{ "ng-src" => "{{ '/assets/usersImage/avatars/' + commentary.user.image}}" }
+				%span
+					{{ commentary.user.username }} - {{ commentary.created_at }}
+			%hr
+			.commentaryContent
+				{{ commentary.content }}

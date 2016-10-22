@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="SoonZik.Views.BattleView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:data="using:SoonZik.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{StaticResource BattleViewModel}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:Key="BattleDataTemplate">
+            <Grid Height="100" Tapped="UIElement_OnTapped">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Text="{Binding Path=artist_one.username}" FontSize="20" TextWrapping="Wrap" />
+                <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Text="{Binding Path=artist_two.username}" FontSize="20" TextWrapping="Wrap" />
+
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid x:Name="GlobalGrid">
+        <ListView Background="Transparent" x:Name="ListViewNews" ItemsSource="{Binding ListBattles}"
+                  ItemTemplate="{StaticResource BattleDataTemplate}"
+                  SelectedItem="{Binding SelectedBattle, Mode=TwoWay}" />
+    </Grid>
+
+
+</Page>

@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="SoonZik.Views.Discotheque"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SoonZik.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModels="using:SoonZik.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Background="#CCCCCC" Height="1080">
+
+        <Grid Height="80" VerticalAlignment="Top" Width="1920" Background="#B0B0B0">
+            <TextBlock x:Uid="discotheque_txt" x:Name="discotheque_txt" HorizontalAlignment="Left" Margin="100,10,0,0" TextWrapping="Wrap" Text="Discotheque" VerticalAlignment="Top" Height="70" Width="Auto" FontSize="53.333" Foreground="Black"/>
+            <Button x:Name="back_btn" Content="Button" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Style="{StaticResource NavigationBackButtonNormalStyle}" RequestedTheme="Light" Click="Button_Click"/>
+        </Grid>
+
+
+        <TextBlock x:Uid="music_list_txt" x:Name="musics_txt" HorizontalAlignment="Left" Margin="92,130,0,0" TextWrapping="Wrap" Text="Musiques" VerticalAlignment="Top" Height="45" Width="170" Foreground="Black" FontSize="30"/>
+        <TextBlock x:Uid="albums_txt" x:Name="albums_txt" HorizontalAlignment="Left" Margin="650,130,0,0" TextWrapping="Wrap" Text="Albums" VerticalAlignment="Top" Height="45" Width="170" Foreground="Black" FontSize="30"/>
+        <TextBlock x:Uid="packs_txt" x:Name="packs_txt" HorizontalAlignment="Left" Margin="1390,130,0,0" TextWrapping="Wrap" Text="Packs" VerticalAlignment="Top" Height="45" Width="170" Foreground="Black" FontSize="30"/>
+
+        <GridView x:Name="music_list" ItemClick="music_list_ItemClick" ItemsSource="{Binding music_own.musics}" HorizontalAlignment="Left" Margin="90,180,0,0" VerticalAlignment="Top" Width="435" Height="850" IsItemClickEnabled="True" IsSwipeEnabled="False" SelectionMode="None" SelectedItem="{Binding genre_selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="150" Height="150" Background="White">
+                        <Image Stretch="Fill" Source="ms-appx:///Assets/Record-Album-02.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,10">
+
+                            <TextBlock Text="{Binding user.username}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+                            <TextBlock Text="{Binding title}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            
+            <!--<ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="16" Foreground="Black">Title:</TextBlock>
+                            <TextBlock Name="music_title" Text="{Binding title}" FontSize="16" Foreground="Black" Margin="20,0,0,0"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="16" Foreground="Black">Price:</TextBlock>
+                            <TextBlock Name="music_duration" Text="{Binding user.username}" FontSize="16" Foreground="Black" Margin="20,0,0,0"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>-->
+        </GridView>
+
+
+        <GridView x:Name="pack_list" ItemsSource="{Binding music_own.packs}" ItemClick="pack_list_ItemClick" IsItemClickEnabled="True" HorizontalAlignment="Left" Height="850" Margin="1390,180,0,0" VerticalAlignment="Top" Width="435" IsSynchronizedWithCurrentItem="False">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="200" Height="200">
+                        <Image Stretch="Fill" Source="ms-appx:///Assets/Record-Album-02.jpg" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,10">
+                            <TextBlock Text="{Binding title}" FontSize="25" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <GridView x:Name="album_list" ItemClick="album_list_ItemClick" ItemsSource="{Binding album_list}" HorizontalAlignment="Left" Margin="650,180,0,0" VerticalAlignment="Top" Width="610" Height="850" IsItemClickEnabled="True" IsSwipeEnabled="False" SelectionMode="None">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="200" Height="200" Background="White">
+                        <Image Stretch="Fill" Source="{Binding image}" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,0,0,10">
+                            <TextBlock Text="{Binding user.username}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+                            <TextBlock Text="{Binding title}" FontSize="20" Margin="10,0,0,0" TextTrimming="WordEllipsis" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="White"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+    </Grid>
+</Page>

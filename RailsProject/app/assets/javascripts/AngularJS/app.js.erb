@@ -1,0 +1,255 @@
+SoonzikApp = angular.module('SoonzikApp', ['ngRoute', 'ngCookies', 'ngResource', 'ngFileUpload', 'angular-loading-bar', 'ngAnimate', 'mm.foundation', 'uiGmapgoogle-maps', 'facebook', 'directive.g+signin']);
+
+SoonzikApp.config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
+	var url = document.location.pathname;
+
+	var whitelist = [
+		/\/users\/[0-9]+\/finish_signup/,
+		/\/users\/sign_in/,
+		/\/users\/sign_up/,
+		/\/users\/sign_out/,
+		/\/users\/password\/new/
+	];
+
+	var dynamicPage = true;
+	for (var index in whitelist) {
+		if (whitelist[index].test(url) == true) {
+			dynamicPage = false;
+			break;
+		}
+	}
+
+	if (dynamicPage) {
+		$locationProvider.html5Mode(true);
+		$routeProvider.when('/', {
+			templateUrl: '<%= asset_path("AngularJS/views/others/index.html.haml") %>',
+			controller: 'IndexCtrl'
+		}).when('/users/friendlist', {
+			templateUrl: '<%= asset_path("AngularJS/views/friend/index.html.haml") %>',
+			controller: 'FriendCtrl'
+		}).when('/_=_', {
+			templateUrl: '<%= asset_path("AngularJS/views/others/index.html.haml") %>',
+			controller: 'IndexCtrl'
+		}).when('/news/', {
+			templateUrl: '<%= asset_path("AngularJS/views/news/index.html.haml") %>',
+			controller: 'NewsCtrl'
+		}).when('/news/:id', {
+			templateUrl: '<%= asset_path("AngularJS/views/news/show.html.haml") %>',
+			controller: 'NewsCtrl'
+		}).when('/packs', {
+			templateUrl: '<%= asset_path("AngularJS/views/packs/index.html.haml") %>',
+			controller: 'PacksCtrl'
+		}).when('/packs/:id', {
+			templateUrl: '<%= asset_path("AngularJS/views/packs/show.html.haml") %>',
+			controller: 'PacksCtrl'
+		}).when('/users/:id', {
+			templateUrl: '<%= asset_path("AngularJS/views/users/show.html.haml") %>',
+			controller: 'UsersCtrl'
+		}).when('/users/:id/edit', {
+			templateUrl: '<%= asset_path("AngularJS/views/users/edit.html.haml") %>',
+			controller: 'UsersCtrl'
+		}).when('/battles', {
+			templateUrl: '<%= asset_path("AngularJS/views/battles/index.html.haml") %>',
+			controller: 'BattlesCtrl'
+		}).when('/battles/:id', {
+			templateUrl: '<%= asset_path("AngularJS/views/battles/show.html.haml") %>',
+			controller: 'BattlesCtrl'
+		}).when('/carts/my_cart', {
+			templateUrl: '<%= asset_path("AngularJS/views/cart/show.html.haml") %>',
+			controller: 'CartCtrl'
+		}).when('/playlists/:id', {
+			templateUrl: '<%= asset_path("AngularJS/views/playlists/show.html.haml") %>',
+			controller: 'PlaylistsCtrl'
+		}).when('/listenings', {
+			templateUrl: '<%= asset_path("AngularJS/views/listenings/index.html.haml") %>',
+			controller: 'ListeningsCtrl'
+		}).when('/search/:value', {
+			templateUrl: '<%= asset_path("AngularJS/views/search/index.html.haml") %>',
+			controller: 'SearchCtrl'
+		}).when('/explorer', {
+			templateUrl: '<%= asset_path("AngularJS/views/explorer/index.html.haml") %>',
+			controller: 'ExplorerCtrl'
+		}).when('/explorer/influence/:influence', {
+			templateUrl: '<%= asset_path("AngularJS/views/explorer/index.html.haml") %>',
+			controller: 'ExplorerCtrl'
+		}).when('/explorer/influence/:influence/:genre', {
+			templateUrl: '<%= asset_path("AngularJS/views/explorer/index.html.haml") %>',
+			controller: 'ExplorerCtrl'
+		}).when('/explorer/ambiance/:ambiance', {
+			templateUrl: '<%= asset_path("AngularJS/views/explorer/index.html.haml") %>',
+			controller: 'ExplorerCtrl'
+		}).when('/albums/:id', {
+			templateUrl: '<%= asset_path("AngularJS/views/albums/show.html.haml") %>',
+			controller: 'AlbumsCtrl'
+		}).when('/notifications', {
+			templateUrl: '<%= asset_path("AngularJS/views/notifications/index.html.haml") %>',
+			controller: 'NotifsCtrl'
+		}).when('/concerts', {
+			templateUrl: '<%= asset_path("AngularJS/views/concerts/index.html.haml") %>',
+			controller: 'ConcertsCtrl'
+		}).when('/my_music', {
+			templateUrl: '<%= asset_path("AngularJS/views/discotheque/index.html.haml") %>',
+			controller: 'DiscothequeCtrl'
+		}).when('/feedbacks/new', {
+			templateUrl: '<%= asset_path("AngularJS/views/feedbacks/new.html.haml") %>',
+			controller: 'FeedbackCtrl'
+		});
+	}
+
+	$httpProvider.defaults.useXDomain = true;
+	delete $httpProvider.defaults.headers.common["X-Requested-With"];
+}]);
+
+SoonzikApp.config(function(uiGmapGoogleMapApiProvider) {
+		uiGmapGoogleMapApiProvider.configure({
+				key: 'AIzaSyBdbSsqSM-wMia6xhlQmlVt5cDL18GUsk0',
+				v: '3.17',
+				libraries: 'weather,geometry,visualization'
+		});
+});
+
+SoonzikApp.run(['$route', '$rootScope', '$location', 'SecureAuth', 'HTTPService', '$routeParams', function ($route, $rootScope, $location, SecureAuth, HTTPService, $routeParams) {
+	$rootScope.user = false;
+	$rootScope.tooltip = false;
+	$rootScope.myPlaylists = [];	// list of playlists of the user
+  $rootScope.playlist = [];			// the current playlist
+	$rootScope.friends = [];
+	var original = $location.path;
+	var current_user = SecureAuth.getCurrentUser();
+	if (current_user.id != null && current_user.token != null && current_user.username != null) {
+		$rootScope.user = current_user;
+	}
+
+	// Add functions to the rootscope
+
+	$location.path = function (path, reload) {
+		if (reload === false) {
+			var lastRoute = $route.current;
+			var un = $rootScope.$on('$locationChangeSuccess', function () {
+				$route.current = lastRoute;
+				un();
+			});
+		}
+		return original.apply($location, [path]);
+	};
+
+	$rootScope.labels = labels;
+
+	$rootScope.range = function(n) {
+		if (Math.floor(n) > 0)
+	  	return new Array(Math.floor(n));
+	  else
+	  	return [];
+	}
+
+	$rootScope.min = function(a, b) {
+		return (a < b ? a : b);
+	}
+
+	$rootScope.max = function(a, b) {
+		return (a > b ? a : b);
+	}
+
+	$rootScope.toInt = function(value) {
+		var number = parseInt(value);
+		if (isNaN(number)) {
+			return 0;
+		} else {
+			return number;
+		}
+	}
+
+	$rootScope.likeResource = function(resourceName) {
+		var resource = resourceName.charAt(0).toUpperCase() + resourceName.slice(1);
+		var current_user = SecureAuth.getCurrentUser();
+		if (current_user.id != null && current_user.token != null && current_user.username != null) {
+			$rootScope.user = current_user;
+		}
+
+		SecureAuth.securedTransaction(function(key, id) {
+			if (!$rootScope.likes.isLiked) {
+				var parameters = {
+					secureKey: key,
+			  		user_id: id,
+			  		like: {
+			  			user_id: id,
+			  			typeObj: resource,
+			  			obj_id: $routeParams.id
+			  		}
+			  	};
+
+				HTTPService.likeResource(parameters).then(function(response) {
+					$rootScope.likes.count++;
+					$rootScope.likes.isLiked = true;
+				}, function(error) {
+					NotificationService.error($rootScope.labels.FILE_APP_LIKE_ERROR_MESSAGE);
+				});
+			} else {
+				var parameters = [
+					{ key: "secureKey", value: key },
+			  		{ key: "user_id", value: id },
+			  		{ key: encodeURIComponent("like[typeObj]"), value: resource },
+			  		{ key: encodeURIComponent("like[obj_id]"), value: $routeParams.id }
+			  	];
+
+				HTTPService.removeLike(parameters).then(function(response) {
+					$rootScope.likes.count--;
+					$rootScope.likes.isLiked = false;
+				}, function(error) {
+					NotificationService.error($rootScope.labels.FILE_APP_UNLIKE_ERROR_MESSAGE);
+				});
+			}
+		});
+	}
+
+  $rootScope.setTooltip = function(music) {
+  	$rootScope.tooltip = music;
+  	if ($rootScope.tooltip != false) {
+  		for (var i = 0 ; i < $rootScope.myPlaylists.length ; i++) {
+  			for (var j = 0 ; j < $rootScope.myPlaylists[i].musics.length ; j++) {
+  				if (music.id == $rootScope.myPlaylists[i].musics[j].id) {
+  					$rootScope.myPlaylists[i].check = true;
+  				}
+  			}
+  		}
+  	} else {
+  		for (var i = 0 ; i < $rootScope.myPlaylists.length ; i++) {
+ 				$rootScope.myPlaylists[i].check = false;
+  		}
+  	}
+  }
+
+	// Logic available for multiple view / controller
+
+	if ($rootScope.user) {
+		SecureAuth.securedTransaction(function(key, user_id) {
+			var playlistParams = [
+				{ key: "attribute[user_id]", value: $rootScope.user.id },
+				{ key: "user_id", value: user_id },
+				{ key: "secureKey", value: key }
+			]
+			HTTPService.findPlaylist(playlistParams).then(function(response) {
+	    	$rootScope.myPlaylists = response.data.content;
+	    	for (var i = 0 ; i < $rootScope.myPlaylists.length ; i++) {
+	    		$rootScope.myPlaylists[i].check = false;
+	    		$rootScope.myPlaylists[i].extend = false;
+	    		$rootScope.myPlaylists[i].share = false;
+	    		$rootScope.myPlaylists[i].url = 'http://lvh.me:3000/playlists/' + $rootScope.myPlaylists[i].id;
+
+	    		var duration = 0;
+	    		for (var j = 0 ; j < $rootScope.myPlaylists[i].musics.length ; j++) {
+	    			duration += $rootScope.myPlaylists[i].musics[j].duration;
+	    		}
+
+	    		$rootScope.myPlaylists[i].duration = duration;
+	    	}
+			}, function(error) {
+				NotificationService.error($rootScope.labels.FILE_APP_PLAYLIST_NOT_FOUND_ERROR_MESSAGE + playlist.name);
+			});
+		});
+	}
+}]);
+
+SoonzikApp.config(function(FacebookProvider) {
+	FacebookProvider.init('572371212865769');
+})

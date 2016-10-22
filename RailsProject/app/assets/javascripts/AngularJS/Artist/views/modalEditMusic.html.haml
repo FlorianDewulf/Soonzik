@@ -1,0 +1,40 @@
+%h3 Update a music
+%hr
+.form
+	.row
+		.small-12.medium-3.large-2.columns
+			%label.left.inline{ for: "title" } Title
+		.small-12.medium-9.large-10.columns
+			%input{ type: "text", placeholder: "My title", "ng-model" => "form.title", id: "title" }
+	.row
+		.small-12.medium-3.large-2.columns
+			%label.left.inline{ for: "price" } Price
+		.small-12.medium-9.large-10.columns
+			%input{ type: "text", placeholder: "My price", "ng-model" => "form.price", id: "price" }
+	.row
+		.small-12.medium-3.large-2.columns
+			%label.left.inline Limited
+		.small-12.medium-9.large-10.columns
+			%input{ type: "radio", name: "limited", value: "true", "ng-model" => "form.limited", id: "limitedYes" }
+			%label{ for: "limitedYes" } Yes
+			%input{ type: "radio", name: "limited", value: "false", "ng-model" => "form.limited", id: "limitedNo" }
+			%label{ for: "limitedNo" } No
+	.row
+		%h3
+			Genres
+		.small-6.medium-4.large-3.columns.left{ "ng-repeat" => "influence in influences" }
+			%h5 {{ influence.name }}
+			%label{ for: "{{genre.style_name}}", "ng-repeat" => "genre in influence.genres" }
+				%input{ type: "checkbox", "checklist-model" => "selected.selectedGenres", "checklist-value" => "genre.id", id: "{{genre.style_name}}"}
+				{{ genre.style_name }}
+	.row
+		%h3
+			Ambiances
+		.small-6.medium-4.large-3.columns.left
+			%label{ "ng-repeat" => "ambiance in ambiances", for: "{{ ambiance.name }}" }
+				%input{ type: "checkbox", "checklist-model" => "selected.selectedAmbiances", "checklist-value" => "ambiance.id", id: "{{ambiance.name}}"}
+				{{ ambiance.name }}
+.button{ "ng-click" => "ok()" }
+	Update
+%loading{ "loading-type" => "'square'", "ng-if" => 'loading == true' }
+%a.close-reveal-modal{ "ng-click" => "cancel()" } ×

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout">
+
+        <TextView android:text="@string/email_label" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/emailLabel"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/emailUser"
+            android:text="Email"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/emailLabel"
+            android:layout_toEndOf="@+id/emailLabel"
+            android:layout_marginLeft="68dp"
+            android:layout_marginStart="68dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout2">
+
+        <TextView android:text="@string/firstname_label" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/fnameLabel"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/fnameUser"
+            android:text="fname"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/fnameLabel"
+            android:layout_toEndOf="@+id/fnameLabel"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout3">
+        <TextView android:text="@string/lastname_label" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/lnameLabel"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/lnameUser"
+            android:text="lname"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/lnameLabel"
+            android:layout_toEndOf="@+id/lnameLabel"
+            android:layout_marginLeft="36dp"
+            android:layout_marginStart="36dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout4">
+
+        <TextView android:text="@string/username_label" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/usernameLabel"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/usernameUser"
+            android:text="username"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/usernameLabel"
+            android:layout_toEndOf="@+id/usernameLabel"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout5">
+
+        <TextView android:text="@string/birthday_label" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/birthdayLabel"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/birthdayUser"
+            android:text="birthday"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/birthdayLabel"
+            android:layout_toEndOf="@+id/birthdayLabel"
+            android:layout_marginLeft="52dp"
+            android:layout_marginStart="52dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout6">
+
+        <TextView android:text="@string/description_label" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/descriptionLabel"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/descriptionUser"
+            android:text="Voici du text de description"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/descriptionLabel"
+            android:layout_toEndOf="@+id/descriptionLabel"
+            android:layout_marginLeft="33dp"
+            android:layout_marginStart="33dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout8">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout7">
+
+        <TextView android:text="@string/picture_label" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/imageLabel"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+        <ImageView
+            android:id="@+id/imageUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_search"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageLabel"
+            android:layout_toEndOf="@+id/imageLabel"
+            android:layout_marginLeft="63dp"
+            android:layout_marginStart="63dp"
+            android:contentDescription="@string/profile_picture" />
+
+    </RelativeLayout>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/update_button"
+        android:id="@+id/updateUserButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="128dp"
+        android:background="#FF8000"
+        android:backgroundTint="#FE9A2E" />
+
+
+</RelativeLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/fragment_userprofil.xml -->

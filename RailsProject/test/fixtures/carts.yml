@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+panierUn:
+  user: UserOne
+  albums: AlbumOne
+  gift: false
+
+panierDeux:
+  user: UserTwo
+  musics: MusicOne
+  gift: true

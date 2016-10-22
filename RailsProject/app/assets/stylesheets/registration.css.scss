@@ -1,0 +1,61 @@
+.links {
+	font-size: 12px;
+	text-align: center;
+}
+
+.social-button {
+	margin-left: 30px;
+}
+
+.social-button .button {
+	margin: 0 0 0.25rem !important;
+}
+
+.row {
+	.devise {
+		border: 1px solid #C0C0C0;
+
+		&:before {
+			content: " ";
+			height: 5px;
+			width: 100%;
+			background: #008CBA;
+			display: table;
+		}
+
+		.panel {
+			padding: 15px;
+			border: 1px dashed #C0C0C0;
+			margin: 5px;
+
+			h5 {
+				color: #333;
+			}
+		}
+	}
+
+	&.signup {
+		h2 {
+			padding-left: 20px;
+			font-family: "Drakolomb";
+		}
+
+		.subheader {
+			font-family: "Lato";
+			color: #6f6f6f;
+		}
+
+		span.prefix {
+		  background: #008CBA;
+	    color: #F5F5F5;
+
+	    i {
+	    	font-size: 18px;
+	    }
+	  }
+
+	  .newsletter {
+	  	padding-left: 20px;
+	  }
+	}
+}

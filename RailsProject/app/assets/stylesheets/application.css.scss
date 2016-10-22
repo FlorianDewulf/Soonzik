@@ -1,0 +1,188 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require ./fonts/Drakolomb.css
+ *= require ./fonts/Lato-Regular.css
+ *= stub active_admin
+ *= require_self
+ *
+
+ */
+
+/* Add imports of custom sass/scss files here */
+
+@import "foundation-icons";
+
+/* ROOT PAGE */
+
+html { height: 100vh; }
+
+body { min-height: 100%; }
+
+html, body { margin: 0; padding: 0; }
+
+header {
+	i { font-size: 20px; }
+
+	&.index {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 60px;
+		width: 200px;
+		display: block;
+		margin: 0;
+		padding: 0;
+		background: #252525;
+		overflow-y: auto;
+		border-right: 1px solid #191919;
+
+		&::-webkit-scrollbar { 
+			display: none; 
+		}
+	}
+
+	.flags ul li {
+		border-bottom: 0px;
+		img { width: 30px; }
+	}
+}
+
+main {
+	width:100%;
+	min-height: 100%;
+	background: whitesmoke;
+	padding-top: 20px;
+	padding-left: 200px;
+	padding-bottom: 60px;
+
+	& > small.error {
+		margin-top: -20px;
+		p { margin-bottom: 3px; }
+	}
+
+	& > .large-12 > div { padding-bottom: 60px; }
+}
+
+.loupe { width: 15px; }
+
+.top-bar-custom {
+	.center-logo {
+		height: 100%;
+
+		& > a.soonzik-logo {
+			display: block;
+			width: 100%;
+			background: white;
+			padding-bottom: 10px;
+		}
+	}
+
+	.searchBtn { padding: 8px; }
+
+	input#inputSearch {
+		padding: 0px;
+		line-height: 40px;
+		font-size: 11px;
+		margin: 0;
+	}
+
+	ul {
+		margin: 0;
+
+		.clearfix p { margin: 0; }
+	}
+
+	.photo-profile {
+		border-radius: 100%;
+		width: 50px;
+		height: 50px;
+	}
+
+	.profile {
+		line-height: 50px;
+		font-size: 17px;
+		padding-left: 5px;
+	}
+
+	ul li {
+		color: #333;
+		padding: 3px 7px;
+		border-bottom: #191919 1px solid;
+	}
+
+	.open {
+		display: block;
+		z-index: 10;
+
+		.button {
+			margin: 7px;
+			width: 150px;
+			display: block;
+		}
+	}
+
+	.menu-logo {
+		max-width: 100%;
+		max-height: 46px;
+		margin-top: 7px;
+		cursor: pointer;
+	}
+
+	.notif {
+		display: inline-block;
+		background: #CC3333;
+		border-radius: 25px;
+		border: 1px solid white;
+		font-size: 10px;
+		color: white;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		line-height: 22px;
+		font-weight: bold;
+	}
+}
+
+@media only screen and (max-width: 45em) {
+	.small_menu { display: none; }
+	header.index { width: 75px; }
+	header ul { text-align: center; }
+	main { padding-left: 75px; }
+}
+
+.custom-disable {
+	color: gray;
+}
+
+/*
+ *
+ * HELPER
+ * 
+ */
+
+.lineBlock { width: 100%; padding: 5px 20px; }
+.divider { background-color: #D8D8D8; height: 1px; margin: 10px 0px; }
+.size-42 { font-size: 42px; }
+music { cursor: pointer; }
+.pricing-table li.title { background: #6B6B6B; }
+.pricing-table li.price { color: #6B6B6B; }
+.relative { position: relative; }
+div.reveal-modal-bg { position: fixed; }
+.pointer { cursor: pointer; }
+ul .no-bullet { margin-bottom: 5px; }
+#error_explanation { font-size: 14px; padding-left: 30px; margin-bottom: 30px; font-weight: bold; }
+.removeInfo { padding-right: 5px; color: black; }
+small.bg-green { background: #59CC33; }
+.subtitleLink { text-align: right; margin-right: 20px; a{ color: darkslategray; } }
+.button a { color: white; }

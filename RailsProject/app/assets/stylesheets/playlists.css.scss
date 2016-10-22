@@ -1,0 +1,46 @@
+// Place all the styles related to the Playlists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.playlist {
+	padding-top: 25px;
+
+	.button-group {
+		.button {
+			margin: 1px;
+		}
+	}
+
+	.playlistMusic {
+		i {
+			cursor: pointer;
+		}
+
+		.item {
+			height: 55px;
+			line-height: 55px;
+
+			img {
+				height: 100%;
+			}
+
+			.tiny, ul {
+				margin-bottom: 5px;
+			}
+
+			.mytooltip {
+				top: 45px;
+				right: 0px;
+			}
+
+			.columns {
+				height: 100%;
+
+				p {
+					height: inherit;
+					line-height: inherit;
+				}
+			}
+		}
+	}
+}

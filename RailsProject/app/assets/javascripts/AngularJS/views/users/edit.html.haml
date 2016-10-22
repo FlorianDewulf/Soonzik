@@ -1,0 +1,10 @@
+%script{ src: "https://connect.soundcloud.com/sdk/sdk-3.0.0.js" }
+:javascript
+	var SC = window.SC;
+	SC.initialize({
+		client_id: 'YOUR_CLIENT_ID',
+		redirect_uri: 'http://example.com/callback'
+	});
+.editPanel{ "ng-init" => "editInit()" }
+	%loading{ "ng-if" => "loading == true" }
+	%div{ "ng-if" => "loading == false", "ng-include" => "'/assets/AngularJS/views/users/_form.html.haml'" }

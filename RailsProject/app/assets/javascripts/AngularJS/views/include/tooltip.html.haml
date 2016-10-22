@@ -1,0 +1,44 @@
+.tooltipContainer
+	%div{ "ng-show" => "type == 1" }
+		%ul.no-bullet{ "ng-show" => "state == 1" }
+			%li{ "ng-click" => "listen()" } {{ labels.DISPLAY_TOOLTIP_LISTEN_LABEL }}
+			%li{ "ng-click" => "addMusicToCurrentPlaylist()" } {{ labels.DISPLAY_TOOLTIP_ADD_CURRENT_PLAYLIST_LABEL }}
+			%li{ "ng-click" => "changeState(2)" } {{ labels.DISPLAY_TOOLTIP_ADD_TO_PLAYLIST_LABEL }}
+			%li{ "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_TOOLTIP_CLOSE_LABEL }}
+		%ul.no-bullet{ "ng-show" => "state == 2 && type == 1" }
+			%li{ "ng-repeat" => "myplaylist in myPlaylists" }
+				%input{ "ng-click" => "managePlaylist(myplaylist)", type: "checkbox", id: "playlist-{{myplaylist.id}}", "ng-value" => "true", "ng-model" => "myplaylist.check" }
+				%label{ "for" => "playlist-{{myplaylist.id}}" } {{ myplaylist.name }}
+			%li{ "ng-click" => "changeState(1)" } {{ labels.DISPLAY_TOOLTIP_BACK_LABEL }}
+	%div.saveAs{ "ng-show" => "type == 2" }
+		%ul.no-bullet
+			%li.clearfix
+				.small-5.columns {{ labels.DISPLAY_TOOLTIP_NAME_LABEL }}
+				.small-7.columns
+					%input{ type: "text", "ng-model" => "input.name", placeholder: "{{ labels.DISPLAY_TOOLTIP_NEW_PLAYLIST_LABEL }}" }
+			%li{ "ng-click" => "savePlaylist()" } {{ labels.DISPLAY_TOOLTIP_SAVE_BUTTON }}
+			%li{ "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_TOOLTIP_CLOSE_LABEL }}
+	%div.saveAs{ "ng-show" => "type == 3" }
+		%ul.no-bullet
+			%li {{ labels.DISPLAY_TOOLTIP_SHARE_LABEL }} !
+			%li.small-11.small-centered.columns
+				%input.radius{ type: "text", value: "{{ idShare.str }}", "select-on-click" => true, readonly: "readonly" }
+			%li{ "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_TOOLTIP_CLOSE_LABEL }}
+	%div.saveAs{ "ng-show" => "type == 4" }
+		%ul.no-bullet
+			%li{ "ng-click" => "tooltipCallbackAdd(tooltipPlaylist.musics)" } {{ labels.DISPLAY_TOOLTIP_ADD_CURRENT_PLAYLIST_LABEL }}
+			%li{ "ng-click" => "tooltipCallbackReplace(tooltipPlaylist.musics)" } {{ labels.DISPLAY_TOOLTIP_REPLACE_PLAYLIST_LABEL }}
+			%li{ "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_TOOLTIP_CLOSE_LABEL }}
+	%div.saveAs{ "ng-show" => "type == 5" }
+		%ul.no-bullet.clearfix
+			%li.small-12.columns {{ labels.DISPLAY_TOOLTIP_SURE_DELETE_LABEL }}
+			%li.choice.small-6.columns{ "ng-click" => "removePlaylist()" } {{ labels.DISPLAY_TOOLTIP_YES_LABEL }}
+			%li.choice.small-6.columns{ "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_TOOLTIP_NO_LABEL }}
+	%div.saveAs{ "ng-show" => "type == 6" }
+		%ul.no-bullet
+			%li.clearfix
+				.small-5.columns {{ labels.DISPLAY_TOOLTIP_NAME_LABEL }}
+				.small-7.columns
+					%input{ type: "text", "ng-model" => "input.name", placeholder: "{{ labels.DISPLAY_TOOLTIP_NEW_PLAYLIST_LABEL }}" }
+			%li{ "ng-click" => "saveNewPlaylistFromCurrent()" } {{ labels.DISPLAY_TOOLTIP_SAVE_BUTTON }}
+			%li{ "ng-click" => "setTooltip(false)" } {{ labels.DISPLAY_TOOLTIP_CLOSE_LABEL }}

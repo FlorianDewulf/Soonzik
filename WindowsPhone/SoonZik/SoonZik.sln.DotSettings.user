@@ -1,0 +1,10 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Juan-Pablo Bastardos\Documents\GitHub\SoonZik\Soonzik\WindowsPhone\SoonZik\packages\Coding4Fun.Toolkit.Controls.2.1.0\lib\wpa81\Coding4Fun.Toolkit.Controls.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Gery\Documents\GitHub\Soonzik\WindowsPhone\SoonZik\packages\Coding4Fun.Toolkit.Controls.2.1.0\lib\wpa81\Coding4Fun.Toolkit.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Gery\Documents\GitHub\Soonzik\WindowsPhone\SoonZik\packages\Coding4Fun.Toolkit.Controls.2.1.0\lib\wpa81\Coding4Fun.Toolkit.Controls.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Gery\Documents\GitHub\Soonzik\WindowsPhone\SoonZik\packages\PayPal.Checkout.SDK-WindowsPhone8.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Gery\Documents\GitHub\Soonzik\WindowsPhone\SoonZik\packages\WebSocket4Net.0.14\lib\sl50-wp\WebSocket4Net.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Gery\Downloads\WebSocket4Net(0.14.1)\net45\Debug\WebSocket4Net.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Gery\Documents\GitHub\Soonzik\WindowsPhone\SoonZik\WebSocketRails-WP-master\WebSocketRails-WP\Bin\Debug\WebSocketRails.dll" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

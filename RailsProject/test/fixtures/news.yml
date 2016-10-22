@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+newsOne:
+  title: Akinator nous a rejoint sur SoonZik
+  date: 2014-09-09 12:00:00
+  user: UserOne
+  commentaries: commentaireNews
+  attachments: attachmentOne, attachmentTwo
+  news_type: Sortie
+
+newsSecond:
+  title: SoonZik vient d'ouvrir !
+  date: 2014-09-07 23:19:17
+  user: UserTwo
+  news_type: Nouvelle

@@ -1,0 +1,21 @@
+// Place all the styles related to the Carts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cart {
+    padding-left: 5%;
+    padding-right: 5%;
+    img {
+        width: 50%;
+    }
+
+    .delete_item {
+        margin-top: 75%;
+    }
+
+    .panel p {
+        color: #424242;
+        font-family: "Lato";
+
+    }
+}

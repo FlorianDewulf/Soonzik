@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+contenuNews1:
+  content: Contenu de la news numero 1
+  title: Akinator nous a rejoint sur SoonZik
+  language: FR
+  news: newsOne
+
+contenuNews2:
+  content: Contenu de la news numero 2
+  title: SoonZik vient d'ouvrir !
+  language: EN
+  news: newsTwo

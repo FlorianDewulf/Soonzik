@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/battlepicture"
+        android:src="@drawable/ic_profile"
+        android:contentDescription="@string/imgmenudescription"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom des artistes"
+        android:textSize="50px"
+        android:layout_alignTop="@+id/battlepicture"
+        android:layout_toRightOf="@+id/battlepicture"
+        android:layout_toEndOf="@+id/battlepicture"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="8dp">
+    </TextView>
+
+    <ImageView
+        android:src="@drawable/ic_disc"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:id="@+id/imageView"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_below="@+id/label"
+        android:layout_alignLeft="@+id/label"
+        android:layout_alignStart="@+id/label" />
+
+    <TextView
+        android:id="@+id/nbvote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nb vote / Nb vote"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_below="@+id/label"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <ImageView
+        android:src="@drawable/ic_disc"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/label"
+        android:layout_toRightOf="@+id/nbvote"
+        android:layout_toEndOf="@+id/nbvote"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp" />
+
+    <TextView
+        android:id="@+id/timeremaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8H"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp" />
+
+</RelativeLayout><!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/row_battles.xml -->

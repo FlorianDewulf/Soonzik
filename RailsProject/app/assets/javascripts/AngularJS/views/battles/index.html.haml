@@ -1,0 +1,23 @@
+.battle{ "ng-init" => "indexInit()" }
+	%loading{ "ng-if" => "loading == true" }
+	.row{ "ng-if" => "loading == false" }
+		%h1.subheader {{ labels.DISPLAY_BATTLE_LIST_LABEL }}
+		.clearfix.battleLine{ "ng-repeat" => "battle in index.resources" }
+			%hr
+			.medium-4.columns
+				%p
+					%a{ href: "/users/{{ battle.artist_one.id }}" } {{ battle.artist_one.username }}
+				%img{ "ng-src" => "{{ '/assets/usersImage/avatars/' + battle.artist_one.image}}" }
+				%p{ "ng-if" => "currentUser != false" }
+					%span{ "ng-click" => "indexVoteFor(battle, battle.artist_one)", "class" => "label radius {{ voteClass(index.voteCurrentUser[battle.id], battle.artist_one.id) }}" } {{ voteText(index.voteCurrentUser[battle.id], battle.artist_one.id) }}
+			.medium-4.columns
+				%battle{ "battle-values" => "index.votes[battle.id]" }
+				%a.button.radius{ href: "/battles/{{ battle.id }}" } {{ labels.DISPLAY_BATTLE_LINK_TO_SHOW_LABEL }}
+				%p {{ battle.timeLeft }}
+			.medium-4.columns.end
+				%p
+					%a{ href: "/users/{{ battle.artist_one.id }}" } {{ battle.artist_two.username }}
+				%img{ "ng-src" => "{{ '/assets/usersImage/avatars/' + battle.artist_two.image}}" }
+				%p{ "ng-if" => "currentUser != false" }
+					%span{ "ng-click" => "indexVoteFor(battle, battle.artist_two)", "class" => "label radius {{ voteClass(index.voteCurrentUser[battle.id], battle.artist_two.id) }}" } {{ voteText(index.voteCurrentUser[battle.id], battle.artist_two.id) }}
+		%div{ "ng-include" => "'/assets/AngularJS/views/include/pagination.html.haml'" }

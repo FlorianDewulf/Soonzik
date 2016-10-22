@@ -1,0 +1,138 @@
+.index{ "ng-init" => "initIndex()" }
+  %loading{ "ng-if" => "loading == true" }
+  .index{ "ng-if" => "loading == false" }
+    .lineBlock.clearfix
+      .small-12.columns{ "ng-class" => "classLeftSide" }
+        %h3 {{ labels.DISPLAY_INDEX_LAST_NEWS_LABEL }}
+        .clearfix
+          .newsContainer.clearfix
+            .newsItem{"ng-repeat" => "new in news"}
+              %img{ "ng-src" => "{{ (new.attachments.length == 0) ? '/assets/news/placeholder.jpg' : '/assets/news/' + new.attachments[0].url }}" }
+              .newsItemOverlay
+                %h4
+                  %a{ href: "/news/{{new.id}}" } {{ new.title }}
+                %p {{ new.content }}
+        .subtitleLink
+          %a{ href: "/news" }
+            {{ labels.DISPLAY_INDEX_NEWS_SEE_MORE }}
+            %i.fi-arrow-right
+      .small-12.medium-4.columns{ "ng-if" => "user != false" }
+        %loading{ "ng-if" => "loadingRightSide == true" }
+        .contentRightSide.userProfile{ "ng-if" => "loadingRightSide == false" }
+          %h3 {{ labels.DISPLAY_INDEX_SWEET_LABEL }}
+          .btnGroup
+            .button.tiny{ "ng-click" => "selectFlux()" } {{ labels.DISPLAY_INDEX_ACTIVITY_LABEL }}
+            .button.tiny{ "ng-click" => "selectInteraction()" } {{ labels.DISPLAY_INDEX_INTERACTION_LABEL }}
+          .tab_flux{ "ng-show" => "tab == 0" }
+            .sweet.tweets{ "on-scroll" => "reloadTweet()", "scroll-position" => "'bottom'" }
+              %p{ "ng-if" => "tweets.length == 0" } {{ labels.DISPLAY_INDEX_NO_SWEET_LABEL }}
+              .sweetContainer.tweet.clearfix{ "ng-repeat" => "tweet in tweets" }
+                .small-1.columns
+                  %a{ href: "/users/{{tweet.user.id}}" }
+                    %img{ "ng-src" => "{{ '/assets/usersImage/avatars/' + tweet.user.image }}" }
+                .contentTweet.small-11.columns
+                  %tweet{ "tweet-msg" => "tweet.msg" }
+                  %p.underTweet
+                    %i.fi-clock
+                    %span {{ tweet.created_at }} -
+                    %i.fi-comment.pointer{ "ng-click" => "comment(tweet.user.username)" }
+                    %span.pointer{ "ng-click" => "comment(tweet.user.username)" } {{ labels.DISPLAY_INDEX_ANSWER_LABEL }}
+              %loading{ "ng-if" => "loading_tweet", "loading-type" => "'square'" }
+          .tab_my_talk{ "ng-show" => "tab != 0" }
+            .sweet.tweets{ "on-scroll" => "reloadPersonalTweet()", "scroll-position" => "'bottom'" }
+              %p{ "ng-if" => "otherTweets.length == 0" } {{ labels.DISPLAY_INDEX_NO_SWEET_LABEL }}
+              .sweetContainer.tweet.clearfix{ "ng-repeat" => "tweet in otherTweets" }
+                .small-1.columns
+                  %img{ "ng-src" => "{{ '/assets/usersImage/avatars/' + tweet.user.image }}" }
+                .contentTweet.small-11.columns
+                  %tweet{ "tweet-msg" => "tweet.msg" }
+                  %p.underTweet
+                    %i.fi-clock
+                    %span {{ tweet.created_at }} -
+                    %i.fi-comment.pointer{ "ng-click" => "comment(tweet.user.username)" }
+                    %span.pointer{ "ng-click" => "comment(tweet.user.username)" } {{ labels.DISPLAY_INDEX_ANSWER_LABEL }}
+              %loading{ "ng-if" => "loading_tweet", "loading-type" => "'square'" }
+          .row.collapse
+            .small-10.columns
+              %input#inputTweet{ type: "text", placeholder: "Tell something !", "ng-model" => "tweet.input", "submit-input" => "sendTweet()" }
+            .small-2.columns.end{ "ng-click" => "sendTweet()" }
+              %a.button.postfix
+                %i.fi-arrow-right
+          %span {{ 140 - tweet.input.length }} {{ labels.DISPLAY_INDEX_CHARACTER_LEFT_LABEL }}
+    .lineBlock.darkLine.packLine.clearfix
+      .small-12.columns{ "ng-class" => "classLeftSide" }
+        %h3 {{ labels.DISPLAY_INDEX_LAST_PACKS_LABEL }}
+        %ul.no-bullet
+          %li{ "ng-repeat" => "pack in packs"}
+            %span.pointer{ "ng-click" => "selectPack(pack)" } {{ pack.object.title }}
+        .packContainer{ "ng-show" => "selectedPack.display == true" }
+          .albumList.text-center
+            %span {{ selectedPack.pack.object.timeleft }}
+            %p {{ labels.DISPLAY_INDEX_PAY_MORE_LABEL_PART_ONE }} {{ selectedPack.pack.object.minimal_price }}{{ labels.DISPLAY_INDEX_PAY_MORE_LABEL_PART_TWO }}
+            .clearfix
+              .albumPack{ "ng-repeat" => "album in selectedPack.pack.partialList" }
+                %a{ href: "/albums/{{ album.id }}" }
+                  %img{ "ng-src" => "{{ '/assets/albums/' + album.image }}"}
+                  %p {{ album.title }}
+            .averagePrice
+              %hr
+              %style .packContainer .albumList .averagePrice hr:after { content: "{{ labels.DISPLAY_INDEX_PAY_MORE_LABEL_PART_ONE }} {{ selectedPack.pack.object.averagePrice }}{{ labels.DISPLAY_INDEX_PAY_MORE_LABEL_PART_TWO }}"; }
+            .clearfix
+              .albumPack{ "ng-repeat" => "album in selectedPack.pack.albumList" }
+                %a{ href: "/albums/{{ album.id }}" }
+                  %img{ "ng-src" => "{{ '/assets/albums/' + album.image }}"}
+                  %p {{ album.title }}
+            %a{ href: "/packs/{{ selectedPack.pack.object.id }}" }
+              %span.button {{ labels.DISPLAY_INDEX_PACK_PAGE_LABEL }}
+        .subtitleLink
+          %a{ href: "/packs" }
+            {{ labels.DISPLAY_INDEX_PACKS_SEE_MORE }}
+            %i.fi-arrow-right
+      .small-12.medium-4.columns{ "ng-if" => "user != false" }
+        .suggestions
+          %h3 {{ labels.DISPLAY_INDEX_SUGGESTION_LABEL }}
+          .music.clearfix{ "ng-repeat" => "suggestion in suggestions" }
+            %music.small-2.columns{ "music-object" => "suggestion" }
+              %i.fi-play
+            .small-8.columns
+              %a{ href: "/albums/{{ suggestion.album.id }}" }
+                %span {{ suggestion.title }}
+            .small-2.columns
+              %a{ href: "/albums/{{ suggestion.album.id }}" }
+                %i.fi-arrow-right
+    .lineBlock.battles
+      %h3 {{ labels.DISPLAY_INDEX_LAST_BATTLES_LABEL }}
+      .battle{ "ng-repeat" => "battle in battles" }
+        .clearfix
+          .small-12.medium-4.text-center.columns
+            %figure
+              %a{ href: "/users/{{ battle.artist_one.id }}" }
+                %img.artist_one{ "ng-src" => "{{ '/assets/usersImage/avatars/' + battle.artist_one.image}}" }
+                %figcaption {{ battle.artist_one.username }}
+          .small-12.medium-4.text-center.columns.hide-for-small-only
+            %figure
+              %a{ href: "/users/{{ battle.artist_one.id }}" }
+                %img.artist_two{ "ng-src" => "{{ '/assets/usersImage/avatars/' + battle.artist_one.image}}" }
+                %figcaption {{ battle.artist_two.username }}
+        .clearfix
+          .medium-offset-4.medium-4.text-center.columns.hide-for-small-only
+            %span.button
+              %a{ href: "/battles/{{ battle.id }}" } {{ labels.DISPLAY_INDEX_BATTLE_PAGE_LABEL }}
+        .clearfix
+          .progress.small-12
+            %span.meter{ style: "width:{{ battle.votes[0].width }}%" } {{ battle.votes[0].value }} %
+            %span.meter.success{ style: "width:{{ battle.votes[1].width }}%" } {{ battle.votes[1].value }} %
+          .small-12.text-center.columns.hide-for-medium-up
+            %span.button
+              %a{ href: "/battles/{{ battle.id }}" } {{ labels.DISPLAY_INDEX_BATTLE_PAGE_LABEL }}
+        .clearfix
+          .small-12.medium-4.text-center.columns.hide-for-medium-up
+            %figure
+              %a{ href: "/users/{{ battle.artist_two.id }}" }
+                %img.artist_two{ "ng-src" => "{{ '/assets/usersImage/avatars/' + battle.artist_two.image}}" }
+                %figcaption {{ battle.artist_two.username }}
+        %hr
+      .subtitleLink.small-9
+        %a{ href: "/battles" }
+          {{ labels.DISPLAY_INDEX_BATTLES_SEE_MORE }}
+          %i.fi-arrow-right

@@ -1,0 +1,47 @@
+// Place all the styles related to the Packs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pack {
+
+	.panel {
+		margin-left: 20px;
+	}
+
+	.my-modal {
+		position: relative !important;
+		bottom: 0;
+		font-size: 12px;
+	}
+
+	input[type="range"] {
+		-webkit-appearance: none !important;
+		width: 100%;
+		height: 1rem;
+		border: 1px solid #DDDDDD;
+		border-radius: 10px;
+		margin: 0.75rem 0;
+		transition: all 0.3s ease;
+	}
+
+	input[type="range"]::-webkit-slider-thumb {
+		-webkit-appearance: none !important;
+		width: 2rem;
+		height: 1.375rem;
+		background-color: #008CBA;
+		border-radius: 1000px;
+		box-shadow: 0px 0px 3px #008CBA;
+		transition: all 0.5s ease;
+	}
+
+	input[type="range"]::-webkit-slider-thumb:active {
+		box-shadow: 0px 0px 1px #008CBA;
+	}
+
+	battle {
+		line-height: 175px;
+		height: 175px;
+		display: block;
+	}
+
+}

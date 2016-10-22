@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>menu_news</key>
+	<string>News</string>
+	<key>menu_explore</key>
+	<string>Explore</string>
+	<key>menu_packs</key>
+	<string>Packs</string>
+	<key>menu_geoloc</key>
+	<string>Geoloc</string>
+	<key>menu_battle</key>
+	<string>Battle</string>
+	<key>menu_content</key>
+	<string>My Content</string>
+	<key>menu_network</key>
+	<string>My Network</string>
+	<key>menu_account</key>
+	<string>My Account</string>
+	<key>menu_cart</key>
+	<string>Cart</string>
+	<key>save</key>
+	<string>Save</string>
+	<key>cancel</key>
+	<string>Cancel</string>
+	<key>delete</key>
+	<string>Delete</string>
+	<key>playlist_enter_title</key>
+	<string>Please enter a title</string>
+	<key>playlist_create_title</key>
+	<string>New playlist</string>
+	<key>playlist_create_synthaxe</key>
+	<string>Please enter between 4 and 20 characters</string>
+	<key>playlist_deleted</key>
+	<string>The playlist has been deleted</string>
+	<key>playlist_deleted_error</key>
+	<string>An error has occured during the removal</string>
+	<key>update_error</key>
+	<string>Error during the update</string>
+	<key>news_add_com</key>
+	<string>Write a comment</string>
+	<key>account_update</key>
+	<string>Your account has been updated</string>
+	<key>choose_social_network</key>
+	<string>Please choose a social network</string>
+	<key>current_list_no_content</key>
+	<string>The playing list is empty</string>
+	<key>playlist_delete_music</key>
+	<string>%@ has been deleted from the playlist</string>
+	<key>play_all</key>
+	<string>Play all</string>
+	<key>no_playlist</key>
+	<string>You don&apos;t have created any playlist yet</string>
+	<key>no_playlist_content</key>
+	<string>You didn&apos;t add any music in this playlist yet</string>
+	<key>title_playlists</key>
+	<string>Playlist</string>
+	<key>title_rate_music</key>
+	<string>Rate this music</string>
+	<key>title_albums</key>
+	<string>Albums</string>
+	<key>title_musics</key>
+	<string>Musics</string>
+	<key>title_influences</key>
+	<string>Influences</string>
+	<key>title_artists</key>
+	<string>Artists</string>
+	<key>title_social</key>
+	<string>Social</string>
+	<key>title_number</key>
+	<string>N°</string>
+	<key>title_street</key>
+	<string>Street</string>
+	<key>title_zip</key>
+	<string>Zip Code</string>
+	<key>title_city</key>
+	<string>City</string>
+	<key>title_country</key>
+	<string>Country</string>
+	<key>vote_for_artist</key>
+	<string>You&apos;ve just voted for %@</string>
+	<key>vote_for_artist_error</key>
+	<string>Error occured during the vote</string>
+	<key>battle_deadline</key>
+	<string>End of the battle in %dd %dh %dm %ds</string>
+	<key>battle_ended</key>
+	<string>The battle is over</string>
+	<key>follow_artist</key>
+	<string>You follow %@</string>
+	<key>unfollow_artist</key>
+	<string>You don&apos;t follow %@ anymore</string>
+	<key>music_added_playlist</key>
+	<string>You have added %@ in %@</string>
+	<key>music_added_playlist_error</key>
+	<string>The music had not been added</string>
+	<key>music_added_current_list</key>
+	<string>You have added: %@ to the current playing list</string>
+	<key>loading_error</key>
+	<string>Error during loading</string>
+	<key>connect_failed</key>
+	<string>Unable to connect</string>
+	<key>add_friend</key>
+	<string>%@ is now your friend</string>
+	<key>del_friend</key>
+	<string>%@ is not in your friend list anymore</string>
+	<key>news_com_added</key>
+	<string>Your comment has been sent</string>
+	<key>news_com_added_error</key>
+	<string>Error during the sending</string>
+	<key>soonzik_phase_1</key>
+	<string>Help independent artists with SoonZik</string>
+	<key>battle_versus</key>
+	<string>VS</string>
+	<key>title_follows</key>
+	<string>Your follows</string>
+	<key>title_friends</key>
+	<string>Your friends</string>
+	<key>title_followers</key>
+	<string>Your followers</string>
+	<key>title_username</key>
+	<string>Username</string>
+	<key>title_firstname</key>
+	<string>First name</string>
+	<key>title_lastname</key>
+	<string>Last name</string>
+	<key>title_send</key>
+	<string>Send</string>
+	<key>title_users</key>
+	<string>Users</string>
+	<key>title_search</key>
+	<string>Search</string>
+	<key>title_packs</key>
+	<string>Packs</string>
+	<key>title_email</key>
+	<string>Email</string>
+	<key>buy_now</key>
+	<string>Buy now</string>
+	<key>title_remove_from_playlist</key>
+	<string>Remove from the playlist</string>
+	<key>title_album_view</key>
+	<string>Album view</string>
+	<key>title_artist_view</key>
+	<string>Artist view</string>
+	<key>title_add_to_playing_list</key>
+	<string>Add to the playing list</string>
+	<key>search_no_result</key>
+	<string>Search an artist, a music, an album, a user or a pack</string>
+	<key>title_add_to_playlist</key>
+	<string>Add to a playlist</string>
+	<key>title_delete_from_playing_list</key>
+	<string>Delete from the playing list</string>
+	<key>title_best_singles</key>
+	<string>Their best singles</string>
+	<key>repartition_artist</key>
+	<string>For the artist</string>
+	<key>repartition_association</key>
+	<string>For associations</string>
+	<key>repartition_site</key>
+	<string>For the website</string>
+	<key>repartition_choice</key>
+	<string>Your amount</string>
+	<key>choose_amount</key>
+	<string>Please enter an amount</string>
+	<key>buy_music</key>
+	<string>Buy this music</string>
+	<key>rating_success</key>
+	<string>Your rate has been registered</string>
+	<key>rate_title</key>
+	<string>Rate</string>
+	<key>rating_error</key>
+	<string>Error occured during the rating</string>
+	<key>ask_buy_album</key>
+	<string>Do you want to buy this album?</string>
+	<key>no</key>
+	<string>No</string>
+	<key>yes</key>
+	<string>Yes</string>
+	<key>add_to_cart_success</key>
+	<string>Successfully added in your cart</string>
+	<key>add_to_cart_error</key>
+	<string>An error occured during the add</string>
+	<key>cart_empty</key>
+	<string>Your cart is empty</string>
+	<key>cart_error_delete</key>
+	<string>An error occured during the removing</string>
+	<key>cart_success_delete</key>
+	<string>The item has been successfuly deleted</string>
+	<key>pack_average_message</key>
+	<string>If you spend more or the same amount as the other users, you will unlock all the albums</string>
+	<key>pack_average</key>
+	<string>The average is %.2f€</string>
+	<key>payment_title_success</key>
+	<string>Successfull Payment</string>
+	<key>payment_message_success</key>
+	<string>Your payment has been successfully accomplished. You can go in the &quot;Explore&quot; section to listen you favorite songs.</string>
+	<key>let_message_to_followers</key>
+	<string>Let a message to your followers</string>
+	<key>tweet_sended</key>
+	<string>Tweet sended</string>
+	<key>tweet_sended_error</key>
+	<string>The tweet hasn&apos;t been sent</string>
+</dict>
+</plist>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:id="@+id/albumpicture"
+        android:src="@drawable/ic_explorer"
+        android:contentDescription="@string/imgmenudescription"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/albumtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/albumpicture"
+        android:layout_toEndOf="@+id/albumpicture"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:id="@+id/artistname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist"
+        android:layout_below="@+id/albumtitle"
+        android:layout_alignLeft="@+id/albumtitle"
+        android:layout_alignStart="@+id/albumtitle" />
+
+    <TextView
+        android:id="@+id/nbtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignRight="@+id/albumtitle"
+        android:layout_alignEnd="@+id/albumtitle" />
+
+
+    <ImageView
+        android:src="@drawable/ic_explorer"
+        android:contentDescription="@string/imgmenudescription"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:layout_below="@+id/artistname"
+        android:layout_alignLeft="@+id/artistname"
+        android:layout_alignStart="@+id/artistname"
+        android:id="@+id/imageView3" />
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Kevin/Desktop/SoonZik/app/src/main/res/layout/row_albums.xml -->

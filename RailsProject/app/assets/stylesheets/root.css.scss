@@ -1,0 +1,255 @@
+.index {
+	h3 { font-family: "Drakolomb";font-weight: bold; }
+
+	.darkLine { background: #333;color: #22BCEF; }
+
+	/*
+	 *
+	 * NEWS BLOCK
+	 * 
+	 */
+
+	.newsContainer {
+		.newsItem {
+			width: 230px;
+			height: 270px;
+			position: relative;
+			overflow: hidden;
+			border: 2px solid white;
+			float: left;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			line-height: 270px;
+			text-align: center;
+
+			img {
+				width: 100%;
+			}
+
+			&:hover .newsItemOverlay {
+				top: 0;
+			}
+
+			.newsItemOverlay {
+				position: absolute;
+				top: -300px;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.8);
+				-webkit-transition: top 1s ease;
+				-moz-transition: top 1s ease;
+				-ms-transition: top 1s ease;
+				-o-transition: top 1s ease;
+				transition: top 1s ease;
+				padding: 10px;
+
+				h4 {
+					margin-top: 100px;
+					color: #008CBA;
+					font-weight: bold;
+				}
+
+				p {
+					text-overflow : ellipsis;
+					white-space : nowrap;
+					overflow : hidden;
+				}
+
+				//- newsItemOverlay end
+			}
+
+			//- newsItem end
+		}
+
+		//- newsContainer end
+	}
+
+
+	/*
+	 *
+	 * PACK BLOCK
+	 * 
+	 */
+
+	.darkLine.packLine {
+		h3 { color: #22BCEF; }
+		ul {
+			margin-left: 40px;
+			list-style-type: square;
+
+			li span {
+				padding: 5px;
+
+				&:hover { background: #222; }
+			}
+		}
+		.subtitleLink a { color: #008CBA;}
+	}
+
+	.packContainer {
+		border-radius: 5px;
+		max-height: 999px;
+		height: auto;
+		-webkit-transition: all .5s ease;
+		-moz-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+
+		.albumList { padding: 7px; margin: 5px; }
+
+		&.ng-hide {
+			max-height: 0px;
+			display: block !important;
+		}
+
+		.albumPack {
+			margin-left: 5px;
+			margin-right: 5px;
+			display: inline-block;
+
+			img {
+				width: 100px;
+			}
+		}
+
+		.averagePrice hr:after {
+	    display: inline-block;
+	    position: relative;
+	    top: -0.7em;
+	    font-size: 1em;
+	    padding: 0 0.25em;
+	    background: #333;
+	    color: #43AC46;
+		}
+	}
+
+
+	/*
+	 *
+	 * SWEET BLOCK
+	 * 
+	 */
+
+	.contentRightSide {
+
+		.btnGroup {
+			padding-top: 10px;
+
+			.button {
+				margin-bottom: 0;
+			}
+		}
+
+		input {
+	    margin: 0;
+	    border-top: 0;
+		}
+
+		a.button.postfix {
+	    padding-left: 1px;
+	    padding-right: 1px;
+	  }
+
+		.sweet {
+			height: 300px;
+			width: 100%;
+			border: 1px solid lightgray;
+			border-radius: 4px;
+			padding: 0px 3px 0px 3px;
+			position: relative;
+			overflow: auto;
+
+			.sweetContainer {
+				width: 100%;
+				background: #EEE;
+				margin-top: 5px;
+				margin-bottom: 5px;
+
+				.columns {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+
+	/*
+	 *
+	 * SUGGESTION BLOCK
+	 * 
+	 */
+
+	.suggestions {
+		border-left: 1px solid #CCC;
+		padding-left: 5px;
+		margin-left: -6px;
+
+		.music {
+			border-bottom: 1px solid lightgray;
+			padding-bottom: 4px;
+			padding-top: 4px;
+		}
+	}
+
+	/*
+	 *
+	 * BATTLE BLOCK
+	 * 
+	 */
+
+	.battles {
+
+		hr {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		img {
+			width: 160px;
+
+			&.artist_one {
+				border: 7px solid #008CBA;
+			}
+
+			&.artist_two {
+				border: 7px solid #43AC6A;
+			}
+		}
+
+		.progress {
+
+			max-width: 1024px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			border: 0;
+			height: 2em;
+
+			.meter {
+				float: left;
+				color: white;
+				text-align: center;
+
+				&.success {
+			    background: #43AC6A;
+				}			
+			}
+		}
+	}
+}
+
+
+@media only screen and (max-width: 40.0625em) {
+	.battles .progress {
+		position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    float: left;
+  }
+}

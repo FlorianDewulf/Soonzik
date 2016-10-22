@@ -1,0 +1,94 @@
+.title
+	%h2 Tour Page
+	%span.byline You can find all your tours here
+.tourIndex.row{ "ng-controller" => "TourCtrl", "ng-init" => "tourInit()" }
+	.button.tiny{ "ng-click" => "openCloseForm(true)" }
+		Create new concert
+	.newTour.small-12{ "ng-show" => "form.open == true" }
+		%hr
+		.form
+			.blockForm.row
+				.labelForm.small-12.medium-4.large-3.columns
+					%span.inline Date
+				.inputForm.small-12.medium-8.large-9.columns
+					%input{ type: "datetime-local", "ng-model" => "form.value.concert.planification", placeholder: "yyyy-MM-dd HH:mm", min: "#{Time.now.strftime("%Y-%m-%d")}T00:00" }
+					%small.error{ "ng-if" => "errors.concert.planification != false", "ng-repeat" => "error in errors.concert.planification" } Date {{ error }}
+				.labelForm.small-12.medium-4.large-3.columns
+					%span.inline Link
+				.inputForm.small-12.medium-8.large-9.columns
+					%input{ placeholder: "Link to get more information about the event", type: "text", "ng-model" => "form.value.concert.url" }
+					%small.error{ "ng-if" => "errors.concert.url != false", "ng-repeat" => "error in errors.concert.url" } Link {{ error }}
+				.labelForm.small-12.medium-4.large-3.columns
+					%span.inline Number of the street
+				.inputForm.small-12.medium-8.large-9.columns
+					%input{ placeholder: "72", type: "text", "ng-model" => "form.value.address.numberStreet" }
+					%small.error{ "ng-if" => "errors.address.numberStreet != false", "ng-repeat" => "error in errors.address.numberStreet" } Number {{ error }}
+				.labelForm.small-12.medium-4.large-3.columns
+					%span.inline Street
+				.inputForm.small-12.medium-8.large-9.columns
+					%input{ placeholder: "Street xxx", type: "text", "ng-model" => "form.value.address.street" }
+					%small.error{ "ng-if" => "errors.address.street != false", "ng-repeat" => "error in errors.address.street" } Street {{ error }}
+				.labelForm.small-12.medium-4.large-3.columns
+					%span.inline More information
+				.inputForm.small-12.medium-8.large-9.columns
+					%input{ placeholder: "In the Irish pub", type: "text", "ng-model" => "form.value.address.complement" }
+					%small.error{ "ng-if" => "errors.address.complement != false", "ng-repeat" => "error in errors.address.complement" } Complement {{ error }}
+				.labelForm.small-12.medium-4.large-3.columns
+					%span.inline City
+				.inputForm.small-12.medium-8.large-9.columns
+					%input{ placeholder: "SoonZik-City", type: "text", "ng-model" => "form.value.address.city" }
+					%small.error{ "ng-if" => "errors.address.city != false", "ng-repeat" => "error in errors.address.city" } City {{ error }}
+				.labelForm.small-12.medium-4.large-3.columns
+					%span.inline Zipcode
+				.inputForm.small-12.medium-8.large-9.columns
+					%input{ placeholder: "12345", type: "text", "ng-model" => "form.value.address.zipcode" }
+					%small.error{ "ng-if" => "errors.address.zipcode != false", "ng-repeat" => "error in errors.address.zipcode" } Zipcode {{ error }}
+				.labelForm.small-12.medium-4.large-3.columns
+					%span.inline Country
+				.inputForm.small-12.medium-8.large-9.columns
+					%input{ placeholder: "SoonZik-Country", type: "text", "ng-model" => "form.value.address.country" }
+					%small.error{ "ng-if" => "errors.address.country != false", "ng-repeat" => "error in errors.address.country" } Country {{ error }}
+		.text-center
+			%span.button{ "ng-click" => "create()"}
+				Create
+			%span.button{ "ng-click" => "openCloseForm(false)" }
+				Close
+		%hr
+	.listTour.small-12
+		%ul.no-bullet.inline-list#concert
+			- @concerts.each do |concert|
+				%li
+					%ul.square.vcard
+						%li.fn= concert.planification
+						%li.street-address= "#{concert.address.numberStreet} #{concert.address.street} #{concert.address.complement if concert.address.complement != nil}"
+						%li.locality= "#{concert.address.city} #{concert.address.zipcode} #{concert.address.country}"
+						- if concert.url != nil && concert.url.size > 0
+							%li
+								%a{ href: concert.url }= concert.url
+						- else
+							%li
+								No link for this event
+						%li.text-center
+							.buttonFrom
+								%a.button{ href: "/tour/edit/#{ concert.id }" }
+									Edit
+							.buttonFrom
+								%a.button{ href: "/tour/delete/#{ concert.id }" }
+									Delete
+			%li{ "ng-repeat" => "concert in concerts" }
+				%ul.square.vcard
+					%li.fn {{ concert.planification }}
+					%li.street-address
+						{{ concert.address.numberStreet }} {{ concert.address.complement != null ? concert.address.complement : '' }}
+					%li.locality
+						{{ concert.address.city }} {{ concert.address.zipcode }} {{ concert.address.country }}
+					%li
+						%a{ href: "{{ concert.url }}", "ng-if" => "concert.url != null" } {{ concert.url }}
+						%span{ "ng-if" => "concert.url == null || concert.url == ''" } No link for this event
+					%li.text-center
+						.buttonFrom
+							%a.button{ href: "/tour/edit/{{concert.id}}" }
+								Edit
+						.buttonFrom
+							%a.button{ href: "/tour/delete/{{concert.id}}" }
+								Delete

@@ -1,0 +1,113 @@
+.discotheque{ "ng-init" => "discoInit()" }
+	%loading{ "ng-if" => "loading == true" }
+	.discothequeContainer{ "ng-if" => "loading == false" }
+		.radio
+			.button
+				%input{ type: "radio", "ng-model" => "display.selection", name: "display_type", value: "grid", id: "display_grid", checked: true }
+				%label{ for: "display_grid" } Grid
+			.button
+				%input{ type: "radio", "ng-model" => "display.selection", name: "display_type", value: "list", id: "display_list" }
+				%label{ for: "display_list" } List
+		.clearfix
+			.myMusics.small-12
+				.grid{ "ng-if" => "display.selection == 'grid'" }
+					.gridOpen{ "ng-show" => "gridSelectedItem.object != null" }
+					.gridContent
+						%h3 {{ labels.DISPLAY_DISCOTHEQUE_MUSIC_LABEL }}
+						%hr
+						%ul.inline-list{ "ng-if" => "mymusic.musics.length != 0" }
+							%li.text-center{ "ng-repeat" => "music in mymusic.musics" }
+								%div
+									%img{ "ng-src" => "{{ '/assets/albums/' + music.album.image }}" }
+								%span {{ music.title }}
+								.overPlay
+									%music{ "music-object" => "music" }
+										%i.fi-play
+									%i.fi-download.pointer{ "ng-click" => "download(music)" }
+						%p{ "ng-if" => "mymusic.musics.length == 0" } {{ labels.DISPLAY_DISCOTHEQUE_NOTHING_LABEL }}
+						%h3 {{ labels.DISPLAY_DISCOTHEQUE_ALBUM_LABEL }}
+						%hr
+						%ul.inline-list{ "ng-if" => "mymusic.albums.length != 0" }
+							%li.text-center{ "ng-repeat" => "album in mymusic.albums" }
+								%div
+									%img{ "ng-src" => "{{ '/assets/albums/' + album.image }}" }
+								%span {{ album.title }}
+								.overPlay
+									%i.fi-plus.pointer{ "ng-click" => "openAlbum(album)" }
+						%p{ "ng-if" => "mymusic.albums.length == 0" } {{ labels.DISPLAY_DISCOTHEQUE_NOTHING_LABEL }}
+						%h3 {{ labels.DISPLAY_DISCOTHEQUE_PACK_LABEL }}
+						%hr
+							%ul.inline-list{ "ng-if" => "mymusic.packs.length != 0" }
+								%li.text-center{ "ng-repeat" => "pack in mymusic.packs" }
+									%div
+										%img{ "ng-src" => "{{ '/assets/albums/' + pack.albums[0].image }}" }
+									%span {{ pack.title }}
+									.overPlay
+										%i.fi-plus.pointer{ "ng-click" => "openPack(pack)" }
+						%p{ "ng-if" => "mymusic.packs.length == 0" } {{ labels.DISPLAY_DISCOTHEQUE_NOTHING_LABEL }}
+				.list{ "ng-if" => "display.selection == 'list'" }
+					%h3 {{ labels.DISPLAY_DISCOTHEQUE_MUSIC_LABEL }}
+					%hr
+					.music{ "ng-if" => "mymusic.musics.length > 0" }
+						.musicContent{ "ng-repeat" => "music in mymusic.musics" }
+							.clearfix
+								.small-2.medium-2.large-1.columns
+									%music{ "music-object" => "music" }
+										%img{ "ng-src" => "{{ '/assets/albums/' + music.album.image }}" }
+								.small-5.large-7.columns
+									%music{ "music-object" => "music" } {{ music.title }}
+								.small-4.large-2.columns
+									.left {{ formatTime(music.duration) }}
+									.text-right.relative
+										%i.fi-plus.pointer{ "ng-click" => "setTooltip(tooltip == music ? false : music)" }
+										.mytooltip.toolright{ "ng-show" => "tooltip == music", "ng-include" => "'/assets/AngularJS/views/include/tooltip.html.haml'", "ng-controller" => "TooltipCtrl", "ng-init" => "tooltipInit(music, 1)" }
+								.small-1.columns
+									%i.fi-download.pointer{ "ng-click" => "download(music)" }
+							%hr
+					%p{ "ng-if" => "mymusic.musics.length == 0" } {{ labels.DISPLAY_DISCOTHEQUE_NOTHING_LABEL }}
+					%h3 {{ labels.DISPLAY_DISCOTHEQUE_ALBUM_LABEL }}
+					%hr
+					.album{ "ng-if" => "mymusic.albums.length > 0" }
+						.albumContent{ "ng-repeat" => "album in mymusic.albums" }
+							.clearfix
+								.small-3.medium-2.columns
+									%img{ "ng-src" => "{{ '/assets/albums/' + album.image }}" }
+									%h5.text-center
+										%a{ href: "/albums/{{ album.id }}" } {{ album.title }}
+								.small-9.medium-10.columns
+									.clearfix.lineMusic{ "ng-repeat" => "music in album.musics" }
+										.small-8.columns
+											%music{ "music-object" => "music" } {{ music.title }}
+										.small-2.columns
+											.left.hide-for-small-only.hide-for-medium-only {{ formatTime(music.duration) }}
+											.text-right.relative
+												%i.fi-plus{ "ng-click" => "setTooltip(tooltip == music ? false : music)" }
+												.mytooltip.toolright{ "ng-show" => "tooltip == music", "ng-include" => "'/assets/AngularJS/views/include/tooltip.html.haml'", "ng-controller" => "TooltipCtrl", "ng-init" => "tooltipInit(music, 1)" }
+										.small-2.columns
+											%i.fi-download.pointer{ "ng-click" => "download(music)" }
+							%hr
+					%p{ "ng-if" => "mymusic.albums.length == 0" } {{ labels.DISPLAY_DISCOTHEQUE_NOTHING_LABEL }}
+					%h3 {{ labels.DISPLAY_DISCOTHEQUE_PACK_LABEL }}
+					%hr
+					.pack{ "ng-if" => "mymusic.packs.length > 0" }
+						.packContainer{ "ng-repeat" => "pack in mymusic.packs track by $index" }
+							%h4
+								%span{ "ng-class" => "{ redBorder: ($index % 3 == 0), blueBorder: ($index % 3 == 1), greenBorder: ($index % 3 == 2) }" } {{ pack.title }}
+							.packContent.clearfix{ "ng-repeat" => "album in pack.albums", "ng-class" => "{ redBorder: ($index % 3 == 0), blueBorder: ($index % 3 == 1), greenBorder: ($index % 3 == 2) }" }
+								.small-3.medium-2.columns
+									%img{ "ng-src" => "{{ '/assets/albums/' + album.image }}" }
+									%h5.text-center
+										%a{ href: "/albums/{{ album.id }}" } {{ album.title }}
+								.small-9.medium-10.columns
+									.clearfix.lineMusic{ "ng-repeat" => "music in album.musics" }
+										.small-8.columns
+											%music{ "music-object" => "music" } {{ music.title }}
+										.small-2.columns
+											.left.hide-for-small-only.hide-for-medium-only {{ formatTime(music.duration) }}
+											.text-right.relative
+												%i.fi-plus{ "ng-click" => "setTooltip(tooltip == music ? false : music)" }
+												.mytooltip.toolright{ "ng-show" => "tooltip == music", "ng-include" => "'/assets/AngularJS/views/include/tooltip.html.haml'", "ng-controller" => "TooltipCtrl", "ng-init" => "tooltipInit(music, 1)" }
+										.small-2.columns
+											%i.fi-download.pointer{ "ng-click" => "download(music)" }
+								%hr
+					%p{ "ng-if" => "mymusic.packs.length == 0" } {{ labels.DISPLAY_DISCOTHEQUE_NOTHING_LABEL }}

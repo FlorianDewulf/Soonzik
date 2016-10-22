@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="SoonZik.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:SoonZik.ViewModel"
+    xmlns:view="using:SoonZik.Views"
+    mc:Ignorable="d"
+    xmlns:controls="using:SoonZik.Controls"
+    xmlns:converters="using:Coding4Fun.Toolkit.Controls.Converters"
+    DataContext="{StaticResource MainPageViewModel}"
+    Background="#D3D3D3">
+
+
+    <Grid x:Name="MainPageGrid">
+        <view:Connexion />
+    </Grid>
+
+</Page>

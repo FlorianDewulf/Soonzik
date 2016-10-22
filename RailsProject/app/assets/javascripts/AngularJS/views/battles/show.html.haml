@@ -1,0 +1,61 @@
+.battle{ "ng-init" => "showInit()" }
+	%loading{ "ng-if" => "loading == true" }
+	.row{ "ng-if" => "loading == false" }
+		.clearfix.battleLine
+			.medium-4.columns
+				%h4
+					%a{ href: "/users/{{ show.battle.artist_one.id }}" } {{ show.battle.artist_one.username }}
+				%img{ "ng-src" => "{{ '/assets/usersImage/avatars/' + show.battle.artist_one.image}}" }
+				%p{ "ng-if" => "currentUser != false" }
+					%span{ "ng-click" => "showVoteFor(show.battle, show.battle.artist_one)", "class" => "label radius {{ voteClass(show.voteCurrentUser, show.battle.artist_one.id) }}" } {{ voteText(show.voteCurrentUser, show.battle.artist_one.id) }}
+				.topFive.text-center{ "ng-if" => "show.artistOne.topFive.length != 0" }
+					%h5
+						{{ labels.DISPLAY_BATTLE_TOP_LABEL }}
+						%a{ href: "/users/{{ show.battle.artist_one.id }}" } {{ show.battle.artist_one.username }}
+					%table.small-12
+						%tr{ "ng-repeat" => "topFiveOne in show.artistOne.topFive" }
+							%td
+								%music{ "music-object" => "topFiveOne" }
+									%i.fi-play
+							%td
+								%music{ "music-object" => "topFiveOne" } {{ topFiveOne.title }}
+							%td
+								{{ formatTime(topFiveOne.duration) }}
+							%td
+								{{ topFiveOne.price }} $
+				%h5{ "ng-if" => "show.artistOne.topFive.length == 0" }
+					{{ labels.DISPLAY_BATTLE_NO_MUSIC_LABEL }}
+			.medium-4.columns
+				%battle{ "battle-values" => "show.votes" }
+				%p {{ show.battle.timeLeft }}
+				.peopleVote{ "ng-if" => "show.votes.length > 0" }
+					%h5
+						{{ labels.DISPLAY_BATTLE_THEY_VOTED_LABEL }}
+					%ul.small-block-grid-3.medium-block-grid-2.large-block-grid-3
+						%li{ "ng-repeat" => "people in show.randomVote" }
+							%a{ href: "/users/{{ people.id }}" }
+								%img{ "ng-src" => "{{ '/assets/usersImage/avatars/' + people.image }}" }
+
+			.medium-4.columns
+				%h4
+					%a{ href: "/users/{{ show.battle.artist_two.id }}" } {{ show.battle.artist_two.username }}
+				%img{ "ng-src" => "{{ '/assets/usersImage/avatars/' + show.battle.artist_two.image}}" }
+				%p{ "ng-if" => "currentUser != false" }
+					%span{ "ng-click" => "showVoteFor(show.battle, show.battle.artist_two)", "class" => "label radius {{ voteClass(show.voteCurrentUser, show.battle.artist_two.id) }}" } {{ voteText(show.voteCurrentUser, show.battle.artist_two.id) }}
+				.topFive.text-center{ "ng-if" => "show.artistTwo.topFive.length != 0" }
+					%h5
+						{{ labels.DISPLAY_BATTLE_TOP_LABEL }}
+						%a{ href: "/users/{{ show.battle.artist_two.id }}" } {{ show.battle.artist_two.username }}
+					%table.small-12
+						%tr{ "ng-repeat" => "topFiveTwo in show.artistTwo.topFive" }
+							%td
+								%music{ "music-object" => "topFiveTwo" }
+									%i.fi-play
+							%td
+								%music{ "music-object" => "topFiveTwo" } {{ topFiveTwo.title }}
+							%td
+								{{ formatTime(topFiveTwo.duration) }}
+							%td
+								{{ topFiveTwo.price }} $
+				%h5{ "ng-if" => "show.artistTwo.topFive.length == 0" }
+					{{ labels.DISPLAY_BATTLE_NO_MUSIC_LABEL }}

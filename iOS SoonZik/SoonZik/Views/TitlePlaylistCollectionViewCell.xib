@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TitlePlaylistCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="148"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="148"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty_list.png" translatesAutoresizingMaskIntoConstraints="NO" id="XQV-2I-eQh">
+                        <rect key="frame" x="0.0" y="60" width="60" height="60"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty_list.png" translatesAutoresizingMaskIntoConstraints="NO" id="FIc-Sz-7x7">
+                        <rect key="frame" x="60" y="0.0" width="60" height="60"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty_list.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ix7-o9-45m">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Pf4-Wd-F9I">
+                        <rect key="frame" x="6" y="123" width="106" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty_list.png" translatesAutoresizingMaskIntoConstraints="NO" id="c1t-HZ-vSU">
+                        <rect key="frame" x="60" y="60" width="60" height="60"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ytp-5B-CTo">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <size key="customSize" width="125" height="148"/>
+            <connections>
+                <outlet property="album1Image" destination="Ix7-o9-45m" id="dMP-LZ-RJW"/>
+                <outlet property="album2Image" destination="FIc-Sz-7x7" id="g9J-IU-kSH"/>
+                <outlet property="album3Image" destination="XQV-2I-eQh" id="cVU-oz-tin"/>
+                <outlet property="album4Image" destination="c1t-HZ-vSU" id="6jN-fJ-GbK"/>
+                <outlet property="containView" destination="ytp-5B-CTo" id="a2f-11-yXp"/>
+                <outlet property="playlistTitle" destination="Pf4-Wd-F9I" id="dUl-kA-at0"/>
+            </connections>
+            <point key="canvasLocation" x="466" y="437"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="empty_list.png" width="256" height="256"/>
+    </resources>
+</document>

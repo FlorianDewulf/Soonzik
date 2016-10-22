@@ -1,0 +1,106 @@
+.seachContainer.clearfix{ "ng-init" => "initSearch()" }
+	.small-12.medium-3.columns
+		%h2 {{ labels.DISPLAY_SEARCH_FILTERS_LABEL }}
+		%hr
+		%ul.no-bullet
+			%li
+				%label
+					%input{ type: "checkbox", "ng-model" => "box.all", "ng-change" => "changeBox('all')" }
+					{{ labels.DISPLAY_SEARCH_ALL_FILTER_LABEL }}
+			%li
+				%label
+					%input{ type: "checkbox", "ng-model" => "box.users", "ng-change" => "changeBox('users')" }
+					{{ labels.DISPLAY_SEARCH_USER_FILTER_LABEL }}
+			%li
+				%label
+					%input{ type: "checkbox", "ng-model" => "box.artists", "ng-change" => "changeBox('artists')" }
+					{{ labels.DISPLAY_SEARCH_ARTIST_FILTER_LABEL }}
+			%li
+				%label
+					%input{ type: "checkbox", "ng-model" => "box.albums", "ng-change" => "changeBox('albums')" }
+					{{ labels.DISPLAY_SEARCH_ALBUM_FILTER_LABEL }}
+			%li
+				%label
+					%input{ type: "checkbox", "ng-model" => "box.musics", "ng-change" => "changeBox('musics')" }
+					{{ labels.DISPLAY_SEARCH_MUSIC_FILTER_LABEL }}
+			%li
+				%label
+					%input{ type: "checkbox", "ng-model" => "box.packs", "ng-change" => "changeBox('packs')" }
+					{{ labels.DISPLAY_SEARCH_PACK_FILTER_LABEL }}
+	.small-12.medium-9.columns
+		%loading{ "ng-if" => "loading == true" }
+		.searchResults{ "ng-if" => "loading == false" }
+			.headerSearch.row
+				.small-12.medium-11.large-9.columns.small-centered
+					.row.collapse
+						.small-8.medium-6.columns
+							%input{ type: "text", "ng-model" => "searchParam.value" }
+						.small-4.columns.left
+							%a.button.postfix{ href: "#", "ng-click" => "newSearch()" } {{ labels.DISPLAY_SEARCH_SEARCH_LABEL }}
+			.contentSeach
+				.users{ "ng-show" => "box.users" }
+					%h4 {{ labels.DISPLAY_SEARCH_USER_FILTER_LABEL }}
+					%hr
+					%p{ "ng-if" => "result.user.length == 0" } {{ labels.DISPLAY_SEARCH_NOTHING_LABEL }}
+					.boxInfo.clearfix{ "ng-if" => "result.user.length > 0", "ng-repeat" => "u in result.user" }
+						.small-3.columns
+							%img{ "ng-src" => '{{ "/assets/usersImage/avatars/" + u.image }}' }
+						.small-9.columns
+							%h5
+								%a{ href: "/users/{{u.id}}" }
+									{{ u.username }}
+							%p {{ u.description }}
+				.artists{ "ng-show" => "box.artists" }
+					%h4 {{ labels.DISPLAY_SEARCH_ARTIST_FILTER_LABEL }}
+					%hr
+					%p{ "ng-if" => "result.artist.length == 0" } {{ labels.DISPLAY_SEARCH_NOTHING_LABEL }}
+					.boxInfo.clearfix{ "ng-if" => "result.artist.length > 0", "ng-repeat" => "artist in result.artist" }
+						.small-3.columns
+							%img{ "ng-src" => '{{ "/assets/usersImage/avatars/" + artist.image }}' }
+						.small-9.columns
+							%h5
+								%a{ href: "/users/{{artist.id}}" }
+									{{ artist.username }}
+							%p {{ artist.description }}
+				.albums{ "ng-show" => "box.albums" }
+					%h4 {{ labels.DISPLAY_SEARCH_ALBUM_FILTER_LABEL }}
+					%hr
+					%p{ "ng-if" => "result.album.length == 0" } {{ labels.DISPLAY_SEARCH_NOTHING_LABEL }}
+					.boxInfo.clearfix{ "ng-if" => "result.album.length > 0", "ng-repeat" => "album in result.album" }
+						.small-3.columns
+							%img{ "ng-src" => '{{ "/assets/albums/" + album.image }}' }
+						.small-9.columns
+							%h5
+								%a{ href: "/albums/{{album.id}}" } {{ album.title }}
+							%p
+								%em
+									{{ labels.DISPLAY_SEARCH_BY_LABEL }} "
+								%a{ href: "/users/{{album.user.id}}" }
+									{{ album.user.username }}
+								%em
+									" - {{ album.yearProd }}
+				.musics{ "ng-show" => "box.musics" }
+					%h4 {{ labels.DISPLAY_SEARCH_MUSIC_FILTER_LABEL }}
+					%hr
+					%p{ "ng-if" => "result.music.length == 0" } {{ labels.DISPLAY_SEARCH_NOTHING_LABEL }}
+					.boxInfo{ "ng-if" => "result.music.length > 0", "ng-repeat" => "music in result.music" }
+						.clearfix
+							.small-1.columns
+								%music{ "music-object" => "music" }
+									%i.fi-play
+							.small-7.columns
+								%music{ "music-object" => "music" }
+									%p {{ music.title }}
+							.small-2.columns
+								{{ music.price }} $
+							.small-2.columns
+								{{ formatDuration(music.duration) }}
+						%p.text-right
+							%em {{ labels.DISPLAY_SEARCH_ALBUM_FROM_LABEL }}
+							%a{ href: "/albums/{{music.album.id}}" } {{ music.album.title }}
+				.packs{ "ng-show" => "box.packs" }
+					%h4 {{ labels.DISPLAY_SEARCH_PACK_FILTER_LABEL }}
+					%hr
+					%p{ "ng-if" => "result.pack.length == 0" } {{ labels.DISPLAY_SEARCH_NOTHING_LABEL }}
+					.boxInfo{ "ng-if" => "result.pack.length > 0", "ng-repeat" => "pack in result.pack" }
+						%a{ href: "/packs/{{pack.id}}" } {{ pack.title }}

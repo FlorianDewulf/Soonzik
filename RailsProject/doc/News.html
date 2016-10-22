@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<!--
+
+  Fivefish RDoc Generator
+  $Id$
+
+  Authors:
+  - Michael Granger <ged@FaerieMUD.org>
+
+ -->
+<html lang="en">
+<head>
+	<title>RDoc Documentation</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<link href="." rel="prefix" />
+
+	<link href="./css/fivefish.min.css" rel="stylesheet" />
+
+	<script src="./js/jquery-1.7.1.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="./js/bootstrap.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="./js/searchindex.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="./js/fivefish.min.js" type="text/javascript"
+		defer="defer" charset="utf-8" onload="initFivefish()"></script>
+</head>
+
+<body class="class-page">
+
+	<nav class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand"
+					href="./index.html">RDoc Documentation</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#class-dropdown">
+								Classes
+								<b class="caret"></b>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#file-dropdown">
+								Files
+								<b class="caret"></b>
+							</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+				<span class="pull-right">
+					<form class="navbar-search">
+						<input type="hidden" id="navbar-search-target" value="" />
+						<input type="text" class="search-query" value=""
+							placeholder="Method, Class, or Filename" />
+					</form>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		
+		<header class="hero-unit">
+			<hgroup>
+								  												<h1 class="class"
+					rel="popover"
+					data-original-title="In files"
+					data-content="app/models/news.rb"
+					>News</h1>
+				</p>
+							</hgroup>
+			<span class="label">class</span>
+		</header>
+
+		<section class="module-relations">
+			<dl>
+								<dt>Superclass</dt>
+								<dd class="superclass">ActiveRecord::Base</dd>
+								
+				
+							</dl>
+		</section>
+
+		<section class="description">
+			
+<p>The model of the object <a href="News.html">News</a> Contain the relation
+and the validation Can provide some features linked to this model</p>
+
+<h4 id="class-News-label-Attributes">Attributes<span><a href="#class-News-label-Attributes">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>id</code> - (integer) - The ID of the object</p>
+</li><li>
+<p><code>author_id</code> - (integer) - The ID of the user</p>
+</li><li>
+<p><code>title</code> - (string) - The title of the news (need to change for
+multi language)</p>
+</li><li>
+<p><code>news_type</code> - (string) - The type of news (example :
+“discovery”, “promotion”, “information”…)</p>
+</li></ul>
+
+<h4 id="class-News-label-Associations">Associations<span><a href="#class-News-label-Associations">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p><code>belongs_to</code> - :user</p>
+</li><li>
+<p><code>has_many</code> - :newstexts</p>
+</li><li>
+<p><code>has_and_belongs_to_many</code> - :attachments</p>
+</li><li>
+<p><code>has_and_belongs_to_many</code> - :commentaries</p>
+</li></ul>
+		</section>
+
+				<section id="5Buntitled-5D" class="documentation-section">
+			
+		    
+			
+			
+			<!-- Methods -->
+						
+						<section class="public-methods class-methods methods">
+				<header>
+					<h3>Public Class Methods</h3>
+				</header>
+
+								<a name="method-c-fillLikes">anchor</a>
+				<div id="method-c-fillLikes-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">fillLikes</span><span 
+							class="method-args">(ar_news, security = false, user_id = nil)</span>
+										</header>
+
+					<div class="method-description">
+											<p>Fill an association of records of the notes average</p>					
+											<div class="method-source-code" id="fillLikes-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">fillLikes</span>(<span class="ruby-identifier">ar_news</span>, <span class="ruby-identifier">security</span> = <span class="ruby-keyword">false</span>, <span class="ruby-identifier">user_id</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">ar_news</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sql</span> = <span class="ruby-string">&quot;SELECT news_id, COUNT(news_id) AS count FROM newslikes WHERE (news_id IN (&quot;</span>
+  <span class="ruby-identifier">sql_hasLiked</span> = <span class="ruby-string">&quot;SELECT news_id FROM newslikes WHERE (news_id IN (&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">security</span>
+
+  <span class="ruby-identifier">ar_news</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">news</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">sql</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;, &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sql</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">news</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">security</span>
+      <span class="ruby-identifier">sql_hasLiked</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;, &quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">sql_hasLiked</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">news</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">sql</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;)) GROUP BY news_id&quot;</span>
+  <span class="ruby-identifier">records_array</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">sql</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">security</span>
+    <span class="ruby-identifier">sql_hasLiked</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;)) AND user_id = #{user_id}&quot;</span>
+    <span class="ruby-identifier">records_liked</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">sql_hasLiked</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">ar_news</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">news</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">passIn</span> = <span class="ruby-keyword">false</span>
+
+    <span class="ruby-identifier">records_array</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">news</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">record</span>[<span class="ruby-string">&#39;news_id&#39;</span>].<span class="ruby-identifier">to_i</span>)
+        <span class="ruby-identifier">passIn</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">news</span>.<span class="ruby-identifier">setLike</span> <span class="ruby-identifier">record</span>[<span class="ruby-string">&#39;count&#39;</span>]
+        <span class="ruby-keyword">break</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">security</span>
+      <span class="ruby-identifier">records_liked</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">news</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">record</span>[<span class="ruby-string">&#39;news_id&#39;</span>].<span class="ruby-identifier">to_i</span>)
+          <span class="ruby-identifier">news</span>.<span class="ruby-identifier">setLiked</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">news</span>.<span class="ruby-identifier">setLike</span> <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">passIn</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-c-miniKey">anchor</a>
+				<div id="method-c-miniKey-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">miniKey</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Filter of information for the <a href="API.html">API</a></p>
+
+<p>Fields returned : [:id, :title, :date]</p>					
+											<div class="method-source-code" id="miniKey-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">miniKey</span>
+  [<span class="ruby-value">:id</span>, <span class="ruby-value">:created_at</span>]
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-c-news_params">anchor</a>
+				<div id="method-c-news_params-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">news_params</span><span 
+							class="method-args">(parameters)</span>
+										</header>
+
+					<div class="method-description">
+											<p>The strong parameters to save or update object</p>					
+											<div class="method-source-code" id="news_params-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">news_params</span>(<span class="ruby-identifier">parameters</span>)
+  <span class="ruby-identifier">parameters</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:news</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:title</span>, <span class="ruby-value">:author_id</span>)
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+									
+						<section class="public-methods instance-methods methods">
+				<header>
+					<h3>Public Instance Methods</h3>
+				</header>
+
+								<a name="method-i-content">anchor</a>
+				<div id="method-i-content-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">content</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>To give the content of the good language</p>					
+											<div class="method-source-code" id="content-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">content</span>
+  <span class="ruby-identifier">content</span> = <span class="ruby-string">&quot;No Content&quot;</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@language</span>.<span class="ruby-identifier">present?</span>)
+    <span class="ruby-identifier">nt</span> = <span class="ruby-constant">Newstext</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">news_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">where</span>(<span class="ruby-identifier">language</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@language</span>)
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">nt</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">nt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+      <span class="ruby-identifier">content</span> = <span class="ruby-identifier">nt</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">content</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">content</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-hasLiked">anchor</a>
+				<div id="method-i-hasLiked-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">hasLiked</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>To know if you liked this</p>					
+											<div class="method-source-code" id="hasLiked-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hasLiked</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@hasLiked</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@hasLiked</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-likes">anchor</a>
+				<div id="method-i-likes-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">likes</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Return the number of likes</p>					
+											<div class="method-source-code" id="likes-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">likes</span>
+  <span class="ruby-keyword">return</span> (<span class="ruby-ivar">@likes</span>.<span class="ruby-identifier">present?</span>) <span class="ruby-operator">?</span> <span class="ruby-ivar">@likes</span> <span class="ruby-operator">:</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-node">&quot;SELECT COUNT(news_id) AS count FROM newslikes WHERE news_id = #{self.id.to_s}&quot;</span>)[<span class="ruby-value">0</span>][<span class="ruby-string">&quot;count&quot;</span>]
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-myConstructor">anchor</a>
+				<div id="method-i-myConstructor-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">myConstructor</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>My constructor called after activerecord create the object ; it init the
+default language</p>					
+											<div class="method-source-code" id="myConstructor-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">myConstructor</span>
+  <span class="ruby-ivar">@language</span> = <span class="ruby-string">&quot;EN&quot;</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-setLanguage">anchor</a>
+				<div id="method-i-setLanguage-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">setLanguage</span><span 
+							class="method-args">(language)</span>
+										</header>
+
+					<div class="method-description">
+											<p>To give the title of the good language</p>					
+											<div class="method-source-code" id="setLanguage-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setLanguage</span>(<span class="ruby-identifier">language</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-constant">Language</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">abbreviation</span><span class="ruby-operator">:</span> <span class="ruby-identifier">language</span>).<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>)
+    <span class="ruby-ivar">@language</span> = <span class="ruby-identifier">language</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-setLike">anchor</a>
+				<div id="method-i-setLike-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">setLike</span><span 
+							class="method-args">(value)</span>
+										</header>
+
+					<div class="method-description">
+											<p>Set the number of likes</p>					
+											<div class="method-source-code" id="setLike-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setLike</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-ivar">@likes</span> = <span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-setLiked">anchor</a>
+				<div id="method-i-setLiked-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">setLiked</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Set the number of likes</p>					
+											<div class="method-source-code" id="setLiked-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setLiked</span>
+  <span class="ruby-ivar">@hasLiked</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-title">anchor</a>
+				<div id="method-i-title-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">title</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>To give the title of the good language</p>					
+											<div class="method-source-code" id="title-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">title</span>
+  <span class="ruby-identifier">title</span> = <span class="ruby-string">&quot;No Title&quot;</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@language</span>.<span class="ruby-identifier">present?</span>)
+    <span class="ruby-identifier">nt</span> = <span class="ruby-constant">NewsTitle</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">news_id</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">where</span>(<span class="ruby-identifier">language</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@language</span>)
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">nt</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">nt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+      <span class="ruby-identifier">title</span> = <span class="ruby-identifier">nt</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">title</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">title</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-to_s">anchor</a>
+				<div id="method-i-to_s-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">to_s</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>override</p>					
+											<div class="method-source-code" id="to_s-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File app/models/news.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;News #{self.id}&quot;</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+						
+		</section>
+		
+
+		<hr>
+
+		<footer>
+			<div class="container">
+				<span id="rdoc-version">Generated by RDoc 4.2.0</span> using the
+				<a id="generator-version"
+					href="http://deveiate.org/fivefish">Fivefish RDoc 0.1.0</a> generator.
+			</div>
+		</footer>
+	</div> <!-- /container -->
+
+	<!-- Class dropdown menu -->
+	<div id="class-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="./API.html">API</a></li>
+			<li><a href="./API/AlbumsController.html">API::AlbumsController</a></li>
+			<li><a href="./API/AmbiancesController.html">API::AmbiancesController</a></li>
+			<li><a href="./API/ApiController.html">API::ApiController</a></li>
+			<li><a href="./API/ApisecurityController.html">API::ApisecurityController</a></li>
+			<li><a href="./API/BattlesController.html">API::BattlesController</a></li>
+			<li><a href="./API/CartsController.html">API::CartsController</a></li>
+			<li><a href="./API/ConcertsController.html">API::ConcertsController</a></li>
+			<li><a href="./API/FeedbacksController.html">API::FeedbacksController</a></li>
+			<li><a href="./API/GenresController.html">API::GenresController</a></li>
+			<li><a href="./API/InfluencesController.html">API::InfluencesController</a></li>
+			<li><a href="./API/LanguagesController.html">API::LanguagesController</a></li>
+			<li><a href="./API/LikesController.html">API::LikesController</a></li>
+			<li><a href="./API/ListeningsController.html">API::ListeningsController</a></li>
+			<li><a href="./API/MessagesController.html">API::MessagesController</a></li>
+			<li><a href="./API/MusicsController.html">API::MusicsController</a></li>
+			<li><a href="./API/NewsController.html">API::NewsController</a></li>
+			<li><a href="./API/NotificationsController.html">API::NotificationsController</a></li>
+			<li><a href="./API/PacksController.html">API::PacksController</a></li>
+			<li><a href="./API/PlaylistsController.html">API::PlaylistsController</a></li>
+			<li><a href="./API/PurchasesController.html">API::PurchasesController</a></li>
+			<li><a href="./API/SearchsController.html">API::SearchsController</a></li>
+			<li><a href="./API/SuggestionsController.html">API::SuggestionsController</a></li>
+			<li><a href="./API/TweetsController.html">API::TweetsController</a></li>
+			<li><a href="./API/UsersController.html">API::UsersController</a></li>
+			<li><a href="./Artist/MusicsController.html">Artist::MusicsController</a></li>
+			<li><a href="./Address.html">Address</a></li>
+			<li><a href="./AdminUser.html">AdminUser</a></li>
+			<li><a href="./Album.html">Album</a></li>
+			<li><a href="./Albumslike.html">Albumslike</a></li>
+			<li><a href="./Ambiance.html">Ambiance</a></li>
+			<li><a href="./Attachment.html">Attachment</a></li>
+			<li><a href="./Battle.html">Battle</a></li>
+			<li><a href="./Cart.html">Cart</a></li>
+			<li><a href="./Commentary.html">Commentary</a></li>
+			<li><a href="./Concert.html">Concert</a></li>
+			<li><a href="./Concertslike.html">Concertslike</a></li>
+			<li><a href="./Description.html">Description</a></li>
+			<li><a href="./Feedback.html">Feedback</a></li>
+			<li><a href="./Follow.html">Follow</a></li>
+			<li><a href="./Friend.html">Friend</a></li>
+			<li><a href="./Genre.html">Genre</a></li>
+			<li><a href="./Group.html">Group</a></li>
+			<li><a href="./Identity.html">Identity</a></li>
+			<li><a href="./Influence.html">Influence</a></li>
+			<li><a href="./Language.html">Language</a></li>
+			<li><a href="./Listening.html">Listening</a></li>
+			<li><a href="./Meet.html">Meet</a></li>
+			<li><a href="./Meetstring.html">Meetstring</a></li>
+			<li><a href="./Message.html">Message</a></li>
+			<li><a href="./Music.html">Music</a></li>
+			<li><a href="./MusicNote.html">MusicNote</a></li>
+			<li><a href="./Musicalpast.html">Musicalpast</a></li>
+			<li><a href="./News.html">News</a></li>
+			<li><a href="./NewsTitle.html">NewsTitle</a></li>
+			<li><a href="./Newslike.html">Newslike</a></li>
+			<li><a href="./Newstext.html">Newstext</a></li>
+			<li><a href="./Notification.html">Notification</a></li>
+			<li><a href="./Pack.html">Pack</a></li>
+			<li><a href="./PartialAlbum.html">PartialAlbum</a></li>
+			<li><a href="./PaypalPayment.html">PaypalPayment</a></li>
+			<li><a href="./Playlist.html">Playlist</a></li>
+			<li><a href="./PlaylistObject.html">PlaylistObject</a></li>
+			<li><a href="./Proposition.html">Proposition</a></li>
+			<li><a href="./Purchase.html">Purchase</a></li>
+			<li><a href="./PurchasedAlbum.html">PurchasedAlbum</a></li>
+			<li><a href="./PurchasedMusic.html">PurchasedMusic</a></li>
+			<li><a href="./PurchasedPack.html">PurchasedPack</a></li>
+			<li><a href="./Tool.html">Tool</a></li>
+			<li><a href="./Tweet.html">Tweet</a></li>
+			<li><a href="./User.html">User</a></li>
+			<li><a href="./Vote.html">Vote</a></li>
+		</ul>
+	</div>
+
+	<!-- File dropdown menu -->
+	<div id="file-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+		</ul>
+	</div>
+
+</body>
+</html>
